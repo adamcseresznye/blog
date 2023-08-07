@@ -1,8 +1,5 @@
 ---
 title: Top 10 things I learned from the book Effective Pandas by  Matt Harrison
-format:
-  gfm:
-    code-fold: false
 jupyter: python3
 ---
 
