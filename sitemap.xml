@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/welcome/index.html</loc>
-    <lastmod>2023-08-07T09:56:39.566Z</lastmod>
+    <lastmod>2023-08-07T10:14:22.572Z</lastmod>
   </url>
   <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/another post/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html</loc>
-    <lastmod>2023-08-07T09:56:38.892Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/about.html</loc>
-    <lastmod>2023-08-07T09:56:36.468Z</lastmod>
+    <loc>https://adamcseresznye.github.io/blog/posts/one-more-post/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html</loc>
+    <lastmod>2023-08-07T10:14:21.762Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/index.html</loc>
-    <lastmod>2023-08-07T09:56:37.027Z</lastmod>
+    <lastmod>2023-08-07T10:14:18.983Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/about.html</loc>
+    <lastmod>2023-08-07T10:14:18.512Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/another post/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html</loc>
+    <lastmod>2023-08-07T10:14:20.712Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/post-with-code/index.html</loc>
-    <lastmod>2023-08-07T09:56:39.268Z</lastmod>
+    <lastmod>2023-08-07T10:14:22.210Z</lastmod>
   </url>
 </urlset>
