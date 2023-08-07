@@ -2,7 +2,9 @@
 title: "About"
 image: profile.jpg
 about:
-  template: broadside
+  template: trestles
+  image-shape: rounded
+  image-width: 15em
   links:
     - icon: twitter
       text: Twitter
@@ -18,7 +20,9 @@ about:
 
 <h1 style="text-align: center;">Hi there! Welcome to my website! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/> </h1> 
 
-I am Adam, a PhD candidate at the University of Antwerp. I would like to dedicate this website to my pursuit of mastering data science.  Here, you'll find projects, blog posts, and valuable insights to inspire your own endeavors.<br/> 
+I am Adam, a PhD candidate at the University of Antwerp focusing on the field of environmental toxicology. If you're curious about my academic journey and accomplishments, feel free to explore [Pubmed](https://pubmed.ncbi.nlm.nih.gov/?term=Cseresznye%2C+Adam%5BAuthor%5D&sort=) for more information. 
+
+I would like to dedicate this website to my pursuit of mastering data science.  Here, you'll find projects, blog posts, and valuable insights to inspire your own endeavors.<br/> 
 <br/>
 Remember:<br/> 
 

@@ -91,6 +91,8 @@ Additionally, to enhance the plot further, we can properly label the x and y axe
 Lets-Plot provides numerous options to showcase our data using categorical variables. From bar plots, box plots, and violin plots to pie charts, the possibilities are diverse. You can check out their [API](https://lets-plot.org/pages/api.html) for reference. Let's explore some examples to demonstrate the versatility of Lets-Plot in visualizing categorical data.
 
 ```{python}
+#| fig-column: page
+ 
 penguin_bar = (ggplot(df,aes(x='species'))
                + geom_bar()
               )
