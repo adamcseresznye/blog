@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Adam Cseresznye">
+<meta name="dcterms.date" content="2023-08-02">
 
 <title>Adam Cseresznye - Top 10 things I learned from the book Effective Pandas by Matt Harrison</title>
 <style>
@@ -103,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -121,8 +123,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../articles.html" rel="" target="">
+ <span class="menu-text">Articles</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../projects.html" rel="" target="">
@@ -139,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../www.linkedin.com/in/adam-cseresznye" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/adam-cseresznye" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -156,13 +158,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Top 10 things I learned from the book Effective Pandas by Matt Harrison</h1>
-                      </div>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Pandas</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Adam Cseresznye </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 2, 2023</p>
+      </div>
+    </div>
     
       
     </div>
@@ -171,9 +188,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#load-the-dataset" id="toc-load-the-dataset" class="nav-link active" data-scroll-target="#load-the-dataset">Load the dataset</a></li>
+  <li><a href="#tip-1-use-pd.assign-more-extensively" id="toc-tip-1-use-pd.assign-more-extensively" class="nav-link" data-scroll-target="#tip-1-use-pd.assign-more-extensively">Tip #1: Use <code>pd.assign</code> more extensively</a></li>
+  <li><a href="#tip-2-simplify-the-management-of-multiple-if-else-conditions-using-np.select" id="toc-tip-2-simplify-the-management-of-multiple-if-else-conditions-using-np.select" class="nav-link" data-scroll-target="#tip-2-simplify-the-management-of-multiple-if-else-conditions-using-np.select">Tip #2: Simplify the management of multiple if-else conditions using <code>np.select</code></a></li>
+  <li><a href="#tip-3-filter-rows-or-columns-with-the-combination-of-pd.loc-and-lambda" id="toc-tip-3-filter-rows-or-columns-with-the-combination-of-pd.loc-and-lambda" class="nav-link" data-scroll-target="#tip-3-filter-rows-or-columns-with-the-combination-of-pd.loc-and-lambda">Tip #3 Filter rows or columns with the combination of <code>pd.loc</code> and <code>lambda</code></a></li>
+  <li><a href="#tip-4-rename-multiple-columns-effortlessly-with-rename-and-replace" id="toc-tip-4-rename-multiple-columns-effortlessly-with-rename-and-replace" class="nav-link" data-scroll-target="#tip-4-rename-multiple-columns-effortlessly-with-rename-and-replace">Tip #4 Rename multiple columns effortlessly with <code>rename</code> and <code>replace</code></a></li>
+  <li><a href="#tip-5-use-pd.clip-to-easily-remove-outliers" id="toc-tip-5-use-pd.clip-to-easily-remove-outliers" class="nav-link" data-scroll-target="#tip-5-use-pd.clip-to-easily-remove-outliers">Tip #5: Use <code>pd.clip</code> to easily remove outliers</a></li>
+  <li><a href="#tip-6-find-corrupted-entries-with-str.extract" id="toc-tip-6-find-corrupted-entries-with-str.extract" class="nav-link" data-scroll-target="#tip-6-find-corrupted-entries-with-str.extract">Tip #6: Find corrupted entries with <code>str.extract</code></a></li>
+  <li><a href="#tip-7-sort-values-based-on-the-key-parameter" id="toc-tip-7-sort-values-based-on-the-key-parameter" class="nav-link" data-scroll-target="#tip-7-sort-values-based-on-the-key-parameter">Tip #7: Sort values based on the <code>key</code> parameter</a></li>
+  <li><a href="#tip-8-reference-an-existing-variable-inside-pd.query-with" id="toc-tip-8-reference-an-existing-variable-inside-pd.query-with" class="nav-link" data-scroll-target="#tip-8-reference-an-existing-variable-inside-pd.query-with">Tip #8: Reference an existing variable inside <code>pd.query</code> with @</a></li>
+  <li><a href="#tip-9-gain-more-insights-by-using-style.background_gradient" id="toc-tip-9-gain-more-insights-by-using-style.background_gradient" class="nav-link" data-scroll-target="#tip-9-gain-more-insights-by-using-style.background_gradient">Tip #9: Gain more insights by using <code>style.background_gradient</code></a></li>
+  <li><a href="#tip-10-use-pd.pipe-to-include-any-functions-in-our-chain" id="toc-tip-10-use-pd.pipe-to-include-any-functions-in-our-chain" class="nav-link" data-scroll-target="#tip-10-use-pd.pipe-to-include-any-functions-in-our-chain">Tip #10: Use <code>pd.pipe</code> to include any functions in our chain</a></li>
+  <li><a href="#tip-10-1-use-the-margin-parameter-of-pd.crosstab-to-easily-calculate-rowcolumn-subtotals" id="toc-tip-10-1-use-the-margin-parameter-of-pd.crosstab-to-easily-calculate-rowcolumn-subtotals" class="nav-link" data-scroll-target="#tip-10-1-use-the-margin-parameter-of-pd.crosstab-to-easily-calculate-rowcolumn-subtotals">Tip #10 + 1: Use the “margin” parameter of <code>pd.crosstab</code> to easily calculate row/column subtotals</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -189,14 +225,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'display.max_columns'</span>, <span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="my-table-of-content" class="level1">
-<h1>My Table of content</h1>
-<ul>
-<li><a href="#id-section1">Section 1</a></li>
-</ul>
-#
-<div id="id-section1">
-<p>Load the dataset</p>
+<section id="load-the-dataset" class="level1">
+<h1>Load the dataset</h1>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_csv(<span class="st">'smartphones.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># some info about the dataframe, such as dimensions and dtypes of columns</span></span>
@@ -233,7 +263,7 @@ dtypes: float64(8), int64(10), object(4)
 memory usage: 168.6+ KB</code></pre>
 </div>
 </div>
-</div></section>
+</section>
 <section id="tip-1-use-pd.assign-more-extensively" class="level1">
 <h1>Tip #1: Use <code>pd.assign</code> more extensively</h1>
 <p>The <code>pd.assign</code> method in Pandas is a very powerful tool that can be used to create new columns, modify existing columns, or both. It is a very versatile method that can be used in a variety of ways.</p>
@@ -487,7 +517,7 @@ Name: frequency, dtype: int64</code></pre>
 </div>
 </div>
 </section>
-<section id="tip-5-use-pd.clip-to-easily-remove-outliers" class="level1">
+<section id="tip-5-use-pd.clip-to-easily-remove-outliers" class="level1 page-columns page-full">
 <h1>Tip #5: Use <code>pd.clip</code> to easily remove outliers</h1>
 <div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First, we'll identify the phone brands with the most number of handsets present in our dataset."</span></span>
@@ -515,8 +545,8 @@ Name: frequency, dtype: int64</code></pre>
 ['tecno', 'poco', 'realme', 'xiaomi', 'motorola', 'vivo', 'oppo', 'samsung', 'oneplus', 'apple']</code></pre>
 </div>
 </div>
-<div class="cell" data-tags="[]" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">8</span>))</span>
+<div class="cell page-columns page-full" data-tags="[]" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># For reference, this is what our box plot looks if we leave in the outlier values</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>(df</span>
@@ -544,10 +574,9 @@ Name: frequency, dtype: int64</code></pre>
 <span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>     )</span>
 <span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].<span class="bu">set</span>(ylabel<span class="op">=</span><span class="st">'Price in local currency'</span>)</span>
-<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'2023_08_04_EP_1.jpg'</span>, dpi<span class="op">=</span><span class="dv">600</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="2023_08_02-Top_10_things_I_learned_from_Effective_Pandas_files/figure-html/cell-12-output-1.png" width="1141" height="759"></p>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display column-page">
+<p><img src="2023_08_02-Top_10_things_I_learned_from_Effective_Pandas_files/figure-html/cell-12-output-1.png" width="984" height="471"></p>
 </div>
 </div>
 </section>
@@ -759,11 +788,11 @@ dtype: int64</code></pre>
 </div>
 </div>
 </section>
-<section id="tip-9-gain-more-insights-by-using-style.background_gradient" class="level1">
+<section id="tip-9-gain-more-insights-by-using-style.background_gradient" class="level1 page-columns page-full">
 <h1>Tip #9: Gain more insights by using <code>style.background_gradient</code></h1>
 <p>Being a visual creature, I often struggle to comprehend data quickly just by examining the raw table alone. Fortunately, with the help of <code>style.background_gradient</code>, similar to the <code>heatmap</code> function in the <code>seaborn</code> library, we can represent cells, in terms of color gradient, based on their values. This enables us to identify trends and patterns in our data swiftly, making data analysis more intuitive and insightful.</p>
 <p><strong>Problem statement:</strong> Our goal is to identify the overall trends related to key descriptors found among the Top 10 smartphone brands, aiming to determine which brand offers the most value for our money.</p>
-<div class="cell" data-execution_count="16">
+<div class="cell page-columns page-full" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>(df</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"brand_name.isin(@top10_brand_names_ordered)"</span>) <span class="co"># filter rows based on top10 brands</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a> .groupby([<span class="st">'brand_name'</span>,])</span>
@@ -783,276 +812,276 @@ dtype: int64</code></pre>
 <span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>     ,]</span>
 <span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a> )</span>
 <span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display column-page" data-execution_count="16">
 <style type="text/css">
-#T_0454a td {
+#T_39fb7 td {
   text-align: center;
 }
-#T_0454a caption {
+#T_39fb7 caption {
   font-size: 1.5em;
   font-weight: bold;
 }
-#T_0454a_row0_col0, #T_0454a_row1_col0, #T_0454a_row2_col2, #T_0454a_row3_col2, #T_0454a_row4_col2, #T_0454a_row5_col0 {
+#T_39fb7_row0_col0, #T_39fb7_row1_col0, #T_39fb7_row2_col2, #T_39fb7_row3_col2, #T_39fb7_row4_col2, #T_39fb7_row5_col0 {
   background-color: #2369bd;
   color: #f1f1f1;
 }
-#T_0454a_row0_col1 {
+#T_39fb7_row0_col1 {
   background-color: #b8c3d5;
   color: #000000;
 }
-#T_0454a_row0_col2, #T_0454a_row2_col7 {
+#T_39fb7_row0_col2, #T_39fb7_row2_col7 {
   background-color: #cad0dd;
   color: #000000;
 }
-#T_0454a_row0_col3 {
+#T_39fb7_row0_col3 {
   background-color: #dcdee6;
   color: #000000;
 }
-#T_0454a_row0_col4, #T_0454a_row0_col5 {
+#T_39fb7_row0_col4, #T_39fb7_row0_col5 {
   background-color: #efd8d6;
   color: #000000;
 }
-#T_0454a_row0_col6 {
+#T_39fb7_row0_col6 {
   background-color: #eed7d5;
   color: #000000;
 }
-#T_0454a_row0_col7 {
+#T_39fb7_row0_col7 {
   background-color: #edd5d3;
   color: #000000;
 }
-#T_0454a_row0_col8, #T_0454a_row3_col5 {
+#T_39fb7_row0_col8, #T_39fb7_row3_col5 {
   background-color: #d39794;
   color: #f1f1f1;
 }
-#T_0454a_row0_col9, #T_0454a_row1_col2, #T_0454a_row2_col9, #T_0454a_row3_col0, #T_0454a_row4_col0, #T_0454a_row5_col2 {
+#T_39fb7_row0_col9, #T_39fb7_row1_col2, #T_39fb7_row2_col9, #T_39fb7_row3_col0, #T_39fb7_row4_col0, #T_39fb7_row5_col2 {
   background-color: #a9373b;
   color: #f1f1f1;
 }
-#T_0454a_row1_col1, #T_0454a_row5_col3 {
+#T_39fb7_row1_col1, #T_39fb7_row5_col3 {
   background-color: #7192c0;
   color: #f1f1f1;
 }
-#T_0454a_row1_col3 {
+#T_39fb7_row1_col3 {
   background-color: #97abc9;
   color: #f1f1f1;
 }
-#T_0454a_row1_col4 {
+#T_39fb7_row1_col4 {
   background-color: #bfc8d8;
   color: #000000;
 }
-#T_0454a_row1_col5 {
+#T_39fb7_row1_col5 {
   background-color: #adbbd1;
   color: #000000;
 }
-#T_0454a_row1_col6 {
+#T_39fb7_row1_col6 {
   background-color: #c0c9d9;
   color: #000000;
 }
-#T_0454a_row1_col7 {
+#T_39fb7_row1_col7 {
   background-color: #bac4d6;
   color: #000000;
 }
-#T_0454a_row1_col8 {
+#T_39fb7_row1_col8 {
   background-color: #bbc5d7;
   color: #000000;
 }
-#T_0454a_row1_col9 {
+#T_39fb7_row1_col9 {
   background-color: #f2e0df;
   color: #000000;
 }
-#T_0454a_row2_col0, #T_0454a_row5_col1 {
+#T_39fb7_row2_col0, #T_39fb7_row5_col1 {
   background-color: #3b73bc;
   color: #f1f1f1;
 }
-#T_0454a_row2_col1 {
+#T_39fb7_row2_col1 {
   background-color: #678bbe;
   color: #f1f1f1;
 }
-#T_0454a_row2_col3 {
+#T_39fb7_row2_col3 {
   background-color: #f7f4f4;
   color: #000000;
 }
-#T_0454a_row2_col4, #T_0454a_row5_col5 {
+#T_39fb7_row2_col4, #T_39fb7_row5_col5 {
   background-color: #a5b5ce;
   color: #000000;
 }
-#T_0454a_row2_col5 {
+#T_39fb7_row2_col5 {
   background-color: #e2e3ea;
   color: #000000;
 }
-#T_0454a_row2_col6, #T_0454a_row3_col3 {
+#T_39fb7_row2_col6, #T_39fb7_row3_col3 {
   background-color: #d49a97;
   color: #f1f1f1;
 }
-#T_0454a_row2_col8 {
+#T_39fb7_row2_col8 {
   background-color: #aab8d0;
   color: #000000;
 }
-#T_0454a_row3_col1 {
+#T_39fb7_row3_col1 {
   background-color: #d9a6a4;
   color: #000000;
 }
-#T_0454a_row3_col4, #T_0454a_row3_col7 {
+#T_39fb7_row3_col4, #T_39fb7_row3_col7 {
   background-color: #c47371;
   color: #f1f1f1;
 }
-#T_0454a_row3_col6, #T_0454a_row4_col7 {
+#T_39fb7_row3_col6, #T_39fb7_row4_col7 {
   background-color: #cd8885;
   color: #f1f1f1;
 }
-#T_0454a_row3_col8 {
+#T_39fb7_row3_col8 {
   background-color: #cc8784;
   color: #f1f1f1;
 }
-#T_0454a_row3_col9 {
+#T_39fb7_row3_col9 {
   background-color: #c97f7d;
   color: #f1f1f1;
 }
-#T_0454a_row4_col1 {
+#T_39fb7_row4_col1 {
   background-color: #d29491;
   color: #f1f1f1;
 }
-#T_0454a_row4_col3 {
+#T_39fb7_row4_col3 {
   background-color: #e3bfbd;
   color: #000000;
 }
-#T_0454a_row4_col4 {
+#T_39fb7_row4_col4 {
   background-color: #c87c7a;
   color: #f1f1f1;
 }
-#T_0454a_row4_col5 {
+#T_39fb7_row4_col5 {
   background-color: #d1918e;
   color: #f1f1f1;
 }
-#T_0454a_row4_col6 {
+#T_39fb7_row4_col6 {
   background-color: #e7c7c5;
   color: #000000;
 }
-#T_0454a_row4_col8 {
+#T_39fb7_row4_col8 {
   background-color: #d59c99;
   color: #f1f1f1;
 }
-#T_0454a_row4_col9 {
+#T_39fb7_row4_col9 {
   background-color: #deb2b0;
   color: #000000;
 }
-#T_0454a_row5_col4 {
+#T_39fb7_row5_col4 {
   background-color: #4276bc;
   color: #f1f1f1;
 }
-#T_0454a_row5_col6 {
+#T_39fb7_row5_col6 {
   background-color: #809bc3;
   color: #f1f1f1;
 }
-#T_0454a_row5_col7 {
+#T_39fb7_row5_col7 {
   background-color: #7896c1;
   color: #f1f1f1;
 }
-#T_0454a_row5_col8 {
+#T_39fb7_row5_col8 {
   background-color: #6489be;
   color: #f1f1f1;
 }
-#T_0454a_row5_col9 {
+#T_39fb7_row5_col9 {
   background-color: #a0b1cc;
   color: #000000;
 }
 </style>
 
-<table id="T_0454a" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<table id="T_39fb7" data-quarto-postprocess="true" class="table table-sm table-striped small">
 <caption>Key descriptors of the Top 10 smartphone brands</caption>
 <thead>
 <tr class="header">
 <th class="index_name level0" data-quarto-table-cell-role="th">brand_name</th>
-<th id="T_0454a_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Tecno</th>
-<th id="T_0454a_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Realme</th>
-<th id="T_0454a_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Apple</th>
-<th id="T_0454a_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Vivo</th>
-<th id="T_0454a_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">Poco</th>
-<th id="T_0454a_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">Samsung</th>
-<th id="T_0454a_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">Oppo</th>
-<th id="T_0454a_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">Xiaomi</th>
-<th id="T_0454a_level0_col8" class="col_heading level0 col8" data-quarto-table-cell-role="th">Motorola</th>
-<th id="T_0454a_level0_col9" class="col_heading level0 col9" data-quarto-table-cell-role="th">Oneplus</th>
+<th id="T_39fb7_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Tecno</th>
+<th id="T_39fb7_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Realme</th>
+<th id="T_39fb7_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Apple</th>
+<th id="T_39fb7_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Vivo</th>
+<th id="T_39fb7_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">Poco</th>
+<th id="T_39fb7_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">Samsung</th>
+<th id="T_39fb7_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">Oppo</th>
+<th id="T_39fb7_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">Xiaomi</th>
+<th id="T_39fb7_level0_col8" class="col_heading level0 col8" data-quarto-table-cell-role="th">Motorola</th>
+<th id="T_39fb7_level0_col9" class="col_heading level0 col9" data-quarto-table-cell-role="th">Oneplus</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_0454a_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">avg_rating</td>
-<td id="T_0454a_row0_col0" class="data row0 col0">7.4</td>
-<td id="T_0454a_row0_col1" class="data row0 col1">7.6</td>
-<td id="T_0454a_row0_col2" class="data row0 col2">7.7</td>
-<td id="T_0454a_row0_col3" class="data row0 col3">7.7</td>
-<td id="T_0454a_row0_col4" class="data row0 col4">7.9</td>
-<td id="T_0454a_row0_col5" class="data row0 col5">7.9</td>
-<td id="T_0454a_row0_col6" class="data row0 col6">7.9</td>
-<td id="T_0454a_row0_col7" class="data row0 col7">7.9</td>
-<td id="T_0454a_row0_col8" class="data row0 col8">8.0</td>
-<td id="T_0454a_row0_col9" class="data row0 col9">8.2</td>
+<td id="T_39fb7_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">avg_rating</td>
+<td id="T_39fb7_row0_col0" class="data row0 col0">7.4</td>
+<td id="T_39fb7_row0_col1" class="data row0 col1">7.6</td>
+<td id="T_39fb7_row0_col2" class="data row0 col2">7.7</td>
+<td id="T_39fb7_row0_col3" class="data row0 col3">7.7</td>
+<td id="T_39fb7_row0_col4" class="data row0 col4">7.9</td>
+<td id="T_39fb7_row0_col5" class="data row0 col5">7.9</td>
+<td id="T_39fb7_row0_col6" class="data row0 col6">7.9</td>
+<td id="T_39fb7_row0_col7" class="data row0 col7">7.9</td>
+<td id="T_39fb7_row0_col8" class="data row0 col8">8.0</td>
+<td id="T_39fb7_row0_col9" class="data row0 col9">8.2</td>
 </tr>
 <tr class="even">
-<td id="T_0454a_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">processor_speed</td>
-<td id="T_0454a_row1_col0" class="data row1 col0">2.1</td>
-<td id="T_0454a_row1_col1" class="data row1 col1">2.3</td>
-<td id="T_0454a_row1_col2" class="data row1 col2">3.1</td>
-<td id="T_0454a_row1_col3" class="data row1 col3">2.4</td>
-<td id="T_0454a_row1_col4" class="data row1 col4">2.5</td>
-<td id="T_0454a_row1_col5" class="data row1 col5">2.4</td>
-<td id="T_0454a_row1_col6" class="data row1 col6">2.5</td>
-<td id="T_0454a_row1_col7" class="data row1 col7">2.4</td>
-<td id="T_0454a_row1_col8" class="data row1 col8">2.5</td>
-<td id="T_0454a_row1_col9" class="data row1 col9">2.7</td>
+<td id="T_39fb7_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">processor_speed</td>
+<td id="T_39fb7_row1_col0" class="data row1 col0">2.1</td>
+<td id="T_39fb7_row1_col1" class="data row1 col1">2.3</td>
+<td id="T_39fb7_row1_col2" class="data row1 col2">3.1</td>
+<td id="T_39fb7_row1_col3" class="data row1 col3">2.4</td>
+<td id="T_39fb7_row1_col4" class="data row1 col4">2.5</td>
+<td id="T_39fb7_row1_col5" class="data row1 col5">2.4</td>
+<td id="T_39fb7_row1_col6" class="data row1 col6">2.5</td>
+<td id="T_39fb7_row1_col7" class="data row1 col7">2.4</td>
+<td id="T_39fb7_row1_col8" class="data row1 col8">2.5</td>
+<td id="T_39fb7_row1_col9" class="data row1 col9">2.7</td>
 </tr>
 <tr class="odd">
-<td id="T_0454a_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">ram_capacity</td>
-<td id="T_0454a_row2_col0" class="data row2 col0">5.4</td>
-<td id="T_0454a_row2_col1" class="data row2 col1">5.7</td>
-<td id="T_0454a_row2_col2" class="data row2 col2">5.3</td>
-<td id="T_0454a_row2_col3" class="data row2 col3">6.7</td>
-<td id="T_0454a_row2_col4" class="data row2 col4">6.1</td>
-<td id="T_0454a_row2_col5" class="data row2 col5">6.5</td>
-<td id="T_0454a_row2_col6" class="data row2 col6">7.5</td>
-<td id="T_0454a_row2_col7" class="data row2 col7">6.4</td>
-<td id="T_0454a_row2_col8" class="data row2 col8">6.1</td>
-<td id="T_0454a_row2_col9" class="data row2 col9">8.2</td>
+<td id="T_39fb7_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">ram_capacity</td>
+<td id="T_39fb7_row2_col0" class="data row2 col0">5.4</td>
+<td id="T_39fb7_row2_col1" class="data row2 col1">5.7</td>
+<td id="T_39fb7_row2_col2" class="data row2 col2">5.3</td>
+<td id="T_39fb7_row2_col3" class="data row2 col3">6.7</td>
+<td id="T_39fb7_row2_col4" class="data row2 col4">6.1</td>
+<td id="T_39fb7_row2_col5" class="data row2 col5">6.5</td>
+<td id="T_39fb7_row2_col6" class="data row2 col6">7.5</td>
+<td id="T_39fb7_row2_col7" class="data row2 col7">6.4</td>
+<td id="T_39fb7_row2_col8" class="data row2 col8">6.1</td>
+<td id="T_39fb7_row2_col9" class="data row2 col9">8.2</td>
 </tr>
 <tr class="even">
-<td id="T_0454a_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">screen_size</td>
-<td id="T_0454a_row3_col0" class="data row3 col0">6.7</td>
-<td id="T_0454a_row3_col1" class="data row3 col1">6.5</td>
-<td id="T_0454a_row3_col2" class="data row3 col2">6.1</td>
-<td id="T_0454a_row3_col3" class="data row3 col3">6.5</td>
-<td id="T_0454a_row3_col4" class="data row3 col4">6.6</td>
-<td id="T_0454a_row3_col5" class="data row3 col5">6.6</td>
-<td id="T_0454a_row3_col6" class="data row3 col6">6.6</td>
-<td id="T_0454a_row3_col7" class="data row3 col7">6.6</td>
-<td id="T_0454a_row3_col8" class="data row3 col8">6.6</td>
-<td id="T_0454a_row3_col9" class="data row3 col9">6.6</td>
+<td id="T_39fb7_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">screen_size</td>
+<td id="T_39fb7_row3_col0" class="data row3 col0">6.7</td>
+<td id="T_39fb7_row3_col1" class="data row3 col1">6.5</td>
+<td id="T_39fb7_row3_col2" class="data row3 col2">6.1</td>
+<td id="T_39fb7_row3_col3" class="data row3 col3">6.5</td>
+<td id="T_39fb7_row3_col4" class="data row3 col4">6.6</td>
+<td id="T_39fb7_row3_col5" class="data row3 col5">6.6</td>
+<td id="T_39fb7_row3_col6" class="data row3 col6">6.6</td>
+<td id="T_39fb7_row3_col7" class="data row3 col7">6.6</td>
+<td id="T_39fb7_row3_col8" class="data row3 col8">6.6</td>
+<td id="T_39fb7_row3_col9" class="data row3 col9">6.6</td>
 </tr>
 <tr class="odd">
-<td id="T_0454a_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">battery_capacity</td>
-<td id="T_0454a_row4_col0" class="data row4 col0">5333.9</td>
-<td id="T_0454a_row4_col1" class="data row4 col1">4903.1</td>
-<td id="T_0454a_row4_col2" class="data row4 col2">3527.2</td>
-<td id="T_0454a_row4_col3" class="data row4 col3">4703.7</td>
-<td id="T_0454a_row4_col4" class="data row4 col4">5009.4</td>
-<td id="T_0454a_row4_col5" class="data row4 col5">4917.4</td>
-<td id="T_0454a_row4_col6" class="data row4 col6">4667.2</td>
-<td id="T_0454a_row4_col7" class="data row4 col7">4957.6</td>
-<td id="T_0454a_row4_col8" class="data row4 col8">4863.1</td>
-<td id="T_0454a_row4_col9" class="data row4 col9">4759.5</td>
+<td id="T_39fb7_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">battery_capacity</td>
+<td id="T_39fb7_row4_col0" class="data row4 col0">5333.9</td>
+<td id="T_39fb7_row4_col1" class="data row4 col1">4903.1</td>
+<td id="T_39fb7_row4_col2" class="data row4 col2">3527.2</td>
+<td id="T_39fb7_row4_col3" class="data row4 col3">4703.7</td>
+<td id="T_39fb7_row4_col4" class="data row4 col4">5009.4</td>
+<td id="T_39fb7_row4_col5" class="data row4 col5">4917.4</td>
+<td id="T_39fb7_row4_col6" class="data row4 col6">4667.2</td>
+<td id="T_39fb7_row4_col7" class="data row4 col7">4957.6</td>
+<td id="T_39fb7_row4_col8" class="data row4 col8">4863.1</td>
+<td id="T_39fb7_row4_col9" class="data row4 col9">4759.5</td>
 </tr>
 <tr class="even">
-<td id="T_0454a_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">price</td>
-<td id="T_0454a_row5_col0" class="data row5 col0">14545.4</td>
-<td id="T_0454a_row5_col1" class="data row5 col1">17461.4</td>
-<td id="T_0454a_row5_col2" class="data row5 col2">95966.5</td>
-<td id="T_0454a_row5_col3" class="data row5 col3">26782.4</td>
-<td id="T_0454a_row5_col4" class="data row5 col4">18479.2</td>
-<td id="T_0454a_row5_col5" class="data row5 col5">36843.0</td>
-<td id="T_0454a_row5_col6" class="data row5 col6">29650.0</td>
-<td id="T_0454a_row5_col7" class="data row5 col7">27961.1</td>
-<td id="T_0454a_row5_col8" class="data row5 col8">24099.9</td>
-<td id="T_0454a_row5_col9" class="data row5 col9">35858.6</td>
+<td id="T_39fb7_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">price</td>
+<td id="T_39fb7_row5_col0" class="data row5 col0">14545.4</td>
+<td id="T_39fb7_row5_col1" class="data row5 col1">17461.4</td>
+<td id="T_39fb7_row5_col2" class="data row5 col2">95966.5</td>
+<td id="T_39fb7_row5_col3" class="data row5 col3">26782.4</td>
+<td id="T_39fb7_row5_col4" class="data row5 col4">18479.2</td>
+<td id="T_39fb7_row5_col5" class="data row5 col5">36843.0</td>
+<td id="T_39fb7_row5_col6" class="data row5 col6">29650.0</td>
+<td id="T_39fb7_row5_col7" class="data row5 col7">27961.1</td>
+<td id="T_39fb7_row5_col8" class="data row5 col8">24099.9</td>
+<td id="T_39fb7_row5_col9" class="data row5 col9">35858.6</td>
 </tr>
 </tbody>
 </table>
@@ -1087,8 +1116,7 @@ dtype: int64</code></pre>
 <span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>          xlabel<span class="op">=</span><span class="st">'RAM capacity'</span>,</span>
 <span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>          ylabel<span class="op">=</span><span class="st">'User rating'</span></span>
 <span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>         )</span>
-<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'fig2.jpg'</span>, dpi<span class="op">=</span><span class="dv">600</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="2023_08_02-Top_10_things_I_learned_from_Effective_Pandas_files/figure-html/cell-18-output-1.png" width="584" height="470"></p>
 </div>

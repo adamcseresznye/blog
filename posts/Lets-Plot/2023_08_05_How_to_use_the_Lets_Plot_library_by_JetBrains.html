@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Adam Cseresznye">
+<meta name="dcterms.date" content="2023-08-05">
 
 <title>Adam Cseresznye - How to use the Lets-Plot library by JetBrains</title>
 <style>
@@ -103,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -121,8 +123,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../articles.html" rel="" target="">
+ <span class="menu-text">Articles</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../projects.html" rel="" target="">
@@ -139,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../www.linkedin.com/in/adam-cseresznye" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/adam-cseresznye" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -156,13 +158,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">How to use the Lets-Plot library by JetBrains</h1>
-                      </div>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Lets-Plot</div>
+                <div class="quarto-category">ggplot2</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Adam Cseresznye </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 5, 2023</p>
+      </div>
+    </div>
     
       
     </div>
@@ -171,9 +189,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#syntax-similarities-lets-plot-and-ggplot2" id="toc-syntax-similarities-lets-plot-and-ggplot2" class="nav-link active" data-scroll-target="#syntax-similarities-lets-plot-and-ggplot2">Syntax Similarities: <code>Lets-Plot</code> and <code>ggplot2</code></a></li>
+  <li><a href="#visualizing-data-based-on-categorical-variables" id="toc-visualizing-data-based-on-categorical-variables" class="nav-link" data-scroll-target="#visualizing-data-based-on-categorical-variables">Visualizing Data Based on Categorical Variables</a></li>
+  <li><a href="#incorporate-multiple-variables-with-facet_wrap" id="toc-incorporate-multiple-variables-with-facet_wrap" class="nav-link" data-scroll-target="#incorporate-multiple-variables-with-facet_wrap">Incorporate Multiple Variables with facet_wrap</a></li>
+  <li><a href="#reordering-categorical-variables-based-on-statistics" id="toc-reordering-categorical-variables-based-on-statistics" class="nav-link" data-scroll-target="#reordering-categorical-variables-based-on-statistics">Reordering Categorical Variables Based On Statistics</a></li>
+  <li><a href="#chaining-pandas-code-with-lets-plot-visualization" id="toc-chaining-pandas-code-with-lets-plot-visualization" class="nav-link" data-scroll-target="#chaining-pandas-code-with-lets-plot-visualization">Chaining Pandas Code with Lets Plot Visualization</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -182,15 +212,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>That’s why in this article, I’m excited to introduce you to the <a href="https://lets-plot.org/index.html#">Lets-Plot</a> library by JetBrains. It is the closest you can get to ggplot’s syntax while using Python. While some traditional Python users might find the syntax a bit unfamiliar initially, I’m here to make a case for this fantastic library and hopefully inspire you to incorporate it into your day-to-day data science activities.</p>
 <p>To showcase (some of) the key features of Lets-Plot, we will be utilizing the <a href="https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv">penguins dataset</a> 🐧 from Github.</p>
 <p>Without further ado, let’s dive right in and discover the power and beauty of Lets-Plot! 🐍📊</p>
-<section id="table-of-contents" class="level1">
-<h1>Table of contents</h1>
-<ul>
-<li><a href="#id-section1">Syntax Similarities: Lets-Plot and ggplot2</a></li>
-<li><a href="#id-section2">Visualizing Data Based on Categorical Variables</a></li>
-<li><a href="#id-section3">Incorporate Multiple Variables with facet_wrap</a></li>
-<li><a href="#id-section4">Reordering Categorical Variables Based On Statistics</a></li>
-<li><a href="#id-section5">Chaining Pandas Code with Lets Plot Visualization</a></li>
-</ul>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installation</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install lets-plot </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -204,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
-            <div id="Ps7Dng"></div>
+            <div id="jSZop3"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -228,20 +249,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("Ps7Dng").appendChild(div);
+                        document.getElementById("jSZop3").appendChild(div);
                     };
-                    var e = document.getElementById("Ps7Dng");
+                    var e = document.getElementById("jSZop3");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 </div>
-<div class="cell" data-execution_count="3">
+<div class="cell page-columns page-full" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>address<span class="op">=</span><span class="st">'https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv'</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_csv(address)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display column-page" data-execution_count="12">
 <div>
 
 
@@ -327,9 +348,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="id-section1">
-
-</div></section>
 <section id="syntax-similarities-lets-plot-and-ggplot2" class="level1">
 <h1>Syntax Similarities: <code>Lets-Plot</code> and <code>ggplot2</code></h1>
 <p>For our first exercise, I thought it would be beneficial to replicate a basic plot inspired by Hadley’s book. When comparing my code here with <a href="https://r4ds.hadley.nz/data-visualize#sec-adding-aesthetics-layers">the one presented by him</a>, you’ll notice that there is very little difference between the two. The syntax is nearly identical, making it a smooth transition from ggplot to Lets-Plot.</p>
@@ -347,8 +365,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> geom_point() <span class="co"># Draw points defined by an x and y coordinate, as for a scatter plot.</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> geom_smooth(method<span class="op">=</span><span class="st">'lm'</span>) <span class="co"># Add a smoothed conditional mean. ‘lm’ stands for 'linear model' as Smoothing method</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-   <div id="d3EQMH"></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+   <div id="ivPmEv"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -391,7 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("d3EQMH");
+           var plotContainer = document.getElementById("ivPmEv");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -416,8 +434,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  ) </span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> scale_color_viridis() <span class="co"># lets-plots equivalent of the scale_color_colorblind()</span></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-   <div id="coW35r"></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+   <div id="MvsmJn"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -473,7 +491,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("coW35r");
+           var plotContainer = document.getElementById("MvsmJn");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -481,9 +499,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="id-section2">
-
-</div></section>
+</section>
 <section id="visualizing-data-based-on-categorical-variables" class="level1">
 <h1>Visualizing Data Based on Categorical Variables</h1>
 <p>Lets-Plot provides numerous options to showcase our data using categorical variables. From bar plots, box plots, and violin plots to pie charts, the possibilities are diverse. You can check out their <a href="https://lets-plot.org/pages/api.html">API</a> for reference. Let’s explore some examples to demonstrate the versatility of Lets-Plot in visualizing categorical data.</p>
@@ -504,8 +520,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                         <span class="op">+</span> geom_bar(position<span class="op">=</span><span class="st">'fill'</span>)</span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>                        )</span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>gggrid([penguin_bar, penguin_box, penguin_density, penguin_rel_frequency], ncol<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-   <div id="6gERT5"></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+   <div id="J74PMT"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -619,7 +635,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 "metainfo_list":[]
 }]
 };
-           var plotContainer = document.getElementById("6gERT5");
+           var plotContainer = document.getElementById("J74PMT");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -627,15 +643,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="id-section3">
-
-</div></section>
+</section>
 <section id="incorporate-multiple-variables-with-facet_wrap" class="level1">
 <h1>Incorporate Multiple Variables with facet_wrap</h1>
 <p>So far we’ve discovered how easy it is to plot data based on a single categorical variable. However, what if we want to depict relationships involving two or more categorical variables? That’s where <code>facet_wrap</code> comes in handy. This versatile function bears resemblance to similar functions found in <code>seaborn</code> or <code>ggplot2</code> libraries.</p>
 <p>To unlock the potential of <code>facet_wrap</code>, we simply need to define aesthetics, which can either be global or local to the mapping function. Then, we can use <code>facet_wrap</code> with the relevant categorical variable we want to visualize. It’s as simple as that!</p>
 <div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>g<span class="op">=</span>(ggplot(df, aes(x <span class="op">=</span> <span class="st">'flipper_length_mm'</span>, y <span class="op">=</span> <span class="st">'body_mass_g'</span>))  </span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(ggplot(df, aes(x <span class="op">=</span> <span class="st">'flipper_length_mm'</span>, y <span class="op">=</span> <span class="st">'body_mass_g'</span>))  </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> geom_point(aes(color <span class="op">=</span> <span class="st">'species'</span>, shape <span class="op">=</span> <span class="st">'species'</span>), size <span class="op">=</span> <span class="dv">4</span>) </span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> facet_wrap(<span class="st">'island'</span>, nrow<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> labs(title <span class="op">=</span> <span class="st">"Body mass and flipper length based on island"</span>,</span>
@@ -644,10 +658,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>       )</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> theme(plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">20</span>,face<span class="op">=</span><span class="st">'bold'</span>))</span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> ggsize(<span class="dv">1000</span>,<span class="dv">500</span>)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>ggsave(g, filename<span class="op">=</span><span class="st">'2023_08_05_4.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>'C:\\Users\\s0212777\\Documents\\GitHub\\blog\\posts\\one-more-post\\lets-plot-images\\2023_08_05_4.svg'</code></pre>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+   <div id="jbbbd8"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"species":["Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap"],
+"island":["Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Torgersen","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Biscoe","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream","Dream"],
+"flipper_length_mm":[181.0,186.0,195.0,null,193.0,190.0,181.0,195.0,193.0,190.0,186.0,180.0,182.0,191.0,198.0,185.0,195.0,197.0,184.0,194.0,174.0,180.0,189.0,185.0,180.0,187.0,183.0,187.0,172.0,180.0,178.0,178.0,188.0,184.0,195.0,196.0,190.0,180.0,181.0,184.0,182.0,195.0,186.0,196.0,185.0,190.0,182.0,179.0,190.0,191.0,186.0,188.0,190.0,200.0,187.0,191.0,186.0,193.0,181.0,194.0,185.0,195.0,185.0,192.0,184.0,192.0,195.0,188.0,190.0,198.0,190.0,190.0,196.0,197.0,190.0,195.0,191.0,184.0,187.0,195.0,189.0,196.0,187.0,193.0,191.0,194.0,190.0,189.0,189.0,190.0,202.0,205.0,185.0,186.0,187.0,208.0,190.0,196.0,178.0,192.0,192.0,203.0,183.0,190.0,193.0,184.0,199.0,190.0,181.0,197.0,198.0,191.0,193.0,197.0,191.0,196.0,188.0,199.0,189.0,189.0,187.0,198.0,176.0,202.0,186.0,199.0,191.0,195.0,191.0,210.0,190.0,197.0,193.0,199.0,187.0,190.0,191.0,200.0,185.0,193.0,193.0,187.0,188.0,190.0,192.0,185.0,190.0,184.0,195.0,193.0,187.0,201.0,211.0,230.0,210.0,218.0,215.0,210.0,211.0,219.0,209.0,215.0,214.0,216.0,214.0,213.0,210.0,217.0,210.0,221.0,209.0,222.0,218.0,215.0,213.0,215.0,215.0,215.0,216.0,215.0,210.0,220.0,222.0,209.0,207.0,230.0,220.0,220.0,213.0,219.0,208.0,208.0,208.0,225.0,210.0,216.0,222.0,217.0,210.0,225.0,213.0,215.0,210.0,220.0,210.0,225.0,217.0,220.0,208.0,220.0,208.0,224.0,208.0,221.0,214.0,231.0,219.0,230.0,214.0,229.0,220.0,223.0,216.0,221.0,221.0,217.0,216.0,230.0,209.0,220.0,215.0,223.0,212.0,221.0,212.0,224.0,212.0,228.0,218.0,218.0,212.0,230.0,218.0,228.0,212.0,224.0,214.0,226.0,216.0,222.0,203.0,225.0,219.0,228.0,215.0,228.0,216.0,215.0,210.0,219.0,208.0,209.0,216.0,229.0,213.0,230.0,217.0,230.0,217.0,222.0,214.0,null,215.0,222.0,212.0,213.0,192.0,196.0,193.0,188.0,197.0,198.0,178.0,197.0,195.0,198.0,193.0,194.0,185.0,201.0,190.0,201.0,197.0,181.0,190.0,195.0,181.0,191.0,187.0,193.0,195.0,197.0,200.0,200.0,191.0,205.0,187.0,201.0,187.0,203.0,195.0,199.0,195.0,210.0,192.0,205.0,210.0,187.0,196.0,196.0,196.0,201.0,190.0,212.0,187.0,198.0,199.0,201.0,193.0,203.0,187.0,197.0,191.0,203.0,202.0,194.0,206.0,189.0,195.0,207.0,202.0,193.0,210.0,198.0],
+"body_mass_g":[3750.0,3800.0,3250.0,null,3450.0,3650.0,3625.0,4675.0,3475.0,4250.0,3300.0,3700.0,3200.0,3800.0,4400.0,3700.0,3450.0,4500.0,3325.0,4200.0,3400.0,3600.0,3800.0,3950.0,3800.0,3800.0,3550.0,3200.0,3150.0,3950.0,3250.0,3900.0,3300.0,3900.0,3325.0,4150.0,3950.0,3550.0,3300.0,4650.0,3150.0,3900.0,3100.0,4400.0,3000.0,4600.0,3425.0,2975.0,3450.0,4150.0,3500.0,4300.0,3450.0,4050.0,2900.0,3700.0,3550.0,3800.0,2850.0,3750.0,3150.0,4400.0,3600.0,4050.0,2850.0,3950.0,3350.0,4100.0,3050.0,4450.0,3600.0,3900.0,3550.0,4150.0,3700.0,4250.0,3700.0,3900.0,3550.0,4000.0,3200.0,4700.0,3800.0,4200.0,3350.0,3550.0,3800.0,3500.0,3950.0,3600.0,3550.0,4300.0,3400.0,4450.0,3300.0,4300.0,3700.0,4350.0,2900.0,4100.0,3725.0,4725.0,3075.0,4250.0,2925.0,3550.0,3750.0,3900.0,3175.0,4775.0,3825.0,4600.0,3200.0,4275.0,3900.0,4075.0,2900.0,3775.0,3350.0,3325.0,3150.0,3500.0,3450.0,3875.0,3050.0,4000.0,3275.0,4300.0,3050.0,4000.0,3325.0,3500.0,3500.0,4475.0,3425.0,3900.0,3175.0,3975.0,3400.0,4250.0,3400.0,3475.0,3050.0,3725.0,3000.0,3650.0,4250.0,3475.0,3450.0,3750.0,3700.0,4000.0,4500.0,5700.0,4450.0,5700.0,5400.0,4550.0,4800.0,5200.0,4400.0,5150.0,4650.0,5550.0,4650.0,5850.0,4200.0,5850.0,4150.0,6300.0,4800.0,5350.0,5700.0,5000.0,4400.0,5050.0,5000.0,5100.0,4100.0,5650.0,4600.0,5550.0,5250.0,4700.0,5050.0,6050.0,5150.0,5400.0,4950.0,5250.0,4350.0,5350.0,3950.0,5700.0,4300.0,4750.0,5550.0,4900.0,4200.0,5400.0,5100.0,5300.0,4850.0,5300.0,4400.0,5000.0,4900.0,5050.0,4300.0,5000.0,4450.0,5550.0,4200.0,5300.0,4400.0,5650.0,4700.0,5700.0,4650.0,5800.0,4700.0,5550.0,4750.0,5000.0,5100.0,5200.0,4700.0,5800.0,4600.0,6000.0,4750.0,5950.0,4625.0,5450.0,4725.0,5350.0,4750.0,5600.0,4600.0,5300.0,4875.0,5550.0,4950.0,5400.0,4750.0,5650.0,4850.0,5200.0,4925.0,4875.0,4625.0,5250.0,4850.0,5600.0,4975.0,5500.0,4725.0,5500.0,4700.0,5500.0,4575.0,5500.0,5000.0,5950.0,4650.0,5500.0,4375.0,5850.0,4875.0,6000.0,4925.0,null,4850.0,5750.0,5200.0,5400.0,3500.0,3900.0,3650.0,3525.0,3725.0,3950.0,3250.0,3750.0,4150.0,3700.0,3800.0,3775.0,3700.0,4050.0,3575.0,4050.0,3300.0,3700.0,3450.0,4400.0,3600.0,3400.0,2900.0,3800.0,3300.0,4150.0,3400.0,3800.0,3700.0,4550.0,3200.0,4300.0,3350.0,4100.0,3600.0,3900.0,3850.0,4800.0,2700.0,4500.0,3950.0,3650.0,3550.0,3500.0,3675.0,4450.0,3400.0,4300.0,3250.0,3675.0,3325.0,3950.0,3600.0,4050.0,3350.0,3450.0,3250.0,4050.0,3800.0,3525.0,3950.0,3650.0,3650.0,4000.0,3400.0,3775.0,4100.0,3775.0]
+},
+"mapping":{
+"x":"flipper_length_mm",
+"y":"body_mass_g"
+},
+"data_meta":{
+},
+"facet":{
+"name":"wrap",
+"facets":"island",
+"nrow":1.0,
+"order":1.0,
+"dir":"h"
+},
+"ggtitle":{
+"text":"Body mass and flipper length based on island",
+"subtitle":"Dimensions for Adelie, Chinstrap, and Gentoo Penguins"
+},
+"theme":{
+"plot_title":{
+"face":"bold",
+"size":20.0,
+"blank":false
+}
+},
+"ggsize":{
+"width":1000.0,
+"height":500.0
+},
+"kind":"plot",
+"scales":[{
+"name":"Flipper length (mm)",
+"aesthetic":"x"
+},{
+"name":"Body mass (g)",
+"aesthetic":"y"
+}],
+"layers":[{
+"geom":"point",
+"mapping":{
+"color":"species",
+"shape":"species"
+},
+"data_meta":{
+},
+"size":4.0,
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("jbbbd8");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();    
+   </script>
 </div>
 </div>
 <div id="id-section4">
@@ -657,12 +735,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Reordering Categorical Variables Based On Statistics</h1>
 <p>When visualizing data, a task I frequently encounter is ordering categorical variables in either ascending or descending order, based on statistics like median or mean. In my previous point on “Visualizing Data Based on Categorical Variables,” you noticed that the boxplot displayed categories in an unordered manner. However, consider how we can present them in an ascending order, determined by the median. This not only enhances the aesthetics of the plot but also provides valuable insights into the relationships among the categories.</p>
 <div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>(ggplot(df,aes(as_discrete(<span class="st">'species'</span>, order<span class="op">=</span><span class="dv">1</span>, order_by<span class="op">=</span><span class="st">'..middle..'</span>), </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>               y <span class="op">=</span> <span class="st">'body_mass_g'</span>))</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> geom_boxplot()</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-   <div id="8GnaW1"></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(ggplot(df,aes(as_discrete(<span class="st">'species'</span>, order<span class="op">=</span><span class="dv">1</span>, order_by<span class="op">=</span><span class="st">'..middle..'</span>), </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>               y <span class="op">=</span> <span class="st">'body_mass_g'</span>))</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> geom_boxplot()</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+   <div id="4Fxfih"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -703,7 +781,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("8GnaW1");
+           var plotContainer = document.getElementById("4Fxfih");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -712,36 +790,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>By incorporating the <code>as_discrete</code> function, specifying the column, the ordering direction (1 for ascending, -1 for descending), and setting the <code>order_by</code> variable to <em>middle</em> (representing the median), the plot has become significantly more informative. This simple addition has allowed us to organize the categorical variables in a meaningful manner, improving the visualization’s clarity and aiding in the interpretation of relationships among the categories.</p>
-<div id="id-section5">
-
-</div></section>
+</section>
 <section id="chaining-pandas-code-with-lets-plot-visualization" class="level1">
 <h1>Chaining Pandas Code with Lets Plot Visualization</h1>
 <p>One of the best features of the <code>pandas</code> library is its remarkable customizability. With the help of the <code>pd.pipe</code> function, we can seamlessly integrate any of our own functions into method chains, as long as they return a <code>DataFrame</code> or <code>Series</code>. This opens up exciting possibilities to fully incorporate <code>Lets-Plot</code> into our code, just like <code>pandas</code>’ own built-in plotting functionality.</p>
 <p>While <code>Lets-Plot</code> may be slightly more verbose than <code>pandas</code> plotting, it offers significantly more flexibility and freedom for customization. Not to mention that some may consider it visually more appealing. With <code>Lets-Plot</code> integrated into our <code>pandas</code> code, we can effortlessly create stunning and informative plots, making data analysis an even more enjoyable experience.</p>
 <div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>(df</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a> .groupby(<span class="st">'species'</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a> [[<span class="st">'body_mass_g'</span>, <span class="st">'flipper_length_mm'</span>]]</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a> .mean()</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a> .reset_index()</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: (ggplot(df)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> geom_pie(aes(<span class="bu">slice</span><span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>), </span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>                              stat<span class="op">=</span><span class="st">'identity'</span>,size<span class="op">=</span><span class="dv">30</span>, hole<span class="op">=</span><span class="fl">0.2</span>, stroke<span class="op">=</span><span class="fl">1.0</span>,</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>                              labels<span class="op">=</span>layer_labels().line(<span class="st">'@body_mass_g'</span>).<span class="bu">format</span>(<span class="st">'@body_mass_g'</span>, <span class="st">'{.0f}'</span>).size(<span class="dv">20</span>)</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>                             )</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> labs(title <span class="op">=</span> <span class="st">"Body mass based on species"</span>,</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>                          subtitle <span class="op">=</span> <span class="st">"Representing how Lets-Plot can be used with pd. pipe"</span>,</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>                          x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">""</span>,</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>                         )</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> theme(axis<span class="op">=</span><span class="st">'blank'</span>,</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>                          plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">20</span>,face<span class="op">=</span><span class="st">'bold'</span>))</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> ggsize(<span class="dv">500</span>,<span class="dv">400</span>)</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>                  )</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a> )</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-   <div id="yJCUq9"></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a> .groupby(<span class="st">'species'</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a> [[<span class="st">'body_mass_g'</span>, <span class="st">'flipper_length_mm'</span>]]</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a> .mean()</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a> .reset_index()</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: (ggplot(df)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> geom_pie(aes(<span class="bu">slice</span><span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>), </span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>                              stat<span class="op">=</span><span class="st">'identity'</span>,size<span class="op">=</span><span class="dv">30</span>, hole<span class="op">=</span><span class="fl">0.2</span>, stroke<span class="op">=</span><span class="fl">1.0</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>                              labels<span class="op">=</span>layer_labels().line(<span class="st">'@body_mass_g'</span>).<span class="bu">format</span>(<span class="st">'@body_mass_g'</span>, <span class="st">'{.0f}'</span>).size(<span class="dv">20</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>                             )</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> labs(title <span class="op">=</span> <span class="st">"Body mass based on species"</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>                          subtitle <span class="op">=</span> <span class="st">"Representing how Lets-Plot can be used with pd. pipe"</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                          x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">""</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                         )</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> theme(axis<span class="op">=</span><span class="st">'blank'</span>,</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>                          plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">20</span>,face<span class="op">=</span><span class="st">'bold'</span>))</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> ggsize(<span class="dv">500</span>,<span class="dv">400</span>)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>                  )</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a> )</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+   <div id="GaNeP0"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -802,7 +878,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("yJCUq9");
+           var plotContainer = document.getElementById("GaNeP0");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});

@@ -4,12 +4,11 @@
     "items": []
   },
   {
-    "listing": "/index.html",
+    "listing": "/articles.html",
     "items": [
-      "/posts/another post/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html",
-      "/posts/one-more-post/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html",
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/Lets-Plot/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html",
+      "/posts/Top 10 things I learned from Effective Pandas/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html",
+      "/posts/Kaggle/Kaggle.html"
     ]
   }
 ]
