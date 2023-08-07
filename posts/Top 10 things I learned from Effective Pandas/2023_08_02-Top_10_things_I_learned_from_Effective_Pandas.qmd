@@ -1,5 +1,10 @@
 ---
 title: Top 10 things I learned from the book Effective Pandas by  Matt Harrison
+author: Adam Cseresznye
+date: '2023-08-02'
+categories:
+  - Pandas
+toc: true
 jupyter: python3
 ---
 
@@ -19,10 +24,7 @@ import seaborn as sns
 pd.set_option('display.max_columns', None)
 ```
 
-# My Table of content
-- [Section 1](#id-section1)
-
-# <div id='id-section1'/> Load the dataset
+# Load the dataset
 
 ```{python}
 df=pd.read_csv('smartphones.csv')
@@ -162,7 +164,8 @@ print(top10_brand_names_ordered)
 
 ```{python}
 #| tags: []
-fig, axs = plt.subplots(1,2, figsize=(12,8))
+#| column: page
+fig, axs = plt.subplots(1,2, figsize=(10,5))
 
 # For reference, this is what our box plot looks if we leave in the outlier values
 (df
@@ -191,7 +194,6 @@ fig, axs = plt.subplots(1,2, figsize=(12,8))
 )
 axs[0].set(ylabel='Price in local currency')
 plt.tight_layout()
-plt.savefig('2023_08_04_EP_1.jpg', dpi=600)
 ```
 
 # Tip #6: Find corrupted entries with <code>str.extract</code>
@@ -262,6 +264,7 @@ Being a visual creature, I often struggle to comprehend data quickly just by exa
 **Problem statement:** Our goal is to identify the overall trends related to key descriptors found among the Top 10 smartphone brands, aiming to determine which brand offers the most value for our money. 
 
 ```{python}
+#| column: page
 (df
  .query("brand_name.isin(@top10_brand_names_ordered)") # filter rows based on top10 brands
  .groupby(['brand_name',])
@@ -315,7 +318,6 @@ with sns.axes_style("darkgrid"):
           ylabel='User rating'
          )
 plt.tight_layout()
-plt.savefig('fig2.jpg', dpi=600)
 ```
 
 # Tip #10 + 1: Use the "margin" parameter of <code>pd.crosstab</code> to easily calculate row/column subtotals

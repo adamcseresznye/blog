@@ -1,6 +1,12 @@
 ---
 title: How to use the Lets-Plot library by JetBrains
+author: Adam Cseresznye
+date: '2023-08-05'
+categories:
+  - Lets-Plot
+  - ggplot2
 jupyter: python3
+toc: true
 ---
 
 When I embarked on my data science journey,  due to my academics background I quickly gravitated towards the [R programming language](https://www.r-project.org/). Like many R novices, I began with Hadley Wickham's [R for Data Science](https://r4ds.hadley.nz/) book which introduced me to the wonderful [ggplot2](https://ggplot2.tidyverse.org/) library. As my interest in machine learning grew, I made the switch to Python. Nowadays, for most of my data plotting needs, I rely mainly on [matplotlib](https://matplotlib.org/) or [seaborn](https://seaborn.pydata.org/). Though I love these libraries, their multiple ways of accomplishing the same tasks can be a bit cumbersome and challenging to learn at first.
@@ -10,13 +16,6 @@ That's why in this article, I'm excited to introduce you to the [Lets-Plot](http
 To showcase (some of) the key features of Lets-Plot, we will be utilizing the [penguins dataset](https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv) 🐧 from Github. 
 
 Without further ado, let's dive right in and discover the power and beauty of Lets-Plot! 🐍📊
-
-# Table of contents
-- [Syntax Similarities: Lets-Plot and ggplot2](#id-section1)
-- [Visualizing Data Based on Categorical Variables](#id-section2)
-- [Incorporate Multiple Variables with facet_wrap](#id-section3)
-- [Reordering Categorical Variables Based On Statistics](#id-section4)
-- [Chaining Pandas Code with Lets Plot Visualization](#id-section5)
 
 ```{python}
 # Installation
@@ -34,12 +33,12 @@ LetsPlot.setup_html()
 ```
 
 ```{python}
+#| column: page
 address='https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv'
 df=pd.read_csv(address)
 df.head()
 ```
 
-<div id='id-section1'/>
 
 # Syntax Similarities: <code>Lets-Plot</code> and <code>ggplot2</code>
 
@@ -86,7 +85,6 @@ Additionally, to enhance the plot further, we can properly label the x and y axe
 ) 
 ```
 
-<div id='id-section2'/>
 
 # Visualizing Data Based on Categorical Variables
 
@@ -111,8 +109,6 @@ penguin_rel_frequency = (ggplot(df,aes(x = 'island', fill = 'species'))
 gggrid([penguin_bar, penguin_box, penguin_density, penguin_rel_frequency], ncol=2)
 ```
 
-<div id='id-section3'/>
-
 # Incorporate Multiple Variables with facet_wrap
 
 So far we've discovered how easy it is to plot data based on a single categorical variable. However, what if we want to depict relationships involving two or more categorical variables? That's where <code>facet_wrap</code> comes in handy. This versatile function bears resemblance to similar functions found in <code>seaborn</code> or <code>ggplot2</code> libraries.
@@ -120,7 +116,7 @@ So far we've discovered how easy it is to plot data based on a single categorica
 To unlock the potential of <code>facet_wrap</code>, we simply need to define aesthetics, which can either be global or local to the mapping function. Then, we can use <code>facet_wrap</code> with the relevant categorical variable we want to visualize. It's as simple as that! 
 
 ```{python}
-g=(ggplot(df, aes(x = 'flipper_length_mm', y = 'body_mass_g'))  
+(ggplot(df, aes(x = 'flipper_length_mm', y = 'body_mass_g'))  
  + geom_point(aes(color = 'species', shape = 'species'), size = 4) 
  + facet_wrap('island', nrow=1)
  + labs(title = "Body mass and flipper length based on island",
@@ -130,7 +126,6 @@ g=(ggplot(df, aes(x = 'flipper_length_mm', y = 'body_mass_g'))
  + theme(plot_title=element_text(size=20,face='bold'))
  + ggsize(1000,500)
 )
-ggsave(g, filename='2023_08_05_4.svg')
 ```
 
 <div id='id-section4'/>
@@ -147,8 +142,6 @@ When visualizing data, a task I frequently encounter is ordering categorical var
 ```
 
 By incorporating the <code>as_discrete</code> function, specifying the column, the ordering direction (1 for ascending, -1 for descending), and setting the <code>order_by</code> variable to *middle* (representing the median), the plot has become significantly more informative. This simple addition has allowed us to organize the categorical variables in a meaningful manner, improving the visualization's clarity and aiding in the interpretation of relationships among the categories.
-
-<div id='id-section5'/>
 
 # Chaining Pandas Code with Lets Plot Visualization
 

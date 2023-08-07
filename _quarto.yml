@@ -5,14 +5,14 @@ website:
   title: "Adam Cseresznye"
   navbar:
     right:
-      - about.qmd
+      - articles.qmd
       - projects.qmd
       - icon: github
         href: https://github.com/adamcseresznye
       - icon: twitter
         href: https://twitter.com/csenye22
       - icon: linkedin
-        href: www.linkedin.com/in/adam-cseresznye
+        href: https://www.linkedin.com/in/adam-cseresznye
 format:
   html:
     css: styles.css
