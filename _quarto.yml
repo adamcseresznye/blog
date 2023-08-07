@@ -1,22 +1,19 @@
 project:
   type: website
-  output-dir: docs
-  
 
 website:
   title: "blog"
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
+    right:
       - about.qmd
-      - posts/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.qmd
-
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
 
 
 
