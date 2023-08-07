@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/welcome/index.html</loc>
-    <lastmod>2023-08-07T09:43:16.344Z</lastmod>
+    <lastmod>2023-08-07T09:47:46.430Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/another post/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html</loc>
+    <lastmod>2023-08-07T09:47:44.875Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/about.html</loc>
-    <lastmod>2023-08-07T09:42:52.266Z</lastmod>
+    <lastmod>2023-08-07T09:47:23.723Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/index.html</loc>
-    <lastmod>2023-08-07T09:42:55.408Z</lastmod>
+    <lastmod>2023-08-07T09:47:26.437Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/post-with-code/index.html</loc>
-    <lastmod>2023-08-07T09:43:15.576Z</lastmod>
+    <lastmod>2023-08-07T09:47:45.665Z</lastmod>
   </url>
 </urlset>
