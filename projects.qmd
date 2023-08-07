@@ -1,14 +1,14 @@
 ---
-title: "Articles"
+title: "Projects"
 listing:
-  contents: posts
+  contents: projects
   sort: "date desc"
   type: default
-  categories: true
+  categories: false
   sort-ui: false
   filter-ui: false
 page-layout: full
 title-block-banner: true
 ---
 
-
+Coming soon!

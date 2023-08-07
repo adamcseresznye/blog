@@ -2,19 +2,23 @@ project:
   type: website
 
 website:
-  title: "blog"
+  title: "Adam Cseresznye"
   navbar:
     right:
       - about.qmd
+      - projects.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/adamcseresznye
       - icon: twitter
-        href: https://twitter.com
+        href: https://twitter.com/csenye22
+      - icon: linkedin
+        href: www.linkedin.com/in/adam-cseresznye
 format:
   html:
-    light: flatly
-    dark: darkly
     css: styles.css
+    theme: 
+       light: [litera, styles.scss]
+       dark: [darkly, styles-dark.scss]
 
 
 
