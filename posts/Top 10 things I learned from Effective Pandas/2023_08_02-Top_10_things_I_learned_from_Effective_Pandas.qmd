@@ -6,6 +6,10 @@ categories:
   - Pandas
 toc: true
 jupyter: python3
+format:
+  html:
+    code-fold: true
+    code-tools: true
 ---
 
 [Effective Pandas by Matt Harrison](https://store.metasnake.com/effective-pandas-book) is a guide to the Pandas library, a powerful Python tool for data manipulation and analysis. The book covers a wide range of topics, from basic data structures to advanced techniques for data cleaning, transformation, and visualization.

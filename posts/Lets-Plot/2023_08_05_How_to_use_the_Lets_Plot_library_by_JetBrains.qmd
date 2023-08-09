@@ -7,6 +7,10 @@ categories:
   - ggplot2
 jupyter: python3
 toc: true
+format:
+  html:
+    code-fold: true
+    code-tools: true
 ---
 
 When I embarked on my data science journey,  due to my academics background I quickly gravitated towards the [R programming language](https://www.r-project.org/). Like many R novices, I began with Hadley Wickham's [R for Data Science](https://r4ds.hadley.nz/) book which introduced me to the wonderful [ggplot2](https://ggplot2.tidyverse.org/) library. As my interest in machine learning grew, I made the switch to Python. Nowadays, for most of my data plotting needs, I rely mainly on [matplotlib](https://matplotlib.org/) or [seaborn](https://seaborn.pydata.org/). Though I love these libraries, their multiple ways of accomplishing the same tasks can be a bit cumbersome and challenging to learn at first.

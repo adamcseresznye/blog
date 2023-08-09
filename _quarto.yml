@@ -4,7 +4,8 @@ project:
 website:
   title: "Adam Cseresznye"
   page-footer: "Copyright 2023, Adam Cseresznye" 
-  reader-mode: true
+  open-graph: true
+  twitter-card: true
   navbar:
     right:
       - articles.qmd
