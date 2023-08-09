@@ -103,6 +103,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Adam Cseresznye - Tidy Tuesday: Hot Ones Episodes">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://adamcseresznye.github.io/blog/posts/2023-08-08-HotOnes/Hot_Ones_by_First_We_Feast_logo.svg.png">
+<meta property="og:site-name" content="Adam Cseresznye">
+<meta property="og:image:height" content="1078">
+<meta property="og:image:width" content="1920">
+<meta name="twitter:title" content="Adam Cseresznye - Tidy Tuesday: Hot Ones Episodes">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://adamcseresznye.github.io/blog/posts/2023-08-08-HotOnes/Hot_Ones_by_First_We_Feast_logo.svg.png">
+<meta name="twitter:image-height" content="1078">
+<meta name="twitter:image-width" content="1920">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -148,11 +160,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -162,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Tidy Tuesday: Hot Ones Episodes</h1>
+      <div class="quarto-title-block"><div><h1 class="title">Tidy Tuesday: Hot Ones Episodes</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Tidy Tuesday</div>
               </div>
@@ -229,6 +236,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="import-data" class="level1">
 <h1>Import data</h1>
 <div class="cell" data-tags="[]" data-execution_count="1">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
@@ -236,9 +245,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot.mapping <span class="im">import</span> as_discrete</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 
-            <div id="5IqdAx"></div>
+            <div id="wIIItF"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -262,9 +272,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("5IqdAx").appendChild(div);
+                        document.getElementById("wIIItF").appendChild(div);
                     };
-                    var e = document.getElementById("5IqdAx");
+                    var e = document.getElementById("wIIItF");
                     e.appendChild(script);
                 })()
             </script>
@@ -273,12 +283,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>We have three dataframes: <code>sauces</code>, <code>season</code> and <code>episodes</code>. For more information about the data dictionary see the <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-08-08/readme.md">GitHub repo</a>.</p>
 <div class="cell" data-tags="[]" data-execution_count="2">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sauces<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-08/sauces.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>season<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-08/seasons.csv'</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>episodes<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-08/episodes.csv'</span>)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>sauces.sample(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="54">
+</details>
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
@@ -294,25 +307,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">168</td>
-<td>17</td>
-<td>9</td>
-<td>Puckerbutt Pepper Company – Extra Mean Green H...</td>
-<td>702000</td>
+<td data-quarto-table-cell-role="th">21</td>
+<td>3</td>
+<td>2</td>
+<td>Tabasco</td>
+<td>4000</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">138</td>
-<td>14</td>
-<td>9</td>
-<td>Hot Ones – Eye of the Scorpion</td>
-<td>676000</td>
+<td data-quarto-table-cell-role="th">32</td>
+<td>4</td>
+<td>3</td>
+<td>Secret Aardvark</td>
+<td>5000</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">42</td>
-<td>5</td>
+<td data-quarto-table-cell-role="th">25</td>
 <td>3</td>
-<td>Small Axe Peppers – The Bronx Greenmarket Hot ...</td>
-<td>5500</td>
+<td>6</td>
+<td>Bravado Spice Company – Ghost Pepper and Blueb...</td>
+<td>28000</td>
 </tr>
 </tbody>
 </table>
@@ -321,8 +334,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="3">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>season.sample(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="55">
+</details>
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
@@ -339,28 +355,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">13</td>
-<td>14</td>
-<td>12.0</td>
+<td data-quarto-table-cell-role="th">15</td>
+<td>16</td>
+<td>14.0</td>
 <td>NaN</td>
-<td>2021-01-28</td>
-<td>2021-04-15</td>
+<td>2021-09-23</td>
+<td>2021-12-23</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">8</td>
-<td>9</td>
-<td>12.0</td>
-<td>1 bonus</td>
-<td>2019-05-30</td>
-<td>2019-09-05</td>
+<td data-quarto-table-cell-role="th">11</td>
+<td>12</td>
+<td>10.0</td>
+<td>NaN</td>
+<td>2020-06-25</td>
+<td>2020-08-27</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">12</td>
-<td>13</td>
-<td>11.0</td>
+<td data-quarto-table-cell-role="th">16</td>
+<td>17</td>
+<td>12.0</td>
 <td>NaN</td>
-<td>2020-10-01</td>
-<td>2020-12-10</td>
+<td>2022-01-20</td>
+<td>2022-04-07</td>
 </tr>
 </tbody>
 </table>
@@ -369,8 +385,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="4">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>episodes.sample(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="56">
+</details>
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
@@ -390,35 +409,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">280</td>
-<td>20</td>
-<td>281</td>
+<td data-quarto-table-cell-role="th">54</td>
 <td>3</td>
-<td>Lenny Kravitz Stays Cool While Eating Spicy Wings</td>
-<td>2023-02-09</td>
-<td>Lenny Kravitz</td>
+<td>55</td>
+<td>7</td>
+<td>Russell Brand Achieves Enlightenment While Eat...</td>
+<td>2017-03-02</td>
+<td>Russell Brand</td>
 <td>1</td>
 <td>True</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">278</td>
-<td>20</td>
-<td>279</td>
+<td data-quarto-table-cell-role="th">242</td>
+<td>17</td>
+<td>243</td>
 <td>1</td>
-<td>Anna Kendrick Gets The Giggles While Eating Sp...</td>
-<td>2023-01-26</td>
-<td>Anna Kendrick</td>
+<td>Seth Rogen Scorches his Tongue While Eating Sp...</td>
+<td>2022-01-20</td>
+<td>Seth Rogen</td>
 <td>1</td>
 <td>True</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">212</td>
-<td>14</td>
-<td>213</td>
-<td>9</td>
-<td>J Balvin Meets The Devil While Eating Spicy Wings</td>
-<td>2021-03-25</td>
-<td>J Balvin</td>
+<td data-quarto-table-cell-role="th">291</td>
+<td>21</td>
+<td>292</td>
+<td>2</td>
+<td>Julia Louis-Dreyfus Fires Her Publicist While ...</td>
+<td>2023-06-01</td>
+<td>Julia Louis-Dreyfus</td>
 <td>1</td>
 <td>True</td>
 </tr>
@@ -458,6 +477,8 @@ Note
 <section id="what-differences-can-be-observed-in-the-spiciness-of-sauces-as-we-look-across-the-various-seasons" class="level2">
 <h2 class="anchored" data-anchor-id="what-differences-can-be-observed-in-the-spiciness-of-sauces-as-we-look-across-the-various-seasons">What differences can be observed in the spiciness of sauces as we look across the various seasons?</h2>
 <div class="cell" data-tags="[]" data-execution_count="5">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(sauces</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> .groupby(<span class="st">'season'</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> .agg(AVG_scoville<span class="op">=</span>(<span class="st">'scoville'</span>, <span class="st">'mean'</span>),</span>
@@ -479,9 +500,10 @@ Note
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>      )</span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a> </span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div id="fig-fig1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-   <div id="ZL0aa2"></div>
+   <div id="5p8WmV"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -536,7 +558,7 @@ Note
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("ZL0aa2");
+           var plotContainer = document.getElementById("5p8WmV");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -549,6 +571,8 @@ Note
 <p>There seems to be a shift during the season 3-5 period as can be seen in <a href="#fig-fig1">Figure&nbsp;1</a>. Both indicators – <em>mean</em> and <em>median</em> Scoville Units – show a consistent upward trend over this time frame and later on they stabilize.</p>
 <p>What about the overall spread of the data? 🤔</p>
 <div class="cell" data-tags="[]" data-execution_count="6">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(sauces</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> .loc[:, [<span class="st">'season'</span>, <span class="st">'scoville'</span>]]</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: (ggplot(df, aes(<span class="st">'season'</span>, <span class="st">'scoville'</span>))</span>
@@ -562,9 +586,10 @@ Note
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>                  )</span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>      )</span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div id="fig-fig2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-   <div id="i2DhiA"></div>
+   <div id="xQV0xH"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -616,7 +641,7 @@ Note
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("i2DhiA");
+           var plotContainer = document.getElementById("xQV0xH");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -632,11 +657,14 @@ Note
 <h2 class="anchored" data-anchor-id="has-every-individual-successfully-completed-all-the-episodes">Has every individual successfully completed all the episodes?</h2>
 <p>To answer this question we will use the <code>episodes</code> dataframe. Keep in mind there are 300 episodes in this dataframe. The <code>finished</code> column can be useful here. Just by looking for entries where <code>finished == False</code> we will have our answer.</p>
 <div class="cell" data-tags="[]" data-execution_count="7">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(episodes</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"finished==False"</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> [[<span class="st">'season'</span>, <span class="st">'guest'</span>, <span class="st">'guest_appearance_number'</span>]]</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="59">
+</details>
+<div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
 
@@ -748,6 +776,8 @@ Note
 </div>
 <p>Taking a closer look, it seems that around 15 participants didn’t make it through the entire Hot Ones interview challenge.Not bad out of 300 shows. And guess what? Eric André popped up on the show not just once, but twice! Now, the big question: did he conquer the hot seat in at least one of those interviews? Let’s plot the data to make it more visual…</p>
 <div class="cell" data-tags="[]" data-execution_count="8">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(episodes</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"finished==False"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a> .groupby(<span class="st">'season'</span>)</span>
@@ -766,9 +796,10 @@ Note
 <span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>      )</span>
 <span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div id="fig-fig3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-   <div id="6N3rbR"></div>
+   <div id="RNM06a"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -813,7 +844,7 @@ Note
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("6N3rbR");
+           var plotContainer = document.getElementById("RNM06a");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -834,6 +865,8 @@ Note
 <h2 class="anchored" data-anchor-id="what-is-the-completion-rate-per-season">What is the completion rate per season?</h2>
 <p>To get to the bottom of this question, let’s start by figuring out how many episodes were in each season. We can grab this info from the season dataset. Just a heads-up, in season 9 they seem to threw in an extra episode. So, keep this in mind! Otherwise, you might end up with percentages that go beyond 100%.</p>
 <div class="cell" data-tags="[]" data-execution_count="9">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First we need to find out the total number of episodes per season</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>episodes_per_season <span class="op">=</span> (season</span>
@@ -850,8 +883,11 @@ Note
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                       .drop(columns<span class="op">=</span><span class="st">'note'</span>)</span>
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>                       .squeeze()</span>
 <span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>                      )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="10">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>completion_rate <span class="op">=</span> (episodes</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                   .query(<span class="st">"finished==True"</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                   .groupby(<span class="st">'season'</span>)</span>
@@ -874,9 +910,10 @@ Note
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>                  )</span>
 <span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>      )</span>
 <span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div id="fig-fig4" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-   <div id="JPLnWl"></div>
+   <div id="iGGVXz"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -921,7 +958,7 @@ Note
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("JPLnWl");
+           var plotContainer = document.getElementById("iGGVXz");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -937,6 +974,8 @@ Note
 <h2 class="anchored" data-anchor-id="is-there-a-correlation-between-scoville-units-and-completion-rate">Is there a correlation between Scoville Units and completion rate?</h2>
 <p>Here’s a curious thought: could there be a link between Scoville Units and the completion rate? I’m just wondering if the spiciness level affects how well participants handle the challenge. Exploring this connection might add a spicy twist to the Hot Ones experience – let’s see where the data takes us!</p>
 <div class="cell" data-tags="[]" data-execution_count="11">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># AVG_scoville code comes from a code snippet </span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 'What differences can be observed in the spiciness </span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># of sauces as we look across the various seasons?'</span></span>
@@ -951,12 +990,15 @@ Note
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># as the completion rate is not defined for that</span></span>
 <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>stats.pearsonr(AVG_scoville.values[:<span class="op">-</span><span class="dv">1</span>],completion_rate.completion_rate.values[:<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="63">
+</details>
+<div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>PearsonRResult(statistic=0.5039021286250108, pvalue=0.02349225734224539)</code></pre>
 </div>
 </div>
 <p>The Pearson correlation coefficient has its say: there’s actually a moderate positive correlation(0.5, <em>p</em>&lt;0.05) between Scoville Units and completion rate. Quite intriguing, isn’t it? Honestly, I was expecting the opposite outcome myself! It seems like the higher the average spiciness, the more determined the guests become. Take a look at <a href="#fig-fig5">Figure&nbsp;5</a>.</p>
 <div class="cell" data-tags="[]" data-execution_count="12">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>(pd.concat([AVG_scoville,completion_rate],axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a> .rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'success_rate'</span>})</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: (ggplot(df, aes(<span class="st">'AVG_scoville'</span>, <span class="st">'completion_rate'</span>))</span>
@@ -970,9 +1012,10 @@ Note
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>                  )</span>
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>      )</span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div id="fig-fig5" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-   <div id="RRLA7r"></div>
+   <div id="tagypj"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1030,7 +1073,7 @@ Note
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("RRLA7r");
+           var plotContainer = document.getElementById("tagypj");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1045,11 +1088,14 @@ Note
 <h2 class="anchored" data-anchor-id="are-there-any-returning-guests">Are there any returning guests?</h2>
 <p>Has there been a brave soul who dared to make a return to the show for a second time? The column <code>guest_appearance_number</code> holds the answers you’re looking for.</p>
 <div class="cell" data-tags="[]" data-execution_count="13">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>(episodes</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"guest_appearance_number &gt; 1"</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a> [[<span class="st">'guest'</span>,<span class="st">'season'</span>, <span class="st">'episode_season'</span>, <span class="st">'finished'</span>]]</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="65">
+</details>
+<div class="cell-output cell-output-display" data-execution_count="13">
 <div>
 
 
@@ -1161,6 +1207,8 @@ Note
 <h1>Final words</h1>
 <p>And there you have it, folks – that’s a wrap! I hope you enjoyed exploring the Hot Ones dataset with me. Rest assured, more of these analyses are in the pipeline for the future. Stay tuned for what’s to come!</p>
 
+
+<!-- -->
 
 </section>
 
@@ -1359,6 +1407,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -1512,7 +1611,301 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'Tidy Tuesday: Hot Ones Episodes'</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Adam Cseresznye</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> today</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Tidy Tuesday</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>#| label: Hot ones logo</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>#| fig-cap: "fig1"</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="al">![](Hot_Ones_by_First_We_Feast_logo.svg.png)</span>{fig-align="center" width=50%}</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>I've decided to get more involved in the Tidy Tuesday movement. I think it's a really enjoyable way to improve my skills in working with data, like analyzing, organizing, and visualizing it. The cool datasets they provide make it even more interesting. More information on Tidy Tuesday and their past datasets can be found <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/rfordatascience/tidytuesday)</span>.</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>This week we have a dataset related to the show Hot Ones. <span class="co">[</span><span class="ot">Hot Ones</span><span class="co">](https://www.youtube.com/playlist?list=PLAzrgbu8gEMIIK3r4Se1dOZWSZzUSadfZ)</span> is a unique web series that combines spicy food challenges with celebrity interviews. Hosted by Sean Evans, guests tackle increasingly hot chicken wings while answering questions, leading to candid and entertaining conversations. The show's blend of heat and honesty has turned it into a global sensation, offering a fresh take on interviews and captivating audiences worldwide.</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>Let's see what we can learn from the data 🔬🕵️‍♂️.</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="fu"># Import data</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot.mapping <span class="im">import</span> as_discrete</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>We have three dataframes: <span class="in">`sauces`</span>, <span class="in">`season`</span> and <span class="in">`episodes`</span>. For more information about the data dictionary see the <span class="co">[</span><span class="ot">GitHub repo</span><span class="co">](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-08-08/readme.md)</span>.</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>sauces<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-08/sauces.csv'</span>)</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>season<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-08/seasons.csv'</span>)</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>episodes<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-08/episodes.csv'</span>)</span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>sauces.sample(<span class="dv">3</span>)</span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>season.sample(<span class="dv">3</span>)</span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>episodes.sample(<span class="dv">3</span>)</span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>After taking a look at all three datasets, I think I will continue working with the <span class="in">`sauces`</span> and <span class="in">`episodes`</span> ones.</span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a><span class="fu"># Questions</span></span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a>**My main questions are:** </span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a><span class="ss">*  </span>What differences can be observed in the spiciness of sauces as we look across the various seasons?</span>
+<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a><span class="ss">*  </span>Has every individual successfully completed all the episodes?</span>
+<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a><span class="ss">*  </span>What is the average completion rate per season?</span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a><span class="ss">*  </span>Is there a correlation between Scoville Units and completion rate?</span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a><span class="ss">*  </span>Are there any returning guests?</span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data Analysis</span></span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## What differences can be observed in the spiciness of sauces as we look across the various seasons?</span></span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Average and median Scoville Units across the Hot Ones' seasons</span></span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-fig1</span></span>
+<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a>(sauces</span>
+<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a> .groupby(<span class="st">'season'</span>)</span>
+<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a> .agg(AVG_scoville<span class="op">=</span>(<span class="st">'scoville'</span>, <span class="st">'mean'</span>),</span>
+<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a>      median_scoville<span class="op">=</span>(<span class="st">'scoville'</span>, <span class="st">'median'</span>),</span>
+<span id="cb15-98"><a href="#cb15-98" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a> .reset_index()</span>
+<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a> .melt(id_vars<span class="op">=</span><span class="st">'season'</span>,</span>
+<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a>       var_name<span class="op">=</span><span class="st">'statistics'</span>,</span>
+<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: (ggplot(df, aes(<span class="st">'season'</span>, <span class="st">'value'</span>,fill<span class="op">=</span><span class="st">'statistics'</span>))</span>
+<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> geom_bar(stat<span class="op">=</span><span class="st">'identity'</span>)</span>
+<span id="cb15-105"><a href="#cb15-105" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> facet_wrap(<span class="st">'statistics'</span>,nrow<span class="op">=</span><span class="dv">1</span>,scales<span class="op">=</span><span class="st">'free_y'</span>)</span>
+<span id="cb15-106"><a href="#cb15-106" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> labs(x<span class="op">=</span><span class="st">'Seasons'</span>,</span>
+<span id="cb15-107"><a href="#cb15-107" aria-hidden="true" tabindex="-1"></a>                          y<span class="op">=</span><span class="st">'Scoville Units'</span></span>
+<span id="cb15-108"><a href="#cb15-108" aria-hidden="true" tabindex="-1"></a>                         )</span>
+<span id="cb15-109"><a href="#cb15-109" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> theme(plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">20</span>,face<span class="op">=</span><span class="st">'bold'</span>))</span>
+<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> ggsize(<span class="dv">1100</span>,<span class="dv">400</span>)</span>
+<span id="cb15-111"><a href="#cb15-111" aria-hidden="true" tabindex="-1"></a>                  )</span>
+<span id="cb15-112"><a href="#cb15-112" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb15-113"><a href="#cb15-113" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb15-114"><a href="#cb15-114" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-115"><a href="#cb15-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-116"><a href="#cb15-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-117"><a href="#cb15-117" aria-hidden="true" tabindex="-1"></a>There seems to be a shift during the season 3-5 period as can be seen in @fig-fig1. Both indicators – *mean* and *median* Scoville Units – show a consistent upward trend over this time frame and later on they stabilize.</span>
+<span id="cb15-118"><a href="#cb15-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-119"><a href="#cb15-119" aria-hidden="true" tabindex="-1"></a>What about the overall spread of the data? 🤔</span>
+<span id="cb15-120"><a href="#cb15-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-123"><a href="#cb15-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-124"><a href="#cb15-124" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Spread of Scoville Units across the Hot Ones' seasons</span></span>
+<span id="cb15-125"><a href="#cb15-125" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-fig2</span></span>
+<span id="cb15-126"><a href="#cb15-126" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-127"><a href="#cb15-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-128"><a href="#cb15-128" aria-hidden="true" tabindex="-1"></a>(sauces</span>
+<span id="cb15-129"><a href="#cb15-129" aria-hidden="true" tabindex="-1"></a> .loc[:, [<span class="st">'season'</span>, <span class="st">'scoville'</span>]]</span>
+<span id="cb15-130"><a href="#cb15-130" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: (ggplot(df, aes(<span class="st">'season'</span>, <span class="st">'scoville'</span>))</span>
+<span id="cb15-131"><a href="#cb15-131" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> geom_boxplot()</span>
+<span id="cb15-132"><a href="#cb15-132" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> scale_y_log10()</span>
+<span id="cb15-133"><a href="#cb15-133" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> labs(x<span class="op">=</span><span class="st">'Seasons'</span>,</span>
+<span id="cb15-134"><a href="#cb15-134" aria-hidden="true" tabindex="-1"></a>                          y<span class="op">=</span><span class="st">'log(Scoville Units)'</span></span>
+<span id="cb15-135"><a href="#cb15-135" aria-hidden="true" tabindex="-1"></a>                         )</span>
+<span id="cb15-136"><a href="#cb15-136" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> theme(plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">20</span>,face<span class="op">=</span><span class="st">'bold'</span>))</span>
+<span id="cb15-137"><a href="#cb15-137" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> ggsize(<span class="dv">800</span>,<span class="dv">400</span>)</span>
+<span id="cb15-138"><a href="#cb15-138" aria-hidden="true" tabindex="-1"></a>                  )</span>
+<span id="cb15-139"><a href="#cb15-139" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb15-140"><a href="#cb15-140" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-141"><a href="#cb15-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-142"><a href="#cb15-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-143"><a href="#cb15-143" aria-hidden="true" tabindex="-1"></a>Here are some observations: Season 5 exhibits the widest range, featuring sauces with Scoville Units spanning from 450 to 2,000,000. In addition, starting from season 6 onwards, the *averages*, *medians*, and *ranges* of Scoville Units appear to even out.</span>
+<span id="cb15-144"><a href="#cb15-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-145"><a href="#cb15-145" aria-hidden="true" tabindex="-1"></a><span class="fu">## Has every individual successfully completed all the episodes?</span></span>
+<span id="cb15-146"><a href="#cb15-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-147"><a href="#cb15-147" aria-hidden="true" tabindex="-1"></a>To answer this question we will use the <span class="in">`episodes`</span> dataframe. Keep in mind there are 300 episodes in this dataframe. The <span class="in">`finished`</span> column can be useful here. Just by looking for entries where <span class="in">`finished == False`</span> we will have our answer.</span>
+<span id="cb15-148"><a href="#cb15-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-151"><a href="#cb15-151" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-152"><a href="#cb15-152" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-153"><a href="#cb15-153" aria-hidden="true" tabindex="-1"></a>(episodes</span>
+<span id="cb15-154"><a href="#cb15-154" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"finished==False"</span>)</span>
+<span id="cb15-155"><a href="#cb15-155" aria-hidden="true" tabindex="-1"></a> [[<span class="st">'season'</span>, <span class="st">'guest'</span>, <span class="st">'guest_appearance_number'</span>]]</span>
+<span id="cb15-156"><a href="#cb15-156" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-157"><a href="#cb15-157" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-158"><a href="#cb15-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-159"><a href="#cb15-159" aria-hidden="true" tabindex="-1"></a>Taking a closer look, it seems that around 15 participants didn't make it through the entire Hot Ones interview challenge.Not bad out of 300 shows. And guess what? Eric André popped up on the show not just once, but twice! Now, the big question: did he conquer the hot seat in at least one of those interviews? Let's plot the data to make it more visual...</span>
+<span id="cb15-160"><a href="#cb15-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-163"><a href="#cb15-163" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-164"><a href="#cb15-164" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Number of incomplete interviews per season</span></span>
+<span id="cb15-165"><a href="#cb15-165" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-fig3</span></span>
+<span id="cb15-166"><a href="#cb15-166" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-167"><a href="#cb15-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-168"><a href="#cb15-168" aria-hidden="true" tabindex="-1"></a>(episodes</span>
+<span id="cb15-169"><a href="#cb15-169" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"finished==False"</span>)</span>
+<span id="cb15-170"><a href="#cb15-170" aria-hidden="true" tabindex="-1"></a> .groupby(<span class="st">'season'</span>)</span>
+<span id="cb15-171"><a href="#cb15-171" aria-hidden="true" tabindex="-1"></a> .finished</span>
+<span id="cb15-172"><a href="#cb15-172" aria-hidden="true" tabindex="-1"></a> .count()</span>
+<span id="cb15-173"><a href="#cb15-173" aria-hidden="true" tabindex="-1"></a> .to_frame()</span>
+<span id="cb15-174"><a href="#cb15-174" aria-hidden="true" tabindex="-1"></a> .reset_index()</span>
+<span id="cb15-175"><a href="#cb15-175" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: (ggplot(df, aes(<span class="st">'season'</span>, <span class="st">'finished'</span>))</span>
+<span id="cb15-176"><a href="#cb15-176" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> geom_bar(stat<span class="op">=</span><span class="st">'identity'</span>)</span>
+<span id="cb15-177"><a href="#cb15-177" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> labs(x<span class="op">=</span><span class="st">'Seasons'</span>,</span>
+<span id="cb15-178"><a href="#cb15-178" aria-hidden="true" tabindex="-1"></a>                          y<span class="op">=</span><span class="st">'Number of incomplete interviews'</span></span>
+<span id="cb15-179"><a href="#cb15-179" aria-hidden="true" tabindex="-1"></a>                         )</span>
+<span id="cb15-180"><a href="#cb15-180" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> theme(plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">20</span>,face<span class="op">=</span><span class="st">'bold'</span>))</span>
+<span id="cb15-181"><a href="#cb15-181" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> ggsize(<span class="dv">600</span>,<span class="dv">400</span>)</span>
+<span id="cb15-182"><a href="#cb15-182" aria-hidden="true" tabindex="-1"></a>                  )</span>
+<span id="cb15-183"><a href="#cb15-183" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb15-184"><a href="#cb15-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-185"><a href="#cb15-185" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-186"><a href="#cb15-186" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-187"><a href="#cb15-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-188"><a href="#cb15-188" aria-hidden="true" tabindex="-1"></a>Interestingly, a majority of these incomplete interviews belong to season 2 (@fig-fig3). This fact is quite surprising, especially when you consider that the maximum Scoville value for that season was only 550,000 – nearly a quarter of the following year's value, where only one person faced difficulty finishing the challenge.</span>
+<span id="cb15-189"><a href="#cb15-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-190"><a href="#cb15-190" aria-hidden="true" tabindex="-1"></a><span class="al">![](https://thumbs.gfycat.com/DishonestPoorBluebreastedkookaburra-max-1mb.gif)</span>{fig-align="center"}</span>
+<span id="cb15-191"><a href="#cb15-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-192"><a href="#cb15-192" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is the completion rate per season?</span></span>
+<span id="cb15-193"><a href="#cb15-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-194"><a href="#cb15-194" aria-hidden="true" tabindex="-1"></a>To get to the bottom of this question, let's start by figuring out how many episodes were in each season. We can grab this info from the season dataset. Just a heads-up, in season 9 they seem to threw in an extra episode. So, keep this in mind! Otherwise, you might end up with percentages that go beyond 100%. </span>
+<span id="cb15-195"><a href="#cb15-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-198"><a href="#cb15-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-199"><a href="#cb15-199" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-200"><a href="#cb15-200" aria-hidden="true" tabindex="-1"></a><span class="co"># First we need to find out the total number of episodes per season</span></span>
+<span id="cb15-201"><a href="#cb15-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-202"><a href="#cb15-202" aria-hidden="true" tabindex="-1"></a>episodes_per_season <span class="op">=</span> (season</span>
+<span id="cb15-203"><a href="#cb15-203" aria-hidden="true" tabindex="-1"></a>                       [[<span class="st">'season'</span>, <span class="st">'episodes'</span>, <span class="st">'note'</span>]]</span>
+<span id="cb15-204"><a href="#cb15-204" aria-hidden="true" tabindex="-1"></a>                       .set_index(<span class="st">'season'</span>)</span>
+<span id="cb15-205"><a href="#cb15-205" aria-hidden="true" tabindex="-1"></a>                       <span class="co"># we need to extract the one extra episode in season 9</span></span>
+<span id="cb15-206"><a href="#cb15-206" aria-hidden="true" tabindex="-1"></a>                       .assign(note<span class="op">=</span><span class="kw">lambda</span> df: df.note</span>
+<span id="cb15-207"><a href="#cb15-207" aria-hidden="true" tabindex="-1"></a>                               .<span class="bu">str</span>.extract(<span class="vs">r'([0-9.]+)'</span>)</span>
+<span id="cb15-208"><a href="#cb15-208" aria-hidden="true" tabindex="-1"></a>                               .astype(<span class="bu">float</span>),</span>
+<span id="cb15-209"><a href="#cb15-209" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># add the two column together</span></span>
+<span id="cb15-210"><a href="#cb15-210" aria-hidden="true" tabindex="-1"></a>                               episodes<span class="op">=</span><span class="kw">lambda</span> df: df.episodes</span>
+<span id="cb15-211"><a href="#cb15-211" aria-hidden="true" tabindex="-1"></a>                               .add(df.note, fill_value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb15-212"><a href="#cb15-212" aria-hidden="true" tabindex="-1"></a>                              )</span>
+<span id="cb15-213"><a href="#cb15-213" aria-hidden="true" tabindex="-1"></a>                       .drop(columns<span class="op">=</span><span class="st">'note'</span>)</span>
+<span id="cb15-214"><a href="#cb15-214" aria-hidden="true" tabindex="-1"></a>                       .squeeze()</span>
+<span id="cb15-215"><a href="#cb15-215" aria-hidden="true" tabindex="-1"></a>                      )</span>
+<span id="cb15-216"><a href="#cb15-216" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-217"><a href="#cb15-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-220"><a href="#cb15-220" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-221"><a href="#cb15-221" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Completion rate per season</span></span>
+<span id="cb15-222"><a href="#cb15-222" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-fig4</span></span>
+<span id="cb15-223"><a href="#cb15-223" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-224"><a href="#cb15-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-225"><a href="#cb15-225" aria-hidden="true" tabindex="-1"></a>completion_rate <span class="op">=</span> (episodes</span>
+<span id="cb15-226"><a href="#cb15-226" aria-hidden="true" tabindex="-1"></a>                   .query(<span class="st">"finished==True"</span>)</span>
+<span id="cb15-227"><a href="#cb15-227" aria-hidden="true" tabindex="-1"></a>                   .groupby(<span class="st">'season'</span>)</span>
+<span id="cb15-228"><a href="#cb15-228" aria-hidden="true" tabindex="-1"></a>                   .finished</span>
+<span id="cb15-229"><a href="#cb15-229" aria-hidden="true" tabindex="-1"></a>                   .<span class="bu">sum</span>()</span>
+<span id="cb15-230"><a href="#cb15-230" aria-hidden="true" tabindex="-1"></a>                   .div(episodes_per_season)</span>
+<span id="cb15-231"><a href="#cb15-231" aria-hidden="true" tabindex="-1"></a>                   .mul(<span class="dv">100</span>)</span>
+<span id="cb15-232"><a href="#cb15-232" aria-hidden="true" tabindex="-1"></a>                   .to_frame().reset_index()</span>
+<span id="cb15-233"><a href="#cb15-233" aria-hidden="true" tabindex="-1"></a>                   .rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'completion_rate'</span>})</span>
+<span id="cb15-234"><a href="#cb15-234" aria-hidden="true" tabindex="-1"></a>                  )</span>
+<span id="cb15-235"><a href="#cb15-235" aria-hidden="true" tabindex="-1"></a>                   </span>
+<span id="cb15-236"><a href="#cb15-236" aria-hidden="true" tabindex="-1"></a>(completion_rate                  </span>
+<span id="cb15-237"><a href="#cb15-237" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: (ggplot(df, aes(<span class="st">'season'</span>, <span class="st">'completion_rate'</span>))</span>
+<span id="cb15-238"><a href="#cb15-238" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> geom_line(stat<span class="op">=</span><span class="st">'identity'</span>)</span>
+<span id="cb15-239"><a href="#cb15-239" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> labs(x<span class="op">=</span><span class="st">'Seasons'</span>,</span>
+<span id="cb15-240"><a href="#cb15-240" aria-hidden="true" tabindex="-1"></a>                          y<span class="op">=</span><span class="st">'</span><span class="sc">% s</span><span class="st">uccessful participants'</span></span>
+<span id="cb15-241"><a href="#cb15-241" aria-hidden="true" tabindex="-1"></a>                         )</span>
+<span id="cb15-242"><a href="#cb15-242" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> theme(plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">20</span>,face<span class="op">=</span><span class="st">'bold'</span>))</span>
+<span id="cb15-243"><a href="#cb15-243" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> ggsize(<span class="dv">600</span>,<span class="dv">400</span>)</span>
+<span id="cb15-244"><a href="#cb15-244" aria-hidden="true" tabindex="-1"></a>                  )</span>
+<span id="cb15-245"><a href="#cb15-245" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb15-246"><a href="#cb15-246" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-247"><a href="#cb15-247" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-248"><a href="#cb15-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-249"><a href="#cb15-249" aria-hidden="true" tabindex="-1"></a>Taking a peek at @fig-fig4, it seems like the normalized completion rate hits its lowest point in season 1, closely followed by season 7. However, even in those seasons, the rate remains surprisingly high.</span>
+<span id="cb15-250"><a href="#cb15-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-251"><a href="#cb15-251" aria-hidden="true" tabindex="-1"></a><span class="fu">## Is there a correlation between Scoville Units and completion rate?</span></span>
+<span id="cb15-252"><a href="#cb15-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-253"><a href="#cb15-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-254"><a href="#cb15-254" aria-hidden="true" tabindex="-1"></a>Here's a curious thought: could there be a link between Scoville Units and the completion rate? I'm just wondering if the spiciness level affects how well participants handle the challenge. Exploring this connection might add a spicy twist to the Hot Ones experience – let's see where the data takes us!</span>
+<span id="cb15-255"><a href="#cb15-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-258"><a href="#cb15-258" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-259"><a href="#cb15-259" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-260"><a href="#cb15-260" aria-hidden="true" tabindex="-1"></a><span class="co"># AVG_scoville code comes from a code snippet </span></span>
+<span id="cb15-261"><a href="#cb15-261" aria-hidden="true" tabindex="-1"></a><span class="co"># 'What differences can be observed in the spiciness </span></span>
+<span id="cb15-262"><a href="#cb15-262" aria-hidden="true" tabindex="-1"></a><span class="co"># of sauces as we look across the various seasons?'</span></span>
+<span id="cb15-263"><a href="#cb15-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-264"><a href="#cb15-264" aria-hidden="true" tabindex="-1"></a>AVG_scoville <span class="op">=</span> (sauces</span>
+<span id="cb15-265"><a href="#cb15-265" aria-hidden="true" tabindex="-1"></a>                .groupby(<span class="st">'season'</span>)</span>
+<span id="cb15-266"><a href="#cb15-266" aria-hidden="true" tabindex="-1"></a>                .agg(AVG_scoville<span class="op">=</span>(<span class="st">'scoville'</span>, <span class="st">'mean'</span>))</span>
+<span id="cb15-267"><a href="#cb15-267" aria-hidden="true" tabindex="-1"></a>                .squeeze()</span>
+<span id="cb15-268"><a href="#cb15-268" aria-hidden="true" tabindex="-1"></a>               )</span>
+<span id="cb15-269"><a href="#cb15-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-270"><a href="#cb15-270" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's calculate the Pearson correlation coefficient. We have to discard the last value</span></span>
+<span id="cb15-271"><a href="#cb15-271" aria-hidden="true" tabindex="-1"></a><span class="co"># as the completion rate is not defined for that</span></span>
+<span id="cb15-272"><a href="#cb15-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-273"><a href="#cb15-273" aria-hidden="true" tabindex="-1"></a>stats.pearsonr(AVG_scoville.values[:<span class="op">-</span><span class="dv">1</span>],completion_rate.completion_rate.values[:<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb15-274"><a href="#cb15-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-275"><a href="#cb15-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-276"><a href="#cb15-276" aria-hidden="true" tabindex="-1"></a>The Pearson correlation coefficient has its say: there's actually a moderate positive correlation(0.5, *p*&lt;0.05) between Scoville Units and completion rate. Quite intriguing, isn't it? Honestly, I was expecting the opposite outcome myself! It seems like the higher the average spiciness, the more determined the guests become. Take a look at @fig-fig5.</span>
+<span id="cb15-277"><a href="#cb15-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-280"><a href="#cb15-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-281"><a href="#cb15-281" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Correlation between Average Scoville units and Completion rates</span></span>
+<span id="cb15-282"><a href="#cb15-282" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-fig5</span></span>
+<span id="cb15-283"><a href="#cb15-283" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-284"><a href="#cb15-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-285"><a href="#cb15-285" aria-hidden="true" tabindex="-1"></a>(pd.concat([AVG_scoville,completion_rate],axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb15-286"><a href="#cb15-286" aria-hidden="true" tabindex="-1"></a> .rename(columns<span class="op">=</span>{<span class="dv">0</span>:<span class="st">'success_rate'</span>})</span>
+<span id="cb15-287"><a href="#cb15-287" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: (ggplot(df, aes(<span class="st">'AVG_scoville'</span>, <span class="st">'completion_rate'</span>))</span>
+<span id="cb15-288"><a href="#cb15-288" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb15-289"><a href="#cb15-289" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> geom_smooth()</span>
+<span id="cb15-290"><a href="#cb15-290" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> labs(x<span class="op">=</span><span class="st">'Average Scoville units'</span>,</span>
+<span id="cb15-291"><a href="#cb15-291" aria-hidden="true" tabindex="-1"></a>                          y<span class="op">=</span><span class="st">'</span><span class="sc">% s</span><span class="st">uccessful participants'</span></span>
+<span id="cb15-292"><a href="#cb15-292" aria-hidden="true" tabindex="-1"></a>                         )</span>
+<span id="cb15-293"><a href="#cb15-293" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> theme(plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">20</span>,face<span class="op">=</span><span class="st">'bold'</span>))</span>
+<span id="cb15-294"><a href="#cb15-294" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> ggsize(<span class="dv">600</span>,<span class="dv">400</span>)</span>
+<span id="cb15-295"><a href="#cb15-295" aria-hidden="true" tabindex="-1"></a>                  )</span>
+<span id="cb15-296"><a href="#cb15-296" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb15-297"><a href="#cb15-297" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-298"><a href="#cb15-298" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-299"><a href="#cb15-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-300"><a href="#cb15-300" aria-hidden="true" tabindex="-1"></a><span class="fu">## Are there any returning guests?</span></span>
+<span id="cb15-301"><a href="#cb15-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-302"><a href="#cb15-302" aria-hidden="true" tabindex="-1"></a>Has there been a brave soul who dared to make a return to the show for a second time? The column <span class="in">`guest_appearance_number`</span> holds the answers you're looking for.</span>
+<span id="cb15-303"><a href="#cb15-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-306"><a href="#cb15-306" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-307"><a href="#cb15-307" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb15-308"><a href="#cb15-308" aria-hidden="true" tabindex="-1"></a>(episodes</span>
+<span id="cb15-309"><a href="#cb15-309" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"guest_appearance_number &gt; 1"</span>)</span>
+<span id="cb15-310"><a href="#cb15-310" aria-hidden="true" tabindex="-1"></a> [[<span class="st">'guest'</span>,<span class="st">'season'</span>, <span class="st">'episode_season'</span>, <span class="st">'finished'</span>]]</span>
+<span id="cb15-311"><a href="#cb15-311" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-312"><a href="#cb15-312" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-313"><a href="#cb15-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-314"><a href="#cb15-314" aria-hidden="true" tabindex="-1"></a>It looks like a total of 12 individuals have taken on the challenge not once, but twice.  Hats off to their courage! 🎩</span>
+<span id="cb15-315"><a href="#cb15-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-316"><a href="#cb15-316" aria-hidden="true" tabindex="-1"></a><span class="fu"># Final words</span></span>
+<span id="cb15-317"><a href="#cb15-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-318"><a href="#cb15-318" aria-hidden="true" tabindex="-1"></a>And there you have it, folks – that's a wrap! I hope you enjoyed exploring the Hot Ones dataset with me. Rest assured, more of these analyses are in the pipeline for the future. Stay tuned for what's to come!</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

@@ -103,6 +103,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Adam Cseresznye - Top 10 things I learned from the book Effective Pandas by Matt Harrison">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://adamcseresznye.github.io/blog/posts/Top 10 things I learned from Effective Pandas/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas_files/figure-html/cell-12-output-1.png">
+<meta property="og:site-name" content="Adam Cseresznye">
+<meta property="og:image:height" content="941">
+<meta property="og:image:width" content="1967">
+<meta name="twitter:title" content="Adam Cseresznye - Top 10 things I learned from the book Effective Pandas by Matt Harrison">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://adamcseresznye.github.io/blog/posts/Top 10 things I learned from Effective Pandas/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas_files/figure-html/cell-12-output-1.png">
+<meta name="twitter:image-height" content="941">
+<meta name="twitter:image-width" content="1967">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -148,11 +160,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -162,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Top 10 things I learned from the book Effective Pandas by Matt Harrison</h1>
+      <div class="quarto-title-block"><div><h1 class="title">Top 10 things I learned from the book Effective Pandas by Matt Harrison</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Pandas</div>
               </div>
@@ -224,18 +231,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In this article, I will share the top 10 (+1) things I learned from Effective Pandas. These are the concepts and techniques that I found to be the most useful and practical.</p>
 <p>We will use the <a href="https://www.kaggle.com/datasets/abhijitdahatonde/real-world-smartphones-dataset?select=smartphones.csv">Real World Smartphone’s Dataset</a> by Abhijit Dahatonde from Kaggle. Let’s get to it.</p>
 <div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'display.max_columns'</span>, <span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <section id="load-the-dataset" class="level1">
 <h1>Load the dataset</h1>
 <div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_csv(<span class="st">'smartphones.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># some info about the dataframe, such as dimensions and dtypes of columns</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 980 entries, 0 to 979
@@ -275,6 +288,8 @@ memory usage: 168.6+ KB</code></pre>
 <p>One of the most important benefits of using the assign method is that it can be incorporated into method chaining. This means that you can chain multiple assign methods together to create a more concise and readable code. Another benefit of using the assign method is that it completely sidesteps the infamous <code>SettingWithCopyWarning</code>. This warning is often triggered when you try to modify an existing column in a DataFrame. However, the assign method creates a new DataFrame, so there is no need to worry about this warning.</p>
 <p><strong>Problem statement:</strong> Let’s say we would like to capitalize the brand names located in the <code>brand_name column</code> as well as calculate the Pixels Per Inch (PPI). PPI can be calculated following the equation described by the <a href="https://en.wikipedia.org/wiki/Pixel_density">Pixel density</a> page on Wikipedia.</p>
 <div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(df</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> .assign(brand_name<span class="op">=</span><span class="kw">lambda</span> df: df.brand_name.<span class="bu">str</span>.capitalize(), <span class="co"># capitalizes the brand names </span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>         PPI<span class="op">=</span><span class="kw">lambda</span> df: (np.sqrt(np.square(df.resolution_height) <span class="op">+</span> np.square(df.resolution_width))</span>
@@ -286,6 +301,7 @@ memory usage: 168.6+ KB</code></pre>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a> .sort_values(by<span class="op">=</span><span class="st">'PPI'</span>,ascending<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a> .head(<span class="dv">5</span>)</span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
@@ -342,17 +358,22 @@ memory usage: 168.6+ KB</code></pre>
 <p>If our goal is to incorporate if-else logic seamlessly into our code, we can effortlessly achieve this using either <code>pd.mask</code> or <code>pd.where</code>. Yet, what approach should we adopt when we need to evaluate multiple conditions instead of just two? In such situations, we have two options: we can either employ successive <code>pd.mask</code> or <code>pd.where</code> calls, or we can take advantage of the <code>np.select</code> function as an alternative solution.</p>
 <p><strong>Problem statement:</strong> We want to identify the top 3 and top 5 most popular processor brands in smartphones. To do this, we will first create two lists, one for the top 3 brands and one for the top 5 brands. Any processor brand that is not in either of these lists will be categorized as “Other”.</p>
 <div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's create the two lists that contain the top3 and top5 brand names</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>top3<span class="op">=</span>df.processor_brand.value_counts().head(<span class="dv">3</span>).index</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>top5<span class="op">=</span>df.processor_brand.value_counts().head(<span class="dv">5</span>).index</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Top 3 most popular processors: </span><span class="sc">{</span>top3<span class="sc">.</span>tolist()<span class="sc">}</span><span class="ss">'</span>)</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Top 5 most popular processors: </span><span class="sc">{</span>top5<span class="sc">.</span>tolist()<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Top 3 most popular processors: ['snapdragon', 'helio', 'dimensity']
 Top 5 most popular processors: ['snapdragon', 'helio', 'dimensity', 'exynos', 'bionic']</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">Here's an example that employs two successive pd.where calls:</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">In the first pd.where call, it checks whether the brand is in the top 3; if not, it assigns the label "Top5" to it.</span></span>
@@ -368,6 +389,7 @@ Top 5 most popular processors: ['snapdragon', 'helio', 'dimensity', 'exynos', 'b
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a> .loc[:, <span class="st">'frequency'</span>]</span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a> .value_counts()</span>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>snapdragon    413
 helio         201
@@ -378,6 +400,8 @@ Name: frequency, dtype: int64</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"> Now Let's see np.select!</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"> It simplifies the process significantly. By providing a list of conditions we want to evaluate and their </span></span>
@@ -394,6 +418,7 @@ Name: frequency, dtype: int64</code></pre>
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a> .loc[:, <span class="st">'frequency'</span>]</span>
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a> .value_counts()</span>
 <span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>snapdragon    413
 helio         201
@@ -409,10 +434,13 @@ Name: frequency, dtype: int64</code></pre>
 <p>Some experienced Pandas users might consider the following concept trivial, but it was an eye-opener for me after reading the book. It turns out that combining <code>pd.loc</code> and <code>lambda</code> (or any custom functions) allows us to filter both rows and columns, depending on our specific needs.</p>
 <p><strong>Problem statement:</strong> We are interested in identifying phones with a battery capacity greater than 5000mAh.</p>
 <div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>(df</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a> .loc[<span class="kw">lambda</span> df: df.battery_capacity.gt(<span class="dv">5000</span>),[<span class="st">'model'</span>, <span class="st">'battery_capacity'</span>]] <span class="co"># here we use pd.gt() to select values greater than 5000</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a> .sort_values(by<span class="op">=</span><span class="st">'battery_capacity'</span>)</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
@@ -494,7 +522,10 @@ Name: frequency, dtype: int64</code></pre>
 <p>OK. This is a big one for me. I used this one multiple times already. The title pretty much says it all. Let’s say our column names contain spaces, which makes column selection by attribute access pretty much impossible. Now, what do we do? Well…Let’s see.</p>
 <p><strong>Problem statement:</strong> We would like to remove all the underscores from our column names.</p>
 <div class="cell" data-execution_count="8">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df.columns <span class="co"># original column names for reference</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>Index(['brand_name', 'model', 'price', 'avg_rating', '5G_or_not',
        'processor_brand', 'num_cores', 'processor_speed', 'battery_capacity',
@@ -506,11 +537,14 @@ Name: frequency, dtype: int64</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="9">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># column names after replacing underscores</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>(df</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a> .rename(columns <span class="op">=</span> <span class="kw">lambda</span> x: x.replace(<span class="st">'_'</span>, <span class="st">''</span>))</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a> .columns</span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>Index(['brandname', 'model', 'price', 'avgrating', '5Gornot', 'processorbrand',
        'numcores', 'processorspeed', 'batterycapacity',
@@ -525,6 +559,8 @@ Name: frequency, dtype: int64</code></pre>
 <section id="tip-5-use-pd.clip-to-easily-remove-outliers" class="level1 page-columns page-full">
 <h1>Tip #5: Use <code>pd.clip</code> to easily remove outliers</h1>
 <div class="cell" data-execution_count="10">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First, we'll identify the phone brands with the most number of handsets present in our dataset."</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>top10_brand_names <span class="op">=</span> (df</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                     .brand_name</span>
@@ -545,12 +581,15 @@ Name: frequency, dtype: int64</code></pre>
 <span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>                             .to_list()</span>
 <span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>                            )</span>
 <span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(top10_brand_names_ordered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>['xiaomi', 'samsung', 'vivo', 'realme', 'oppo', 'motorola', 'apple', 'oneplus', 'poco', 'tecno']
 ['tecno', 'poco', 'realme', 'xiaomi', 'motorola', 'vivo', 'oppo', 'samsung', 'oneplus', 'apple']</code></pre>
 </div>
 </div>
 <div class="cell page-columns page-full" data-tags="[]" data-execution_count="11">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># For reference, this is what our box plot looks if we leave in the outlier values</span></span>
@@ -580,6 +619,7 @@ Name: frequency, dtype: int64</code></pre>
 <span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].<span class="bu">set</span>(ylabel<span class="op">=</span><span class="st">'Price in local currency'</span>)</span>
 <span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display column-page">
 <p><img src="2023_08_02-Top_10_things_I_learned_from_Effective_Pandas_files/figure-html/cell-12-output-1.png" width="984" height="471"></p>
 </div>
@@ -590,6 +630,8 @@ Name: frequency, dtype: int64</code></pre>
 <p>How often have you encountered the situation where, for some reason, a column that is expected to only contain numerical values displays <code>object</code> as its <code>dtype</code>? This often indicates the presence of some string values mixed within the column. It would be beneficial to promptly identify all the erroneous values, correct them, and proceed with our analysis smoothly. Let’s explore what we can do in such scenarios.</p>
 <p><strong>Problem statement:</strong> We would like to identify any cells in a specific column that contain non-numerical values.</p>
 <div class="cell" data-execution_count="12">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df_bad_values <span class="op">=</span> df.copy(deep<span class="op">=</span><span class="va">True</span>) <span class="co"># let's prepare a copy of the original dataframe </span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># let's modify some of the values in the price column randomly:</span></span>
@@ -597,6 +639,7 @@ Name: frequency, dtype: int64</code></pre>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>df_bad_values.loc[np.random.randint(<span class="dv">0</span>, high<span class="op">=</span>df_bad_values.shape[<span class="dv">0</span>], size<span class="op">=</span><span class="dv">10</span>), <span class="st">'price'</span>] <span class="op">=</span> <span class="st">'-'</span></span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>df_bad_values.loc[np.random.randint(<span class="dv">0</span>, high<span class="op">=</span>df_bad_values.shape[<span class="dv">0</span>], size<span class="op">=</span><span class="dv">10</span>), <span class="st">'price'</span>] <span class="op">=</span> <span class="st">'*'</span></span>
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>df_bad_values.info() <span class="co"># the modified dataframe's price column now returns object as dtype</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 980 entries, 0 to 979
@@ -630,12 +673,15 @@ memory usage: 168.6+ KB</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="13">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># let's find the corrupted values easily:</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>(df_bad_values</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a> .price</span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a> .<span class="bu">str</span>.extract(<span class="vs">r'([^a-zA-Z])'</span>) <span class="co"># returns NON-matching alphabetical characters</span></span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a> .value_counts()</span>
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>*    10
 -    10
@@ -649,6 +695,8 @@ dtype: int64</code></pre>
 <p>The <code>pd.sort_values</code> function surprised me with its versatility. Previously, I had only used its <code>by</code>, <code>axis</code>, and <code>ascending</code> parameters for sorting. However, Matt’s book introduced me to its <code>key</code> parameter, which allows us to apply any function to sort the values. The only constraint is that the function must return a <code>Series</code>.</p>
 <p><strong>Problem statement:</strong> For whatever reason, we would like to sort the phone model names in ascending order based on their second letter.</p>
 <div class="cell" data-execution_count="14">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>(df</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a> .iloc[:, <span class="dv">1</span>:<span class="dv">3</span>]</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a> .sort_values(by<span class="op">=</span><span class="st">'model'</span>,</span>
@@ -657,6 +705,7 @@ dtype: int64</code></pre>
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>             )</span>
 <span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a> .head(<span class="dv">10</span>)</span>
 <span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <div>
 
@@ -732,6 +781,8 @@ dtype: int64</code></pre>
 <p>This resembles Tip #4, as it’s a technique I frequently use. Since reading Matt’s book, I have started using <code>pd.query</code> extensively to filter rows based on values, instead of relying on <code>.loc</code> or <code>.iloc</code>. In case you choose to adopt <code>pd.query</code> as well, it’s essential to be aware of its capability to use “@” to reference variables in the environment. This feature enhances its flexibility and makes it even more convenient to apply in various data filtering scenarios.</p>
 <p><strong>Problem statement:</strong> Our objective is to identify phones that meet three specific criteria: being priced below the average market price, having more processor cores than the average, and possessing a battery capacity greater than the average.</p>
 <div class="cell" data-execution_count="15">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>average_price<span class="op">=</span>df.price.mean()</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>average_cores<span class="op">=</span>df.num_cores.mean()</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>average_battery<span class="op">=</span>df.battery_capacity.mean()</span>
@@ -742,6 +793,7 @@ dtype: int64</code></pre>
 <span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a> .sort_values(by<span class="op">=</span><span class="st">'price'</span>)</span>
 <span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a> .head()</span>
 <span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <div>
 
@@ -798,6 +850,8 @@ dtype: int64</code></pre>
 <p>Being a visual creature, I often struggle to comprehend data quickly just by examining the raw table alone. Fortunately, with the help of <code>style.background_gradient</code>, similar to the <code>heatmap</code> function in the <code>seaborn</code> library, we can represent cells, in terms of color gradient, based on their values. This enables us to identify trends and patterns in our data swiftly, making data analysis more intuitive and insightful.</p>
 <p><strong>Problem statement:</strong> Our goal is to identify the overall trends related to key descriptors found among the Top 10 smartphone brands, aiming to determine which brand offers the most value for our money.</p>
 <div class="cell page-columns page-full" data-execution_count="16">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>(df</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"brand_name.isin(@top10_brand_names_ordered)"</span>) <span class="co"># filter rows based on top10 brands</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a> .groupby([<span class="st">'brand_name'</span>,])</span>
@@ -817,6 +871,7 @@ dtype: int64</code></pre>
 <span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>     ,]</span>
 <span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a> )</span>
 <span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display column-page" data-execution_count="16">
 <style type="text/css">
 #T_39fb7 td {
@@ -1099,6 +1154,8 @@ dtype: int64</code></pre>
 <p>In the chaining world, you often find yourself wanting to use various functions that are not explicitly designed for chaining. However, there’s good news! You can still achieve this. The <code>pd.pipe</code> function comes to the rescue, allowing you to use any function as long as it returns a Series or DataFrame. It’s a flexible solution that empowers you to seamlessly integrate different functions into your chaining workflow, making your data manipulation more efficient and enjoyable.</p>
 <p><strong>Problem statement:</strong> We aim to visualize the impact of RAM capacity on user satisfaction. To achieve this, we will utilize the <code>sns.lmplot</code> function, which plots the data and corresponding regression models for the Top 5 phone brands.</p>
 <div class="cell" data-execution_count="17">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>top5_brand_names_ordered <span class="op">=</span> df.brand_name.value_counts().head().index</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> sns.axes_style(<span class="st">"darkgrid"</span>):</span>
@@ -1122,6 +1179,7 @@ dtype: int64</code></pre>
 <span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>          ylabel<span class="op">=</span><span class="st">'User rating'</span></span>
 <span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>         )</span>
 <span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <p><img src="2023_08_02-Top_10_things_I_learned_from_Effective_Pandas_files/figure-html/cell-18-output-1.png" width="584" height="470"></p>
 </div>
@@ -1132,6 +1190,8 @@ dtype: int64</code></pre>
 <p>Despite primarily using the pandas <code>groupby</code> function for data aggregation, the <code>pd.crosstab</code> function has an enticing feature: the <code>margin</code> parameter. This option enables us to effortlessly calculate subtotals across rows and columns. Moreover, by normalizing our data, we can gain even more intuition about the questions we want to answer.</p>
 <p><strong>Problem statement:</strong> Our objective is to evaluate how RAM capacity impacts user satisfaction across the Top 5 brands. Additionally, we will normalize our data to compare values comprehensively across the entire dataset.</p>
 <div class="cell" data-execution_count="18">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>(df</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"brand_name.isin(@top5_brand_names_ordered)"</span>) <span class="co"># filter rows based on top10 brands</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a> .assign(brand_name<span class="op">=</span><span class="kw">lambda</span> df: df.brand_name.<span class="bu">str</span>.capitalize())</span>
@@ -1146,6 +1206,7 @@ dtype: int64</code></pre>
 <span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a> .mul(<span class="dv">100</span>)</span>
 <span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a> .<span class="bu">round</span>(<span class="dv">1</span>)</span>
 <span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <div>
 
@@ -1253,6 +1314,8 @@ dtype: int64</code></pre>
 <p>I hope this article has convinced you to pick up Matt Harrison’s <a href="https://store.metasnake.com/effective-pandas-book">Effective Pandas</a>! There are plenty more exciting ideas in the book beyond the Top 10 I’ve shared here (I didn’t even get into the fascinating time series part!). I hope you found these insights helpful and inspiring.</p>
 <p>Happy coding 🐼💻🚀</p>
 
+
+<!-- -->
 
 </section>
 
@@ -1451,6 +1514,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -1604,7 +1718,361 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb28" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Top 10 things I learned from the book Effective Pandas by  Matt Harrison</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Adam Cseresznye</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> '2023-08-02'</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Pandas</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Effective Pandas by Matt Harrison</span><span class="co">](https://store.metasnake.com/effective-pandas-book)</span> is a guide to the Pandas library, a powerful Python tool for data manipulation and analysis. The book covers a wide range of topics, from basic data structures to advanced techniques for data cleaning, transformation, and visualization.</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>I have found Effective Pandas to be a captivating and thought-provoking read. The book offers a genuinely unique take on data wrangling, putting a great emphasis on the utility of *chaining methods* and utilizing the *lambda function*. I have found these ideas to be so useful and practical that I have revisited the book multiple times just to make sure I keep them fresh in my memory. I must have read the book from back to back at least 3-4 times.</span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a>In this article, I will share the top 10 (+1) things I learned from Effective Pandas. These are the concepts and techniques that I found to be the most useful and practical.</span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>We will use the <span class="co">[</span><span class="ot">Real World Smartphone's Dataset</span><span class="co">](https://www.kaggle.com/datasets/abhijitdahatonde/real-world-smartphones-dataset?select=smartphones.csv)</span> by Abhijit Dahatonde from Kaggle. Let's get to it.</span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'display.max_columns'</span>, <span class="va">None</span>)</span>
+<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load the dataset</span></span>
+<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_csv(<span class="st">'smartphones.csv'</span>)</span>
+<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a><span class="co"># some info about the dataframe, such as dimensions and dtypes of columns</span></span>
+<span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a>df.info()</span>
+<span id="cb28-41"><a href="#cb28-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-42"><a href="#cb28-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-43"><a href="#cb28-43" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #1: Use &lt;code&gt;pd.assign&lt;/code&gt; more extensively</span></span>
+<span id="cb28-44"><a href="#cb28-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-45"><a href="#cb28-45" aria-hidden="true" tabindex="-1"></a>The <span class="kw">&lt;code&gt;</span>pd.assign<span class="kw">&lt;/code&gt;</span> method in Pandas is a very powerful tool that can be used to create new columns, modify existing columns, or both. It is a very versatile method that can be used in a variety of ways.</span>
+<span id="cb28-46"><a href="#cb28-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-47"><a href="#cb28-47" aria-hidden="true" tabindex="-1"></a>One of the most important benefits of using the assign method is that it can be incorporated into method chaining. This means that you can chain multiple assign methods together to create a more concise and readable code. Another benefit of using the assign method is that it completely sidesteps the infamous <span class="kw">&lt;code&gt;</span>SettingWithCopyWarning<span class="kw">&lt;/code&gt;</span>. This warning is often triggered when you try to modify an existing column in a DataFrame. However, the assign method creates a new DataFrame, so there is no need to worry about this warning.</span>
+<span id="cb28-48"><a href="#cb28-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-49"><a href="#cb28-49" aria-hidden="true" tabindex="-1"></a>**Problem statement:** Let's say we would like to capitalize the brand names located in the <span class="kw">&lt;code&gt;</span>brand_name column<span class="kw">&lt;/code&gt;</span> as well as calculate the Pixels Per Inch (PPI). PPI can be calculated following the equation described by the <span class="co">[</span><span class="ot">Pixel density</span><span class="co">](https://en.wikipedia.org/wiki/Pixel_density)</span> page on Wikipedia.</span>
+<span id="cb28-50"><a href="#cb28-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-53"><a href="#cb28-53" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-54"><a href="#cb28-54" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-55"><a href="#cb28-55" aria-hidden="true" tabindex="-1"></a> .assign(brand_name<span class="op">=</span><span class="kw">lambda</span> df: df.brand_name.<span class="bu">str</span>.capitalize(), <span class="co"># capitalizes the brand names </span></span>
+<span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a>         PPI<span class="op">=</span><span class="kw">lambda</span> df: (np.sqrt(np.square(df.resolution_height) <span class="op">+</span> np.square(df.resolution_width))</span>
+<span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a>                         .div(df.screen_size)</span>
+<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a>                         .<span class="bu">round</span>(<span class="dv">1</span>)</span>
+<span id="cb28-59"><a href="#cb28-59" aria-hidden="true" tabindex="-1"></a>                        )</span>
+<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb28-61"><a href="#cb28-61" aria-hidden="true" tabindex="-1"></a> .loc[:, [<span class="st">'brand_name'</span>,<span class="st">'model'</span>,<span class="st">'PPI'</span>]]</span>
+<span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a> .sort_values(by<span class="op">=</span><span class="st">'PPI'</span>,ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb28-63"><a href="#cb28-63" aria-hidden="true" tabindex="-1"></a> .head(<span class="dv">5</span>)</span>
+<span id="cb28-64"><a href="#cb28-64" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-65"><a href="#cb28-65" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-66"><a href="#cb28-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-67"><a href="#cb28-67" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #2: Simplify the management of multiple if-else conditions using &lt;code&gt;np.select&lt;/code&gt;</span></span>
+<span id="cb28-68"><a href="#cb28-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-69"><a href="#cb28-69" aria-hidden="true" tabindex="-1"></a>If our goal is to incorporate if-else logic seamlessly into our code, we can effortlessly achieve this using either <span class="kw">&lt;code&gt;</span>pd.mask<span class="kw">&lt;/code&gt;</span> or <span class="kw">&lt;code&gt;</span>pd.where<span class="kw">&lt;/code&gt;</span>. Yet, what approach should we adopt when we need to evaluate multiple conditions instead of just two? In such situations, we have two options: we can either employ successive <span class="kw">&lt;code&gt;</span>pd.mask<span class="kw">&lt;/code&gt;</span> or <span class="kw">&lt;code&gt;</span>pd.where<span class="kw">&lt;/code&gt;</span> calls, or we can take advantage of the <span class="kw">&lt;code&gt;</span>np.select<span class="kw">&lt;/code&gt;</span> function as an alternative solution.</span>
+<span id="cb28-70"><a href="#cb28-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-71"><a href="#cb28-71" aria-hidden="true" tabindex="-1"></a>**Problem statement:** We want to identify the top 3 and top 5 most popular processor brands in smartphones. To do this, we will first create two lists, one for the top 3 brands and one for the top 5 brands. Any processor brand that is not in either of these lists will be categorized as "Other".</span>
+<span id="cb28-72"><a href="#cb28-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-75"><a href="#cb28-75" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-76"><a href="#cb28-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's create the two lists that contain the top3 and top5 brand names</span></span>
+<span id="cb28-77"><a href="#cb28-77" aria-hidden="true" tabindex="-1"></a>top3<span class="op">=</span>df.processor_brand.value_counts().head(<span class="dv">3</span>).index</span>
+<span id="cb28-78"><a href="#cb28-78" aria-hidden="true" tabindex="-1"></a>top5<span class="op">=</span>df.processor_brand.value_counts().head(<span class="dv">5</span>).index</span>
+<span id="cb28-79"><a href="#cb28-79" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Top 3 most popular processors: </span><span class="sc">{</span>top3<span class="sc">.</span>tolist()<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb28-80"><a href="#cb28-80" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Top 5 most popular processors: </span><span class="sc">{</span>top5<span class="sc">.</span>tolist()<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb28-81"><a href="#cb28-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-82"><a href="#cb28-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-85"><a href="#cb28-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-86"><a href="#cb28-86" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb28-87"><a href="#cb28-87" aria-hidden="true" tabindex="-1"></a><span class="co">Here's an example that employs two successive pd.where calls:</span></span>
+<span id="cb28-88"><a href="#cb28-88" aria-hidden="true" tabindex="-1"></a><span class="co">In the first pd.where call, it checks whether the brand is in the top 3; if not, it assigns the label "Top5" to it.</span></span>
+<span id="cb28-89"><a href="#cb28-89" aria-hidden="true" tabindex="-1"></a><span class="co">Then, in the second call, it checks if the value is in the top 5; if not, it appends the category "Other".</span></span>
+<span id="cb28-90"><a href="#cb28-90" aria-hidden="true" tabindex="-1"></a><span class="co">As you can see, the logic can become intricate and difficult to grasp, especially when dealing with numerous conditions, </span></span>
+<span id="cb28-91"><a href="#cb28-91" aria-hidden="true" tabindex="-1"></a><span class="co">making the code cumbersome and hard to manage.</span></span>
+<span id="cb28-92"><a href="#cb28-92" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb28-93"><a href="#cb28-93" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-94"><a href="#cb28-94" aria-hidden="true" tabindex="-1"></a> .assign(frequency<span class="op">=</span><span class="kw">lambda</span> df: df.processor_brand</span>
+<span id="cb28-95"><a href="#cb28-95" aria-hidden="true" tabindex="-1"></a>         .where(df.processor_brand.isin(top3), other <span class="op">=</span> <span class="st">'Top5'</span>)</span>
+<span id="cb28-96"><a href="#cb28-96" aria-hidden="true" tabindex="-1"></a>         .where(df.processor_brand.isin(top5), other <span class="op">=</span> <span class="st">'Other'</span>)</span>
+<span id="cb28-97"><a href="#cb28-97" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb28-98"><a href="#cb28-98" aria-hidden="true" tabindex="-1"></a> .loc[:, <span class="st">'frequency'</span>]</span>
+<span id="cb28-99"><a href="#cb28-99" aria-hidden="true" tabindex="-1"></a> .value_counts()</span>
+<span id="cb28-100"><a href="#cb28-100" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-101"><a href="#cb28-101" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-102"><a href="#cb28-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-105"><a href="#cb28-105" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-106"><a href="#cb28-106" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb28-107"><a href="#cb28-107" aria-hidden="true" tabindex="-1"></a><span class="co"> Now Let's see np.select!</span></span>
+<span id="cb28-108"><a href="#cb28-108" aria-hidden="true" tabindex="-1"></a><span class="co"> It simplifies the process significantly. By providing a list of conditions we want to evaluate and their </span></span>
+<span id="cb28-109"><a href="#cb28-109" aria-hidden="true" tabindex="-1"></a><span class="co"> corresponding values if the condition evaluates to True, we can handle multiple conditions effortlessly. </span></span>
+<span id="cb28-110"><a href="#cb28-110" aria-hidden="true" tabindex="-1"></a><span class="co"> Additionally, we can specify a default value if none of the conditions evaluates to True, making the code </span></span>
+<span id="cb28-111"><a href="#cb28-111" aria-hidden="true" tabindex="-1"></a><span class="co"> much more straightforward and easier to manage. </span></span>
+<span id="cb28-112"><a href="#cb28-112" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb28-113"><a href="#cb28-113" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-114"><a href="#cb28-114" aria-hidden="true" tabindex="-1"></a> .assign(frequency<span class="op">=</span><span class="kw">lambda</span> df: np.select(condlist<span class="op">=</span>[df.processor_brand.isin(top3), df.processor_brand.isin(top5)],</span>
+<span id="cb28-115"><a href="#cb28-115" aria-hidden="true" tabindex="-1"></a>                                        choicelist<span class="op">=</span>[df.processor_brand,<span class="st">'Top5'</span>],</span>
+<span id="cb28-116"><a href="#cb28-116" aria-hidden="true" tabindex="-1"></a>                                        default<span class="op">=</span><span class="st">'Other'</span></span>
+<span id="cb28-117"><a href="#cb28-117" aria-hidden="true" tabindex="-1"></a>                                       )</span>
+<span id="cb28-118"><a href="#cb28-118" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb28-119"><a href="#cb28-119" aria-hidden="true" tabindex="-1"></a> .loc[:, <span class="st">'frequency'</span>]</span>
+<span id="cb28-120"><a href="#cb28-120" aria-hidden="true" tabindex="-1"></a> .value_counts()</span>
+<span id="cb28-121"><a href="#cb28-121" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-122"><a href="#cb28-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-123"><a href="#cb28-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-124"><a href="#cb28-124" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #3 Filter rows or columns with the combination of &lt;code&gt;pd.loc&lt;/code&gt; and &lt;code&gt;lambda&lt;/code&gt;</span></span>
+<span id="cb28-125"><a href="#cb28-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-126"><a href="#cb28-126" aria-hidden="true" tabindex="-1"></a>Some experienced Pandas users might consider the following concept trivial, but it was an eye-opener for me after reading the book. It turns out that combining <span class="kw">&lt;code&gt;</span>pd.loc<span class="kw">&lt;/code&gt;</span> and <span class="kw">&lt;code&gt;</span>lambda<span class="kw">&lt;/code&gt;</span> (or any custom functions) allows us to filter both rows and columns, depending on our specific needs.</span>
+<span id="cb28-127"><a href="#cb28-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-128"><a href="#cb28-128" aria-hidden="true" tabindex="-1"></a>**Problem statement:** We are interested in identifying phones with a battery capacity greater than 5000mAh.</span>
+<span id="cb28-129"><a href="#cb28-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-132"><a href="#cb28-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-133"><a href="#cb28-133" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-134"><a href="#cb28-134" aria-hidden="true" tabindex="-1"></a> .loc[<span class="kw">lambda</span> df: df.battery_capacity.gt(<span class="dv">5000</span>),[<span class="st">'model'</span>, <span class="st">'battery_capacity'</span>]] <span class="co"># here we use pd.gt() to select values greater than 5000</span></span>
+<span id="cb28-135"><a href="#cb28-135" aria-hidden="true" tabindex="-1"></a> .sort_values(by<span class="op">=</span><span class="st">'battery_capacity'</span>)</span>
+<span id="cb28-136"><a href="#cb28-136" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-137"><a href="#cb28-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-138"><a href="#cb28-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-139"><a href="#cb28-139" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #4 Rename multiple columns effortlessly with &lt;code&gt;rename&lt;/code&gt; and &lt;code&gt;replace&lt;/code&gt;</span></span>
+<span id="cb28-140"><a href="#cb28-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-141"><a href="#cb28-141" aria-hidden="true" tabindex="-1"></a>OK. This is a big one for me. I used this one multiple times already. The title pretty much says it all. Let's say our column names contain spaces, which makes column selection by attribute access pretty much impossible.  Now, what do we do?</span>
+<span id="cb28-142"><a href="#cb28-142" aria-hidden="true" tabindex="-1"></a>Well...Let's see.</span>
+<span id="cb28-143"><a href="#cb28-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-144"><a href="#cb28-144" aria-hidden="true" tabindex="-1"></a>**Problem statement:** We would like to remove all the underscores from our column names.</span>
+<span id="cb28-145"><a href="#cb28-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-148"><a href="#cb28-148" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-149"><a href="#cb28-149" aria-hidden="true" tabindex="-1"></a>df.columns <span class="co"># original column names for reference</span></span>
+<span id="cb28-150"><a href="#cb28-150" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-151"><a href="#cb28-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-154"><a href="#cb28-154" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-155"><a href="#cb28-155" aria-hidden="true" tabindex="-1"></a><span class="co"># column names after replacing underscores</span></span>
+<span id="cb28-156"><a href="#cb28-156" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-157"><a href="#cb28-157" aria-hidden="true" tabindex="-1"></a> .rename(columns <span class="op">=</span> <span class="kw">lambda</span> x: x.replace(<span class="st">'_'</span>, <span class="st">''</span>))</span>
+<span id="cb28-158"><a href="#cb28-158" aria-hidden="true" tabindex="-1"></a> .columns</span>
+<span id="cb28-159"><a href="#cb28-159" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-160"><a href="#cb28-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-161"><a href="#cb28-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-162"><a href="#cb28-162" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #5: Use &lt;code&gt;pd.clip&lt;/code&gt; to easily remove outliers</span></span>
+<span id="cb28-163"><a href="#cb28-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-166"><a href="#cb28-166" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-167"><a href="#cb28-167" aria-hidden="true" tabindex="-1"></a><span class="co"># First, we'll identify the phone brands with the most number of handsets present in our dataset."</span></span>
+<span id="cb28-168"><a href="#cb28-168" aria-hidden="true" tabindex="-1"></a>top10_brand_names <span class="op">=</span> (df</span>
+<span id="cb28-169"><a href="#cb28-169" aria-hidden="true" tabindex="-1"></a>                     .brand_name</span>
+<span id="cb28-170"><a href="#cb28-170" aria-hidden="true" tabindex="-1"></a>                     .value_counts()</span>
+<span id="cb28-171"><a href="#cb28-171" aria-hidden="true" tabindex="-1"></a>                     .head(<span class="dv">10</span>)</span>
+<span id="cb28-172"><a href="#cb28-172" aria-hidden="true" tabindex="-1"></a>                     .index</span>
+<span id="cb28-173"><a href="#cb28-173" aria-hidden="true" tabindex="-1"></a>                     .tolist()</span>
+<span id="cb28-174"><a href="#cb28-174" aria-hidden="true" tabindex="-1"></a>                    )</span>
+<span id="cb28-175"><a href="#cb28-175" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(top10_brand_names)</span>
+<span id="cb28-176"><a href="#cb28-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-177"><a href="#cb28-177" aria-hidden="true" tabindex="-1"></a><span class="co"># Then we will sort them based on median price</span></span>
+<span id="cb28-178"><a href="#cb28-178" aria-hidden="true" tabindex="-1"></a>top10_brand_names_ordered <span class="op">=</span> (df</span>
+<span id="cb28-179"><a href="#cb28-179" aria-hidden="true" tabindex="-1"></a>                             .loc[<span class="kw">lambda</span> x: x.brand_name.isin(top10_brand_names),[<span class="st">'brand_name'</span>, <span class="st">'price'</span>]]</span>
+<span id="cb28-180"><a href="#cb28-180" aria-hidden="true" tabindex="-1"></a>                             .groupby(<span class="st">'brand_name'</span>)</span>
+<span id="cb28-181"><a href="#cb28-181" aria-hidden="true" tabindex="-1"></a>                             .median()</span>
+<span id="cb28-182"><a href="#cb28-182" aria-hidden="true" tabindex="-1"></a>                             .sort_values(by<span class="op">=</span><span class="st">'price'</span>)</span>
+<span id="cb28-183"><a href="#cb28-183" aria-hidden="true" tabindex="-1"></a>                             .index</span>
+<span id="cb28-184"><a href="#cb28-184" aria-hidden="true" tabindex="-1"></a>                             .to_list()</span>
+<span id="cb28-185"><a href="#cb28-185" aria-hidden="true" tabindex="-1"></a>                            )</span>
+<span id="cb28-186"><a href="#cb28-186" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(top10_brand_names_ordered)</span>
+<span id="cb28-187"><a href="#cb28-187" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-188"><a href="#cb28-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-191"><a href="#cb28-191" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-192"><a href="#cb28-192" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
+<span id="cb28-193"><a href="#cb28-193" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: page</span></span>
+<span id="cb28-194"><a href="#cb28-194" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
+<span id="cb28-195"><a href="#cb28-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-196"><a href="#cb28-196" aria-hidden="true" tabindex="-1"></a><span class="co"># For reference, this is what our box plot looks if we leave in the outlier values</span></span>
+<span id="cb28-197"><a href="#cb28-197" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-198"><a href="#cb28-198" aria-hidden="true" tabindex="-1"></a> .loc[<span class="kw">lambda</span> x: x.brand_name.isin(top10_brand_names),[<span class="st">'brand_name'</span>, <span class="st">'price'</span>]] <span class="co"># filter rows based on top10_brand_names and select columns</span></span>
+<span id="cb28-199"><a href="#cb28-199" aria-hidden="true" tabindex="-1"></a> .pivot(columns<span class="op">=</span><span class="st">'brand_name'</span>,values<span class="op">=</span><span class="st">'price'</span>) <span class="co"># pivot to get the brand names on the x axis later on</span></span>
+<span id="cb28-200"><a href="#cb28-200" aria-hidden="true" tabindex="-1"></a> .loc[:, top10_brand_names_ordered] <span class="co"># order the columns based on median price</span></span>
+<span id="cb28-201"><a href="#cb28-201" aria-hidden="true" tabindex="-1"></a> .plot</span>
+<span id="cb28-202"><a href="#cb28-202" aria-hidden="true" tabindex="-1"></a> .box(title<span class="op">=</span><span class="st">'Top 10 most popular smartphone brands </span><span class="ch">\n</span><span class="st"> -outlier values included-'</span>, </span>
+<span id="cb28-203"><a href="#cb28-203" aria-hidden="true" tabindex="-1"></a>      rot<span class="op">=</span><span class="dv">90</span>,</span>
+<span id="cb28-204"><a href="#cb28-204" aria-hidden="true" tabindex="-1"></a>      ax<span class="op">=</span>axs[<span class="dv">0</span>]</span>
+<span id="cb28-205"><a href="#cb28-205" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb28-206"><a href="#cb28-206" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-207"><a href="#cb28-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-208"><a href="#cb28-208" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-209"><a href="#cb28-209" aria-hidden="true" tabindex="-1"></a> .loc[<span class="kw">lambda</span> x: x[<span class="st">'brand_name'</span>].isin(top10_brand_names), [<span class="st">'brand_name'</span>, <span class="st">'price'</span>]]</span>
+<span id="cb28-210"><a href="#cb28-210" aria-hidden="true" tabindex="-1"></a> .pivot(columns<span class="op">=</span><span class="st">'brand_name'</span>, values<span class="op">=</span><span class="st">'price'</span>)</span>
+<span id="cb28-211"><a href="#cb28-211" aria-hidden="true" tabindex="-1"></a> .loc[:, top10_brand_names_ordered]</span>
+<span id="cb28-212"><a href="#cb28-212" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: df.assign(<span class="op">**</span>{col : df[col].clip(lower<span class="op">=</span>df[col].quantile(<span class="fl">0.05</span>), <span class="co"># this is called dictionary unpacking</span></span>
+<span id="cb28-213"><a href="#cb28-213" aria-hidden="true" tabindex="-1"></a>                                                  upper<span class="op">=</span>df[col].quantile(<span class="fl">0.95</span>))</span>
+<span id="cb28-214"><a href="#cb28-214" aria-hidden="true" tabindex="-1"></a>                              <span class="cf">for</span> col <span class="kw">in</span> df.columns}))</span>
+<span id="cb28-215"><a href="#cb28-215" aria-hidden="true" tabindex="-1"></a> .plot</span>
+<span id="cb28-216"><a href="#cb28-216" aria-hidden="true" tabindex="-1"></a> .box(title<span class="op">=</span><span class="st">'Top 10 most popular smartphone brands </span><span class="ch">\n</span><span class="st"> -only values between 5th and 95th percentiles included-'</span>,</span>
+<span id="cb28-217"><a href="#cb28-217" aria-hidden="true" tabindex="-1"></a>      rot<span class="op">=</span><span class="dv">90</span>,</span>
+<span id="cb28-218"><a href="#cb28-218" aria-hidden="true" tabindex="-1"></a>      ax<span class="op">=</span>axs[<span class="dv">1</span>]</span>
+<span id="cb28-219"><a href="#cb28-219" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb28-220"><a href="#cb28-220" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-221"><a href="#cb28-221" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].<span class="bu">set</span>(ylabel<span class="op">=</span><span class="st">'Price in local currency'</span>)</span>
+<span id="cb28-222"><a href="#cb28-222" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb28-223"><a href="#cb28-223" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-224"><a href="#cb28-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-225"><a href="#cb28-225" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #6: Find corrupted entries with &lt;code&gt;str.extract&lt;/code&gt;</span></span>
+<span id="cb28-226"><a href="#cb28-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-227"><a href="#cb28-227" aria-hidden="true" tabindex="-1"></a>How often have you encountered the situation where, for some reason, a column that is expected to only contain numerical values displays <span class="kw">&lt;code&gt;</span>object<span class="kw">&lt;/code&gt;</span> as its <span class="kw">&lt;code&gt;</span>dtype<span class="kw">&lt;/code&gt;</span>? This often indicates the presence of some string values mixed within the column. It would be beneficial to promptly identify all the erroneous values, correct them, and proceed with our analysis smoothly. Let's explore what we can do in such scenarios.</span>
+<span id="cb28-228"><a href="#cb28-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-229"><a href="#cb28-229" aria-hidden="true" tabindex="-1"></a>**Problem statement:** We would like to identify any cells in a specific column that contain non-numerical values.</span>
+<span id="cb28-230"><a href="#cb28-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-233"><a href="#cb28-233" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-234"><a href="#cb28-234" aria-hidden="true" tabindex="-1"></a>df_bad_values <span class="op">=</span> df.copy(deep<span class="op">=</span><span class="va">True</span>) <span class="co"># let's prepare a copy of the original dataframe </span></span>
+<span id="cb28-235"><a href="#cb28-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-236"><a href="#cb28-236" aria-hidden="true" tabindex="-1"></a><span class="co"># let's modify some of the values in the price column randomly:</span></span>
+<span id="cb28-237"><a href="#cb28-237" aria-hidden="true" tabindex="-1"></a>df_bad_values.loc[np.random.randint(<span class="dv">0</span>, high<span class="op">=</span>df_bad_values.shape[<span class="dv">0</span>], size<span class="op">=</span><span class="dv">10</span>), <span class="st">'price'</span>] <span class="op">=</span> <span class="st">'.'</span></span>
+<span id="cb28-238"><a href="#cb28-238" aria-hidden="true" tabindex="-1"></a>df_bad_values.loc[np.random.randint(<span class="dv">0</span>, high<span class="op">=</span>df_bad_values.shape[<span class="dv">0</span>], size<span class="op">=</span><span class="dv">10</span>), <span class="st">'price'</span>] <span class="op">=</span> <span class="st">'-'</span></span>
+<span id="cb28-239"><a href="#cb28-239" aria-hidden="true" tabindex="-1"></a>df_bad_values.loc[np.random.randint(<span class="dv">0</span>, high<span class="op">=</span>df_bad_values.shape[<span class="dv">0</span>], size<span class="op">=</span><span class="dv">10</span>), <span class="st">'price'</span>] <span class="op">=</span> <span class="st">'*'</span></span>
+<span id="cb28-240"><a href="#cb28-240" aria-hidden="true" tabindex="-1"></a>df_bad_values.info() <span class="co"># the modified dataframe's price column now returns object as dtype</span></span>
+<span id="cb28-241"><a href="#cb28-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-242"><a href="#cb28-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-245"><a href="#cb28-245" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-246"><a href="#cb28-246" aria-hidden="true" tabindex="-1"></a><span class="co"># let's find the corrupted values easily:</span></span>
+<span id="cb28-247"><a href="#cb28-247" aria-hidden="true" tabindex="-1"></a>(df_bad_values</span>
+<span id="cb28-248"><a href="#cb28-248" aria-hidden="true" tabindex="-1"></a> .price</span>
+<span id="cb28-249"><a href="#cb28-249" aria-hidden="true" tabindex="-1"></a> .<span class="bu">str</span>.extract(<span class="vs">r'([^a-zA-Z])'</span>) <span class="co"># returns NON-matching alphabetical characters</span></span>
+<span id="cb28-250"><a href="#cb28-250" aria-hidden="true" tabindex="-1"></a> .value_counts()</span>
+<span id="cb28-251"><a href="#cb28-251" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-252"><a href="#cb28-252" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-253"><a href="#cb28-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-254"><a href="#cb28-254" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #7: Sort values based on the &lt;code&gt;key&lt;/code&gt; parameter</span></span>
+<span id="cb28-255"><a href="#cb28-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-256"><a href="#cb28-256" aria-hidden="true" tabindex="-1"></a>The <span class="kw">&lt;code&gt;</span>pd.sort_values<span class="kw">&lt;/code&gt;</span> function surprised me with its versatility. Previously, I had only used its <span class="kw">&lt;code&gt;</span>by<span class="kw">&lt;/code&gt;</span>, <span class="kw">&lt;code&gt;</span>axis<span class="kw">&lt;/code&gt;</span>, and <span class="kw">&lt;code&gt;</span>ascending<span class="kw">&lt;/code&gt;</span> parameters for sorting. However, Matt's book introduced me to its <span class="kw">&lt;code&gt;</span>key<span class="kw">&lt;/code&gt;</span> parameter, which allows us to apply any function to sort the values. The only constraint is that the function must return a <span class="kw">&lt;code&gt;</span>Series<span class="kw">&lt;/code&gt;</span>. </span>
+<span id="cb28-257"><a href="#cb28-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-258"><a href="#cb28-258" aria-hidden="true" tabindex="-1"></a>**Problem statement:** For whatever reason, we would like to sort the phone model names in ascending order based on their second letter.</span>
+<span id="cb28-259"><a href="#cb28-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-262"><a href="#cb28-262" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-263"><a href="#cb28-263" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-264"><a href="#cb28-264" aria-hidden="true" tabindex="-1"></a> .iloc[:, <span class="dv">1</span>:<span class="dv">3</span>]</span>
+<span id="cb28-265"><a href="#cb28-265" aria-hidden="true" tabindex="-1"></a> .sort_values(by<span class="op">=</span><span class="st">'model'</span>,</span>
+<span id="cb28-266"><a href="#cb28-266" aria-hidden="true" tabindex="-1"></a>              key <span class="op">=</span> <span class="kw">lambda</span> x: x.<span class="bu">str</span>[<span class="dv">1</span>],</span>
+<span id="cb28-267"><a href="#cb28-267" aria-hidden="true" tabindex="-1"></a>              ascending <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb28-268"><a href="#cb28-268" aria-hidden="true" tabindex="-1"></a>             )</span>
+<span id="cb28-269"><a href="#cb28-269" aria-hidden="true" tabindex="-1"></a> .head(<span class="dv">10</span>)</span>
+<span id="cb28-270"><a href="#cb28-270" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-271"><a href="#cb28-271" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-272"><a href="#cb28-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-273"><a href="#cb28-273" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #8: Reference an existing variable inside &lt;code&gt;pd.query&lt;/code&gt; with @</span></span>
+<span id="cb28-274"><a href="#cb28-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-275"><a href="#cb28-275" aria-hidden="true" tabindex="-1"></a>This resembles Tip #4, as it's a technique I frequently use. Since reading Matt's book, I have started using <span class="kw">&lt;code&gt;</span>pd.query<span class="kw">&lt;/code&gt;</span> extensively to filter rows based on values, instead of relying on <span class="kw">&lt;code&gt;</span>.loc<span class="kw">&lt;/code&gt;</span> or <span class="kw">&lt;code&gt;</span>.iloc<span class="kw">&lt;/code&gt;</span>. In case you choose to adopt <span class="kw">&lt;code&gt;</span>pd.query<span class="kw">&lt;/code&gt;</span> as well, it's essential to be aware of its capability to use "@" to reference variables in the environment. This feature enhances its flexibility and makes it even more convenient to apply in various data filtering scenarios.</span>
+<span id="cb28-276"><a href="#cb28-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-277"><a href="#cb28-277" aria-hidden="true" tabindex="-1"></a>**Problem statement:** Our objective is to identify phones that meet three specific criteria: being priced below the average market price, having more processor cores than the average, and possessing a battery capacity greater than the average.</span>
+<span id="cb28-278"><a href="#cb28-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-281"><a href="#cb28-281" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-282"><a href="#cb28-282" aria-hidden="true" tabindex="-1"></a>average_price<span class="op">=</span>df.price.mean()</span>
+<span id="cb28-283"><a href="#cb28-283" aria-hidden="true" tabindex="-1"></a>average_cores<span class="op">=</span>df.num_cores.mean()</span>
+<span id="cb28-284"><a href="#cb28-284" aria-hidden="true" tabindex="-1"></a>average_battery<span class="op">=</span>df.battery_capacity.mean()</span>
+<span id="cb28-285"><a href="#cb28-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-286"><a href="#cb28-286" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-287"><a href="#cb28-287" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"(price &lt;= @average_price) and (num_cores &gt;= @average_cores) and (battery_capacity &gt;= @average_battery)"</span>)</span>
+<span id="cb28-288"><a href="#cb28-288" aria-hidden="true" tabindex="-1"></a> .iloc[:,:<span class="dv">3</span>]</span>
+<span id="cb28-289"><a href="#cb28-289" aria-hidden="true" tabindex="-1"></a> .sort_values(by<span class="op">=</span><span class="st">'price'</span>)</span>
+<span id="cb28-290"><a href="#cb28-290" aria-hidden="true" tabindex="-1"></a> .head()</span>
+<span id="cb28-291"><a href="#cb28-291" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-292"><a href="#cb28-292" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-293"><a href="#cb28-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-294"><a href="#cb28-294" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #9: Gain more insights by using &lt;code&gt;style.background_gradient&lt;/code&gt;</span></span>
+<span id="cb28-295"><a href="#cb28-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-296"><a href="#cb28-296" aria-hidden="true" tabindex="-1"></a>Being a visual creature, I often struggle to comprehend data quickly just by examining the raw table alone. Fortunately, with the help of <span class="kw">&lt;code&gt;</span>style.background_gradient<span class="kw">&lt;/code&gt;</span>, similar to the <span class="kw">&lt;code&gt;</span>heatmap<span class="kw">&lt;/code&gt;</span> function in the <span class="kw">&lt;code&gt;</span>seaborn<span class="kw">&lt;/code&gt;</span> library, we can represent cells, in terms of color gradient, based on their values. This enables us to identify trends and patterns in our data swiftly, making data analysis more intuitive and insightful.</span>
+<span id="cb28-297"><a href="#cb28-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-298"><a href="#cb28-298" aria-hidden="true" tabindex="-1"></a>**Problem statement:** Our goal is to identify the overall trends related to key descriptors found among the Top 10 smartphone brands, aiming to determine which brand offers the most value for our money. </span>
+<span id="cb28-299"><a href="#cb28-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-302"><a href="#cb28-302" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-303"><a href="#cb28-303" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: page</span></span>
+<span id="cb28-304"><a href="#cb28-304" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-305"><a href="#cb28-305" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"brand_name.isin(@top10_brand_names_ordered)"</span>) <span class="co"># filter rows based on top10 brands</span></span>
+<span id="cb28-306"><a href="#cb28-306" aria-hidden="true" tabindex="-1"></a> .groupby([<span class="st">'brand_name'</span>,])</span>
+<span id="cb28-307"><a href="#cb28-307" aria-hidden="true" tabindex="-1"></a> [[<span class="st">'avg_rating'</span>, <span class="st">'processor_speed'</span>, <span class="st">'ram_capacity'</span>, </span>
+<span id="cb28-308"><a href="#cb28-308" aria-hidden="true" tabindex="-1"></a>   <span class="st">'screen_size'</span>, <span class="st">'battery_capacity'</span>, <span class="st">'price'</span>]]</span>
+<span id="cb28-309"><a href="#cb28-309" aria-hidden="true" tabindex="-1"></a> .mean()</span>
+<span id="cb28-310"><a href="#cb28-310" aria-hidden="true" tabindex="-1"></a> .sort_values(by<span class="op">=</span><span class="st">'avg_rating'</span>)</span>
+<span id="cb28-311"><a href="#cb28-311" aria-hidden="true" tabindex="-1"></a> .transpose()</span>
+<span id="cb28-312"><a href="#cb28-312" aria-hidden="true" tabindex="-1"></a> .rename(columns<span class="op">=</span><span class="bu">str</span>.capitalize) <span class="co"># capitalize brand names</span></span>
+<span id="cb28-313"><a href="#cb28-313" aria-hidden="true" tabindex="-1"></a> .style</span>
+<span id="cb28-314"><a href="#cb28-314" aria-hidden="true" tabindex="-1"></a> .set_caption(<span class="st">"Key descriptors of the Top 10 smartphone brands"</span>)</span>
+<span id="cb28-315"><a href="#cb28-315" aria-hidden="true" tabindex="-1"></a> .<span class="bu">format</span>(precision<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb28-316"><a href="#cb28-316" aria-hidden="true" tabindex="-1"></a> .background_gradient(cmap <span class="op">=</span> <span class="st">'vlag'</span>, axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb28-317"><a href="#cb28-317" aria-hidden="true" tabindex="-1"></a> .set_table_styles([</span>
+<span id="cb28-318"><a href="#cb28-318" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'selector'</span>: <span class="st">'td'</span>, <span class="st">'props'</span>: <span class="st">'text-align: center;'</span>},</span>
+<span id="cb28-319"><a href="#cb28-319" aria-hidden="true" tabindex="-1"></a>     {<span class="st">'selector'</span>: <span class="st">'caption'</span>,<span class="st">'props'</span>: <span class="st">'font-size:1.5em; font-weight:bold;'</span>}</span>
+<span id="cb28-320"><a href="#cb28-320" aria-hidden="true" tabindex="-1"></a>     ,]</span>
+<span id="cb28-321"><a href="#cb28-321" aria-hidden="true" tabindex="-1"></a> )</span>
+<span id="cb28-322"><a href="#cb28-322" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-323"><a href="#cb28-323" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-324"><a href="#cb28-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-325"><a href="#cb28-325" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #10: Use &lt;code&gt;pd.pipe&lt;/code&gt; to include any functions in our chain</span></span>
+<span id="cb28-326"><a href="#cb28-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-327"><a href="#cb28-327" aria-hidden="true" tabindex="-1"></a>One of the most valuable lessons I learned from Effective Pandas is the importance of arranging my code in a chain. Although it may feel somewhat restrictive at first, once you overcome the initial hurdles, you'll realize that your code becomes more readable and easier to understand. The need to invent unique names for temporary variables is completely eliminated, making coding a much happier experience.  </span>
+<span id="cb28-328"><a href="#cb28-328" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-329"><a href="#cb28-329" aria-hidden="true" tabindex="-1"></a>In the chaining world, you often find yourself wanting to use various functions that are not explicitly designed for chaining. However, there's good news! You can still achieve this. The  <span class="kw">&lt;code&gt;</span>pd.pipe<span class="kw">&lt;/code&gt;</span> function comes to the rescue, allowing you to use any function as long as it returns a Series or DataFrame. It's a flexible solution that empowers you to seamlessly integrate different functions into your chaining workflow, making your data manipulation more efficient and enjoyable.</span>
+<span id="cb28-330"><a href="#cb28-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-331"><a href="#cb28-331" aria-hidden="true" tabindex="-1"></a>**Problem statement:** We aim to visualize the impact of RAM capacity on user satisfaction. To achieve this, we will utilize the <span class="kw">&lt;code&gt;</span>sns.lmplot<span class="kw">&lt;/code&gt;</span> function, which plots the data and corresponding regression models for the Top 5 phone brands. </span>
+<span id="cb28-332"><a href="#cb28-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-335"><a href="#cb28-335" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-336"><a href="#cb28-336" aria-hidden="true" tabindex="-1"></a>top5_brand_names_ordered <span class="op">=</span> df.brand_name.value_counts().head().index</span>
+<span id="cb28-337"><a href="#cb28-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-338"><a href="#cb28-338" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> sns.axes_style(<span class="st">"darkgrid"</span>):</span>
+<span id="cb28-339"><a href="#cb28-339" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> (df</span>
+<span id="cb28-340"><a href="#cb28-340" aria-hidden="true" tabindex="-1"></a>         .query(<span class="st">"brand_name.isin(@top5_brand_names_ordered)"</span>) <span class="co"># filter rows based on top10 brands</span></span>
+<span id="cb28-341"><a href="#cb28-341" aria-hidden="true" tabindex="-1"></a>         [[<span class="st">'brand_name'</span>, <span class="st">'avg_rating'</span>, <span class="st">'ram_capacity'</span>]]</span>
+<span id="cb28-342"><a href="#cb28-342" aria-hidden="true" tabindex="-1"></a>         .assign(brand_name<span class="op">=</span><span class="kw">lambda</span> df: df.brand_name.<span class="bu">str</span>.capitalize())</span>
+<span id="cb28-343"><a href="#cb28-343" aria-hidden="true" tabindex="-1"></a>         .rename(columns<span class="op">=</span>{<span class="st">'brand_name'</span>:<span class="st">'Brand name'</span>})</span>
+<span id="cb28-344"><a href="#cb28-344" aria-hidden="true" tabindex="-1"></a>         .pipe(<span class="kw">lambda</span> df: sns.lmplot(data<span class="op">=</span>df,</span>
+<span id="cb28-345"><a href="#cb28-345" aria-hidden="true" tabindex="-1"></a>                                     x<span class="op">=</span><span class="st">'ram_capacity'</span>,</span>
+<span id="cb28-346"><a href="#cb28-346" aria-hidden="true" tabindex="-1"></a>                                     y<span class="op">=</span><span class="st">'avg_rating'</span>,</span>
+<span id="cb28-347"><a href="#cb28-347" aria-hidden="true" tabindex="-1"></a>                                     hue<span class="op">=</span><span class="st">'Brand name'</span>,</span>
+<span id="cb28-348"><a href="#cb28-348" aria-hidden="true" tabindex="-1"></a>                                     <span class="co"># height=4,</span></span>
+<span id="cb28-349"><a href="#cb28-349" aria-hidden="true" tabindex="-1"></a>                                     <span class="co"># aspect=1.2</span></span>
+<span id="cb28-350"><a href="#cb28-350" aria-hidden="true" tabindex="-1"></a>                                    )</span>
+<span id="cb28-351"><a href="#cb28-351" aria-hidden="true" tabindex="-1"></a>              )</span>
+<span id="cb28-352"><a href="#cb28-352" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb28-353"><a href="#cb28-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-354"><a href="#cb28-354" aria-hidden="true" tabindex="-1"></a>    g.<span class="bu">set</span>(title<span class="op">=</span><span class="st">'Customer satisfaction correlates with RAM capacity'</span>, </span>
+<span id="cb28-355"><a href="#cb28-355" aria-hidden="true" tabindex="-1"></a>          xlabel<span class="op">=</span><span class="st">'RAM capacity'</span>,</span>
+<span id="cb28-356"><a href="#cb28-356" aria-hidden="true" tabindex="-1"></a>          ylabel<span class="op">=</span><span class="st">'User rating'</span></span>
+<span id="cb28-357"><a href="#cb28-357" aria-hidden="true" tabindex="-1"></a>         )</span>
+<span id="cb28-358"><a href="#cb28-358" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb28-359"><a href="#cb28-359" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-360"><a href="#cb28-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-361"><a href="#cb28-361" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tip #10 + 1: Use the "margin" parameter of &lt;code&gt;pd.crosstab&lt;/code&gt; to easily calculate row/column subtotals</span></span>
+<span id="cb28-362"><a href="#cb28-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-363"><a href="#cb28-363" aria-hidden="true" tabindex="-1"></a>Despite primarily using the pandas <span class="kw">&lt;code&gt;</span>groupby<span class="kw">&lt;/code&gt;</span> function for data aggregation, the <span class="kw">&lt;code&gt;</span>pd.crosstab<span class="kw">&lt;/code&gt;</span> function has an enticing feature: the <span class="kw">&lt;code&gt;</span>margin<span class="kw">&lt;/code&gt;</span> parameter. This option enables us to effortlessly calculate subtotals across rows and columns. Moreover, by normalizing our data, we can gain even more intuition about the questions we want to answer.</span>
+<span id="cb28-364"><a href="#cb28-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-365"><a href="#cb28-365" aria-hidden="true" tabindex="-1"></a>**Problem statement:** Our objective is to evaluate how RAM capacity impacts user satisfaction across the Top 5 brands. Additionally, we will normalize our data to compare values comprehensively across the entire dataset.</span>
+<span id="cb28-366"><a href="#cb28-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-369"><a href="#cb28-369" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-370"><a href="#cb28-370" aria-hidden="true" tabindex="-1"></a>(df</span>
+<span id="cb28-371"><a href="#cb28-371" aria-hidden="true" tabindex="-1"></a> .query(<span class="st">"brand_name.isin(@top5_brand_names_ordered)"</span>) <span class="co"># filter rows based on top10 brands</span></span>
+<span id="cb28-372"><a href="#cb28-372" aria-hidden="true" tabindex="-1"></a> .assign(brand_name<span class="op">=</span><span class="kw">lambda</span> df: df.brand_name.<span class="bu">str</span>.capitalize())</span>
+<span id="cb28-373"><a href="#cb28-373" aria-hidden="true" tabindex="-1"></a> .pipe(<span class="kw">lambda</span> df: pd.crosstab(index<span class="op">=</span>df[<span class="st">'ram_capacity'</span>],</span>
+<span id="cb28-374"><a href="#cb28-374" aria-hidden="true" tabindex="-1"></a>                              columns<span class="op">=</span>df[<span class="st">'brand_name'</span>],</span>
+<span id="cb28-375"><a href="#cb28-375" aria-hidden="true" tabindex="-1"></a>                              values<span class="op">=</span>df[<span class="st">'avg_rating'</span>],</span>
+<span id="cb28-376"><a href="#cb28-376" aria-hidden="true" tabindex="-1"></a>                              aggfunc<span class="op">=</span><span class="st">'mean'</span>,</span>
+<span id="cb28-377"><a href="#cb28-377" aria-hidden="true" tabindex="-1"></a>                              margins<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb28-378"><a href="#cb28-378" aria-hidden="true" tabindex="-1"></a>                              normalize<span class="op">=</span><span class="st">'all'</span></span>
+<span id="cb28-379"><a href="#cb28-379" aria-hidden="true" tabindex="-1"></a>                             )</span>
+<span id="cb28-380"><a href="#cb28-380" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb28-381"><a href="#cb28-381" aria-hidden="true" tabindex="-1"></a> .mul(<span class="dv">100</span>)</span>
+<span id="cb28-382"><a href="#cb28-382" aria-hidden="true" tabindex="-1"></a> .<span class="bu">round</span>(<span class="dv">1</span>)</span>
+<span id="cb28-383"><a href="#cb28-383" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-384"><a href="#cb28-384" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-385"><a href="#cb28-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-386"><a href="#cb28-386" aria-hidden="true" tabindex="-1"></a>I hope this article has convinced you to pick up Matt Harrison's <span class="co">[</span><span class="ot">Effective Pandas</span><span class="co">](https://store.metasnake.com/effective-pandas-book)</span>! There are plenty more exciting ideas in the book beyond the Top 10 I've shared here (I didn't even get into the fascinating time series part!). I hope you found these insights helpful and inspiring.</span>
+<span id="cb28-387"><a href="#cb28-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-388"><a href="#cb28-388" aria-hidden="true" tabindex="-1"></a>Happy coding 🐼💻🚀</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
