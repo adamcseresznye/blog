@@ -2,26 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects.html</loc>
-    <lastmod>2023-08-07T19:04:16.123Z</lastmod>
+    <lastmod>2023-08-09T06:57:11.251Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/Lets-Plot/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html</loc>
-    <lastmod>2023-08-07T19:04:12.629Z</lastmod>
+    <lastmod>2023-08-09T06:57:09.411Z</lastmod>
   </url>
   <url>
-    <loc>https://adamcseresznye.github.io/blog/index.html</loc>
-    <lastmod>2023-08-07T19:04:07.351Z</lastmod>
+    <loc>https://adamcseresznye.github.io/blog/posts/2023-08-08-HotOnes/2023_08_08_HotOnes.html</loc>
+    <lastmod>2023-08-09T06:57:07.249Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/articles.html</loc>
-    <lastmod>2023-08-07T19:04:06.368Z</lastmod>
+    <lastmod>2023-08-09T06:57:04.950Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/index.html</loc>
+    <lastmod>2023-08-09T06:57:05.541Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/Kaggle/Kaggle.html</loc>
-    <lastmod>2023-08-07T19:04:10.316Z</lastmod>
+    <lastmod>2023-08-09T06:57:08.108Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/Top 10 things I learned from Effective Pandas/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html</loc>
-    <lastmod>2023-08-07T19:04:15.421Z</lastmod>
+    <lastmod>2023-08-09T06:57:10.892Z</lastmod>
   </url>
 </urlset>
