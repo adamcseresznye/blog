@@ -91,13 +91,13 @@ After taking a look at all three datasets, I think I will continue working with 
        var_name='statistics',
       )
  .pipe(lambda df: (ggplot(df, aes('season', 'value',fill='statistics'))
-                   + geom_bar(stat='identity')
+                   + geom_bar(stat='identity', show_legend= False)
                    + facet_wrap('statistics',nrow=1,scales='free_y')
                    + labs(x='Seasons',
                           y='Scoville Units'
                          )
                    + theme(plot_title=element_text(size=20,face='bold'))
-                   + ggsize(1100,400)
+                  + ggsize(1000,600)
                   )
       )
  
@@ -122,7 +122,7 @@ What about the overall spread of the data? 🤔
                           y='log(Scoville Units)'
                          )
                    + theme(plot_title=element_text(size=20,face='bold'))
-                   + ggsize(800,400)
+                   + ggsize(1000,600)
                   )
       )
 )
