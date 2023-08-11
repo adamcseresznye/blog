@@ -6,8 +6,9 @@
   {
     "listing": "/articles.html",
     "items": [
-      "/posts/2023-08-08-HotOnes/2023_08_08_HotOnes.html",
+      "/posts/polars/Polars_revised.html",
       "/posts/folium/2023-07-09-Folium.html",
+      "/posts/2023-08-08-HotOnes/2023_08_08_HotOnes.html",
       "/posts/Lets-Plot/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html",
       "/posts/Top 10 things I learned from Effective Pandas/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html",
       "/posts/Kaggle/Kaggle.html"

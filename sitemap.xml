@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects.html</loc>
-    <lastmod>2023-08-09T13:23:04.060Z</lastmod>
+    <lastmod>2023-08-11T11:10:09.127Z</lastmod>
   </url>
   <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/Lets-Plot/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html</loc>
-    <lastmod>2023-08-09T13:22:52.779Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/folium/2023-07-09-Folium.html</loc>
-    <lastmod>2023-08-09T13:21:50.643Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/index.html</loc>
-    <lastmod>2023-08-09T13:21:12.098Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/articles.html</loc>
-    <lastmod>2023-08-09T13:21:11.649Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/2023-08-08-HotOnes/2023_08_08_HotOnes.html</loc>
-    <lastmod>2023-08-09T13:21:36.056Z</lastmod>
+    <loc>https://adamcseresznye.github.io/blog/posts/polars/Polars_revised.html</loc>
+    <lastmod>2023-08-11T11:10:07.171Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/Kaggle/Kaggle.html</loc>
-    <lastmod>2023-08-09T13:22:22.994Z</lastmod>
+    <lastmod>2023-08-11T11:10:02.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/2023-08-08-HotOnes/2023_08_08_HotOnes.html</loc>
+    <lastmod>2023-08-11T11:09:58.735Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/articles.html</loc>
+    <lastmod>2023-08-11T11:09:56.540Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/index.html</loc>
+    <lastmod>2023-08-11T11:09:56.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/folium/2023-07-09-Folium.html</loc>
+    <lastmod>2023-08-11T11:10:02.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/Lets-Plot/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html</loc>
+    <lastmod>2023-08-11T11:10:04.276Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/Top 10 things I learned from Effective Pandas/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html</loc>
-    <lastmod>2023-08-09T13:23:03.685Z</lastmod>
+    <lastmod>2023-08-11T11:10:08.814Z</lastmod>
   </url>
 </urlset>
