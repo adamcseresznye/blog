@@ -1,7 +1,7 @@
 ---
 title: "\U0001F973\U0001F389 Two IBM certificates and some geospatial data"
 author: Adam Cseresznye
-date: today
+date: '2023-08-10'
 categories:
   - celebration
   - geospatial data
