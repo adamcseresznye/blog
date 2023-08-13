@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Polars
 author: Adam Cseresznye
-date: today
+date: '2023-08-11'
 categories:
   - Polars
 jupyter: python3
