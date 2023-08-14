@@ -13,12 +13,18 @@ format:
     code-tools: true
 ---
 
-#| label: Photo by Hans-Jurgen Mager on Unsplash
-#| fig-cap: "fig1"
+#| fig-cap: Photo by Hans-Jurgen Mager on Unsplash
+#| label: fig-fig0
 
 ![](hans-jurgen-mager-qQWV91TTBrE-unsplash.jpg){fig-align="center" width=50%}
 
-After I shared my initial article about ["Getting Started with Polars"](https://adamcseresznye.github.io/blog/posts/polars/Polars_revised.html), I couldn't help but thinking about a potential speed comparison between Polars and Pandas given the excitement about the new release of [Pandas 2.0](https://pandas.pydata.org/docs/dev/whatsnew/v2.0.0.html), which promised to bring blazing-fast performance to the table. Pandas 2.0 was announced to come packed with cool features, including the addition of Apache Arrow (pyarrow) as its backing memory format. The big perk of Apache Arrow is that it makes operations speedier and more memory-friendly. Naturally, this got me wondering: how does Pandas 2.0 measure up against Polars? Let's dive in and find out!
+Once I shared my first article about ["Getting Started with Polars"](https://adamcseresznye.github.io/blog/posts/polars/Polars_revised.html) I started thinking about something exciting: comparing the speed of Polars and Pandas. This curiosity was sparked by all the buzz around the brand-new [Pandas 2.0 release](https://pandas.pydata.org/docs/dev/whatsnew/v2.0.0.html), promising lightning-fast performance. Pandas 2.0 was announced to come packed with cool features, including the addition of Apache Arrow (pyarrow) as its backing memory format. The big perk of Apache Arrow is that it makes operations speedier and more memory-friendly. Naturally, this got me wondering: how does Pandas 2.0 measure up against Polars? Let's dive in and find out!
+
+::: {.callout-warning}
+
+Keep in mind: occasionally, I refer to some performance difference figures. Even though I repeated these experiments 100 times each, because computations can have a bit of randomness, there might be slight variations in the exact numbers.
+
+:::
 
 # Setup
 
@@ -43,7 +49,6 @@ print(pl.__version__)
 ::: {.callout-note}
 
 Throughout this article, we'll be working with the latest versions of the packages: Pandas 2.0.3 and Polars 0.18.11.
-
 
 :::
 
@@ -109,7 +114,6 @@ On the other hand, the `get_figure` method takes these gathered results and gene
 To bring it all together and keep things simple, we've designed the `run_test` function. This function orchestrates the entire process, seamlessly merging the steps outlined above.
 
 ```{python}
-
 class Timeit:
     """
     A class for measuring the execution time of multiple functions.
@@ -301,7 +305,7 @@ read_parquet = run_test(test_dict, "Read parquet")
 
 ::: {.callout-note}
 
-Polars unquestionably wins this round, boasting a speed advantage of 2 to 4 times over Pandas.
+Polars unquestionably wins this round, it can boast a speed advantage of 2 to 4 times over Pandas.
 :::
 
 # Selecting Columns
@@ -349,7 +353,7 @@ select_col_in_memory = run_test(test_dict, "Select column")
 
 ::: {.callout-note}
 
-While Polars showed a significant 3-4 times speed advantage for tasks involving pre-read files, both libraries perform similarly when the files are already in memory.
+While Polars showed a significant speed advantage for tasks involving pre-read files, both libraries perform similarly when the files are already in memory.
 :::
 
 # Filtering Rows
@@ -495,7 +499,7 @@ concatenate = run_test(test_dict, "Concatenate")
 
 ::: {.callout-note}
 
-Once more, Polars shines with a remarkable 8-10 times speed advantage.
+Once more, Polars shines with a remarkable speed advantage.
     
 :::
 
@@ -554,7 +558,7 @@ aggregate_complex = run_test(test_dict, "Aggregate (complex)")
 
 ::: {.callout-note}
 
-While Polars demonstrated impressive speed for the straightforward aggregation, the more complex task revealed striking differences between the two libraries. In this case, Polars surged ahead, boasting a remarkable 80-100 times faster performance compared to Pandas.    
+While Pandas showcased noteworthy speed for the simple aggregation, the more intricate task exposed significant disparities between the two libraries. Polars took a commanding lead in this scenario, presenting a considerably faster performance compared to Pandas.
 :::
 
 # Whole workflow
@@ -719,17 +723,18 @@ As evident, the utilization of `scan_csv` increased the required time by about 3
 
 ::: {.callout-note}
 
-When we consider the entirety of the data processing pipeline, irrespective of the file reading approach, Polars emerges as the victor. It consistently exhibits a speed advantage of 5 to 20 times compared to Pandas.
+When we consider the entirety of the data processing pipeline, irrespective of the file reading approach, Polars emerges as the victor. It consistently exhibits a considerable speed advantage compared to Pandas.
 
 :::
 
-# Putting it together
+# Putting it all together
 
 Time to bring together all the things we've explored! Let's sum up what we've learned.
 
 ```{python}
 #| fig-cap: Analyzing Speed Differences Between Pandas and Polars in Common Data Science Workflow Operations
 #| label: fig-fig14
+#| column: page
 
 
 summary = pd.concat(
@@ -759,6 +764,7 @@ fig = (
     )
     .groupby(["experiment", "package"])
     .time_sec.mean()
+    .mul(1000)
     .reset_index()
     .pivot(columns="package", values="time_sec", index="experiment")
     .sort_values(
@@ -771,18 +777,23 @@ fig = (
             y="experiment",
             x=["pandas", "polars"],
             barmode="group",
+            text_auto='.2s',
             orientation="h",
-            labels={"value": "Mean Time (sec)", "experiment": ""},
+            labels={"value": "Average execution Time (msec)", "experiment": ""},
+            title= f'<b>Speed Showdown in Data Workflow Operations</b> <br><sup><i>Pandas {pd.__version__} vs. Polars {pl.__version__}</i></sup>',
             width=1000,
             height=700,
         )
     )
 )
 fig.update_xaxes(tickangle=90)
-fig.update_layout(yaxis=dict(automargin=True), legend_title_text="Package")
+fig.update_layout(yaxis=dict(automargin=True), legend_title_text="Library")
+fig.update_traces(textposition='outside')
 ```
 
-Throughout our exploration, Polars has consistently outperformed Pandas, showcasing speed differences ranging from 2x to up to a remarkable 100x. We intentionally focused on tasks that frequently arise in data analysis, encompassing file reading, column selection, filtering, and more. However, where Polars truly shines is in aggregation, capitalizing on its multiprocessing prowess. Take a glance at @fig-fig14, and you'll notice that reading files is the most time-consuming step for Polars. To address this (and reduce memory usage at the same time), we have the nifty `scan_csv` function that enables Polars to operate in a lazy mode, optimizing the entire data pipeline. It's clear that Polars packs a punch in the realm of data processing!
+Throughout our exploration, Polars has consistently outperformed Pandas. We intentionally focused on tasks that frequently arise in data analysis, encompassing file reading, column selection, filtering, and more. However, where Polars truly shines is in aggregation, capitalizing on its multiprocessing prowess. Take a glance at @fig-fig14, and you'll notice that reading files is the most time-consuming step for Polars. To address this (and reduce memory usage at the same time), we have the nifty `scan_csv` function that enables Polars to operate in a lazy mode, optimizing the entire data pipeline. It's clear that Polars packs a punch in the realm of data processing!
 
 Should you consider using Polars? Based on the findings of this experiment, it's evident that Polars can bring substantial benefits to every stage of your data processing. Its remarkable speed can make a significant impact. If you're open to investing time in understanding its API (which isn't drastically different from Pandas), I'm confident your projects will gain a significant speed boost. And don't forget, the [trajectory](https://www.crunchbase.com/funding_round/polars-seed--963c89d2) of the project seems promising, implying a bright future ahead.
+
+Whatever path you choose, ensure you become well-acquainted with your selected library and stay current with emerging technologies. And above all, relish the journey. Happy coding, and until next time! 🐼🐍🤓💻
 

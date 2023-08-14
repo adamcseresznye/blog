@@ -6,6 +6,7 @@ website:
   page-footer: "Copyright 2023, Adam Cseresznye" 
   open-graph: true
   twitter-card: true
+  reader-mode: true
   navbar:
     right:
       - articles.qmd
