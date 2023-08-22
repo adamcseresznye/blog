@@ -2,46 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects.html</loc>
-    <lastmod>2023-08-16T12:08:52.162Z</lastmod>
+    <lastmod>2023-08-22T19:07:29.416Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/spam/spam.html</loc>
-    <lastmod>2023-08-16T12:08:50.138Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/polars/Polars_revised.html</loc>
-    <lastmod>2023-08-16T12:08:46.872Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/Kaggle/Kaggle.html</loc>
-    <lastmod>2023-08-16T12:08:42.660Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/2023-08-08-HotOnes/2023_08_08_HotOnes.html</loc>
-    <lastmod>2023-08-16T12:08:38.404Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/articles.html</loc>
-    <lastmod>2023-08-16T12:08:36.136Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/index.html</loc>
-    <lastmod>2023-08-16T12:08:36.496Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/folium/2023-07-09-Folium.html</loc>
-    <lastmod>2023-08-16T12:08:41.878Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/Lets-Plot/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html</loc>
-    <lastmod>2023-08-16T12:08:43.927Z</lastmod>
+    <lastmod>2023-08-22T19:07:24.115Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/polars speed/polars_speed.html</loc>
-    <lastmod>2023-08-16T12:08:48.680Z</lastmod>
+    <lastmod>2023-08-22T19:07:07.200Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/Lets-Plot/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html</loc>
+    <lastmod>2023-08-22T19:06:54.874Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/folium/2023-07-09-Folium.html</loc>
+    <lastmod>2023-08-22T19:06:49.504Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/index.html</loc>
+    <lastmod>2023-08-22T19:06:39.524Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/articles.html</loc>
+    <lastmod>2023-08-22T19:06:38.828Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/2023-08-08-HotOnes/2023_08_08_HotOnes.html</loc>
+    <lastmod>2023-08-22T19:06:43.500Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/Kaggle/Kaggle.html</loc>
+    <lastmod>2023-08-22T19:06:51.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/polars/Polars_revised.html</loc>
+    <lastmod>2023-08-22T19:07:02.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/refugee/refugee.html</loc>
+    <lastmod>2023-08-22T19:07:14.395Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/Top 10 things I learned from Effective Pandas/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html</loc>
-    <lastmod>2023-08-16T12:08:51.831Z</lastmod>
+    <lastmod>2023-08-22T19:07:28.296Z</lastmod>
   </url>
 </urlset>
