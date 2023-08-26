@@ -17,7 +17,24 @@ about:
       href: https://github.com/adamcseresznye
 
 ---
-> *"Constant dripping wears away a stone"* 
+<html>
+<head>
+  <style>
+    blockquote p:nth-of-type(2) {
+      font-size: 0.8em;
+      line-height: 0;
+    }
+  </style>
+</head>
+
+<blockquote cite="http://developer.mozilla.org">
+  <p>"Now is better than never..."</p>
+  <p>The Zen of Python by Tim Peters</p>
+</blockquote>
+
+
+</html>
+
 
 
 <h1 style="text-align: center;">Hi there! Welcome to my website! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/> </h1> 
