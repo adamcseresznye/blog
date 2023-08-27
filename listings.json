@@ -6,6 +6,7 @@
   {
     "listing": "/articles.html",
     "items": [
+      "/posts/pandas_styler/pandas_style.html",
       "/posts/refugee/refugee.html",
       "/posts/spam/spam.html",
       "/posts/polars speed/polars_speed.html",
