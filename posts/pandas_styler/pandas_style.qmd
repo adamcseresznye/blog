@@ -12,7 +12,7 @@ format:
     code-tools: true
 ---
 
-![](https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L2pvYjY4Ni0yODUteC5qcGc.jpg?s=-wP7u0WhXmFn8GbzreOWR2zdM7O7EP79uN6zvW1vavI){fig-align="center" width=50%}
+![Image by Mika Baumeister](https://images.unsplash.com/photo-1529078155058-5d716f45d604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80){fig-align="center" width=50%}
 
 As you wrap up your data analysis journey, you face a fun decision: how to share your discoveries effectively. Tables and graphs both have their moments to shine. Tables work great when you want your audience to spot exact values and compare them. But, here's the twist: tables can look overwhelming at first, especially if they're crammed with data.
 
@@ -277,7 +277,7 @@ def highlight_sunday(value, color):
     # Use apply_index to style index labels. If the label is 'tip', 'day', or 'size', set the color to white, otherwise black.
     .apply_index(
         lambda s: np.where(
-            s.isin(["tip", "day", "size"]), "color:white;", "color:black;"
+            s.isin(["tip", "day", "size"]), "opacity: 100%;", "opacity: 10%;"
         ),
         axis=1,
     )
