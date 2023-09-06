@@ -8,6 +8,8 @@ website:
   twitter-card: true
   reader-mode: true
   navbar:
+    left: 
+      - scientific_output.qmd
     right:
       - articles.qmd
       - projects.qmd
