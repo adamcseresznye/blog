@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/projects.html",
+    "listing": "/scientific_output.html",
     "items": []
   },
   {
@@ -18,5 +18,9 @@
       "/posts/Top 10 things I learned from Effective Pandas/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html",
       "/posts/Kaggle/Kaggle.html"
     ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": []
   }
 ]
