@@ -25,10 +25,18 @@ title-block-banner: true
 
 # Conference talks
 
-* **Adam Cseresznye**, P. Cleys, G. Poma, Y.A. Bamai, E. Hardy, P. Scheepers, S. Viegas, S. Porras, T. Santonen, R.C. Duca, A. Covaci, and HBM4EU E-Waste study group. HBM4EU E-waste study: persistent organic pollutants in e-waste recycling workers in the European Union. ISBM-12, Porto, Portugal, 2023.
+* **Adam Cseresznye**, Fatima den Ouden, Liesa Engelen, Jasper Bombeke, Giulia Poma, Thomas J McGrath, Roger Peró Gascon, Gwen Falony, Ellen De Paepe, Lieselot Y Hemeryck, Tim S Nawrot, Jeroen Raes, Lynn Vanhaecke, Sarah De Saeger, Marthe De Boevre, Adrian Covaci. Serum Levels of Persistent Organic Pollutants in the Flemish Gut Flora Project Cohort. Dioxin, Maastricht, the Netherlands, 2023.  
+* **Emilie M. Hardy**, Adam Cseresznye , Paul T.J. Scheepers, Maria Torres Toda, Yu Ait Bamai, Simo Porras , Susana Viegas, Tiina Santonen, Adrian Covaci, An van Nieuwenhuyse, Radu C. Duca and HBM4EU e-waste study team. Assessment of e-waste occupational exposure to PCBs and PBDEs using settled dust and silicone wristbands analysis. Dioxin, Maastricht, the Netherlands, 2023.  
+* **S. Yin**, T J. McGrath, A. Cseresznye, J. Bombeke, G. Poma, A. Covaci. Assessment of Silicone Wristbands for Monitoring Personal Exposure to Chlorinated
+Paraffins (C8-36): a Pilot Study. Dioxin, Maastricht, the Netherlands, 2023.  
+* **Paul T.J. Scheepers**, Susana Viegas, Radu-Corneliu Duca, Jelle Verdonck, Emilie Hardy, Adrian Covaci, Paulien Cleys, Adam Cseresznye, Thomas Goën, Karen S. Galea, Jelle Verdonck, Katrien Poels, Lode Godderis, Elizabeth Leese, Henriqueta Louro, Maria Silva, Sophie Ndaw, Simo Porras, Selma Mahiout, Tiina Santonen. The HBM4EU e-waste study: exploratory survey of worker’s exposure to toxic contaminants. ISES Annual Meeting, Chicago, IL, USA, 2023.  
+* **Paulien Cleys**, Emilie Hardy, Yu Ait Bamai, Giulia Poma, Adam Cseresznye, Govindan Malarvannan, Paul T.J. Scheepers, Susana Viegas, Simo P. Porras, Tiina Santonen, Lode Godderis, Jelle Verdonck, Katrien Poels, Carla Martins, Maria João Silva, Henriqueta Louro, Inese Martinsone, Lāsma Akūlova, An van Nieuwenhuyse, Martien Graumans, Selma Mahiout, Radu Corneliu Duca, Adrian Covaci, HBM4EU e-waste study: Occupational Exposure of Electronic Waste Workers to Phthalates and Alternative Plasticizers in Europe. ISES Annual Meeting, Chicago, IL, USA, 2023.  
+* **Adam Cseresznye**, P. Cleys, G. Poma, Y.A. Bamai, E. Hardy, P. Scheepers, S. Viegas, S. Porras, T. Santonen, R.C. Duca, A. Covaci, and HBM4EU E-Waste study group. HBM4EU E-waste study: persistent organic pollutants in e-waste recycling workers in the European Union. ISBM-12, Porto, Portugal, 2023. 
+
 
 # Poster presentations
 
+* Alicia Macan Schönleben , Thomas McGrath, Shanshan Yin, Adam Cseresznye, Alexander van Nuijs, *Giulia Poma*, Adrian Covaci. Chlorinated paraffins in seaweed chips – First insights using High-Resolution Mass Spectrometry. **Dioxin, Maastricht, the Netherlands, 2023**     
 * Aurore Nkiliza, Claire Huguenard, Adam Cseresznye, Teresa Darcey, Corbin Bachmeier, James E. Evans, Andrew P. Keegan, Michael Mullan, Fiona Crawford and Laila Abdullah. The APOE e4 allele differentially influences plasma bioactive lipids in soldiers with mild TBI and PTSD, **AAIC, 2020**. 
 * Huguenard C, Cseresznye A, Darcey T, Bachmeier C, Evans J E, Cheryl L, Keegan A. P, Mullan M,Crawford F, Abdullah L. APOE4-dependent and independent changes in acylcarnitines indicate lipid metabolic changes early on in Alzheimer’s disease. **AAIC, 2020**. 
 * Cseresznye A, Huguenard C, Evans JE, Crawford F, Mullan M, Abdullah L. LC/MS/HRMS analysis of short to very long chain free fatty acids following charge reversal chemical derivatization [MP 364]. **ASMS conference, 2020**. 
