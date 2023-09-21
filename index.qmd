@@ -1,9 +1,8 @@
 ---
-title: "About"
 image: profile-pic.png
 about:
-  template: trestles
-  image-shape: rounded
+  template: broadside
+  image-shape: rectangle
   image-width: 12em
   links:
     - icon: twitter
@@ -52,8 +51,9 @@ about:
 
 <h1 style="text-align: center;">Hi there! Welcome to my website! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/> </h1> 
 
-I am Adam, a PhD candidate at the University of Antwerp focusing on the field of *environmental toxicology*. If you're curious about my academic journey and accomplishments, feel free to explore [my scientific output](https://adamcseresznye.github.io/blog/scientific_output.html) for more information. 
 
-This platform is mainly dedicated to my pursuit of mastering *data science*, and I would invite you to join me. Here, you'll come across various projects, blog posts, and valuable tidbits that could inspire your own endeavors. 
+I am Adam, a PhD candidate at the University of Antwerp focusing on the field of *environmental toxicology*. If you're curious about my academic journey and accomplishments, feel free to explore [my scientific output](https://adamcseresznye.github.io/blog/scientific_output.html) for more information.
+
+This platform is mainly dedicated to my pursuit of mastering *data science*, and I would invite you to join me. Here, you'll come across various [projects](https://adamcseresznye.github.io/blog/projects.html), [blog posts](https://adamcseresznye.github.io/blog/articles.html), and valuable tidbits that could inspire your own endeavors. 
 
 Let's embark on this data-driven journey together!
