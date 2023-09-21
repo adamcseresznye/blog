@@ -1,10 +1,10 @@
 ---
 title: "About"
-image: profile.jpg
+image: profile-pic.png
 about:
   template: trestles
   image-shape: rounded
-  image-width: 15em
+  image-width: 12em
   links:
     - icon: twitter
       text: Twitter
@@ -17,24 +17,37 @@ about:
       href: https://github.com/adamcseresznye
 
 ---
+
 <html>
 <head>
   <style>
-    blockquote p:nth-of-type(2) {
-      font-size: 0.8em;
-      line-height: 0;
+    blockquote {
+      border-left: 4px solid #E5E4E2;
+      padding: 15px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    blockquote p {
+      margin: 0;
+      line-height: 0.5;
+    }
+
+    blockquote footer {
+      text-align: left;
+      margin-top: 10px;
+      font-style: italic;
+      font-size: 13px;
     }
   </style>
 </head>
-
-<blockquote cite="http://developer.mozilla.org">
-  <p>"Now is better than never..."</p>
-  <p>The Zen of Python by Tim Peters</p>
-</blockquote>
-
-
+<body>
+  <blockquote>
+    <p>Now is better than never...</p>
+    <footer>— Tim Peters, <cite>The Zen of Python</cite></footer>
+  </blockquote>
+</body>
 </html>
-
 
 
 <h1 style="text-align: center;">Hi there! Welcome to my website! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/> </h1> 
