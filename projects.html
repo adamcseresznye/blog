@@ -74,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -113,10 +113,8 @@ ga('send', {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Adam Cseresznye - Projects">
-<meta property="og:description" content="">
 <meta property="og:site-name" content="Adam Cseresznye">
 <meta name="twitter:title" content="Adam Cseresznye - Projects">
-<meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -180,40 +178,73 @@ ga('send', {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Projects</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Predicting Belgian Real Estate Prices">Predicting Belgian Real Estate Prices <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Projects</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<p>Coming soon!</p>
+    
+  
+    
+  </div>
+  
+
+</header>
+
 
 
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Predicting Belgian Real Estate Prices" data-listing-date-sort="1694901600000" data-listing-file-modified-sort="1699468397869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="thumbnail">
+<p><a href="./projects/Predicting Belgian Real Estate Prices_ Part 1_Feature Selection for Web Scraping/NB_1_ACs_Select_features_for_scraping.html"> <p class="card-img-top"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/408003083.jpg?k=c49b5c4a2346b3ab002b9d1b22dbfb596cee523b53abef2550d0c92d0faf2d8b&o=&hp=1"  class="thumbnail-image card-img"/></p> </a></p>
+</div>
+<div class="body">
+<a href="./projects/Predicting Belgian Real Estate Prices_ Part 1_Feature Selection for Web Scraping/NB_1_ACs_Select_features_for_scraping.html">
+<h3 class="no-anchor listing-title">
+Predicting Belgian Real Estate Prices: Part 1: Feature Selection for Web Scraping
+</h3>
+<div class="listing-subtitle">
 
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Predicting Belgian Real Estate Prices'); return false;">
+Predicting Belgian Real Estate Prices
+</div>
+</div>
+<a href="./projects/Predicting Belgian Real Estate Prices_ Part 1_Feature Selection for Web Scraping/NB_1_ACs_Select_features_for_scraping.html">
+<div class="listing-description">
+Welcome to our project focusing on understanding the key factors that impact real estate property prices in Belgium. Our ultimate goal is to leverage data collected from <em>immo…</em>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./projects/Predicting Belgian Real Estate Prices_ Part 1_Feature Selection for Web Scraping/NB_1_ACs_Select_features_for_scraping.html">
+<div class="listing-date">
+Sep 17, 2023
+</div>
+<div class="listing-author">
+Adam Cseresznye
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items

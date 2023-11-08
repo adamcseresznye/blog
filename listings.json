@@ -1,7 +1,9 @@
 [
   {
     "listing": "/scientific_output.html",
-    "items": []
+    "items": [
+      "/projects/Predicting Belgian Real Estate Prices_ Part 1_Feature Selection for Web Scraping/NB_1_ACs_Select_features_for_scraping.html"
+    ]
   },
   {
     "listing": "/articles.html",
@@ -22,6 +24,8 @@
   },
   {
     "listing": "/projects.html",
-    "items": []
+    "items": [
+      "/projects/Predicting Belgian Real Estate Prices_ Part 1_Feature Selection for Web Scraping/NB_1_ACs_Select_features_for_scraping.html"
+    ]
   }
 ]
