@@ -1,7 +1,7 @@
 ---
 title: "Scientific Output"
 listing:
-  contents: projects
+  contents: scientific_output.qmd
   sort: "date desc"
   type: default
   categories: false
