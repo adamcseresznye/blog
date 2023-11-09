@@ -36,6 +36,7 @@ Paraffins (C8-36): a Pilot Study. Dioxin, Maastricht, the Netherlands, 2023.
 
 # Poster presentations
 
+* R. Pero-Gascon, E. Maris, A. Cseresznye, F. den Ouden, L. Engelen, L.Y. Hemeryck, E. De Paepe, A. Vich Vila, S. Moossavi, M. Derrien, G. Poma, M. De Boevre, T.S. Nawrot, J. Raes, A. Covaci, L. Vanhaecke & S. De Saeger. FLEXiGUT: investigating the importance of the exposome in the development and progression of chronic low-grade gut inflammation. **Benelux Metabolomics Days, Utrecht, the Netherlands, 2023**
 * Alicia Macan Schönleben , Thomas McGrath, Shanshan Yin, Adam Cseresznye, Alexander van Nuijs, *Giulia Poma*, Adrian Covaci. Chlorinated paraffins in seaweed chips – First insights using High-Resolution Mass Spectrometry. **Dioxin, Maastricht, the Netherlands, 2023**     
 * Aurore Nkiliza, Claire Huguenard, Adam Cseresznye, Teresa Darcey, Corbin Bachmeier, James E. Evans, Andrew P. Keegan, Michael Mullan, Fiona Crawford and Laila Abdullah. The APOE e4 allele differentially influences plasma bioactive lipids in soldiers with mild TBI and PTSD, **AAIC, 2020**. 
 * Huguenard C, Cseresznye A, Darcey T, Bachmeier C, Evans J E, Cheryl L, Keegan A. P, Mullan M,Crawford F, Abdullah L. APOE4-dependent and independent changes in acylcarnitines indicate lipid metabolic changes early on in Alzheimer’s disease. **AAIC, 2020**. 

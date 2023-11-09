@@ -16,7 +16,12 @@ format:
 
 Welcome to our project focusing on understanding the key factors that impact real estate property prices in Belgium. Our ultimate goal is to leverage data collected from _immoweb.be_, a prominent real estate platform in the country, to predict house prices in Belgium. 
 
-If you'd like to give the app a try, you can access it [here](https://belgian-house-price-predictor.streamlit.app/). The app is divided into three sections:
+::: {.callout-note}
+You can access the project's app through its [Streamlit website](https://belgian-house-price-predictor.streamlit.app/).
+
+:::
+
+The app is divided into three sections:
 
 1. **Intro**: This section provides a basic overview of how the project is structured, how data is handled, and how the models are trained.
 
