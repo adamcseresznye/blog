@@ -268,7 +268,7 @@ boundaries = (
     )
     + scale_fill_gradient(low="green", high="red")
     + labs(fill="Median Price")
-    + ggsize(1000, 500)
+    + ggsize(1000, 800)
 )
 ```
 
