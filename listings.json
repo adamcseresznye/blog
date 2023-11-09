@@ -23,6 +23,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/Predicting Belgian Real Estate Prices_ Part 3_Characterizing_the_data/NB_3_ACs_Characterizing_the_data.html",
       "/projects/Predicting Belgian Real Estate Prices_ Part 1_Feature Selection for Web Scraping/NB_1_ACs_Select_features_for_scraping.html",
       "/projects/Predicting Belgian Real Estate Prices_ Part 2_Basic_clean_up_after_scraping/NB_2_ACs_Basic_clean_up_after_scraping.html"
     ]
