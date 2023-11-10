@@ -11,7 +11,7 @@
     "href": "projects/Predicting Belgian Real Estate Prices_ Part 5_Initial_feature_selection/NB_5_ACs_Initial_feature_selection.html",
     "title": "Predicting Belgian Real Estate Prices: Part 5: Initial feature selection",
     "section": "",
-    "text": "Photo by Stephen Phillips - Hostreviews.co.uk on UnSplash"
+    "text": "Photo by Stephen Phillips - Hostreviews.co.uk on UnSplash\nIn Part 4, we looked into some crucial sample pre-processing steps before modeling, establishing the required pipeline for data processing, evaluating various algorithms, and ultimately identifying an appropriate baseline model, that is CatBoost. As we proceed to Part 5, our focus will be on assessing the significance of features in the initial scraped dataset. We’ll achieve this by employing the feature_importances_ method of CatBoostRegressor and analyzing SHAP values. Additionally, we’ll systematically eliminate features showing lower importance or predictive capability. Excited to delve into this phase!"
   },
   {
     "objectID": "projects/Predicting Belgian Real Estate Prices_ Part 5_Initial_feature_selection/NB_5_ACs_Initial_feature_selection.html#read-in-dataframe",
