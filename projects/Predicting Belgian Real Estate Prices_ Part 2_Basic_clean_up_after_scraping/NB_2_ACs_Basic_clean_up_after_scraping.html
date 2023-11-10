@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Adam Cseresznye">
-<meta name="dcterms.date" content="2023-11-08">
+<meta name="dcterms.date" content="2023-11-04">
 
 <title>Adam Cseresznye - Predicting Belgian Real Estate Prices: Part 2: Data Cleanup After Web Scraping</title>
 <style>
@@ -235,7 +235,7 @@ ga('send', {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 8, 2023</p>
+      <p class="date">November 4, 2023</p>
     </div>
   </div>
   
@@ -283,7 +283,7 @@ Note
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="8z35zI"></div>
+            <div id="aYAvAi"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -307,9 +307,9 @@ Note
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("8z35zI").appendChild(div);
+                        document.getElementById("aYAvAi").appendChild(div);
                     };
-                    var e = document.getElementById("8z35zI");
+                    var e = document.getElementById("aYAvAi");
                     e.appendChild(script);
                 })()
             </script>
@@ -335,13 +335,13 @@ Here is the dataset we have gathered through web scraping:</p>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <style type="text/css">
-#T_f3678 thead tr th:nth-child(1) {
+#T_f3d7d thead tr th:nth-child(1) {
   position: sticky;
   background-color: inherit;
   left: 0px;
   z-index: 3 !important;
 }
-#T_f3678 tbody tr th:nth-child(1) {
+#T_f3d7d tbody tr th:nth-child(1) {
   position: sticky;
   background-color: inherit;
   left: 0px;
@@ -349,327 +349,327 @@ Here is the dataset we have gathered through web scraping:</p>
 }
 </style>
 
-<table id="T_f3678" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<table id="T_f3d7d" data-quarto-postprocess="true" class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
-<th id="T_f3678_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Available as of</th>
-<th id="T_f3678_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Construction year</th>
-<th id="T_f3678_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Building condition</th>
-<th id="T_f3678_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Street frontage width</th>
-<th id="T_f3678_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">Number of frontages</th>
-<th id="T_f3678_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">Covered parking spaces</th>
-<th id="T_f3678_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">Outdoor parking spaces</th>
-<th id="T_f3678_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">Surroundings type</th>
-<th id="T_f3678_level0_col8" class="col_heading level0 col8" data-quarto-table-cell-role="th">Living area</th>
-<th id="T_f3678_level0_col9" class="col_heading level0 col9" data-quarto-table-cell-role="th">Living room surface</th>
-<th id="T_f3678_level0_col10" class="col_heading level0 col10" data-quarto-table-cell-role="th">Dining room</th>
-<th id="T_f3678_level0_col11" class="col_heading level0 col11" data-quarto-table-cell-role="th">Kitchen type</th>
-<th id="T_f3678_level0_col12" class="col_heading level0 col12" data-quarto-table-cell-role="th">Kitchen surface</th>
-<th id="T_f3678_level0_col13" class="col_heading level0 col13" data-quarto-table-cell-role="th">Bedrooms</th>
-<th id="T_f3678_level0_col14" class="col_heading level0 col14" data-quarto-table-cell-role="th">Bedroom 1 surface</th>
-<th id="T_f3678_level0_col15" class="col_heading level0 col15" data-quarto-table-cell-role="th">Bedroom 2 surface</th>
-<th id="T_f3678_level0_col16" class="col_heading level0 col16" data-quarto-table-cell-role="th">Bedroom 3 surface</th>
-<th id="T_f3678_level0_col17" class="col_heading level0 col17" data-quarto-table-cell-role="th">Bathrooms</th>
-<th id="T_f3678_level0_col18" class="col_heading level0 col18" data-quarto-table-cell-role="th">Toilets</th>
-<th id="T_f3678_level0_col19" class="col_heading level0 col19" data-quarto-table-cell-role="th">Office</th>
-<th id="T_f3678_level0_col20" class="col_heading level0 col20" data-quarto-table-cell-role="th">Basement</th>
-<th id="T_f3678_level0_col21" class="col_heading level0 col21" data-quarto-table-cell-role="th">Furnished</th>
-<th id="T_f3678_level0_col22" class="col_heading level0 col22" data-quarto-table-cell-role="th">Surface of the plot</th>
-<th id="T_f3678_level0_col23" class="col_heading level0 col23" data-quarto-table-cell-role="th">Connection to sewer network</th>
-<th id="T_f3678_level0_col24" class="col_heading level0 col24" data-quarto-table-cell-role="th">Gas, water &amp; electricity</th>
-<th id="T_f3678_level0_col25" class="col_heading level0 col25" data-quarto-table-cell-role="th">Garden surface</th>
-<th id="T_f3678_level0_col26" class="col_heading level0 col26" data-quarto-table-cell-role="th">TV cable</th>
-<th id="T_f3678_level0_col27" class="col_heading level0 col27" data-quarto-table-cell-role="th">Primary energy consumption</th>
-<th id="T_f3678_level0_col28" class="col_heading level0 col28" data-quarto-table-cell-role="th">Energy class</th>
-<th id="T_f3678_level0_col29" class="col_heading level0 col29" data-quarto-table-cell-role="th">Reference number of the EPC report</th>
-<th id="T_f3678_level0_col30" class="col_heading level0 col30" data-quarto-table-cell-role="th">CO₂ emission</th>
-<th id="T_f3678_level0_col31" class="col_heading level0 col31" data-quarto-table-cell-role="th">Yearly theoretical total energy consumption</th>
-<th id="T_f3678_level0_col32" class="col_heading level0 col32" data-quarto-table-cell-role="th">Heating type</th>
-<th id="T_f3678_level0_col33" class="col_heading level0 col33" data-quarto-table-cell-role="th">Double glazing</th>
-<th id="T_f3678_level0_col34" class="col_heading level0 col34" data-quarto-table-cell-role="th">Price</th>
-<th id="T_f3678_level0_col35" class="col_heading level0 col35" data-quarto-table-cell-role="th">Cadastral income</th>
-<th id="T_f3678_level0_col36" class="col_heading level0 col36" data-quarto-table-cell-role="th">Tenement building</th>
-<th id="T_f3678_level0_col37" class="col_heading level0 col37" data-quarto-table-cell-role="th">Address</th>
-<th id="T_f3678_level0_col38" class="col_heading level0 col38" data-quarto-table-cell-role="th">Website</th>
-<th id="T_f3678_level0_col39" class="col_heading level0 col39" data-quarto-table-cell-role="th">External reference</th>
-<th id="T_f3678_level0_col40" class="col_heading level0 col40" data-quarto-table-cell-role="th">day_of_retrieval</th>
-<th id="T_f3678_level0_col41" class="col_heading level0 col41" data-quarto-table-cell-role="th">ad_url</th>
-<th id="T_f3678_level0_col42" class="col_heading level0 col42" data-quarto-table-cell-role="th">As built plan</th>
-<th id="T_f3678_level0_col43" class="col_heading level0 col43" data-quarto-table-cell-role="th">Latest land use designation</th>
-<th id="T_f3678_level0_col44" class="col_heading level0 col44" data-quarto-table-cell-role="th">Proceedings for breach of planning regulations</th>
-<th id="T_f3678_level0_col45" class="col_heading level0 col45" data-quarto-table-cell-role="th">Possible priority purchase right</th>
-<th id="T_f3678_level0_col46" class="col_heading level0 col46" data-quarto-table-cell-role="th">Subdivision permit</th>
-<th id="T_f3678_level0_col47" class="col_heading level0 col47" data-quarto-table-cell-role="th">Flood zone type</th>
-<th id="T_f3678_level0_col48" class="col_heading level0 col48" data-quarto-table-cell-role="th">Planning permission obtained</th>
-<th id="T_f3678_level0_col49" class="col_heading level0 col49" data-quarto-table-cell-role="th">Width of the lot on the street</th>
+<th id="T_f3d7d_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Available as of</th>
+<th id="T_f3d7d_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Construction year</th>
+<th id="T_f3d7d_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Building condition</th>
+<th id="T_f3d7d_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Street frontage width</th>
+<th id="T_f3d7d_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">Number of frontages</th>
+<th id="T_f3d7d_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">Covered parking spaces</th>
+<th id="T_f3d7d_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">Outdoor parking spaces</th>
+<th id="T_f3d7d_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">Surroundings type</th>
+<th id="T_f3d7d_level0_col8" class="col_heading level0 col8" data-quarto-table-cell-role="th">Living area</th>
+<th id="T_f3d7d_level0_col9" class="col_heading level0 col9" data-quarto-table-cell-role="th">Living room surface</th>
+<th id="T_f3d7d_level0_col10" class="col_heading level0 col10" data-quarto-table-cell-role="th">Dining room</th>
+<th id="T_f3d7d_level0_col11" class="col_heading level0 col11" data-quarto-table-cell-role="th">Kitchen type</th>
+<th id="T_f3d7d_level0_col12" class="col_heading level0 col12" data-quarto-table-cell-role="th">Kitchen surface</th>
+<th id="T_f3d7d_level0_col13" class="col_heading level0 col13" data-quarto-table-cell-role="th">Bedrooms</th>
+<th id="T_f3d7d_level0_col14" class="col_heading level0 col14" data-quarto-table-cell-role="th">Bedroom 1 surface</th>
+<th id="T_f3d7d_level0_col15" class="col_heading level0 col15" data-quarto-table-cell-role="th">Bedroom 2 surface</th>
+<th id="T_f3d7d_level0_col16" class="col_heading level0 col16" data-quarto-table-cell-role="th">Bedroom 3 surface</th>
+<th id="T_f3d7d_level0_col17" class="col_heading level0 col17" data-quarto-table-cell-role="th">Bathrooms</th>
+<th id="T_f3d7d_level0_col18" class="col_heading level0 col18" data-quarto-table-cell-role="th">Toilets</th>
+<th id="T_f3d7d_level0_col19" class="col_heading level0 col19" data-quarto-table-cell-role="th">Office</th>
+<th id="T_f3d7d_level0_col20" class="col_heading level0 col20" data-quarto-table-cell-role="th">Basement</th>
+<th id="T_f3d7d_level0_col21" class="col_heading level0 col21" data-quarto-table-cell-role="th">Furnished</th>
+<th id="T_f3d7d_level0_col22" class="col_heading level0 col22" data-quarto-table-cell-role="th">Surface of the plot</th>
+<th id="T_f3d7d_level0_col23" class="col_heading level0 col23" data-quarto-table-cell-role="th">Connection to sewer network</th>
+<th id="T_f3d7d_level0_col24" class="col_heading level0 col24" data-quarto-table-cell-role="th">Gas, water &amp; electricity</th>
+<th id="T_f3d7d_level0_col25" class="col_heading level0 col25" data-quarto-table-cell-role="th">Garden surface</th>
+<th id="T_f3d7d_level0_col26" class="col_heading level0 col26" data-quarto-table-cell-role="th">TV cable</th>
+<th id="T_f3d7d_level0_col27" class="col_heading level0 col27" data-quarto-table-cell-role="th">Primary energy consumption</th>
+<th id="T_f3d7d_level0_col28" class="col_heading level0 col28" data-quarto-table-cell-role="th">Energy class</th>
+<th id="T_f3d7d_level0_col29" class="col_heading level0 col29" data-quarto-table-cell-role="th">Reference number of the EPC report</th>
+<th id="T_f3d7d_level0_col30" class="col_heading level0 col30" data-quarto-table-cell-role="th">CO₂ emission</th>
+<th id="T_f3d7d_level0_col31" class="col_heading level0 col31" data-quarto-table-cell-role="th">Yearly theoretical total energy consumption</th>
+<th id="T_f3d7d_level0_col32" class="col_heading level0 col32" data-quarto-table-cell-role="th">Heating type</th>
+<th id="T_f3d7d_level0_col33" class="col_heading level0 col33" data-quarto-table-cell-role="th">Double glazing</th>
+<th id="T_f3d7d_level0_col34" class="col_heading level0 col34" data-quarto-table-cell-role="th">Price</th>
+<th id="T_f3d7d_level0_col35" class="col_heading level0 col35" data-quarto-table-cell-role="th">Cadastral income</th>
+<th id="T_f3d7d_level0_col36" class="col_heading level0 col36" data-quarto-table-cell-role="th">Tenement building</th>
+<th id="T_f3d7d_level0_col37" class="col_heading level0 col37" data-quarto-table-cell-role="th">Address</th>
+<th id="T_f3d7d_level0_col38" class="col_heading level0 col38" data-quarto-table-cell-role="th">Website</th>
+<th id="T_f3d7d_level0_col39" class="col_heading level0 col39" data-quarto-table-cell-role="th">External reference</th>
+<th id="T_f3d7d_level0_col40" class="col_heading level0 col40" data-quarto-table-cell-role="th">day_of_retrieval</th>
+<th id="T_f3d7d_level0_col41" class="col_heading level0 col41" data-quarto-table-cell-role="th">ad_url</th>
+<th id="T_f3d7d_level0_col42" class="col_heading level0 col42" data-quarto-table-cell-role="th">As built plan</th>
+<th id="T_f3d7d_level0_col43" class="col_heading level0 col43" data-quarto-table-cell-role="th">Latest land use designation</th>
+<th id="T_f3d7d_level0_col44" class="col_heading level0 col44" data-quarto-table-cell-role="th">Proceedings for breach of planning regulations</th>
+<th id="T_f3d7d_level0_col45" class="col_heading level0 col45" data-quarto-table-cell-role="th">Possible priority purchase right</th>
+<th id="T_f3d7d_level0_col46" class="col_heading level0 col46" data-quarto-table-cell-role="th">Subdivision permit</th>
+<th id="T_f3d7d_level0_col47" class="col_heading level0 col47" data-quarto-table-cell-role="th">Flood zone type</th>
+<th id="T_f3d7d_level0_col48" class="col_heading level0 col48" data-quarto-table-cell-role="th">Planning permission obtained</th>
+<th id="T_f3d7d_level0_col49" class="col_heading level0 col49" data-quarto-table-cell-role="th">Width of the lot on the street</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_f3678_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
-<td id="T_f3678_row0_col0" class="data row0 col0">After signing the deed</td>
-<td id="T_f3678_row0_col1" class="data row0 col1">1975</td>
-<td id="T_f3678_row0_col2" class="data row0 col2">Good</td>
-<td id="T_f3678_row0_col3" class="data row0 col3">23 m</td>
-<td id="T_f3678_row0_col4" class="data row0 col4">4</td>
-<td id="T_f3678_row0_col5" class="data row0 col5">2</td>
-<td id="T_f3678_row0_col6" class="data row0 col6">2</td>
-<td id="T_f3678_row0_col7" class="data row0 col7">Living area (residential, urban or rural)</td>
-<td id="T_f3678_row0_col8" class="data row0 col8">420 m² square meters</td>
-<td id="T_f3678_row0_col9" class="data row0 col9">63 m² square meters</td>
-<td id="T_f3678_row0_col10" class="data row0 col10">Yes</td>
-<td id="T_f3678_row0_col11" class="data row0 col11">USA hyper equipped</td>
-<td id="T_f3678_row0_col12" class="data row0 col12">21 m² square meters</td>
-<td id="T_f3678_row0_col13" class="data row0 col13">5</td>
-<td id="T_f3678_row0_col14" class="data row0 col14">28 m² square meters</td>
-<td id="T_f3678_row0_col15" class="data row0 col15">24 m² square meters</td>
-<td id="T_f3678_row0_col16" class="data row0 col16">21 m² square meters</td>
-<td id="T_f3678_row0_col17" class="data row0 col17">4</td>
-<td id="T_f3678_row0_col18" class="data row0 col18">5</td>
-<td id="T_f3678_row0_col19" class="data row0 col19">Yes</td>
-<td id="T_f3678_row0_col20" class="data row0 col20">Yes</td>
-<td id="T_f3678_row0_col21" class="data row0 col21">No</td>
-<td id="T_f3678_row0_col22" class="data row0 col22">4677 m² square meters</td>
-<td id="T_f3678_row0_col23" class="data row0 col23">Not connected</td>
-<td id="T_f3678_row0_col24" class="data row0 col24">Yes</td>
-<td id="T_f3678_row0_col25" class="data row0 col25">4300 m² square meters</td>
-<td id="T_f3678_row0_col26" class="data row0 col26">Yes</td>
-<td id="T_f3678_row0_col27" class="data row0 col27">296 kWh/m² kilowatt hour per square meters</td>
-<td id="T_f3678_row0_col28" class="data row0 col28">D</td>
-<td id="T_f3678_row0_col29" class="data row0 col29">20210910012683</td>
-<td id="T_f3678_row0_col30" class="data row0 col30">74 kg CO₂/m²</td>
-<td id="T_f3678_row0_col31" class="data row0 col31">133062 kWh/year</td>
-<td id="T_f3678_row0_col32" class="data row0 col32">Fuel oil</td>
-<td id="T_f3678_row0_col33" class="data row0 col33">Yes</td>
-<td id="T_f3678_row0_col34" class="data row0 col34">€ 1,225,000 1225000 €</td>
-<td id="T_f3678_row0_col35" class="data row0 col35">€ 7,615 7615 €</td>
-<td id="T_f3678_row0_col36" class="data row0 col36">No</td>
-<td id="T_f3678_row0_col37" class="data row0 col37">drève richelle 96 1410 - Waterloo</td>
-<td id="T_f3678_row0_col38" class="data row0 col38">http://www.bytheway.be</td>
-<td id="T_f3678_row0_col39" class="data row0 col39">5530019</td>
-<td id="T_f3678_row0_col40" class="data row0 col40">2023-09-27 14:02:10.370650</td>
-<td id="T_f3678_row0_col41" class="data row0 col41">https://www.immoweb.be/en/classified/villa/for-sale/braine-l%27alleud/1420/10844811</td>
-<td id="T_f3678_row0_col42" class="data row0 col42">None</td>
-<td id="T_f3678_row0_col43" class="data row0 col43">None</td>
-<td id="T_f3678_row0_col44" class="data row0 col44">None</td>
-<td id="T_f3678_row0_col45" class="data row0 col45">None</td>
-<td id="T_f3678_row0_col46" class="data row0 col46">None</td>
-<td id="T_f3678_row0_col47" class="data row0 col47">None</td>
-<td id="T_f3678_row0_col48" class="data row0 col48">None</td>
-<td id="T_f3678_row0_col49" class="data row0 col49">None</td>
+<td id="T_f3d7d_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
+<td id="T_f3d7d_row0_col0" class="data row0 col0">After signing the deed</td>
+<td id="T_f3d7d_row0_col1" class="data row0 col1">1975</td>
+<td id="T_f3d7d_row0_col2" class="data row0 col2">Good</td>
+<td id="T_f3d7d_row0_col3" class="data row0 col3">23 m</td>
+<td id="T_f3d7d_row0_col4" class="data row0 col4">4</td>
+<td id="T_f3d7d_row0_col5" class="data row0 col5">2</td>
+<td id="T_f3d7d_row0_col6" class="data row0 col6">2</td>
+<td id="T_f3d7d_row0_col7" class="data row0 col7">Living area (residential, urban or rural)</td>
+<td id="T_f3d7d_row0_col8" class="data row0 col8">420 m² square meters</td>
+<td id="T_f3d7d_row0_col9" class="data row0 col9">63 m² square meters</td>
+<td id="T_f3d7d_row0_col10" class="data row0 col10">Yes</td>
+<td id="T_f3d7d_row0_col11" class="data row0 col11">USA hyper equipped</td>
+<td id="T_f3d7d_row0_col12" class="data row0 col12">21 m² square meters</td>
+<td id="T_f3d7d_row0_col13" class="data row0 col13">5</td>
+<td id="T_f3d7d_row0_col14" class="data row0 col14">28 m² square meters</td>
+<td id="T_f3d7d_row0_col15" class="data row0 col15">24 m² square meters</td>
+<td id="T_f3d7d_row0_col16" class="data row0 col16">21 m² square meters</td>
+<td id="T_f3d7d_row0_col17" class="data row0 col17">4</td>
+<td id="T_f3d7d_row0_col18" class="data row0 col18">5</td>
+<td id="T_f3d7d_row0_col19" class="data row0 col19">Yes</td>
+<td id="T_f3d7d_row0_col20" class="data row0 col20">Yes</td>
+<td id="T_f3d7d_row0_col21" class="data row0 col21">No</td>
+<td id="T_f3d7d_row0_col22" class="data row0 col22">4677 m² square meters</td>
+<td id="T_f3d7d_row0_col23" class="data row0 col23">Not connected</td>
+<td id="T_f3d7d_row0_col24" class="data row0 col24">Yes</td>
+<td id="T_f3d7d_row0_col25" class="data row0 col25">4300 m² square meters</td>
+<td id="T_f3d7d_row0_col26" class="data row0 col26">Yes</td>
+<td id="T_f3d7d_row0_col27" class="data row0 col27">296 kWh/m² kilowatt hour per square meters</td>
+<td id="T_f3d7d_row0_col28" class="data row0 col28">D</td>
+<td id="T_f3d7d_row0_col29" class="data row0 col29">20210910012683</td>
+<td id="T_f3d7d_row0_col30" class="data row0 col30">74 kg CO₂/m²</td>
+<td id="T_f3d7d_row0_col31" class="data row0 col31">133062 kWh/year</td>
+<td id="T_f3d7d_row0_col32" class="data row0 col32">Fuel oil</td>
+<td id="T_f3d7d_row0_col33" class="data row0 col33">Yes</td>
+<td id="T_f3d7d_row0_col34" class="data row0 col34">€ 1,225,000 1225000 €</td>
+<td id="T_f3d7d_row0_col35" class="data row0 col35">€ 7,615 7615 €</td>
+<td id="T_f3d7d_row0_col36" class="data row0 col36">No</td>
+<td id="T_f3d7d_row0_col37" class="data row0 col37">drève richelle 96 1410 - Waterloo</td>
+<td id="T_f3d7d_row0_col38" class="data row0 col38">http://www.bytheway.be</td>
+<td id="T_f3d7d_row0_col39" class="data row0 col39">5530019</td>
+<td id="T_f3d7d_row0_col40" class="data row0 col40">2023-09-27 14:02:10.370650</td>
+<td id="T_f3d7d_row0_col41" class="data row0 col41">https://www.immoweb.be/en/classified/villa/for-sale/braine-l%27alleud/1420/10844811</td>
+<td id="T_f3d7d_row0_col42" class="data row0 col42">None</td>
+<td id="T_f3d7d_row0_col43" class="data row0 col43">None</td>
+<td id="T_f3d7d_row0_col44" class="data row0 col44">None</td>
+<td id="T_f3d7d_row0_col45" class="data row0 col45">None</td>
+<td id="T_f3d7d_row0_col46" class="data row0 col46">None</td>
+<td id="T_f3d7d_row0_col47" class="data row0 col47">None</td>
+<td id="T_f3d7d_row0_col48" class="data row0 col48">None</td>
+<td id="T_f3d7d_row0_col49" class="data row0 col49">None</td>
 </tr>
 <tr class="even">
-<td id="T_f3678_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
-<td id="T_f3678_row1_col0" class="data row1 col0">After signing the deed</td>
-<td id="T_f3678_row1_col1" class="data row1 col1">1850</td>
-<td id="T_f3678_row1_col2" class="data row1 col2">To renovate</td>
-<td id="T_f3678_row1_col3" class="data row1 col3">9 m</td>
-<td id="T_f3678_row1_col4" class="data row1 col4">2</td>
-<td id="T_f3678_row1_col5" class="data row1 col5">1</td>
-<td id="T_f3678_row1_col6" class="data row1 col6">None</td>
-<td id="T_f3678_row1_col7" class="data row1 col7">Urban</td>
-<td id="T_f3678_row1_col8" class="data row1 col8">113 m² square meters</td>
-<td id="T_f3678_row1_col9" class="data row1 col9">None</td>
-<td id="T_f3678_row1_col10" class="data row1 col10">Yes</td>
-<td id="T_f3678_row1_col11" class="data row1 col11">Semi equipped</td>
-<td id="T_f3678_row1_col12" class="data row1 col12">None</td>
-<td id="T_f3678_row1_col13" class="data row1 col13">2</td>
-<td id="T_f3678_row1_col14" class="data row1 col14">14 m² square meters</td>
-<td id="T_f3678_row1_col15" class="data row1 col15">10 m² square meters</td>
-<td id="T_f3678_row1_col16" class="data row1 col16">None</td>
-<td id="T_f3678_row1_col17" class="data row1 col17">1</td>
-<td id="T_f3678_row1_col18" class="data row1 col18">1</td>
-<td id="T_f3678_row1_col19" class="data row1 col19">None</td>
-<td id="T_f3678_row1_col20" class="data row1 col20">None</td>
-<td id="T_f3678_row1_col21" class="data row1 col21">No</td>
-<td id="T_f3678_row1_col22" class="data row1 col22">73 m² square meters</td>
-<td id="T_f3678_row1_col23" class="data row1 col23">Connected</td>
-<td id="T_f3678_row1_col24" class="data row1 col24">None</td>
-<td id="T_f3678_row1_col25" class="data row1 col25">None</td>
-<td id="T_f3678_row1_col26" class="data row1 col26">Yes</td>
-<td id="T_f3678_row1_col27" class="data row1 col27">307 kWh/m² kilowatt hour per square meters</td>
-<td id="T_f3678_row1_col28" class="data row1 col28">D</td>
-<td id="T_f3678_row1_col29" class="data row1 col29">20230306014621</td>
-<td id="T_f3678_row1_col30" class="data row1 col30">76 kg CO₂/m²</td>
-<td id="T_f3678_row1_col31" class="data row1 col31">43587 kWh/year</td>
-<td id="T_f3678_row1_col32" class="data row1 col32">Fuel oil</td>
-<td id="T_f3678_row1_col33" class="data row1 col33">Yes</td>
-<td id="T_f3678_row1_col34" class="data row1 col34">Make an offer starting from € 89,000 Make an offer starting from 89000 €</td>
-<td id="T_f3678_row1_col35" class="data row1 col35">€ 541 541 €</td>
-<td id="T_f3678_row1_col36" class="data row1 col36">No</td>
-<td id="T_f3678_row1_col37" class="data row1 col37">Chaussée de l'Ourthe 65 6900 - Marche-en-Famenne</td>
-<td id="T_f3678_row1_col38" class="data row1 col38">http://www.weinvest.be</td>
-<td id="T_f3678_row1_col39" class="data row1 col39">5246367</td>
-<td id="T_f3678_row1_col40" class="data row1 col40">2023-09-27 14:02:10.641758</td>
-<td id="T_f3678_row1_col41" class="data row1 col41">https://www.immoweb.be/en/classified/town-house/for-sale/jemelle/5580/10843929</td>
-<td id="T_f3678_row1_col42" class="data row1 col42">No</td>
-<td id="T_f3678_row1_col43" class="data row1 col43">Living area (residential, urban or rural)</td>
-<td id="T_f3678_row1_col44" class="data row1 col44">No</td>
-<td id="T_f3678_row1_col45" class="data row1 col45">No</td>
-<td id="T_f3678_row1_col46" class="data row1 col46">No</td>
-<td id="T_f3678_row1_col47" class="data row1 col47">None</td>
-<td id="T_f3678_row1_col48" class="data row1 col48">None</td>
-<td id="T_f3678_row1_col49" class="data row1 col49">10 m meters</td>
+<td id="T_f3d7d_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
+<td id="T_f3d7d_row1_col0" class="data row1 col0">After signing the deed</td>
+<td id="T_f3d7d_row1_col1" class="data row1 col1">1850</td>
+<td id="T_f3d7d_row1_col2" class="data row1 col2">To renovate</td>
+<td id="T_f3d7d_row1_col3" class="data row1 col3">9 m</td>
+<td id="T_f3d7d_row1_col4" class="data row1 col4">2</td>
+<td id="T_f3d7d_row1_col5" class="data row1 col5">1</td>
+<td id="T_f3d7d_row1_col6" class="data row1 col6">None</td>
+<td id="T_f3d7d_row1_col7" class="data row1 col7">Urban</td>
+<td id="T_f3d7d_row1_col8" class="data row1 col8">113 m² square meters</td>
+<td id="T_f3d7d_row1_col9" class="data row1 col9">None</td>
+<td id="T_f3d7d_row1_col10" class="data row1 col10">Yes</td>
+<td id="T_f3d7d_row1_col11" class="data row1 col11">Semi equipped</td>
+<td id="T_f3d7d_row1_col12" class="data row1 col12">None</td>
+<td id="T_f3d7d_row1_col13" class="data row1 col13">2</td>
+<td id="T_f3d7d_row1_col14" class="data row1 col14">14 m² square meters</td>
+<td id="T_f3d7d_row1_col15" class="data row1 col15">10 m² square meters</td>
+<td id="T_f3d7d_row1_col16" class="data row1 col16">None</td>
+<td id="T_f3d7d_row1_col17" class="data row1 col17">1</td>
+<td id="T_f3d7d_row1_col18" class="data row1 col18">1</td>
+<td id="T_f3d7d_row1_col19" class="data row1 col19">None</td>
+<td id="T_f3d7d_row1_col20" class="data row1 col20">None</td>
+<td id="T_f3d7d_row1_col21" class="data row1 col21">No</td>
+<td id="T_f3d7d_row1_col22" class="data row1 col22">73 m² square meters</td>
+<td id="T_f3d7d_row1_col23" class="data row1 col23">Connected</td>
+<td id="T_f3d7d_row1_col24" class="data row1 col24">None</td>
+<td id="T_f3d7d_row1_col25" class="data row1 col25">None</td>
+<td id="T_f3d7d_row1_col26" class="data row1 col26">Yes</td>
+<td id="T_f3d7d_row1_col27" class="data row1 col27">307 kWh/m² kilowatt hour per square meters</td>
+<td id="T_f3d7d_row1_col28" class="data row1 col28">D</td>
+<td id="T_f3d7d_row1_col29" class="data row1 col29">20230306014621</td>
+<td id="T_f3d7d_row1_col30" class="data row1 col30">76 kg CO₂/m²</td>
+<td id="T_f3d7d_row1_col31" class="data row1 col31">43587 kWh/year</td>
+<td id="T_f3d7d_row1_col32" class="data row1 col32">Fuel oil</td>
+<td id="T_f3d7d_row1_col33" class="data row1 col33">Yes</td>
+<td id="T_f3d7d_row1_col34" class="data row1 col34">Make an offer starting from € 89,000 Make an offer starting from 89000 €</td>
+<td id="T_f3d7d_row1_col35" class="data row1 col35">€ 541 541 €</td>
+<td id="T_f3d7d_row1_col36" class="data row1 col36">No</td>
+<td id="T_f3d7d_row1_col37" class="data row1 col37">Chaussée de l'Ourthe 65 6900 - Marche-en-Famenne</td>
+<td id="T_f3d7d_row1_col38" class="data row1 col38">http://www.weinvest.be</td>
+<td id="T_f3d7d_row1_col39" class="data row1 col39">5246367</td>
+<td id="T_f3d7d_row1_col40" class="data row1 col40">2023-09-27 14:02:10.641758</td>
+<td id="T_f3d7d_row1_col41" class="data row1 col41">https://www.immoweb.be/en/classified/town-house/for-sale/jemelle/5580/10843929</td>
+<td id="T_f3d7d_row1_col42" class="data row1 col42">No</td>
+<td id="T_f3d7d_row1_col43" class="data row1 col43">Living area (residential, urban or rural)</td>
+<td id="T_f3d7d_row1_col44" class="data row1 col44">No</td>
+<td id="T_f3d7d_row1_col45" class="data row1 col45">No</td>
+<td id="T_f3d7d_row1_col46" class="data row1 col46">No</td>
+<td id="T_f3d7d_row1_col47" class="data row1 col47">None</td>
+<td id="T_f3d7d_row1_col48" class="data row1 col48">None</td>
+<td id="T_f3d7d_row1_col49" class="data row1 col49">10 m meters</td>
 </tr>
 <tr class="odd">
-<td id="T_f3678_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
-<td id="T_f3678_row2_col0" class="data row2 col0">After signing the deed</td>
-<td id="T_f3678_row2_col1" class="data row2 col1">1949</td>
-<td id="T_f3678_row2_col2" class="data row2 col2">To renovate</td>
-<td id="T_f3678_row2_col3" class="data row2 col3">18 m</td>
-<td id="T_f3678_row2_col4" class="data row2 col4">3</td>
-<td id="T_f3678_row2_col5" class="data row2 col5">1</td>
-<td id="T_f3678_row2_col6" class="data row2 col6">None</td>
-<td id="T_f3678_row2_col7" class="data row2 col7">Isolated</td>
-<td id="T_f3678_row2_col8" class="data row2 col8">139 m² square meters</td>
-<td id="T_f3678_row2_col9" class="data row2 col9">10 m² square meters</td>
-<td id="T_f3678_row2_col10" class="data row2 col10">Yes</td>
-<td id="T_f3678_row2_col11" class="data row2 col11">Semi equipped</td>
-<td id="T_f3678_row2_col12" class="data row2 col12">13 m² square meters</td>
-<td id="T_f3678_row2_col13" class="data row2 col13">2</td>
-<td id="T_f3678_row2_col14" class="data row2 col14">17 m² square meters</td>
-<td id="T_f3678_row2_col15" class="data row2 col15">11 m² square meters</td>
-<td id="T_f3678_row2_col16" class="data row2 col16">None</td>
-<td id="T_f3678_row2_col17" class="data row2 col17">1</td>
-<td id="T_f3678_row2_col18" class="data row2 col18">1</td>
-<td id="T_f3678_row2_col19" class="data row2 col19">Yes</td>
-<td id="T_f3678_row2_col20" class="data row2 col20">Yes</td>
-<td id="T_f3678_row2_col21" class="data row2 col21">No</td>
-<td id="T_f3678_row2_col22" class="data row2 col22">413 m² square meters</td>
-<td id="T_f3678_row2_col23" class="data row2 col23">Connected</td>
-<td id="T_f3678_row2_col24" class="data row2 col24">None</td>
-<td id="T_f3678_row2_col25" class="data row2 col25">315 m² square meters</td>
-<td id="T_f3678_row2_col26" class="data row2 col26">Yes</td>
-<td id="T_f3678_row2_col27" class="data row2 col27">699 kWh/m² kilowatt hour per square meters</td>
-<td id="T_f3678_row2_col28" class="data row2 col28">G</td>
-<td id="T_f3678_row2_col29" class="data row2 col29">20230303013078</td>
-<td id="T_f3678_row2_col30" class="data row2 col30">173 kg CO₂/m²</td>
-<td id="T_f3678_row2_col31" class="data row2 col31">96913 kWh/year</td>
-<td id="T_f3678_row2_col32" class="data row2 col32">Fuel oil</td>
-<td id="T_f3678_row2_col33" class="data row2 col33">Yes</td>
-<td id="T_f3678_row2_col34" class="data row2 col34">Make an offer starting from € 150,000 Make an offer starting from 150000 €</td>
-<td id="T_f3678_row2_col35" class="data row2 col35">€ 689 689 €</td>
-<td id="T_f3678_row2_col36" class="data row2 col36">No</td>
-<td id="T_f3678_row2_col37" class="data row2 col37">Rue de la Wallonie 2A 4680 - Oupeye</td>
-<td id="T_f3678_row2_col38" class="data row2 col38">http://www.nigel-immo.be</td>
-<td id="T_f3678_row2_col39" class="data row2 col39">5534704</td>
-<td id="T_f3678_row2_col40" class="data row2 col40">2023-09-27 14:02:10.905808</td>
-<td id="T_f3678_row2_col41" class="data row2 col41">https://www.immoweb.be/en/classified/house/for-sale/esneux%20tilff/4130/10838582</td>
-<td id="T_f3678_row2_col42" class="data row2 col42">None</td>
-<td id="T_f3678_row2_col43" class="data row2 col43">Living area (residential, urban or rural)</td>
-<td id="T_f3678_row2_col44" class="data row2 col44">No</td>
-<td id="T_f3678_row2_col45" class="data row2 col45">No</td>
-<td id="T_f3678_row2_col46" class="data row2 col46">No</td>
-<td id="T_f3678_row2_col47" class="data row2 col47">Non flood zone</td>
-<td id="T_f3678_row2_col48" class="data row2 col48">None</td>
-<td id="T_f3678_row2_col49" class="data row2 col49">18 m meters</td>
+<td id="T_f3d7d_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
+<td id="T_f3d7d_row2_col0" class="data row2 col0">After signing the deed</td>
+<td id="T_f3d7d_row2_col1" class="data row2 col1">1949</td>
+<td id="T_f3d7d_row2_col2" class="data row2 col2">To renovate</td>
+<td id="T_f3d7d_row2_col3" class="data row2 col3">18 m</td>
+<td id="T_f3d7d_row2_col4" class="data row2 col4">3</td>
+<td id="T_f3d7d_row2_col5" class="data row2 col5">1</td>
+<td id="T_f3d7d_row2_col6" class="data row2 col6">None</td>
+<td id="T_f3d7d_row2_col7" class="data row2 col7">Isolated</td>
+<td id="T_f3d7d_row2_col8" class="data row2 col8">139 m² square meters</td>
+<td id="T_f3d7d_row2_col9" class="data row2 col9">10 m² square meters</td>
+<td id="T_f3d7d_row2_col10" class="data row2 col10">Yes</td>
+<td id="T_f3d7d_row2_col11" class="data row2 col11">Semi equipped</td>
+<td id="T_f3d7d_row2_col12" class="data row2 col12">13 m² square meters</td>
+<td id="T_f3d7d_row2_col13" class="data row2 col13">2</td>
+<td id="T_f3d7d_row2_col14" class="data row2 col14">17 m² square meters</td>
+<td id="T_f3d7d_row2_col15" class="data row2 col15">11 m² square meters</td>
+<td id="T_f3d7d_row2_col16" class="data row2 col16">None</td>
+<td id="T_f3d7d_row2_col17" class="data row2 col17">1</td>
+<td id="T_f3d7d_row2_col18" class="data row2 col18">1</td>
+<td id="T_f3d7d_row2_col19" class="data row2 col19">Yes</td>
+<td id="T_f3d7d_row2_col20" class="data row2 col20">Yes</td>
+<td id="T_f3d7d_row2_col21" class="data row2 col21">No</td>
+<td id="T_f3d7d_row2_col22" class="data row2 col22">413 m² square meters</td>
+<td id="T_f3d7d_row2_col23" class="data row2 col23">Connected</td>
+<td id="T_f3d7d_row2_col24" class="data row2 col24">None</td>
+<td id="T_f3d7d_row2_col25" class="data row2 col25">315 m² square meters</td>
+<td id="T_f3d7d_row2_col26" class="data row2 col26">Yes</td>
+<td id="T_f3d7d_row2_col27" class="data row2 col27">699 kWh/m² kilowatt hour per square meters</td>
+<td id="T_f3d7d_row2_col28" class="data row2 col28">G</td>
+<td id="T_f3d7d_row2_col29" class="data row2 col29">20230303013078</td>
+<td id="T_f3d7d_row2_col30" class="data row2 col30">173 kg CO₂/m²</td>
+<td id="T_f3d7d_row2_col31" class="data row2 col31">96913 kWh/year</td>
+<td id="T_f3d7d_row2_col32" class="data row2 col32">Fuel oil</td>
+<td id="T_f3d7d_row2_col33" class="data row2 col33">Yes</td>
+<td id="T_f3d7d_row2_col34" class="data row2 col34">Make an offer starting from € 150,000 Make an offer starting from 150000 €</td>
+<td id="T_f3d7d_row2_col35" class="data row2 col35">€ 689 689 €</td>
+<td id="T_f3d7d_row2_col36" class="data row2 col36">No</td>
+<td id="T_f3d7d_row2_col37" class="data row2 col37">Rue de la Wallonie 2A 4680 - Oupeye</td>
+<td id="T_f3d7d_row2_col38" class="data row2 col38">http://www.nigel-immo.be</td>
+<td id="T_f3d7d_row2_col39" class="data row2 col39">5534704</td>
+<td id="T_f3d7d_row2_col40" class="data row2 col40">2023-09-27 14:02:10.905808</td>
+<td id="T_f3d7d_row2_col41" class="data row2 col41">https://www.immoweb.be/en/classified/house/for-sale/esneux%20tilff/4130/10838582</td>
+<td id="T_f3d7d_row2_col42" class="data row2 col42">None</td>
+<td id="T_f3d7d_row2_col43" class="data row2 col43">Living area (residential, urban or rural)</td>
+<td id="T_f3d7d_row2_col44" class="data row2 col44">No</td>
+<td id="T_f3d7d_row2_col45" class="data row2 col45">No</td>
+<td id="T_f3d7d_row2_col46" class="data row2 col46">No</td>
+<td id="T_f3d7d_row2_col47" class="data row2 col47">Non flood zone</td>
+<td id="T_f3d7d_row2_col48" class="data row2 col48">None</td>
+<td id="T_f3d7d_row2_col49" class="data row2 col49">18 m meters</td>
 </tr>
 <tr class="even">
-<td id="T_f3678_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
-<td id="T_f3678_row3_col0" class="data row3 col0">After signing the deed</td>
-<td id="T_f3678_row3_col1" class="data row3 col1">1899</td>
-<td id="T_f3678_row3_col2" class="data row3 col2">Good</td>
-<td id="T_f3678_row3_col3" class="data row3 col3">4.2 m</td>
-<td id="T_f3678_row3_col4" class="data row3 col4">2</td>
-<td id="T_f3678_row3_col5" class="data row3 col5">None</td>
-<td id="T_f3678_row3_col6" class="data row3 col6">None</td>
-<td id="T_f3678_row3_col7" class="data row3 col7">Urban</td>
-<td id="T_f3678_row3_col8" class="data row3 col8">119 m² square meters</td>
-<td id="T_f3678_row3_col9" class="data row3 col9">14 m² square meters</td>
-<td id="T_f3678_row3_col10" class="data row3 col10">None</td>
-<td id="T_f3678_row3_col11" class="data row3 col11">USA installed</td>
-<td id="T_f3678_row3_col12" class="data row3 col12">17 m² square meters</td>
-<td id="T_f3678_row3_col13" class="data row3 col13">3</td>
-<td id="T_f3678_row3_col14" class="data row3 col14">14 m² square meters</td>
-<td id="T_f3678_row3_col15" class="data row3 col15">14 m² square meters</td>
-<td id="T_f3678_row3_col16" class="data row3 col16">10 m² square meters</td>
-<td id="T_f3678_row3_col17" class="data row3 col17">2</td>
-<td id="T_f3678_row3_col18" class="data row3 col18">2</td>
-<td id="T_f3678_row3_col19" class="data row3 col19">None</td>
-<td id="T_f3678_row3_col20" class="data row3 col20">None</td>
-<td id="T_f3678_row3_col21" class="data row3 col21">No</td>
-<td id="T_f3678_row3_col22" class="data row3 col22">55 m² square meters</td>
-<td id="T_f3678_row3_col23" class="data row3 col23">Connected</td>
-<td id="T_f3678_row3_col24" class="data row3 col24">Yes</td>
-<td id="T_f3678_row3_col25" class="data row3 col25">None</td>
-<td id="T_f3678_row3_col26" class="data row3 col26">Yes</td>
-<td id="T_f3678_row3_col27" class="data row3 col27">246 kWh/m² kilowatt hour per square meters</td>
-<td id="T_f3678_row3_col28" class="data row3 col28">C</td>
-<td id="T_f3678_row3_col29" class="data row3 col29">20230622-0002923649-RES-1</td>
-<td id="T_f3678_row3_col30" class="data row3 col30">4167 kg CO₂/m²</td>
-<td id="T_f3678_row3_col31" class="data row3 col31">Not specified</td>
-<td id="T_f3678_row3_col32" class="data row3 col32">Gas</td>
-<td id="T_f3678_row3_col33" class="data row3 col33">Yes</td>
-<td id="T_f3678_row3_col34" class="data row3 col34">€ 272,000 272000 €</td>
-<td id="T_f3678_row3_col35" class="data row3 col35">€ 898 898 €</td>
-<td id="T_f3678_row3_col36" class="data row3 col36">No</td>
-<td id="T_f3678_row3_col37" class="data row3 col37">Sint-Denijslaan 1 9000 - Gent</td>
-<td id="T_f3678_row3_col38" class="data row3 col38">http://www.immodavinci.be</td>
-<td id="T_f3678_row3_col39" class="data row3 col39">5535455</td>
-<td id="T_f3678_row3_col40" class="data row3 col40">2023-09-27 14:02:11.811691</td>
-<td id="T_f3678_row3_col41" class="data row3 col41">https://www.immoweb.be/en/classified/house/for-sale/gent/9000/10838392</td>
-<td id="T_f3678_row3_col42" class="data row3 col42">None</td>
-<td id="T_f3678_row3_col43" class="data row3 col43">Living area (residential, urban or rural)</td>
-<td id="T_f3678_row3_col44" class="data row3 col44">No</td>
-<td id="T_f3678_row3_col45" class="data row3 col45">Yes</td>
-<td id="T_f3678_row3_col46" class="data row3 col46">No</td>
-<td id="T_f3678_row3_col47" class="data row3 col47">Non flood zone</td>
-<td id="T_f3678_row3_col48" class="data row3 col48">Yes</td>
-<td id="T_f3678_row3_col49" class="data row3 col49">None</td>
+<td id="T_f3d7d_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
+<td id="T_f3d7d_row3_col0" class="data row3 col0">After signing the deed</td>
+<td id="T_f3d7d_row3_col1" class="data row3 col1">1899</td>
+<td id="T_f3d7d_row3_col2" class="data row3 col2">Good</td>
+<td id="T_f3d7d_row3_col3" class="data row3 col3">4.2 m</td>
+<td id="T_f3d7d_row3_col4" class="data row3 col4">2</td>
+<td id="T_f3d7d_row3_col5" class="data row3 col5">None</td>
+<td id="T_f3d7d_row3_col6" class="data row3 col6">None</td>
+<td id="T_f3d7d_row3_col7" class="data row3 col7">Urban</td>
+<td id="T_f3d7d_row3_col8" class="data row3 col8">119 m² square meters</td>
+<td id="T_f3d7d_row3_col9" class="data row3 col9">14 m² square meters</td>
+<td id="T_f3d7d_row3_col10" class="data row3 col10">None</td>
+<td id="T_f3d7d_row3_col11" class="data row3 col11">USA installed</td>
+<td id="T_f3d7d_row3_col12" class="data row3 col12">17 m² square meters</td>
+<td id="T_f3d7d_row3_col13" class="data row3 col13">3</td>
+<td id="T_f3d7d_row3_col14" class="data row3 col14">14 m² square meters</td>
+<td id="T_f3d7d_row3_col15" class="data row3 col15">14 m² square meters</td>
+<td id="T_f3d7d_row3_col16" class="data row3 col16">10 m² square meters</td>
+<td id="T_f3d7d_row3_col17" class="data row3 col17">2</td>
+<td id="T_f3d7d_row3_col18" class="data row3 col18">2</td>
+<td id="T_f3d7d_row3_col19" class="data row3 col19">None</td>
+<td id="T_f3d7d_row3_col20" class="data row3 col20">None</td>
+<td id="T_f3d7d_row3_col21" class="data row3 col21">No</td>
+<td id="T_f3d7d_row3_col22" class="data row3 col22">55 m² square meters</td>
+<td id="T_f3d7d_row3_col23" class="data row3 col23">Connected</td>
+<td id="T_f3d7d_row3_col24" class="data row3 col24">Yes</td>
+<td id="T_f3d7d_row3_col25" class="data row3 col25">None</td>
+<td id="T_f3d7d_row3_col26" class="data row3 col26">Yes</td>
+<td id="T_f3d7d_row3_col27" class="data row3 col27">246 kWh/m² kilowatt hour per square meters</td>
+<td id="T_f3d7d_row3_col28" class="data row3 col28">C</td>
+<td id="T_f3d7d_row3_col29" class="data row3 col29">20230622-0002923649-RES-1</td>
+<td id="T_f3d7d_row3_col30" class="data row3 col30">4167 kg CO₂/m²</td>
+<td id="T_f3d7d_row3_col31" class="data row3 col31">Not specified</td>
+<td id="T_f3d7d_row3_col32" class="data row3 col32">Gas</td>
+<td id="T_f3d7d_row3_col33" class="data row3 col33">Yes</td>
+<td id="T_f3d7d_row3_col34" class="data row3 col34">€ 272,000 272000 €</td>
+<td id="T_f3d7d_row3_col35" class="data row3 col35">€ 898 898 €</td>
+<td id="T_f3d7d_row3_col36" class="data row3 col36">No</td>
+<td id="T_f3d7d_row3_col37" class="data row3 col37">Sint-Denijslaan 1 9000 - Gent</td>
+<td id="T_f3d7d_row3_col38" class="data row3 col38">http://www.immodavinci.be</td>
+<td id="T_f3d7d_row3_col39" class="data row3 col39">5535455</td>
+<td id="T_f3d7d_row3_col40" class="data row3 col40">2023-09-27 14:02:11.811691</td>
+<td id="T_f3d7d_row3_col41" class="data row3 col41">https://www.immoweb.be/en/classified/house/for-sale/gent/9000/10838392</td>
+<td id="T_f3d7d_row3_col42" class="data row3 col42">None</td>
+<td id="T_f3d7d_row3_col43" class="data row3 col43">Living area (residential, urban or rural)</td>
+<td id="T_f3d7d_row3_col44" class="data row3 col44">No</td>
+<td id="T_f3d7d_row3_col45" class="data row3 col45">Yes</td>
+<td id="T_f3d7d_row3_col46" class="data row3 col46">No</td>
+<td id="T_f3d7d_row3_col47" class="data row3 col47">Non flood zone</td>
+<td id="T_f3d7d_row3_col48" class="data row3 col48">Yes</td>
+<td id="T_f3d7d_row3_col49" class="data row3 col49">None</td>
 </tr>
 <tr class="odd">
-<td id="T_f3678_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
-<td id="T_f3678_row4_col0" class="data row4 col0">At delivery</td>
-<td id="T_f3678_row4_col1" class="data row4 col1">2021</td>
-<td id="T_f3678_row4_col2" class="data row4 col2">As new</td>
-<td id="T_f3678_row4_col3" class="data row4 col3">7.3 m</td>
-<td id="T_f3678_row4_col4" class="data row4 col4">3</td>
-<td id="T_f3678_row4_col5" class="data row4 col5">None</td>
-<td id="T_f3678_row4_col6" class="data row4 col6">1</td>
-<td id="T_f3678_row4_col7" class="data row4 col7">Living area (residential, urban or rural)</td>
-<td id="T_f3678_row4_col8" class="data row4 col8">215 m² square meters</td>
-<td id="T_f3678_row4_col9" class="data row4 col9">46 m² square meters</td>
-<td id="T_f3678_row4_col10" class="data row4 col10">None</td>
-<td id="T_f3678_row4_col11" class="data row4 col11">USA hyper equipped</td>
-<td id="T_f3678_row4_col12" class="data row4 col12">None</td>
-<td id="T_f3678_row4_col13" class="data row4 col13">3</td>
-<td id="T_f3678_row4_col14" class="data row4 col14">16 m² square meters</td>
-<td id="T_f3678_row4_col15" class="data row4 col15">12 m² square meters</td>
-<td id="T_f3678_row4_col16" class="data row4 col16">12 m² square meters</td>
-<td id="T_f3678_row4_col17" class="data row4 col17">1</td>
-<td id="T_f3678_row4_col18" class="data row4 col18">2</td>
-<td id="T_f3678_row4_col19" class="data row4 col19">None</td>
-<td id="T_f3678_row4_col20" class="data row4 col20">None</td>
-<td id="T_f3678_row4_col21" class="data row4 col21">No</td>
-<td id="T_f3678_row4_col22" class="data row4 col22">330 m² square meters</td>
-<td id="T_f3678_row4_col23" class="data row4 col23">Connected</td>
-<td id="T_f3678_row4_col24" class="data row4 col24">Yes</td>
-<td id="T_f3678_row4_col25" class="data row4 col25">250 m² square meters</td>
-<td id="T_f3678_row4_col26" class="data row4 col26">Yes</td>
-<td id="T_f3678_row4_col27" class="data row4 col27">27 kWh/m² kilowatt hour per square meters</td>
-<td id="T_f3678_row4_col28" class="data row4 col28">A</td>
-<td id="T_f3678_row4_col29" class="data row4 col29">12345</td>
-<td id="T_f3678_row4_col30" class="data row4 col30">Not specified</td>
-<td id="T_f3678_row4_col31" class="data row4 col31">Not specified</td>
-<td id="T_f3678_row4_col32" class="data row4 col32">Gas</td>
-<td id="T_f3678_row4_col33" class="data row4 col33">Yes</td>
-<td id="T_f3678_row4_col34" class="data row4 col34">€ 413,150 413150 €</td>
-<td id="T_f3678_row4_col35" class="data row4 col35">None</td>
-<td id="T_f3678_row4_col36" class="data row4 col36">No</td>
-<td id="T_f3678_row4_col37" class="data row4 col37">Astridlaan 1 1700 - Dilbeek</td>
-<td id="T_f3678_row4_col38" class="data row4 col38">http://www.living-stone.be</td>
-<td id="T_f3678_row4_col39" class="data row4 col39">5527171</td>
-<td id="T_f3678_row4_col40" class="data row4 col40">2023-09-27 14:02:11.968969</td>
-<td id="T_f3678_row4_col41" class="data row4 col41">https://www.immoweb.be/en/classified/house/for-sale/affligem/1790/10842333</td>
-<td id="T_f3678_row4_col42" class="data row4 col42">None</td>
-<td id="T_f3678_row4_col43" class="data row4 col43">Living area (residential, urban or rural)</td>
-<td id="T_f3678_row4_col44" class="data row4 col44">None</td>
-<td id="T_f3678_row4_col45" class="data row4 col45">No</td>
-<td id="T_f3678_row4_col46" class="data row4 col46">Yes</td>
-<td id="T_f3678_row4_col47" class="data row4 col47">Non flood zone</td>
-<td id="T_f3678_row4_col48" class="data row4 col48">Yes</td>
-<td id="T_f3678_row4_col49" class="data row4 col49">None</td>
+<td id="T_f3d7d_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
+<td id="T_f3d7d_row4_col0" class="data row4 col0">At delivery</td>
+<td id="T_f3d7d_row4_col1" class="data row4 col1">2021</td>
+<td id="T_f3d7d_row4_col2" class="data row4 col2">As new</td>
+<td id="T_f3d7d_row4_col3" class="data row4 col3">7.3 m</td>
+<td id="T_f3d7d_row4_col4" class="data row4 col4">3</td>
+<td id="T_f3d7d_row4_col5" class="data row4 col5">None</td>
+<td id="T_f3d7d_row4_col6" class="data row4 col6">1</td>
+<td id="T_f3d7d_row4_col7" class="data row4 col7">Living area (residential, urban or rural)</td>
+<td id="T_f3d7d_row4_col8" class="data row4 col8">215 m² square meters</td>
+<td id="T_f3d7d_row4_col9" class="data row4 col9">46 m² square meters</td>
+<td id="T_f3d7d_row4_col10" class="data row4 col10">None</td>
+<td id="T_f3d7d_row4_col11" class="data row4 col11">USA hyper equipped</td>
+<td id="T_f3d7d_row4_col12" class="data row4 col12">None</td>
+<td id="T_f3d7d_row4_col13" class="data row4 col13">3</td>
+<td id="T_f3d7d_row4_col14" class="data row4 col14">16 m² square meters</td>
+<td id="T_f3d7d_row4_col15" class="data row4 col15">12 m² square meters</td>
+<td id="T_f3d7d_row4_col16" class="data row4 col16">12 m² square meters</td>
+<td id="T_f3d7d_row4_col17" class="data row4 col17">1</td>
+<td id="T_f3d7d_row4_col18" class="data row4 col18">2</td>
+<td id="T_f3d7d_row4_col19" class="data row4 col19">None</td>
+<td id="T_f3d7d_row4_col20" class="data row4 col20">None</td>
+<td id="T_f3d7d_row4_col21" class="data row4 col21">No</td>
+<td id="T_f3d7d_row4_col22" class="data row4 col22">330 m² square meters</td>
+<td id="T_f3d7d_row4_col23" class="data row4 col23">Connected</td>
+<td id="T_f3d7d_row4_col24" class="data row4 col24">Yes</td>
+<td id="T_f3d7d_row4_col25" class="data row4 col25">250 m² square meters</td>
+<td id="T_f3d7d_row4_col26" class="data row4 col26">Yes</td>
+<td id="T_f3d7d_row4_col27" class="data row4 col27">27 kWh/m² kilowatt hour per square meters</td>
+<td id="T_f3d7d_row4_col28" class="data row4 col28">A</td>
+<td id="T_f3d7d_row4_col29" class="data row4 col29">12345</td>
+<td id="T_f3d7d_row4_col30" class="data row4 col30">Not specified</td>
+<td id="T_f3d7d_row4_col31" class="data row4 col31">Not specified</td>
+<td id="T_f3d7d_row4_col32" class="data row4 col32">Gas</td>
+<td id="T_f3d7d_row4_col33" class="data row4 col33">Yes</td>
+<td id="T_f3d7d_row4_col34" class="data row4 col34">€ 413,150 413150 €</td>
+<td id="T_f3d7d_row4_col35" class="data row4 col35">None</td>
+<td id="T_f3d7d_row4_col36" class="data row4 col36">No</td>
+<td id="T_f3d7d_row4_col37" class="data row4 col37">Astridlaan 1 1700 - Dilbeek</td>
+<td id="T_f3d7d_row4_col38" class="data row4 col38">http://www.living-stone.be</td>
+<td id="T_f3d7d_row4_col39" class="data row4 col39">5527171</td>
+<td id="T_f3d7d_row4_col40" class="data row4 col40">2023-09-27 14:02:11.968969</td>
+<td id="T_f3d7d_row4_col41" class="data row4 col41">https://www.immoweb.be/en/classified/house/for-sale/affligem/1790/10842333</td>
+<td id="T_f3d7d_row4_col42" class="data row4 col42">None</td>
+<td id="T_f3d7d_row4_col43" class="data row4 col43">Living area (residential, urban or rural)</td>
+<td id="T_f3d7d_row4_col44" class="data row4 col44">None</td>
+<td id="T_f3d7d_row4_col45" class="data row4 col45">No</td>
+<td id="T_f3d7d_row4_col46" class="data row4 col46">Yes</td>
+<td id="T_f3d7d_row4_col47" class="data row4 col47">Non flood zone</td>
+<td id="T_f3d7d_row4_col48" class="data row4 col48">Yes</td>
+<td id="T_f3d7d_row4_col49" class="data row4 col49">None</td>
 </tr>
 </tbody>
 </table>
@@ -816,13 +816,13 @@ Here is the dataset we have gathered through web scraping:</p>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <style type="text/css">
-#T_94f02 thead tr th:nth-child(1) {
+#T_86a77 thead tr th:nth-child(1) {
   position: sticky;
   background-color: inherit;
   left: 0px;
   z-index: 3 !important;
 }
-#T_94f02 tbody tr th:nth-child(1) {
+#T_86a77 tbody tr th:nth-child(1) {
   position: sticky;
   background-color: inherit;
   left: 0px;
@@ -830,327 +830,327 @@ Here is the dataset we have gathered through web scraping:</p>
 }
 </style>
 
-<table id="T_94f02" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<table id="T_86a77" data-quarto-postprocess="true" class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
-<th id="T_94f02_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">address</th>
-<th id="T_94f02_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">as_built_plan</th>
-<th id="T_94f02_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">available_as_of</th>
-<th id="T_94f02_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">basement</th>
-<th id="T_94f02_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">bathrooms</th>
-<th id="T_94f02_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">bedroom_1_surface</th>
-<th id="T_94f02_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">bedroom_2_surface</th>
-<th id="T_94f02_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">bedroom_3_surface</th>
-<th id="T_94f02_level0_col8" class="col_heading level0 col8" data-quarto-table-cell-role="th">bedrooms</th>
-<th id="T_94f02_level0_col9" class="col_heading level0 col9" data-quarto-table-cell-role="th">building_condition</th>
-<th id="T_94f02_level0_col10" class="col_heading level0 col10" data-quarto-table-cell-role="th">co2_emission</th>
-<th id="T_94f02_level0_col11" class="col_heading level0 col11" data-quarto-table-cell-role="th">cadastral_income</th>
-<th id="T_94f02_level0_col12" class="col_heading level0 col12" data-quarto-table-cell-role="th">connection_to_sewer_network</th>
-<th id="T_94f02_level0_col13" class="col_heading level0 col13" data-quarto-table-cell-role="th">construction_year</th>
-<th id="T_94f02_level0_col14" class="col_heading level0 col14" data-quarto-table-cell-role="th">covered_parking_spaces</th>
-<th id="T_94f02_level0_col15" class="col_heading level0 col15" data-quarto-table-cell-role="th">dining_room</th>
-<th id="T_94f02_level0_col16" class="col_heading level0 col16" data-quarto-table-cell-role="th">double_glazing</th>
-<th id="T_94f02_level0_col17" class="col_heading level0 col17" data-quarto-table-cell-role="th">energy_class</th>
-<th id="T_94f02_level0_col18" class="col_heading level0 col18" data-quarto-table-cell-role="th">external_reference</th>
-<th id="T_94f02_level0_col19" class="col_heading level0 col19" data-quarto-table-cell-role="th">flood_zone_type</th>
-<th id="T_94f02_level0_col20" class="col_heading level0 col20" data-quarto-table-cell-role="th">furnished</th>
-<th id="T_94f02_level0_col21" class="col_heading level0 col21" data-quarto-table-cell-role="th">garden_surface</th>
-<th id="T_94f02_level0_col22" class="col_heading level0 col22" data-quarto-table-cell-role="th">gas_water__electricity</th>
-<th id="T_94f02_level0_col23" class="col_heading level0 col23" data-quarto-table-cell-role="th">heating_type</th>
-<th id="T_94f02_level0_col24" class="col_heading level0 col24" data-quarto-table-cell-role="th">kitchen_surface</th>
-<th id="T_94f02_level0_col25" class="col_heading level0 col25" data-quarto-table-cell-role="th">kitchen_type</th>
-<th id="T_94f02_level0_col26" class="col_heading level0 col26" data-quarto-table-cell-role="th">latest_land_use_designation</th>
-<th id="T_94f02_level0_col27" class="col_heading level0 col27" data-quarto-table-cell-role="th">living_area</th>
-<th id="T_94f02_level0_col28" class="col_heading level0 col28" data-quarto-table-cell-role="th">living_room_surface</th>
-<th id="T_94f02_level0_col29" class="col_heading level0 col29" data-quarto-table-cell-role="th">number_of_frontages</th>
-<th id="T_94f02_level0_col30" class="col_heading level0 col30" data-quarto-table-cell-role="th">office</th>
-<th id="T_94f02_level0_col31" class="col_heading level0 col31" data-quarto-table-cell-role="th">outdoor_parking_spaces</th>
-<th id="T_94f02_level0_col32" class="col_heading level0 col32" data-quarto-table-cell-role="th">planning_permission_obtained</th>
-<th id="T_94f02_level0_col33" class="col_heading level0 col33" data-quarto-table-cell-role="th">possible_priority_purchase_right</th>
-<th id="T_94f02_level0_col34" class="col_heading level0 col34" data-quarto-table-cell-role="th">price</th>
-<th id="T_94f02_level0_col35" class="col_heading level0 col35" data-quarto-table-cell-role="th">primary_energy_consumption</th>
-<th id="T_94f02_level0_col36" class="col_heading level0 col36" data-quarto-table-cell-role="th">proceedings_for_breach_of_planning_regulations</th>
-<th id="T_94f02_level0_col37" class="col_heading level0 col37" data-quarto-table-cell-role="th">reference_number_of_the_epc_report</th>
-<th id="T_94f02_level0_col38" class="col_heading level0 col38" data-quarto-table-cell-role="th">street_frontage_width</th>
-<th id="T_94f02_level0_col39" class="col_heading level0 col39" data-quarto-table-cell-role="th">subdivision_permit</th>
-<th id="T_94f02_level0_col40" class="col_heading level0 col40" data-quarto-table-cell-role="th">surface_of_the_plot</th>
-<th id="T_94f02_level0_col41" class="col_heading level0 col41" data-quarto-table-cell-role="th">surroundings_type</th>
-<th id="T_94f02_level0_col42" class="col_heading level0 col42" data-quarto-table-cell-role="th">tv_cable</th>
-<th id="T_94f02_level0_col43" class="col_heading level0 col43" data-quarto-table-cell-role="th">tenement_building</th>
-<th id="T_94f02_level0_col44" class="col_heading level0 col44" data-quarto-table-cell-role="th">toilets</th>
-<th id="T_94f02_level0_col45" class="col_heading level0 col45" data-quarto-table-cell-role="th">website</th>
-<th id="T_94f02_level0_col46" class="col_heading level0 col46" data-quarto-table-cell-role="th">width_of_the_lot_on_the_street</th>
-<th id="T_94f02_level0_col47" class="col_heading level0 col47" data-quarto-table-cell-role="th">yearly_theoretical_total_energy_consumption</th>
-<th id="T_94f02_level0_col48" class="col_heading level0 col48" data-quarto-table-cell-role="th">ad_url</th>
-<th id="T_94f02_level0_col49" class="col_heading level0 col49" data-quarto-table-cell-role="th">day_of_retrieval</th>
+<th id="T_86a77_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">address</th>
+<th id="T_86a77_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">as_built_plan</th>
+<th id="T_86a77_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">available_as_of</th>
+<th id="T_86a77_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">basement</th>
+<th id="T_86a77_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">bathrooms</th>
+<th id="T_86a77_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">bedroom_1_surface</th>
+<th id="T_86a77_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">bedroom_2_surface</th>
+<th id="T_86a77_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">bedroom_3_surface</th>
+<th id="T_86a77_level0_col8" class="col_heading level0 col8" data-quarto-table-cell-role="th">bedrooms</th>
+<th id="T_86a77_level0_col9" class="col_heading level0 col9" data-quarto-table-cell-role="th">building_condition</th>
+<th id="T_86a77_level0_col10" class="col_heading level0 col10" data-quarto-table-cell-role="th">co2_emission</th>
+<th id="T_86a77_level0_col11" class="col_heading level0 col11" data-quarto-table-cell-role="th">cadastral_income</th>
+<th id="T_86a77_level0_col12" class="col_heading level0 col12" data-quarto-table-cell-role="th">connection_to_sewer_network</th>
+<th id="T_86a77_level0_col13" class="col_heading level0 col13" data-quarto-table-cell-role="th">construction_year</th>
+<th id="T_86a77_level0_col14" class="col_heading level0 col14" data-quarto-table-cell-role="th">covered_parking_spaces</th>
+<th id="T_86a77_level0_col15" class="col_heading level0 col15" data-quarto-table-cell-role="th">dining_room</th>
+<th id="T_86a77_level0_col16" class="col_heading level0 col16" data-quarto-table-cell-role="th">double_glazing</th>
+<th id="T_86a77_level0_col17" class="col_heading level0 col17" data-quarto-table-cell-role="th">energy_class</th>
+<th id="T_86a77_level0_col18" class="col_heading level0 col18" data-quarto-table-cell-role="th">external_reference</th>
+<th id="T_86a77_level0_col19" class="col_heading level0 col19" data-quarto-table-cell-role="th">flood_zone_type</th>
+<th id="T_86a77_level0_col20" class="col_heading level0 col20" data-quarto-table-cell-role="th">furnished</th>
+<th id="T_86a77_level0_col21" class="col_heading level0 col21" data-quarto-table-cell-role="th">garden_surface</th>
+<th id="T_86a77_level0_col22" class="col_heading level0 col22" data-quarto-table-cell-role="th">gas_water__electricity</th>
+<th id="T_86a77_level0_col23" class="col_heading level0 col23" data-quarto-table-cell-role="th">heating_type</th>
+<th id="T_86a77_level0_col24" class="col_heading level0 col24" data-quarto-table-cell-role="th">kitchen_surface</th>
+<th id="T_86a77_level0_col25" class="col_heading level0 col25" data-quarto-table-cell-role="th">kitchen_type</th>
+<th id="T_86a77_level0_col26" class="col_heading level0 col26" data-quarto-table-cell-role="th">latest_land_use_designation</th>
+<th id="T_86a77_level0_col27" class="col_heading level0 col27" data-quarto-table-cell-role="th">living_area</th>
+<th id="T_86a77_level0_col28" class="col_heading level0 col28" data-quarto-table-cell-role="th">living_room_surface</th>
+<th id="T_86a77_level0_col29" class="col_heading level0 col29" data-quarto-table-cell-role="th">number_of_frontages</th>
+<th id="T_86a77_level0_col30" class="col_heading level0 col30" data-quarto-table-cell-role="th">office</th>
+<th id="T_86a77_level0_col31" class="col_heading level0 col31" data-quarto-table-cell-role="th">outdoor_parking_spaces</th>
+<th id="T_86a77_level0_col32" class="col_heading level0 col32" data-quarto-table-cell-role="th">planning_permission_obtained</th>
+<th id="T_86a77_level0_col33" class="col_heading level0 col33" data-quarto-table-cell-role="th">possible_priority_purchase_right</th>
+<th id="T_86a77_level0_col34" class="col_heading level0 col34" data-quarto-table-cell-role="th">price</th>
+<th id="T_86a77_level0_col35" class="col_heading level0 col35" data-quarto-table-cell-role="th">primary_energy_consumption</th>
+<th id="T_86a77_level0_col36" class="col_heading level0 col36" data-quarto-table-cell-role="th">proceedings_for_breach_of_planning_regulations</th>
+<th id="T_86a77_level0_col37" class="col_heading level0 col37" data-quarto-table-cell-role="th">reference_number_of_the_epc_report</th>
+<th id="T_86a77_level0_col38" class="col_heading level0 col38" data-quarto-table-cell-role="th">street_frontage_width</th>
+<th id="T_86a77_level0_col39" class="col_heading level0 col39" data-quarto-table-cell-role="th">subdivision_permit</th>
+<th id="T_86a77_level0_col40" class="col_heading level0 col40" data-quarto-table-cell-role="th">surface_of_the_plot</th>
+<th id="T_86a77_level0_col41" class="col_heading level0 col41" data-quarto-table-cell-role="th">surroundings_type</th>
+<th id="T_86a77_level0_col42" class="col_heading level0 col42" data-quarto-table-cell-role="th">tv_cable</th>
+<th id="T_86a77_level0_col43" class="col_heading level0 col43" data-quarto-table-cell-role="th">tenement_building</th>
+<th id="T_86a77_level0_col44" class="col_heading level0 col44" data-quarto-table-cell-role="th">toilets</th>
+<th id="T_86a77_level0_col45" class="col_heading level0 col45" data-quarto-table-cell-role="th">website</th>
+<th id="T_86a77_level0_col46" class="col_heading level0 col46" data-quarto-table-cell-role="th">width_of_the_lot_on_the_street</th>
+<th id="T_86a77_level0_col47" class="col_heading level0 col47" data-quarto-table-cell-role="th">yearly_theoretical_total_energy_consumption</th>
+<th id="T_86a77_level0_col48" class="col_heading level0 col48" data-quarto-table-cell-role="th">ad_url</th>
+<th id="T_86a77_level0_col49" class="col_heading level0 col49" data-quarto-table-cell-role="th">day_of_retrieval</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_94f02_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
-<td id="T_94f02_row0_col0" class="data row0 col0">drève richelle 96 1410 - Waterloo</td>
-<td id="T_94f02_row0_col1" class="data row0 col1">nan</td>
-<td id="T_94f02_row0_col2" class="data row0 col2">After signing the deed</td>
-<td id="T_94f02_row0_col3" class="data row0 col3">True</td>
-<td id="T_94f02_row0_col4" class="data row0 col4">4.000000</td>
-<td id="T_94f02_row0_col5" class="data row0 col5">28.000000</td>
-<td id="T_94f02_row0_col6" class="data row0 col6">24.000000</td>
-<td id="T_94f02_row0_col7" class="data row0 col7">21.000000</td>
-<td id="T_94f02_row0_col8" class="data row0 col8">5.000000</td>
-<td id="T_94f02_row0_col9" class="data row0 col9">Good</td>
-<td id="T_94f02_row0_col10" class="data row0 col10">74.000000</td>
-<td id="T_94f02_row0_col11" class="data row0 col11">7615.000000</td>
-<td id="T_94f02_row0_col12" class="data row0 col12">False</td>
-<td id="T_94f02_row0_col13" class="data row0 col13">1975.000000</td>
-<td id="T_94f02_row0_col14" class="data row0 col14">2.000000</td>
-<td id="T_94f02_row0_col15" class="data row0 col15">True</td>
-<td id="T_94f02_row0_col16" class="data row0 col16">True</td>
-<td id="T_94f02_row0_col17" class="data row0 col17">D</td>
-<td id="T_94f02_row0_col18" class="data row0 col18">5530019</td>
-<td id="T_94f02_row0_col19" class="data row0 col19">nan</td>
-<td id="T_94f02_row0_col20" class="data row0 col20">False</td>
-<td id="T_94f02_row0_col21" class="data row0 col21">4300.000000</td>
-<td id="T_94f02_row0_col22" class="data row0 col22">True</td>
-<td id="T_94f02_row0_col23" class="data row0 col23">Fuel oil</td>
-<td id="T_94f02_row0_col24" class="data row0 col24">21.000000</td>
-<td id="T_94f02_row0_col25" class="data row0 col25">USA hyper equipped</td>
-<td id="T_94f02_row0_col26" class="data row0 col26">nan</td>
-<td id="T_94f02_row0_col27" class="data row0 col27">420.000000</td>
-<td id="T_94f02_row0_col28" class="data row0 col28">63.000000</td>
-<td id="T_94f02_row0_col29" class="data row0 col29">4.000000</td>
-<td id="T_94f02_row0_col30" class="data row0 col30">Yes</td>
-<td id="T_94f02_row0_col31" class="data row0 col31">2.000000</td>
-<td id="T_94f02_row0_col32" class="data row0 col32">nan</td>
-<td id="T_94f02_row0_col33" class="data row0 col33">nan</td>
-<td id="T_94f02_row0_col34" class="data row0 col34">1225000.000000</td>
-<td id="T_94f02_row0_col35" class="data row0 col35">296.000000</td>
-<td id="T_94f02_row0_col36" class="data row0 col36">nan</td>
-<td id="T_94f02_row0_col37" class="data row0 col37">20210910012683</td>
-<td id="T_94f02_row0_col38" class="data row0 col38">23.000000</td>
-<td id="T_94f02_row0_col39" class="data row0 col39">nan</td>
-<td id="T_94f02_row0_col40" class="data row0 col40">4677.000000</td>
-<td id="T_94f02_row0_col41" class="data row0 col41">Living area (residential, urban or rural)</td>
-<td id="T_94f02_row0_col42" class="data row0 col42">True</td>
-<td id="T_94f02_row0_col43" class="data row0 col43">False</td>
-<td id="T_94f02_row0_col44" class="data row0 col44">5.000000</td>
-<td id="T_94f02_row0_col45" class="data row0 col45">http://www.bytheway.be</td>
-<td id="T_94f02_row0_col46" class="data row0 col46">nan</td>
-<td id="T_94f02_row0_col47" class="data row0 col47">133062.000000</td>
-<td id="T_94f02_row0_col48" class="data row0 col48">https://www.immoweb.be/en/classified/villa/for-sale/braine-l%27alleud/1420/10844811</td>
-<td id="T_94f02_row0_col49" class="data row0 col49">2023-09-27 14:02:10.370650</td>
+<td id="T_86a77_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
+<td id="T_86a77_row0_col0" class="data row0 col0">drève richelle 96 1410 - Waterloo</td>
+<td id="T_86a77_row0_col1" class="data row0 col1">nan</td>
+<td id="T_86a77_row0_col2" class="data row0 col2">After signing the deed</td>
+<td id="T_86a77_row0_col3" class="data row0 col3">True</td>
+<td id="T_86a77_row0_col4" class="data row0 col4">4.000000</td>
+<td id="T_86a77_row0_col5" class="data row0 col5">28.000000</td>
+<td id="T_86a77_row0_col6" class="data row0 col6">24.000000</td>
+<td id="T_86a77_row0_col7" class="data row0 col7">21.000000</td>
+<td id="T_86a77_row0_col8" class="data row0 col8">5.000000</td>
+<td id="T_86a77_row0_col9" class="data row0 col9">Good</td>
+<td id="T_86a77_row0_col10" class="data row0 col10">74.000000</td>
+<td id="T_86a77_row0_col11" class="data row0 col11">7615.000000</td>
+<td id="T_86a77_row0_col12" class="data row0 col12">False</td>
+<td id="T_86a77_row0_col13" class="data row0 col13">1975.000000</td>
+<td id="T_86a77_row0_col14" class="data row0 col14">2.000000</td>
+<td id="T_86a77_row0_col15" class="data row0 col15">True</td>
+<td id="T_86a77_row0_col16" class="data row0 col16">True</td>
+<td id="T_86a77_row0_col17" class="data row0 col17">D</td>
+<td id="T_86a77_row0_col18" class="data row0 col18">5530019</td>
+<td id="T_86a77_row0_col19" class="data row0 col19">nan</td>
+<td id="T_86a77_row0_col20" class="data row0 col20">False</td>
+<td id="T_86a77_row0_col21" class="data row0 col21">4300.000000</td>
+<td id="T_86a77_row0_col22" class="data row0 col22">True</td>
+<td id="T_86a77_row0_col23" class="data row0 col23">Fuel oil</td>
+<td id="T_86a77_row0_col24" class="data row0 col24">21.000000</td>
+<td id="T_86a77_row0_col25" class="data row0 col25">USA hyper equipped</td>
+<td id="T_86a77_row0_col26" class="data row0 col26">nan</td>
+<td id="T_86a77_row0_col27" class="data row0 col27">420.000000</td>
+<td id="T_86a77_row0_col28" class="data row0 col28">63.000000</td>
+<td id="T_86a77_row0_col29" class="data row0 col29">4.000000</td>
+<td id="T_86a77_row0_col30" class="data row0 col30">Yes</td>
+<td id="T_86a77_row0_col31" class="data row0 col31">2.000000</td>
+<td id="T_86a77_row0_col32" class="data row0 col32">nan</td>
+<td id="T_86a77_row0_col33" class="data row0 col33">nan</td>
+<td id="T_86a77_row0_col34" class="data row0 col34">1225000.000000</td>
+<td id="T_86a77_row0_col35" class="data row0 col35">296.000000</td>
+<td id="T_86a77_row0_col36" class="data row0 col36">nan</td>
+<td id="T_86a77_row0_col37" class="data row0 col37">20210910012683</td>
+<td id="T_86a77_row0_col38" class="data row0 col38">23.000000</td>
+<td id="T_86a77_row0_col39" class="data row0 col39">nan</td>
+<td id="T_86a77_row0_col40" class="data row0 col40">4677.000000</td>
+<td id="T_86a77_row0_col41" class="data row0 col41">Living area (residential, urban or rural)</td>
+<td id="T_86a77_row0_col42" class="data row0 col42">True</td>
+<td id="T_86a77_row0_col43" class="data row0 col43">False</td>
+<td id="T_86a77_row0_col44" class="data row0 col44">5.000000</td>
+<td id="T_86a77_row0_col45" class="data row0 col45">http://www.bytheway.be</td>
+<td id="T_86a77_row0_col46" class="data row0 col46">nan</td>
+<td id="T_86a77_row0_col47" class="data row0 col47">133062.000000</td>
+<td id="T_86a77_row0_col48" class="data row0 col48">https://www.immoweb.be/en/classified/villa/for-sale/braine-l%27alleud/1420/10844811</td>
+<td id="T_86a77_row0_col49" class="data row0 col49">2023-09-27 14:02:10.370650</td>
 </tr>
 <tr class="even">
-<td id="T_94f02_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
-<td id="T_94f02_row1_col0" class="data row1 col0">Chaussée de l'Ourthe 65 6900 - Marche-en-Famenne</td>
-<td id="T_94f02_row1_col1" class="data row1 col1">False</td>
-<td id="T_94f02_row1_col2" class="data row1 col2">After signing the deed</td>
-<td id="T_94f02_row1_col3" class="data row1 col3">nan</td>
-<td id="T_94f02_row1_col4" class="data row1 col4">1.000000</td>
-<td id="T_94f02_row1_col5" class="data row1 col5">14.000000</td>
-<td id="T_94f02_row1_col6" class="data row1 col6">10.000000</td>
-<td id="T_94f02_row1_col7" class="data row1 col7">nan</td>
-<td id="T_94f02_row1_col8" class="data row1 col8">2.000000</td>
-<td id="T_94f02_row1_col9" class="data row1 col9">To renovate</td>
-<td id="T_94f02_row1_col10" class="data row1 col10">76.000000</td>
-<td id="T_94f02_row1_col11" class="data row1 col11">541.000000</td>
-<td id="T_94f02_row1_col12" class="data row1 col12">True</td>
-<td id="T_94f02_row1_col13" class="data row1 col13">1850.000000</td>
-<td id="T_94f02_row1_col14" class="data row1 col14">1.000000</td>
-<td id="T_94f02_row1_col15" class="data row1 col15">True</td>
-<td id="T_94f02_row1_col16" class="data row1 col16">True</td>
-<td id="T_94f02_row1_col17" class="data row1 col17">D</td>
-<td id="T_94f02_row1_col18" class="data row1 col18">5246367</td>
-<td id="T_94f02_row1_col19" class="data row1 col19">nan</td>
-<td id="T_94f02_row1_col20" class="data row1 col20">False</td>
-<td id="T_94f02_row1_col21" class="data row1 col21">nan</td>
-<td id="T_94f02_row1_col22" class="data row1 col22">nan</td>
-<td id="T_94f02_row1_col23" class="data row1 col23">Fuel oil</td>
-<td id="T_94f02_row1_col24" class="data row1 col24">nan</td>
-<td id="T_94f02_row1_col25" class="data row1 col25">Semi equipped</td>
-<td id="T_94f02_row1_col26" class="data row1 col26">Living area (residential, urban or rural)</td>
-<td id="T_94f02_row1_col27" class="data row1 col27">113.000000</td>
-<td id="T_94f02_row1_col28" class="data row1 col28">nan</td>
-<td id="T_94f02_row1_col29" class="data row1 col29">2.000000</td>
-<td id="T_94f02_row1_col30" class="data row1 col30">nan</td>
-<td id="T_94f02_row1_col31" class="data row1 col31">nan</td>
-<td id="T_94f02_row1_col32" class="data row1 col32">nan</td>
-<td id="T_94f02_row1_col33" class="data row1 col33">False</td>
-<td id="T_94f02_row1_col34" class="data row1 col34">89000.000000</td>
-<td id="T_94f02_row1_col35" class="data row1 col35">307.000000</td>
-<td id="T_94f02_row1_col36" class="data row1 col36">False</td>
-<td id="T_94f02_row1_col37" class="data row1 col37">20230306014621</td>
-<td id="T_94f02_row1_col38" class="data row1 col38">9.000000</td>
-<td id="T_94f02_row1_col39" class="data row1 col39">False</td>
-<td id="T_94f02_row1_col40" class="data row1 col40">73.000000</td>
-<td id="T_94f02_row1_col41" class="data row1 col41">Urban</td>
-<td id="T_94f02_row1_col42" class="data row1 col42">True</td>
-<td id="T_94f02_row1_col43" class="data row1 col43">False</td>
-<td id="T_94f02_row1_col44" class="data row1 col44">1.000000</td>
-<td id="T_94f02_row1_col45" class="data row1 col45">http://www.weinvest.be</td>
-<td id="T_94f02_row1_col46" class="data row1 col46">10.000000</td>
-<td id="T_94f02_row1_col47" class="data row1 col47">43587.000000</td>
-<td id="T_94f02_row1_col48" class="data row1 col48">https://www.immoweb.be/en/classified/town-house/for-sale/jemelle/5580/10843929</td>
-<td id="T_94f02_row1_col49" class="data row1 col49">2023-09-27 14:02:10.641758</td>
+<td id="T_86a77_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
+<td id="T_86a77_row1_col0" class="data row1 col0">Chaussée de l'Ourthe 65 6900 - Marche-en-Famenne</td>
+<td id="T_86a77_row1_col1" class="data row1 col1">False</td>
+<td id="T_86a77_row1_col2" class="data row1 col2">After signing the deed</td>
+<td id="T_86a77_row1_col3" class="data row1 col3">nan</td>
+<td id="T_86a77_row1_col4" class="data row1 col4">1.000000</td>
+<td id="T_86a77_row1_col5" class="data row1 col5">14.000000</td>
+<td id="T_86a77_row1_col6" class="data row1 col6">10.000000</td>
+<td id="T_86a77_row1_col7" class="data row1 col7">nan</td>
+<td id="T_86a77_row1_col8" class="data row1 col8">2.000000</td>
+<td id="T_86a77_row1_col9" class="data row1 col9">To renovate</td>
+<td id="T_86a77_row1_col10" class="data row1 col10">76.000000</td>
+<td id="T_86a77_row1_col11" class="data row1 col11">541.000000</td>
+<td id="T_86a77_row1_col12" class="data row1 col12">True</td>
+<td id="T_86a77_row1_col13" class="data row1 col13">1850.000000</td>
+<td id="T_86a77_row1_col14" class="data row1 col14">1.000000</td>
+<td id="T_86a77_row1_col15" class="data row1 col15">True</td>
+<td id="T_86a77_row1_col16" class="data row1 col16">True</td>
+<td id="T_86a77_row1_col17" class="data row1 col17">D</td>
+<td id="T_86a77_row1_col18" class="data row1 col18">5246367</td>
+<td id="T_86a77_row1_col19" class="data row1 col19">nan</td>
+<td id="T_86a77_row1_col20" class="data row1 col20">False</td>
+<td id="T_86a77_row1_col21" class="data row1 col21">nan</td>
+<td id="T_86a77_row1_col22" class="data row1 col22">nan</td>
+<td id="T_86a77_row1_col23" class="data row1 col23">Fuel oil</td>
+<td id="T_86a77_row1_col24" class="data row1 col24">nan</td>
+<td id="T_86a77_row1_col25" class="data row1 col25">Semi equipped</td>
+<td id="T_86a77_row1_col26" class="data row1 col26">Living area (residential, urban or rural)</td>
+<td id="T_86a77_row1_col27" class="data row1 col27">113.000000</td>
+<td id="T_86a77_row1_col28" class="data row1 col28">nan</td>
+<td id="T_86a77_row1_col29" class="data row1 col29">2.000000</td>
+<td id="T_86a77_row1_col30" class="data row1 col30">nan</td>
+<td id="T_86a77_row1_col31" class="data row1 col31">nan</td>
+<td id="T_86a77_row1_col32" class="data row1 col32">nan</td>
+<td id="T_86a77_row1_col33" class="data row1 col33">False</td>
+<td id="T_86a77_row1_col34" class="data row1 col34">89000.000000</td>
+<td id="T_86a77_row1_col35" class="data row1 col35">307.000000</td>
+<td id="T_86a77_row1_col36" class="data row1 col36">False</td>
+<td id="T_86a77_row1_col37" class="data row1 col37">20230306014621</td>
+<td id="T_86a77_row1_col38" class="data row1 col38">9.000000</td>
+<td id="T_86a77_row1_col39" class="data row1 col39">False</td>
+<td id="T_86a77_row1_col40" class="data row1 col40">73.000000</td>
+<td id="T_86a77_row1_col41" class="data row1 col41">Urban</td>
+<td id="T_86a77_row1_col42" class="data row1 col42">True</td>
+<td id="T_86a77_row1_col43" class="data row1 col43">False</td>
+<td id="T_86a77_row1_col44" class="data row1 col44">1.000000</td>
+<td id="T_86a77_row1_col45" class="data row1 col45">http://www.weinvest.be</td>
+<td id="T_86a77_row1_col46" class="data row1 col46">10.000000</td>
+<td id="T_86a77_row1_col47" class="data row1 col47">43587.000000</td>
+<td id="T_86a77_row1_col48" class="data row1 col48">https://www.immoweb.be/en/classified/town-house/for-sale/jemelle/5580/10843929</td>
+<td id="T_86a77_row1_col49" class="data row1 col49">2023-09-27 14:02:10.641758</td>
 </tr>
 <tr class="odd">
-<td id="T_94f02_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
-<td id="T_94f02_row2_col0" class="data row2 col0">Rue de la Wallonie 2A 4680 - Oupeye</td>
-<td id="T_94f02_row2_col1" class="data row2 col1">nan</td>
-<td id="T_94f02_row2_col2" class="data row2 col2">After signing the deed</td>
-<td id="T_94f02_row2_col3" class="data row2 col3">True</td>
-<td id="T_94f02_row2_col4" class="data row2 col4">1.000000</td>
-<td id="T_94f02_row2_col5" class="data row2 col5">17.000000</td>
-<td id="T_94f02_row2_col6" class="data row2 col6">11.000000</td>
-<td id="T_94f02_row2_col7" class="data row2 col7">nan</td>
-<td id="T_94f02_row2_col8" class="data row2 col8">2.000000</td>
-<td id="T_94f02_row2_col9" class="data row2 col9">To renovate</td>
-<td id="T_94f02_row2_col10" class="data row2 col10">173.000000</td>
-<td id="T_94f02_row2_col11" class="data row2 col11">689.000000</td>
-<td id="T_94f02_row2_col12" class="data row2 col12">True</td>
-<td id="T_94f02_row2_col13" class="data row2 col13">1949.000000</td>
-<td id="T_94f02_row2_col14" class="data row2 col14">1.000000</td>
-<td id="T_94f02_row2_col15" class="data row2 col15">True</td>
-<td id="T_94f02_row2_col16" class="data row2 col16">True</td>
-<td id="T_94f02_row2_col17" class="data row2 col17">G</td>
-<td id="T_94f02_row2_col18" class="data row2 col18">5534704</td>
-<td id="T_94f02_row2_col19" class="data row2 col19">False</td>
-<td id="T_94f02_row2_col20" class="data row2 col20">False</td>
-<td id="T_94f02_row2_col21" class="data row2 col21">315.000000</td>
-<td id="T_94f02_row2_col22" class="data row2 col22">nan</td>
-<td id="T_94f02_row2_col23" class="data row2 col23">Fuel oil</td>
-<td id="T_94f02_row2_col24" class="data row2 col24">13.000000</td>
-<td id="T_94f02_row2_col25" class="data row2 col25">Semi equipped</td>
-<td id="T_94f02_row2_col26" class="data row2 col26">Living area (residential, urban or rural)</td>
-<td id="T_94f02_row2_col27" class="data row2 col27">139.000000</td>
-<td id="T_94f02_row2_col28" class="data row2 col28">10.000000</td>
-<td id="T_94f02_row2_col29" class="data row2 col29">3.000000</td>
-<td id="T_94f02_row2_col30" class="data row2 col30">Yes</td>
-<td id="T_94f02_row2_col31" class="data row2 col31">nan</td>
-<td id="T_94f02_row2_col32" class="data row2 col32">nan</td>
-<td id="T_94f02_row2_col33" class="data row2 col33">False</td>
-<td id="T_94f02_row2_col34" class="data row2 col34">150000.000000</td>
-<td id="T_94f02_row2_col35" class="data row2 col35">699.000000</td>
-<td id="T_94f02_row2_col36" class="data row2 col36">False</td>
-<td id="T_94f02_row2_col37" class="data row2 col37">20230303013078</td>
-<td id="T_94f02_row2_col38" class="data row2 col38">18.000000</td>
-<td id="T_94f02_row2_col39" class="data row2 col39">False</td>
-<td id="T_94f02_row2_col40" class="data row2 col40">413.000000</td>
-<td id="T_94f02_row2_col41" class="data row2 col41">Isolated</td>
-<td id="T_94f02_row2_col42" class="data row2 col42">True</td>
-<td id="T_94f02_row2_col43" class="data row2 col43">False</td>
-<td id="T_94f02_row2_col44" class="data row2 col44">1.000000</td>
-<td id="T_94f02_row2_col45" class="data row2 col45">http://www.nigel-immo.be</td>
-<td id="T_94f02_row2_col46" class="data row2 col46">18.000000</td>
-<td id="T_94f02_row2_col47" class="data row2 col47">96913.000000</td>
-<td id="T_94f02_row2_col48" class="data row2 col48">https://www.immoweb.be/en/classified/house/for-sale/esneux%20tilff/4130/10838582</td>
-<td id="T_94f02_row2_col49" class="data row2 col49">2023-09-27 14:02:10.905808</td>
+<td id="T_86a77_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
+<td id="T_86a77_row2_col0" class="data row2 col0">Rue de la Wallonie 2A 4680 - Oupeye</td>
+<td id="T_86a77_row2_col1" class="data row2 col1">nan</td>
+<td id="T_86a77_row2_col2" class="data row2 col2">After signing the deed</td>
+<td id="T_86a77_row2_col3" class="data row2 col3">True</td>
+<td id="T_86a77_row2_col4" class="data row2 col4">1.000000</td>
+<td id="T_86a77_row2_col5" class="data row2 col5">17.000000</td>
+<td id="T_86a77_row2_col6" class="data row2 col6">11.000000</td>
+<td id="T_86a77_row2_col7" class="data row2 col7">nan</td>
+<td id="T_86a77_row2_col8" class="data row2 col8">2.000000</td>
+<td id="T_86a77_row2_col9" class="data row2 col9">To renovate</td>
+<td id="T_86a77_row2_col10" class="data row2 col10">173.000000</td>
+<td id="T_86a77_row2_col11" class="data row2 col11">689.000000</td>
+<td id="T_86a77_row2_col12" class="data row2 col12">True</td>
+<td id="T_86a77_row2_col13" class="data row2 col13">1949.000000</td>
+<td id="T_86a77_row2_col14" class="data row2 col14">1.000000</td>
+<td id="T_86a77_row2_col15" class="data row2 col15">True</td>
+<td id="T_86a77_row2_col16" class="data row2 col16">True</td>
+<td id="T_86a77_row2_col17" class="data row2 col17">G</td>
+<td id="T_86a77_row2_col18" class="data row2 col18">5534704</td>
+<td id="T_86a77_row2_col19" class="data row2 col19">False</td>
+<td id="T_86a77_row2_col20" class="data row2 col20">False</td>
+<td id="T_86a77_row2_col21" class="data row2 col21">315.000000</td>
+<td id="T_86a77_row2_col22" class="data row2 col22">nan</td>
+<td id="T_86a77_row2_col23" class="data row2 col23">Fuel oil</td>
+<td id="T_86a77_row2_col24" class="data row2 col24">13.000000</td>
+<td id="T_86a77_row2_col25" class="data row2 col25">Semi equipped</td>
+<td id="T_86a77_row2_col26" class="data row2 col26">Living area (residential, urban or rural)</td>
+<td id="T_86a77_row2_col27" class="data row2 col27">139.000000</td>
+<td id="T_86a77_row2_col28" class="data row2 col28">10.000000</td>
+<td id="T_86a77_row2_col29" class="data row2 col29">3.000000</td>
+<td id="T_86a77_row2_col30" class="data row2 col30">Yes</td>
+<td id="T_86a77_row2_col31" class="data row2 col31">nan</td>
+<td id="T_86a77_row2_col32" class="data row2 col32">nan</td>
+<td id="T_86a77_row2_col33" class="data row2 col33">False</td>
+<td id="T_86a77_row2_col34" class="data row2 col34">150000.000000</td>
+<td id="T_86a77_row2_col35" class="data row2 col35">699.000000</td>
+<td id="T_86a77_row2_col36" class="data row2 col36">False</td>
+<td id="T_86a77_row2_col37" class="data row2 col37">20230303013078</td>
+<td id="T_86a77_row2_col38" class="data row2 col38">18.000000</td>
+<td id="T_86a77_row2_col39" class="data row2 col39">False</td>
+<td id="T_86a77_row2_col40" class="data row2 col40">413.000000</td>
+<td id="T_86a77_row2_col41" class="data row2 col41">Isolated</td>
+<td id="T_86a77_row2_col42" class="data row2 col42">True</td>
+<td id="T_86a77_row2_col43" class="data row2 col43">False</td>
+<td id="T_86a77_row2_col44" class="data row2 col44">1.000000</td>
+<td id="T_86a77_row2_col45" class="data row2 col45">http://www.nigel-immo.be</td>
+<td id="T_86a77_row2_col46" class="data row2 col46">18.000000</td>
+<td id="T_86a77_row2_col47" class="data row2 col47">96913.000000</td>
+<td id="T_86a77_row2_col48" class="data row2 col48">https://www.immoweb.be/en/classified/house/for-sale/esneux%20tilff/4130/10838582</td>
+<td id="T_86a77_row2_col49" class="data row2 col49">2023-09-27 14:02:10.905808</td>
 </tr>
 <tr class="even">
-<td id="T_94f02_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
-<td id="T_94f02_row3_col0" class="data row3 col0">Sint-Denijslaan 1 9000 - Gent</td>
-<td id="T_94f02_row3_col1" class="data row3 col1">nan</td>
-<td id="T_94f02_row3_col2" class="data row3 col2">After signing the deed</td>
-<td id="T_94f02_row3_col3" class="data row3 col3">nan</td>
-<td id="T_94f02_row3_col4" class="data row3 col4">2.000000</td>
-<td id="T_94f02_row3_col5" class="data row3 col5">14.000000</td>
-<td id="T_94f02_row3_col6" class="data row3 col6">14.000000</td>
-<td id="T_94f02_row3_col7" class="data row3 col7">10.000000</td>
-<td id="T_94f02_row3_col8" class="data row3 col8">3.000000</td>
-<td id="T_94f02_row3_col9" class="data row3 col9">Good</td>
-<td id="T_94f02_row3_col10" class="data row3 col10">4167.000000</td>
-<td id="T_94f02_row3_col11" class="data row3 col11">898.000000</td>
-<td id="T_94f02_row3_col12" class="data row3 col12">True</td>
-<td id="T_94f02_row3_col13" class="data row3 col13">1899.000000</td>
-<td id="T_94f02_row3_col14" class="data row3 col14">nan</td>
-<td id="T_94f02_row3_col15" class="data row3 col15">nan</td>
-<td id="T_94f02_row3_col16" class="data row3 col16">True</td>
-<td id="T_94f02_row3_col17" class="data row3 col17">C</td>
-<td id="T_94f02_row3_col18" class="data row3 col18">5535455</td>
-<td id="T_94f02_row3_col19" class="data row3 col19">False</td>
-<td id="T_94f02_row3_col20" class="data row3 col20">False</td>
-<td id="T_94f02_row3_col21" class="data row3 col21">nan</td>
-<td id="T_94f02_row3_col22" class="data row3 col22">True</td>
-<td id="T_94f02_row3_col23" class="data row3 col23">Gas</td>
-<td id="T_94f02_row3_col24" class="data row3 col24">17.000000</td>
-<td id="T_94f02_row3_col25" class="data row3 col25">USA installed</td>
-<td id="T_94f02_row3_col26" class="data row3 col26">Living area (residential, urban or rural)</td>
-<td id="T_94f02_row3_col27" class="data row3 col27">119.000000</td>
-<td id="T_94f02_row3_col28" class="data row3 col28">14.000000</td>
-<td id="T_94f02_row3_col29" class="data row3 col29">2.000000</td>
-<td id="T_94f02_row3_col30" class="data row3 col30">nan</td>
-<td id="T_94f02_row3_col31" class="data row3 col31">nan</td>
-<td id="T_94f02_row3_col32" class="data row3 col32">True</td>
-<td id="T_94f02_row3_col33" class="data row3 col33">True</td>
-<td id="T_94f02_row3_col34" class="data row3 col34">272000.000000</td>
-<td id="T_94f02_row3_col35" class="data row3 col35">246.000000</td>
-<td id="T_94f02_row3_col36" class="data row3 col36">False</td>
-<td id="T_94f02_row3_col37" class="data row3 col37">20230622-0002923649-RES-1</td>
-<td id="T_94f02_row3_col38" class="data row3 col38">4.000000</td>
-<td id="T_94f02_row3_col39" class="data row3 col39">False</td>
-<td id="T_94f02_row3_col40" class="data row3 col40">55.000000</td>
-<td id="T_94f02_row3_col41" class="data row3 col41">Urban</td>
-<td id="T_94f02_row3_col42" class="data row3 col42">True</td>
-<td id="T_94f02_row3_col43" class="data row3 col43">False</td>
-<td id="T_94f02_row3_col44" class="data row3 col44">2.000000</td>
-<td id="T_94f02_row3_col45" class="data row3 col45">http://www.immodavinci.be</td>
-<td id="T_94f02_row3_col46" class="data row3 col46">nan</td>
-<td id="T_94f02_row3_col47" class="data row3 col47">nan</td>
-<td id="T_94f02_row3_col48" class="data row3 col48">https://www.immoweb.be/en/classified/house/for-sale/gent/9000/10838392</td>
-<td id="T_94f02_row3_col49" class="data row3 col49">2023-09-27 14:02:11.811691</td>
+<td id="T_86a77_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
+<td id="T_86a77_row3_col0" class="data row3 col0">Sint-Denijslaan 1 9000 - Gent</td>
+<td id="T_86a77_row3_col1" class="data row3 col1">nan</td>
+<td id="T_86a77_row3_col2" class="data row3 col2">After signing the deed</td>
+<td id="T_86a77_row3_col3" class="data row3 col3">nan</td>
+<td id="T_86a77_row3_col4" class="data row3 col4">2.000000</td>
+<td id="T_86a77_row3_col5" class="data row3 col5">14.000000</td>
+<td id="T_86a77_row3_col6" class="data row3 col6">14.000000</td>
+<td id="T_86a77_row3_col7" class="data row3 col7">10.000000</td>
+<td id="T_86a77_row3_col8" class="data row3 col8">3.000000</td>
+<td id="T_86a77_row3_col9" class="data row3 col9">Good</td>
+<td id="T_86a77_row3_col10" class="data row3 col10">4167.000000</td>
+<td id="T_86a77_row3_col11" class="data row3 col11">898.000000</td>
+<td id="T_86a77_row3_col12" class="data row3 col12">True</td>
+<td id="T_86a77_row3_col13" class="data row3 col13">1899.000000</td>
+<td id="T_86a77_row3_col14" class="data row3 col14">nan</td>
+<td id="T_86a77_row3_col15" class="data row3 col15">nan</td>
+<td id="T_86a77_row3_col16" class="data row3 col16">True</td>
+<td id="T_86a77_row3_col17" class="data row3 col17">C</td>
+<td id="T_86a77_row3_col18" class="data row3 col18">5535455</td>
+<td id="T_86a77_row3_col19" class="data row3 col19">False</td>
+<td id="T_86a77_row3_col20" class="data row3 col20">False</td>
+<td id="T_86a77_row3_col21" class="data row3 col21">nan</td>
+<td id="T_86a77_row3_col22" class="data row3 col22">True</td>
+<td id="T_86a77_row3_col23" class="data row3 col23">Gas</td>
+<td id="T_86a77_row3_col24" class="data row3 col24">17.000000</td>
+<td id="T_86a77_row3_col25" class="data row3 col25">USA installed</td>
+<td id="T_86a77_row3_col26" class="data row3 col26">Living area (residential, urban or rural)</td>
+<td id="T_86a77_row3_col27" class="data row3 col27">119.000000</td>
+<td id="T_86a77_row3_col28" class="data row3 col28">14.000000</td>
+<td id="T_86a77_row3_col29" class="data row3 col29">2.000000</td>
+<td id="T_86a77_row3_col30" class="data row3 col30">nan</td>
+<td id="T_86a77_row3_col31" class="data row3 col31">nan</td>
+<td id="T_86a77_row3_col32" class="data row3 col32">True</td>
+<td id="T_86a77_row3_col33" class="data row3 col33">True</td>
+<td id="T_86a77_row3_col34" class="data row3 col34">272000.000000</td>
+<td id="T_86a77_row3_col35" class="data row3 col35">246.000000</td>
+<td id="T_86a77_row3_col36" class="data row3 col36">False</td>
+<td id="T_86a77_row3_col37" class="data row3 col37">20230622-0002923649-RES-1</td>
+<td id="T_86a77_row3_col38" class="data row3 col38">4.000000</td>
+<td id="T_86a77_row3_col39" class="data row3 col39">False</td>
+<td id="T_86a77_row3_col40" class="data row3 col40">55.000000</td>
+<td id="T_86a77_row3_col41" class="data row3 col41">Urban</td>
+<td id="T_86a77_row3_col42" class="data row3 col42">True</td>
+<td id="T_86a77_row3_col43" class="data row3 col43">False</td>
+<td id="T_86a77_row3_col44" class="data row3 col44">2.000000</td>
+<td id="T_86a77_row3_col45" class="data row3 col45">http://www.immodavinci.be</td>
+<td id="T_86a77_row3_col46" class="data row3 col46">nan</td>
+<td id="T_86a77_row3_col47" class="data row3 col47">nan</td>
+<td id="T_86a77_row3_col48" class="data row3 col48">https://www.immoweb.be/en/classified/house/for-sale/gent/9000/10838392</td>
+<td id="T_86a77_row3_col49" class="data row3 col49">2023-09-27 14:02:11.811691</td>
 </tr>
 <tr class="odd">
-<td id="T_94f02_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
-<td id="T_94f02_row4_col0" class="data row4 col0">Astridlaan 1 1700 - Dilbeek</td>
-<td id="T_94f02_row4_col1" class="data row4 col1">nan</td>
-<td id="T_94f02_row4_col2" class="data row4 col2">At delivery</td>
-<td id="T_94f02_row4_col3" class="data row4 col3">nan</td>
-<td id="T_94f02_row4_col4" class="data row4 col4">1.000000</td>
-<td id="T_94f02_row4_col5" class="data row4 col5">16.000000</td>
-<td id="T_94f02_row4_col6" class="data row4 col6">12.000000</td>
-<td id="T_94f02_row4_col7" class="data row4 col7">12.000000</td>
-<td id="T_94f02_row4_col8" class="data row4 col8">3.000000</td>
-<td id="T_94f02_row4_col9" class="data row4 col9">As new</td>
-<td id="T_94f02_row4_col10" class="data row4 col10">nan</td>
-<td id="T_94f02_row4_col11" class="data row4 col11">nan</td>
-<td id="T_94f02_row4_col12" class="data row4 col12">True</td>
-<td id="T_94f02_row4_col13" class="data row4 col13">2021.000000</td>
-<td id="T_94f02_row4_col14" class="data row4 col14">nan</td>
-<td id="T_94f02_row4_col15" class="data row4 col15">nan</td>
-<td id="T_94f02_row4_col16" class="data row4 col16">True</td>
-<td id="T_94f02_row4_col17" class="data row4 col17">A</td>
-<td id="T_94f02_row4_col18" class="data row4 col18">5527171</td>
-<td id="T_94f02_row4_col19" class="data row4 col19">False</td>
-<td id="T_94f02_row4_col20" class="data row4 col20">False</td>
-<td id="T_94f02_row4_col21" class="data row4 col21">250.000000</td>
-<td id="T_94f02_row4_col22" class="data row4 col22">True</td>
-<td id="T_94f02_row4_col23" class="data row4 col23">Gas</td>
-<td id="T_94f02_row4_col24" class="data row4 col24">nan</td>
-<td id="T_94f02_row4_col25" class="data row4 col25">USA hyper equipped</td>
-<td id="T_94f02_row4_col26" class="data row4 col26">Living area (residential, urban or rural)</td>
-<td id="T_94f02_row4_col27" class="data row4 col27">215.000000</td>
-<td id="T_94f02_row4_col28" class="data row4 col28">46.000000</td>
-<td id="T_94f02_row4_col29" class="data row4 col29">3.000000</td>
-<td id="T_94f02_row4_col30" class="data row4 col30">nan</td>
-<td id="T_94f02_row4_col31" class="data row4 col31">1.000000</td>
-<td id="T_94f02_row4_col32" class="data row4 col32">True</td>
-<td id="T_94f02_row4_col33" class="data row4 col33">False</td>
-<td id="T_94f02_row4_col34" class="data row4 col34">413150.000000</td>
-<td id="T_94f02_row4_col35" class="data row4 col35">27.000000</td>
-<td id="T_94f02_row4_col36" class="data row4 col36">nan</td>
-<td id="T_94f02_row4_col37" class="data row4 col37">12345</td>
-<td id="T_94f02_row4_col38" class="data row4 col38">7.000000</td>
-<td id="T_94f02_row4_col39" class="data row4 col39">True</td>
-<td id="T_94f02_row4_col40" class="data row4 col40">330.000000</td>
-<td id="T_94f02_row4_col41" class="data row4 col41">Living area (residential, urban or rural)</td>
-<td id="T_94f02_row4_col42" class="data row4 col42">True</td>
-<td id="T_94f02_row4_col43" class="data row4 col43">False</td>
-<td id="T_94f02_row4_col44" class="data row4 col44">2.000000</td>
-<td id="T_94f02_row4_col45" class="data row4 col45">http://www.living-stone.be</td>
-<td id="T_94f02_row4_col46" class="data row4 col46">nan</td>
-<td id="T_94f02_row4_col47" class="data row4 col47">nan</td>
-<td id="T_94f02_row4_col48" class="data row4 col48">https://www.immoweb.be/en/classified/house/for-sale/affligem/1790/10842333</td>
-<td id="T_94f02_row4_col49" class="data row4 col49">2023-09-27 14:02:11.968969</td>
+<td id="T_86a77_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
+<td id="T_86a77_row4_col0" class="data row4 col0">Astridlaan 1 1700 - Dilbeek</td>
+<td id="T_86a77_row4_col1" class="data row4 col1">nan</td>
+<td id="T_86a77_row4_col2" class="data row4 col2">At delivery</td>
+<td id="T_86a77_row4_col3" class="data row4 col3">nan</td>
+<td id="T_86a77_row4_col4" class="data row4 col4">1.000000</td>
+<td id="T_86a77_row4_col5" class="data row4 col5">16.000000</td>
+<td id="T_86a77_row4_col6" class="data row4 col6">12.000000</td>
+<td id="T_86a77_row4_col7" class="data row4 col7">12.000000</td>
+<td id="T_86a77_row4_col8" class="data row4 col8">3.000000</td>
+<td id="T_86a77_row4_col9" class="data row4 col9">As new</td>
+<td id="T_86a77_row4_col10" class="data row4 col10">nan</td>
+<td id="T_86a77_row4_col11" class="data row4 col11">nan</td>
+<td id="T_86a77_row4_col12" class="data row4 col12">True</td>
+<td id="T_86a77_row4_col13" class="data row4 col13">2021.000000</td>
+<td id="T_86a77_row4_col14" class="data row4 col14">nan</td>
+<td id="T_86a77_row4_col15" class="data row4 col15">nan</td>
+<td id="T_86a77_row4_col16" class="data row4 col16">True</td>
+<td id="T_86a77_row4_col17" class="data row4 col17">A</td>
+<td id="T_86a77_row4_col18" class="data row4 col18">5527171</td>
+<td id="T_86a77_row4_col19" class="data row4 col19">False</td>
+<td id="T_86a77_row4_col20" class="data row4 col20">False</td>
+<td id="T_86a77_row4_col21" class="data row4 col21">250.000000</td>
+<td id="T_86a77_row4_col22" class="data row4 col22">True</td>
+<td id="T_86a77_row4_col23" class="data row4 col23">Gas</td>
+<td id="T_86a77_row4_col24" class="data row4 col24">nan</td>
+<td id="T_86a77_row4_col25" class="data row4 col25">USA hyper equipped</td>
+<td id="T_86a77_row4_col26" class="data row4 col26">Living area (residential, urban or rural)</td>
+<td id="T_86a77_row4_col27" class="data row4 col27">215.000000</td>
+<td id="T_86a77_row4_col28" class="data row4 col28">46.000000</td>
+<td id="T_86a77_row4_col29" class="data row4 col29">3.000000</td>
+<td id="T_86a77_row4_col30" class="data row4 col30">nan</td>
+<td id="T_86a77_row4_col31" class="data row4 col31">1.000000</td>
+<td id="T_86a77_row4_col32" class="data row4 col32">True</td>
+<td id="T_86a77_row4_col33" class="data row4 col33">False</td>
+<td id="T_86a77_row4_col34" class="data row4 col34">413150.000000</td>
+<td id="T_86a77_row4_col35" class="data row4 col35">27.000000</td>
+<td id="T_86a77_row4_col36" class="data row4 col36">nan</td>
+<td id="T_86a77_row4_col37" class="data row4 col37">12345</td>
+<td id="T_86a77_row4_col38" class="data row4 col38">7.000000</td>
+<td id="T_86a77_row4_col39" class="data row4 col39">True</td>
+<td id="T_86a77_row4_col40" class="data row4 col40">330.000000</td>
+<td id="T_86a77_row4_col41" class="data row4 col41">Living area (residential, urban or rural)</td>
+<td id="T_86a77_row4_col42" class="data row4 col42">True</td>
+<td id="T_86a77_row4_col43" class="data row4 col43">False</td>
+<td id="T_86a77_row4_col44" class="data row4 col44">2.000000</td>
+<td id="T_86a77_row4_col45" class="data row4 col45">http://www.living-stone.be</td>
+<td id="T_86a77_row4_col46" class="data row4 col46">nan</td>
+<td id="T_86a77_row4_col47" class="data row4 col47">nan</td>
+<td id="T_86a77_row4_col48" class="data row4 col48">https://www.immoweb.be/en/classified/house/for-sale/affligem/1790/10842333</td>
+<td id="T_86a77_row4_col49" class="data row4 col49">2023-09-27 14:02:11.968969</td>
 </tr>
 </tbody>
 </table>
@@ -1194,13 +1194,13 @@ Here is the dataset we have gathered through web scraping:</p>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <style type="text/css">
-#T_7d8cf thead tr th:nth-child(1) {
+#T_54650 thead tr th:nth-child(1) {
   position: sticky;
   background-color: inherit;
   left: 0px;
   z-index: 3 !important;
 }
-#T_7d8cf tbody tr th:nth-child(1) {
+#T_54650 tbody tr th:nth-child(1) {
   position: sticky;
   background-color: inherit;
   left: 0px;
@@ -1208,345 +1208,345 @@ Here is the dataset we have gathered through web scraping:</p>
 }
 </style>
 
-<table id="T_7d8cf" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<table id="T_54650" data-quarto-postprocess="true" class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
-<th id="T_7d8cf_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">as_built_plan</th>
-<th id="T_7d8cf_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">available_as_of</th>
-<th id="T_7d8cf_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">basement</th>
-<th id="T_7d8cf_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">bathrooms</th>
-<th id="T_7d8cf_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">bedroom_1_surface</th>
-<th id="T_7d8cf_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">bedroom_2_surface</th>
-<th id="T_7d8cf_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">bedroom_3_surface</th>
-<th id="T_7d8cf_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">bedrooms</th>
-<th id="T_7d8cf_level0_col8" class="col_heading level0 col8" data-quarto-table-cell-role="th">building_condition</th>
-<th id="T_7d8cf_level0_col9" class="col_heading level0 col9" data-quarto-table-cell-role="th">co2_emission</th>
-<th id="T_7d8cf_level0_col10" class="col_heading level0 col10" data-quarto-table-cell-role="th">cadastral_income</th>
-<th id="T_7d8cf_level0_col11" class="col_heading level0 col11" data-quarto-table-cell-role="th">connection_to_sewer_network</th>
-<th id="T_7d8cf_level0_col12" class="col_heading level0 col12" data-quarto-table-cell-role="th">construction_year</th>
-<th id="T_7d8cf_level0_col13" class="col_heading level0 col13" data-quarto-table-cell-role="th">covered_parking_spaces</th>
-<th id="T_7d8cf_level0_col14" class="col_heading level0 col14" data-quarto-table-cell-role="th">dining_room</th>
-<th id="T_7d8cf_level0_col15" class="col_heading level0 col15" data-quarto-table-cell-role="th">double_glazing</th>
-<th id="T_7d8cf_level0_col16" class="col_heading level0 col16" data-quarto-table-cell-role="th">energy_class</th>
-<th id="T_7d8cf_level0_col17" class="col_heading level0 col17" data-quarto-table-cell-role="th">external_reference</th>
-<th id="T_7d8cf_level0_col18" class="col_heading level0 col18" data-quarto-table-cell-role="th">flood_zone_type</th>
-<th id="T_7d8cf_level0_col19" class="col_heading level0 col19" data-quarto-table-cell-role="th">furnished</th>
-<th id="T_7d8cf_level0_col20" class="col_heading level0 col20" data-quarto-table-cell-role="th">garden_surface</th>
-<th id="T_7d8cf_level0_col21" class="col_heading level0 col21" data-quarto-table-cell-role="th">gas_water__electricity</th>
-<th id="T_7d8cf_level0_col22" class="col_heading level0 col22" data-quarto-table-cell-role="th">heating_type</th>
-<th id="T_7d8cf_level0_col23" class="col_heading level0 col23" data-quarto-table-cell-role="th">kitchen_surface</th>
-<th id="T_7d8cf_level0_col24" class="col_heading level0 col24" data-quarto-table-cell-role="th">kitchen_type</th>
-<th id="T_7d8cf_level0_col25" class="col_heading level0 col25" data-quarto-table-cell-role="th">latest_land_use_designation</th>
-<th id="T_7d8cf_level0_col26" class="col_heading level0 col26" data-quarto-table-cell-role="th">living_area</th>
-<th id="T_7d8cf_level0_col27" class="col_heading level0 col27" data-quarto-table-cell-role="th">living_room_surface</th>
-<th id="T_7d8cf_level0_col28" class="col_heading level0 col28" data-quarto-table-cell-role="th">number_of_frontages</th>
-<th id="T_7d8cf_level0_col29" class="col_heading level0 col29" data-quarto-table-cell-role="th">office</th>
-<th id="T_7d8cf_level0_col30" class="col_heading level0 col30" data-quarto-table-cell-role="th">outdoor_parking_spaces</th>
-<th id="T_7d8cf_level0_col31" class="col_heading level0 col31" data-quarto-table-cell-role="th">planning_permission_obtained</th>
-<th id="T_7d8cf_level0_col32" class="col_heading level0 col32" data-quarto-table-cell-role="th">possible_priority_purchase_right</th>
-<th id="T_7d8cf_level0_col33" class="col_heading level0 col33" data-quarto-table-cell-role="th">price</th>
-<th id="T_7d8cf_level0_col34" class="col_heading level0 col34" data-quarto-table-cell-role="th">primary_energy_consumption</th>
-<th id="T_7d8cf_level0_col35" class="col_heading level0 col35" data-quarto-table-cell-role="th">proceedings_for_breach_of_planning_regulations</th>
-<th id="T_7d8cf_level0_col36" class="col_heading level0 col36" data-quarto-table-cell-role="th">reference_number_of_the_epc_report</th>
-<th id="T_7d8cf_level0_col37" class="col_heading level0 col37" data-quarto-table-cell-role="th">street_frontage_width</th>
-<th id="T_7d8cf_level0_col38" class="col_heading level0 col38" data-quarto-table-cell-role="th">subdivision_permit</th>
-<th id="T_7d8cf_level0_col39" class="col_heading level0 col39" data-quarto-table-cell-role="th">surface_of_the_plot</th>
-<th id="T_7d8cf_level0_col40" class="col_heading level0 col40" data-quarto-table-cell-role="th">surroundings_type</th>
-<th id="T_7d8cf_level0_col41" class="col_heading level0 col41" data-quarto-table-cell-role="th">tv_cable</th>
-<th id="T_7d8cf_level0_col42" class="col_heading level0 col42" data-quarto-table-cell-role="th">tenement_building</th>
-<th id="T_7d8cf_level0_col43" class="col_heading level0 col43" data-quarto-table-cell-role="th">toilets</th>
-<th id="T_7d8cf_level0_col44" class="col_heading level0 col44" data-quarto-table-cell-role="th">website</th>
-<th id="T_7d8cf_level0_col45" class="col_heading level0 col45" data-quarto-table-cell-role="th">width_of_the_lot_on_the_street</th>
-<th id="T_7d8cf_level0_col46" class="col_heading level0 col46" data-quarto-table-cell-role="th">yearly_theoretical_total_energy_consumption</th>
-<th id="T_7d8cf_level0_col47" class="col_heading level0 col47" data-quarto-table-cell-role="th">ad_url</th>
-<th id="T_7d8cf_level0_col48" class="col_heading level0 col48" data-quarto-table-cell-role="th">day_of_retrieval</th>
-<th id="T_7d8cf_level0_col49" class="col_heading level0 col49" data-quarto-table-cell-role="th">city</th>
-<th id="T_7d8cf_level0_col50" class="col_heading level0 col50" data-quarto-table-cell-role="th">house_number</th>
-<th id="T_7d8cf_level0_col51" class="col_heading level0 col51" data-quarto-table-cell-role="th">zip</th>
-<th id="T_7d8cf_level0_col52" class="col_heading level0 col52" data-quarto-table-cell-role="th">street</th>
+<th id="T_54650_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">as_built_plan</th>
+<th id="T_54650_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">available_as_of</th>
+<th id="T_54650_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">basement</th>
+<th id="T_54650_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">bathrooms</th>
+<th id="T_54650_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">bedroom_1_surface</th>
+<th id="T_54650_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">bedroom_2_surface</th>
+<th id="T_54650_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">bedroom_3_surface</th>
+<th id="T_54650_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">bedrooms</th>
+<th id="T_54650_level0_col8" class="col_heading level0 col8" data-quarto-table-cell-role="th">building_condition</th>
+<th id="T_54650_level0_col9" class="col_heading level0 col9" data-quarto-table-cell-role="th">co2_emission</th>
+<th id="T_54650_level0_col10" class="col_heading level0 col10" data-quarto-table-cell-role="th">cadastral_income</th>
+<th id="T_54650_level0_col11" class="col_heading level0 col11" data-quarto-table-cell-role="th">connection_to_sewer_network</th>
+<th id="T_54650_level0_col12" class="col_heading level0 col12" data-quarto-table-cell-role="th">construction_year</th>
+<th id="T_54650_level0_col13" class="col_heading level0 col13" data-quarto-table-cell-role="th">covered_parking_spaces</th>
+<th id="T_54650_level0_col14" class="col_heading level0 col14" data-quarto-table-cell-role="th">dining_room</th>
+<th id="T_54650_level0_col15" class="col_heading level0 col15" data-quarto-table-cell-role="th">double_glazing</th>
+<th id="T_54650_level0_col16" class="col_heading level0 col16" data-quarto-table-cell-role="th">energy_class</th>
+<th id="T_54650_level0_col17" class="col_heading level0 col17" data-quarto-table-cell-role="th">external_reference</th>
+<th id="T_54650_level0_col18" class="col_heading level0 col18" data-quarto-table-cell-role="th">flood_zone_type</th>
+<th id="T_54650_level0_col19" class="col_heading level0 col19" data-quarto-table-cell-role="th">furnished</th>
+<th id="T_54650_level0_col20" class="col_heading level0 col20" data-quarto-table-cell-role="th">garden_surface</th>
+<th id="T_54650_level0_col21" class="col_heading level0 col21" data-quarto-table-cell-role="th">gas_water__electricity</th>
+<th id="T_54650_level0_col22" class="col_heading level0 col22" data-quarto-table-cell-role="th">heating_type</th>
+<th id="T_54650_level0_col23" class="col_heading level0 col23" data-quarto-table-cell-role="th">kitchen_surface</th>
+<th id="T_54650_level0_col24" class="col_heading level0 col24" data-quarto-table-cell-role="th">kitchen_type</th>
+<th id="T_54650_level0_col25" class="col_heading level0 col25" data-quarto-table-cell-role="th">latest_land_use_designation</th>
+<th id="T_54650_level0_col26" class="col_heading level0 col26" data-quarto-table-cell-role="th">living_area</th>
+<th id="T_54650_level0_col27" class="col_heading level0 col27" data-quarto-table-cell-role="th">living_room_surface</th>
+<th id="T_54650_level0_col28" class="col_heading level0 col28" data-quarto-table-cell-role="th">number_of_frontages</th>
+<th id="T_54650_level0_col29" class="col_heading level0 col29" data-quarto-table-cell-role="th">office</th>
+<th id="T_54650_level0_col30" class="col_heading level0 col30" data-quarto-table-cell-role="th">outdoor_parking_spaces</th>
+<th id="T_54650_level0_col31" class="col_heading level0 col31" data-quarto-table-cell-role="th">planning_permission_obtained</th>
+<th id="T_54650_level0_col32" class="col_heading level0 col32" data-quarto-table-cell-role="th">possible_priority_purchase_right</th>
+<th id="T_54650_level0_col33" class="col_heading level0 col33" data-quarto-table-cell-role="th">price</th>
+<th id="T_54650_level0_col34" class="col_heading level0 col34" data-quarto-table-cell-role="th">primary_energy_consumption</th>
+<th id="T_54650_level0_col35" class="col_heading level0 col35" data-quarto-table-cell-role="th">proceedings_for_breach_of_planning_regulations</th>
+<th id="T_54650_level0_col36" class="col_heading level0 col36" data-quarto-table-cell-role="th">reference_number_of_the_epc_report</th>
+<th id="T_54650_level0_col37" class="col_heading level0 col37" data-quarto-table-cell-role="th">street_frontage_width</th>
+<th id="T_54650_level0_col38" class="col_heading level0 col38" data-quarto-table-cell-role="th">subdivision_permit</th>
+<th id="T_54650_level0_col39" class="col_heading level0 col39" data-quarto-table-cell-role="th">surface_of_the_plot</th>
+<th id="T_54650_level0_col40" class="col_heading level0 col40" data-quarto-table-cell-role="th">surroundings_type</th>
+<th id="T_54650_level0_col41" class="col_heading level0 col41" data-quarto-table-cell-role="th">tv_cable</th>
+<th id="T_54650_level0_col42" class="col_heading level0 col42" data-quarto-table-cell-role="th">tenement_building</th>
+<th id="T_54650_level0_col43" class="col_heading level0 col43" data-quarto-table-cell-role="th">toilets</th>
+<th id="T_54650_level0_col44" class="col_heading level0 col44" data-quarto-table-cell-role="th">website</th>
+<th id="T_54650_level0_col45" class="col_heading level0 col45" data-quarto-table-cell-role="th">width_of_the_lot_on_the_street</th>
+<th id="T_54650_level0_col46" class="col_heading level0 col46" data-quarto-table-cell-role="th">yearly_theoretical_total_energy_consumption</th>
+<th id="T_54650_level0_col47" class="col_heading level0 col47" data-quarto-table-cell-role="th">ad_url</th>
+<th id="T_54650_level0_col48" class="col_heading level0 col48" data-quarto-table-cell-role="th">day_of_retrieval</th>
+<th id="T_54650_level0_col49" class="col_heading level0 col49" data-quarto-table-cell-role="th">city</th>
+<th id="T_54650_level0_col50" class="col_heading level0 col50" data-quarto-table-cell-role="th">house_number</th>
+<th id="T_54650_level0_col51" class="col_heading level0 col51" data-quarto-table-cell-role="th">zip</th>
+<th id="T_54650_level0_col52" class="col_heading level0 col52" data-quarto-table-cell-role="th">street</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_7d8cf_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
-<td id="T_7d8cf_row0_col0" class="data row0 col0">nan</td>
-<td id="T_7d8cf_row0_col1" class="data row0 col1">After signing the deed</td>
-<td id="T_7d8cf_row0_col2" class="data row0 col2">True</td>
-<td id="T_7d8cf_row0_col3" class="data row0 col3">4.000000</td>
-<td id="T_7d8cf_row0_col4" class="data row0 col4">28.000000</td>
-<td id="T_7d8cf_row0_col5" class="data row0 col5">24.000000</td>
-<td id="T_7d8cf_row0_col6" class="data row0 col6">21.000000</td>
-<td id="T_7d8cf_row0_col7" class="data row0 col7">5.000000</td>
-<td id="T_7d8cf_row0_col8" class="data row0 col8">Good</td>
-<td id="T_7d8cf_row0_col9" class="data row0 col9">74.000000</td>
-<td id="T_7d8cf_row0_col10" class="data row0 col10">7615.000000</td>
-<td id="T_7d8cf_row0_col11" class="data row0 col11">False</td>
-<td id="T_7d8cf_row0_col12" class="data row0 col12">1975.000000</td>
-<td id="T_7d8cf_row0_col13" class="data row0 col13">2.000000</td>
-<td id="T_7d8cf_row0_col14" class="data row0 col14">True</td>
-<td id="T_7d8cf_row0_col15" class="data row0 col15">True</td>
-<td id="T_7d8cf_row0_col16" class="data row0 col16">D</td>
-<td id="T_7d8cf_row0_col17" class="data row0 col17">5530019</td>
-<td id="T_7d8cf_row0_col18" class="data row0 col18">nan</td>
-<td id="T_7d8cf_row0_col19" class="data row0 col19">False</td>
-<td id="T_7d8cf_row0_col20" class="data row0 col20">4300.000000</td>
-<td id="T_7d8cf_row0_col21" class="data row0 col21">True</td>
-<td id="T_7d8cf_row0_col22" class="data row0 col22">Fuel oil</td>
-<td id="T_7d8cf_row0_col23" class="data row0 col23">21.000000</td>
-<td id="T_7d8cf_row0_col24" class="data row0 col24">USA hyper equipped</td>
-<td id="T_7d8cf_row0_col25" class="data row0 col25">nan</td>
-<td id="T_7d8cf_row0_col26" class="data row0 col26">420.000000</td>
-<td id="T_7d8cf_row0_col27" class="data row0 col27">63.000000</td>
-<td id="T_7d8cf_row0_col28" class="data row0 col28">4.000000</td>
-<td id="T_7d8cf_row0_col29" class="data row0 col29">Yes</td>
-<td id="T_7d8cf_row0_col30" class="data row0 col30">2.000000</td>
-<td id="T_7d8cf_row0_col31" class="data row0 col31">nan</td>
-<td id="T_7d8cf_row0_col32" class="data row0 col32">nan</td>
-<td id="T_7d8cf_row0_col33" class="data row0 col33">1225000.000000</td>
-<td id="T_7d8cf_row0_col34" class="data row0 col34">296.000000</td>
-<td id="T_7d8cf_row0_col35" class="data row0 col35">nan</td>
-<td id="T_7d8cf_row0_col36" class="data row0 col36">20210910012683</td>
-<td id="T_7d8cf_row0_col37" class="data row0 col37">23.000000</td>
-<td id="T_7d8cf_row0_col38" class="data row0 col38">nan</td>
-<td id="T_7d8cf_row0_col39" class="data row0 col39">4677.000000</td>
-<td id="T_7d8cf_row0_col40" class="data row0 col40">Living area (residential, urban or rural)</td>
-<td id="T_7d8cf_row0_col41" class="data row0 col41">True</td>
-<td id="T_7d8cf_row0_col42" class="data row0 col42">False</td>
-<td id="T_7d8cf_row0_col43" class="data row0 col43">5.000000</td>
-<td id="T_7d8cf_row0_col44" class="data row0 col44">http://www.bytheway.be</td>
-<td id="T_7d8cf_row0_col45" class="data row0 col45">nan</td>
-<td id="T_7d8cf_row0_col46" class="data row0 col46">133062.000000</td>
-<td id="T_7d8cf_row0_col47" class="data row0 col47">https://www.immoweb.be/en/classified/villa/for-sale/braine-l%27alleud/1420/10844811</td>
-<td id="T_7d8cf_row0_col48" class="data row0 col48">2023-09-27 14:02:10.370650</td>
-<td id="T_7d8cf_row0_col49" class="data row0 col49">Waterloo</td>
-<td id="T_7d8cf_row0_col50" class="data row0 col50">96</td>
-<td id="T_7d8cf_row0_col51" class="data row0 col51">1410</td>
-<td id="T_7d8cf_row0_col52" class="data row0 col52">drve richelle</td>
+<td id="T_54650_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
+<td id="T_54650_row0_col0" class="data row0 col0">nan</td>
+<td id="T_54650_row0_col1" class="data row0 col1">After signing the deed</td>
+<td id="T_54650_row0_col2" class="data row0 col2">True</td>
+<td id="T_54650_row0_col3" class="data row0 col3">4.000000</td>
+<td id="T_54650_row0_col4" class="data row0 col4">28.000000</td>
+<td id="T_54650_row0_col5" class="data row0 col5">24.000000</td>
+<td id="T_54650_row0_col6" class="data row0 col6">21.000000</td>
+<td id="T_54650_row0_col7" class="data row0 col7">5.000000</td>
+<td id="T_54650_row0_col8" class="data row0 col8">Good</td>
+<td id="T_54650_row0_col9" class="data row0 col9">74.000000</td>
+<td id="T_54650_row0_col10" class="data row0 col10">7615.000000</td>
+<td id="T_54650_row0_col11" class="data row0 col11">False</td>
+<td id="T_54650_row0_col12" class="data row0 col12">1975.000000</td>
+<td id="T_54650_row0_col13" class="data row0 col13">2.000000</td>
+<td id="T_54650_row0_col14" class="data row0 col14">True</td>
+<td id="T_54650_row0_col15" class="data row0 col15">True</td>
+<td id="T_54650_row0_col16" class="data row0 col16">D</td>
+<td id="T_54650_row0_col17" class="data row0 col17">5530019</td>
+<td id="T_54650_row0_col18" class="data row0 col18">nan</td>
+<td id="T_54650_row0_col19" class="data row0 col19">False</td>
+<td id="T_54650_row0_col20" class="data row0 col20">4300.000000</td>
+<td id="T_54650_row0_col21" class="data row0 col21">True</td>
+<td id="T_54650_row0_col22" class="data row0 col22">Fuel oil</td>
+<td id="T_54650_row0_col23" class="data row0 col23">21.000000</td>
+<td id="T_54650_row0_col24" class="data row0 col24">USA hyper equipped</td>
+<td id="T_54650_row0_col25" class="data row0 col25">nan</td>
+<td id="T_54650_row0_col26" class="data row0 col26">420.000000</td>
+<td id="T_54650_row0_col27" class="data row0 col27">63.000000</td>
+<td id="T_54650_row0_col28" class="data row0 col28">4.000000</td>
+<td id="T_54650_row0_col29" class="data row0 col29">Yes</td>
+<td id="T_54650_row0_col30" class="data row0 col30">2.000000</td>
+<td id="T_54650_row0_col31" class="data row0 col31">nan</td>
+<td id="T_54650_row0_col32" class="data row0 col32">nan</td>
+<td id="T_54650_row0_col33" class="data row0 col33">1225000.000000</td>
+<td id="T_54650_row0_col34" class="data row0 col34">296.000000</td>
+<td id="T_54650_row0_col35" class="data row0 col35">nan</td>
+<td id="T_54650_row0_col36" class="data row0 col36">20210910012683</td>
+<td id="T_54650_row0_col37" class="data row0 col37">23.000000</td>
+<td id="T_54650_row0_col38" class="data row0 col38">nan</td>
+<td id="T_54650_row0_col39" class="data row0 col39">4677.000000</td>
+<td id="T_54650_row0_col40" class="data row0 col40">Living area (residential, urban or rural)</td>
+<td id="T_54650_row0_col41" class="data row0 col41">True</td>
+<td id="T_54650_row0_col42" class="data row0 col42">False</td>
+<td id="T_54650_row0_col43" class="data row0 col43">5.000000</td>
+<td id="T_54650_row0_col44" class="data row0 col44">http://www.bytheway.be</td>
+<td id="T_54650_row0_col45" class="data row0 col45">nan</td>
+<td id="T_54650_row0_col46" class="data row0 col46">133062.000000</td>
+<td id="T_54650_row0_col47" class="data row0 col47">https://www.immoweb.be/en/classified/villa/for-sale/braine-l%27alleud/1420/10844811</td>
+<td id="T_54650_row0_col48" class="data row0 col48">2023-09-27 14:02:10.370650</td>
+<td id="T_54650_row0_col49" class="data row0 col49">Waterloo</td>
+<td id="T_54650_row0_col50" class="data row0 col50">96</td>
+<td id="T_54650_row0_col51" class="data row0 col51">1410</td>
+<td id="T_54650_row0_col52" class="data row0 col52">drve richelle</td>
 </tr>
 <tr class="even">
-<td id="T_7d8cf_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
-<td id="T_7d8cf_row1_col0" class="data row1 col0">False</td>
-<td id="T_7d8cf_row1_col1" class="data row1 col1">After signing the deed</td>
-<td id="T_7d8cf_row1_col2" class="data row1 col2">nan</td>
-<td id="T_7d8cf_row1_col3" class="data row1 col3">1.000000</td>
-<td id="T_7d8cf_row1_col4" class="data row1 col4">14.000000</td>
-<td id="T_7d8cf_row1_col5" class="data row1 col5">10.000000</td>
-<td id="T_7d8cf_row1_col6" class="data row1 col6">nan</td>
-<td id="T_7d8cf_row1_col7" class="data row1 col7">2.000000</td>
-<td id="T_7d8cf_row1_col8" class="data row1 col8">To renovate</td>
-<td id="T_7d8cf_row1_col9" class="data row1 col9">76.000000</td>
-<td id="T_7d8cf_row1_col10" class="data row1 col10">541.000000</td>
-<td id="T_7d8cf_row1_col11" class="data row1 col11">True</td>
-<td id="T_7d8cf_row1_col12" class="data row1 col12">1850.000000</td>
-<td id="T_7d8cf_row1_col13" class="data row1 col13">1.000000</td>
-<td id="T_7d8cf_row1_col14" class="data row1 col14">True</td>
-<td id="T_7d8cf_row1_col15" class="data row1 col15">True</td>
-<td id="T_7d8cf_row1_col16" class="data row1 col16">D</td>
-<td id="T_7d8cf_row1_col17" class="data row1 col17">5246367</td>
-<td id="T_7d8cf_row1_col18" class="data row1 col18">nan</td>
-<td id="T_7d8cf_row1_col19" class="data row1 col19">False</td>
-<td id="T_7d8cf_row1_col20" class="data row1 col20">nan</td>
-<td id="T_7d8cf_row1_col21" class="data row1 col21">nan</td>
-<td id="T_7d8cf_row1_col22" class="data row1 col22">Fuel oil</td>
-<td id="T_7d8cf_row1_col23" class="data row1 col23">nan</td>
-<td id="T_7d8cf_row1_col24" class="data row1 col24">Semi equipped</td>
-<td id="T_7d8cf_row1_col25" class="data row1 col25">Living area (residential, urban or rural)</td>
-<td id="T_7d8cf_row1_col26" class="data row1 col26">113.000000</td>
-<td id="T_7d8cf_row1_col27" class="data row1 col27">nan</td>
-<td id="T_7d8cf_row1_col28" class="data row1 col28">2.000000</td>
-<td id="T_7d8cf_row1_col29" class="data row1 col29">nan</td>
-<td id="T_7d8cf_row1_col30" class="data row1 col30">nan</td>
-<td id="T_7d8cf_row1_col31" class="data row1 col31">nan</td>
-<td id="T_7d8cf_row1_col32" class="data row1 col32">False</td>
-<td id="T_7d8cf_row1_col33" class="data row1 col33">89000.000000</td>
-<td id="T_7d8cf_row1_col34" class="data row1 col34">307.000000</td>
-<td id="T_7d8cf_row1_col35" class="data row1 col35">False</td>
-<td id="T_7d8cf_row1_col36" class="data row1 col36">20230306014621</td>
-<td id="T_7d8cf_row1_col37" class="data row1 col37">9.000000</td>
-<td id="T_7d8cf_row1_col38" class="data row1 col38">False</td>
-<td id="T_7d8cf_row1_col39" class="data row1 col39">73.000000</td>
-<td id="T_7d8cf_row1_col40" class="data row1 col40">Urban</td>
-<td id="T_7d8cf_row1_col41" class="data row1 col41">True</td>
-<td id="T_7d8cf_row1_col42" class="data row1 col42">False</td>
-<td id="T_7d8cf_row1_col43" class="data row1 col43">1.000000</td>
-<td id="T_7d8cf_row1_col44" class="data row1 col44">http://www.weinvest.be</td>
-<td id="T_7d8cf_row1_col45" class="data row1 col45">10.000000</td>
-<td id="T_7d8cf_row1_col46" class="data row1 col46">43587.000000</td>
-<td id="T_7d8cf_row1_col47" class="data row1 col47">https://www.immoweb.be/en/classified/town-house/for-sale/jemelle/5580/10843929</td>
-<td id="T_7d8cf_row1_col48" class="data row1 col48">2023-09-27 14:02:10.641758</td>
-<td id="T_7d8cf_row1_col49" class="data row1 col49">Famenne</td>
-<td id="T_7d8cf_row1_col50" class="data row1 col50">65</td>
-<td id="T_7d8cf_row1_col51" class="data row1 col51">6900</td>
-<td id="T_7d8cf_row1_col52" class="data row1 col52">Chausse de lOurthe</td>
+<td id="T_54650_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
+<td id="T_54650_row1_col0" class="data row1 col0">False</td>
+<td id="T_54650_row1_col1" class="data row1 col1">After signing the deed</td>
+<td id="T_54650_row1_col2" class="data row1 col2">nan</td>
+<td id="T_54650_row1_col3" class="data row1 col3">1.000000</td>
+<td id="T_54650_row1_col4" class="data row1 col4">14.000000</td>
+<td id="T_54650_row1_col5" class="data row1 col5">10.000000</td>
+<td id="T_54650_row1_col6" class="data row1 col6">nan</td>
+<td id="T_54650_row1_col7" class="data row1 col7">2.000000</td>
+<td id="T_54650_row1_col8" class="data row1 col8">To renovate</td>
+<td id="T_54650_row1_col9" class="data row1 col9">76.000000</td>
+<td id="T_54650_row1_col10" class="data row1 col10">541.000000</td>
+<td id="T_54650_row1_col11" class="data row1 col11">True</td>
+<td id="T_54650_row1_col12" class="data row1 col12">1850.000000</td>
+<td id="T_54650_row1_col13" class="data row1 col13">1.000000</td>
+<td id="T_54650_row1_col14" class="data row1 col14">True</td>
+<td id="T_54650_row1_col15" class="data row1 col15">True</td>
+<td id="T_54650_row1_col16" class="data row1 col16">D</td>
+<td id="T_54650_row1_col17" class="data row1 col17">5246367</td>
+<td id="T_54650_row1_col18" class="data row1 col18">nan</td>
+<td id="T_54650_row1_col19" class="data row1 col19">False</td>
+<td id="T_54650_row1_col20" class="data row1 col20">nan</td>
+<td id="T_54650_row1_col21" class="data row1 col21">nan</td>
+<td id="T_54650_row1_col22" class="data row1 col22">Fuel oil</td>
+<td id="T_54650_row1_col23" class="data row1 col23">nan</td>
+<td id="T_54650_row1_col24" class="data row1 col24">Semi equipped</td>
+<td id="T_54650_row1_col25" class="data row1 col25">Living area (residential, urban or rural)</td>
+<td id="T_54650_row1_col26" class="data row1 col26">113.000000</td>
+<td id="T_54650_row1_col27" class="data row1 col27">nan</td>
+<td id="T_54650_row1_col28" class="data row1 col28">2.000000</td>
+<td id="T_54650_row1_col29" class="data row1 col29">nan</td>
+<td id="T_54650_row1_col30" class="data row1 col30">nan</td>
+<td id="T_54650_row1_col31" class="data row1 col31">nan</td>
+<td id="T_54650_row1_col32" class="data row1 col32">False</td>
+<td id="T_54650_row1_col33" class="data row1 col33">89000.000000</td>
+<td id="T_54650_row1_col34" class="data row1 col34">307.000000</td>
+<td id="T_54650_row1_col35" class="data row1 col35">False</td>
+<td id="T_54650_row1_col36" class="data row1 col36">20230306014621</td>
+<td id="T_54650_row1_col37" class="data row1 col37">9.000000</td>
+<td id="T_54650_row1_col38" class="data row1 col38">False</td>
+<td id="T_54650_row1_col39" class="data row1 col39">73.000000</td>
+<td id="T_54650_row1_col40" class="data row1 col40">Urban</td>
+<td id="T_54650_row1_col41" class="data row1 col41">True</td>
+<td id="T_54650_row1_col42" class="data row1 col42">False</td>
+<td id="T_54650_row1_col43" class="data row1 col43">1.000000</td>
+<td id="T_54650_row1_col44" class="data row1 col44">http://www.weinvest.be</td>
+<td id="T_54650_row1_col45" class="data row1 col45">10.000000</td>
+<td id="T_54650_row1_col46" class="data row1 col46">43587.000000</td>
+<td id="T_54650_row1_col47" class="data row1 col47">https://www.immoweb.be/en/classified/town-house/for-sale/jemelle/5580/10843929</td>
+<td id="T_54650_row1_col48" class="data row1 col48">2023-09-27 14:02:10.641758</td>
+<td id="T_54650_row1_col49" class="data row1 col49">Famenne</td>
+<td id="T_54650_row1_col50" class="data row1 col50">65</td>
+<td id="T_54650_row1_col51" class="data row1 col51">6900</td>
+<td id="T_54650_row1_col52" class="data row1 col52">Chausse de lOurthe</td>
 </tr>
 <tr class="odd">
-<td id="T_7d8cf_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
-<td id="T_7d8cf_row2_col0" class="data row2 col0">nan</td>
-<td id="T_7d8cf_row2_col1" class="data row2 col1">After signing the deed</td>
-<td id="T_7d8cf_row2_col2" class="data row2 col2">True</td>
-<td id="T_7d8cf_row2_col3" class="data row2 col3">1.000000</td>
-<td id="T_7d8cf_row2_col4" class="data row2 col4">17.000000</td>
-<td id="T_7d8cf_row2_col5" class="data row2 col5">11.000000</td>
-<td id="T_7d8cf_row2_col6" class="data row2 col6">nan</td>
-<td id="T_7d8cf_row2_col7" class="data row2 col7">2.000000</td>
-<td id="T_7d8cf_row2_col8" class="data row2 col8">To renovate</td>
-<td id="T_7d8cf_row2_col9" class="data row2 col9">173.000000</td>
-<td id="T_7d8cf_row2_col10" class="data row2 col10">689.000000</td>
-<td id="T_7d8cf_row2_col11" class="data row2 col11">True</td>
-<td id="T_7d8cf_row2_col12" class="data row2 col12">1949.000000</td>
-<td id="T_7d8cf_row2_col13" class="data row2 col13">1.000000</td>
-<td id="T_7d8cf_row2_col14" class="data row2 col14">True</td>
-<td id="T_7d8cf_row2_col15" class="data row2 col15">True</td>
-<td id="T_7d8cf_row2_col16" class="data row2 col16">G</td>
-<td id="T_7d8cf_row2_col17" class="data row2 col17">5534704</td>
-<td id="T_7d8cf_row2_col18" class="data row2 col18">False</td>
-<td id="T_7d8cf_row2_col19" class="data row2 col19">False</td>
-<td id="T_7d8cf_row2_col20" class="data row2 col20">315.000000</td>
-<td id="T_7d8cf_row2_col21" class="data row2 col21">nan</td>
-<td id="T_7d8cf_row2_col22" class="data row2 col22">Fuel oil</td>
-<td id="T_7d8cf_row2_col23" class="data row2 col23">13.000000</td>
-<td id="T_7d8cf_row2_col24" class="data row2 col24">Semi equipped</td>
-<td id="T_7d8cf_row2_col25" class="data row2 col25">Living area (residential, urban or rural)</td>
-<td id="T_7d8cf_row2_col26" class="data row2 col26">139.000000</td>
-<td id="T_7d8cf_row2_col27" class="data row2 col27">10.000000</td>
-<td id="T_7d8cf_row2_col28" class="data row2 col28">3.000000</td>
-<td id="T_7d8cf_row2_col29" class="data row2 col29">Yes</td>
-<td id="T_7d8cf_row2_col30" class="data row2 col30">nan</td>
-<td id="T_7d8cf_row2_col31" class="data row2 col31">nan</td>
-<td id="T_7d8cf_row2_col32" class="data row2 col32">False</td>
-<td id="T_7d8cf_row2_col33" class="data row2 col33">150000.000000</td>
-<td id="T_7d8cf_row2_col34" class="data row2 col34">699.000000</td>
-<td id="T_7d8cf_row2_col35" class="data row2 col35">False</td>
-<td id="T_7d8cf_row2_col36" class="data row2 col36">20230303013078</td>
-<td id="T_7d8cf_row2_col37" class="data row2 col37">18.000000</td>
-<td id="T_7d8cf_row2_col38" class="data row2 col38">False</td>
-<td id="T_7d8cf_row2_col39" class="data row2 col39">413.000000</td>
-<td id="T_7d8cf_row2_col40" class="data row2 col40">Isolated</td>
-<td id="T_7d8cf_row2_col41" class="data row2 col41">True</td>
-<td id="T_7d8cf_row2_col42" class="data row2 col42">False</td>
-<td id="T_7d8cf_row2_col43" class="data row2 col43">1.000000</td>
-<td id="T_7d8cf_row2_col44" class="data row2 col44">http://www.nigel-immo.be</td>
-<td id="T_7d8cf_row2_col45" class="data row2 col45">18.000000</td>
-<td id="T_7d8cf_row2_col46" class="data row2 col46">96913.000000</td>
-<td id="T_7d8cf_row2_col47" class="data row2 col47">https://www.immoweb.be/en/classified/house/for-sale/esneux%20tilff/4130/10838582</td>
-<td id="T_7d8cf_row2_col48" class="data row2 col48">2023-09-27 14:02:10.905808</td>
-<td id="T_7d8cf_row2_col49" class="data row2 col49">Oupeye</td>
-<td id="T_7d8cf_row2_col50" class="data row2 col50">2A</td>
-<td id="T_7d8cf_row2_col51" class="data row2 col51">4680</td>
-<td id="T_7d8cf_row2_col52" class="data row2 col52">Rue de la Wallonie</td>
+<td id="T_54650_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
+<td id="T_54650_row2_col0" class="data row2 col0">nan</td>
+<td id="T_54650_row2_col1" class="data row2 col1">After signing the deed</td>
+<td id="T_54650_row2_col2" class="data row2 col2">True</td>
+<td id="T_54650_row2_col3" class="data row2 col3">1.000000</td>
+<td id="T_54650_row2_col4" class="data row2 col4">17.000000</td>
+<td id="T_54650_row2_col5" class="data row2 col5">11.000000</td>
+<td id="T_54650_row2_col6" class="data row2 col6">nan</td>
+<td id="T_54650_row2_col7" class="data row2 col7">2.000000</td>
+<td id="T_54650_row2_col8" class="data row2 col8">To renovate</td>
+<td id="T_54650_row2_col9" class="data row2 col9">173.000000</td>
+<td id="T_54650_row2_col10" class="data row2 col10">689.000000</td>
+<td id="T_54650_row2_col11" class="data row2 col11">True</td>
+<td id="T_54650_row2_col12" class="data row2 col12">1949.000000</td>
+<td id="T_54650_row2_col13" class="data row2 col13">1.000000</td>
+<td id="T_54650_row2_col14" class="data row2 col14">True</td>
+<td id="T_54650_row2_col15" class="data row2 col15">True</td>
+<td id="T_54650_row2_col16" class="data row2 col16">G</td>
+<td id="T_54650_row2_col17" class="data row2 col17">5534704</td>
+<td id="T_54650_row2_col18" class="data row2 col18">False</td>
+<td id="T_54650_row2_col19" class="data row2 col19">False</td>
+<td id="T_54650_row2_col20" class="data row2 col20">315.000000</td>
+<td id="T_54650_row2_col21" class="data row2 col21">nan</td>
+<td id="T_54650_row2_col22" class="data row2 col22">Fuel oil</td>
+<td id="T_54650_row2_col23" class="data row2 col23">13.000000</td>
+<td id="T_54650_row2_col24" class="data row2 col24">Semi equipped</td>
+<td id="T_54650_row2_col25" class="data row2 col25">Living area (residential, urban or rural)</td>
+<td id="T_54650_row2_col26" class="data row2 col26">139.000000</td>
+<td id="T_54650_row2_col27" class="data row2 col27">10.000000</td>
+<td id="T_54650_row2_col28" class="data row2 col28">3.000000</td>
+<td id="T_54650_row2_col29" class="data row2 col29">Yes</td>
+<td id="T_54650_row2_col30" class="data row2 col30">nan</td>
+<td id="T_54650_row2_col31" class="data row2 col31">nan</td>
+<td id="T_54650_row2_col32" class="data row2 col32">False</td>
+<td id="T_54650_row2_col33" class="data row2 col33">150000.000000</td>
+<td id="T_54650_row2_col34" class="data row2 col34">699.000000</td>
+<td id="T_54650_row2_col35" class="data row2 col35">False</td>
+<td id="T_54650_row2_col36" class="data row2 col36">20230303013078</td>
+<td id="T_54650_row2_col37" class="data row2 col37">18.000000</td>
+<td id="T_54650_row2_col38" class="data row2 col38">False</td>
+<td id="T_54650_row2_col39" class="data row2 col39">413.000000</td>
+<td id="T_54650_row2_col40" class="data row2 col40">Isolated</td>
+<td id="T_54650_row2_col41" class="data row2 col41">True</td>
+<td id="T_54650_row2_col42" class="data row2 col42">False</td>
+<td id="T_54650_row2_col43" class="data row2 col43">1.000000</td>
+<td id="T_54650_row2_col44" class="data row2 col44">http://www.nigel-immo.be</td>
+<td id="T_54650_row2_col45" class="data row2 col45">18.000000</td>
+<td id="T_54650_row2_col46" class="data row2 col46">96913.000000</td>
+<td id="T_54650_row2_col47" class="data row2 col47">https://www.immoweb.be/en/classified/house/for-sale/esneux%20tilff/4130/10838582</td>
+<td id="T_54650_row2_col48" class="data row2 col48">2023-09-27 14:02:10.905808</td>
+<td id="T_54650_row2_col49" class="data row2 col49">Oupeye</td>
+<td id="T_54650_row2_col50" class="data row2 col50">2A</td>
+<td id="T_54650_row2_col51" class="data row2 col51">4680</td>
+<td id="T_54650_row2_col52" class="data row2 col52">Rue de la Wallonie</td>
 </tr>
 <tr class="even">
-<td id="T_7d8cf_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
-<td id="T_7d8cf_row3_col0" class="data row3 col0">nan</td>
-<td id="T_7d8cf_row3_col1" class="data row3 col1">After signing the deed</td>
-<td id="T_7d8cf_row3_col2" class="data row3 col2">nan</td>
-<td id="T_7d8cf_row3_col3" class="data row3 col3">2.000000</td>
-<td id="T_7d8cf_row3_col4" class="data row3 col4">14.000000</td>
-<td id="T_7d8cf_row3_col5" class="data row3 col5">14.000000</td>
-<td id="T_7d8cf_row3_col6" class="data row3 col6">10.000000</td>
-<td id="T_7d8cf_row3_col7" class="data row3 col7">3.000000</td>
-<td id="T_7d8cf_row3_col8" class="data row3 col8">Good</td>
-<td id="T_7d8cf_row3_col9" class="data row3 col9">4167.000000</td>
-<td id="T_7d8cf_row3_col10" class="data row3 col10">898.000000</td>
-<td id="T_7d8cf_row3_col11" class="data row3 col11">True</td>
-<td id="T_7d8cf_row3_col12" class="data row3 col12">1899.000000</td>
-<td id="T_7d8cf_row3_col13" class="data row3 col13">nan</td>
-<td id="T_7d8cf_row3_col14" class="data row3 col14">nan</td>
-<td id="T_7d8cf_row3_col15" class="data row3 col15">True</td>
-<td id="T_7d8cf_row3_col16" class="data row3 col16">C</td>
-<td id="T_7d8cf_row3_col17" class="data row3 col17">5535455</td>
-<td id="T_7d8cf_row3_col18" class="data row3 col18">False</td>
-<td id="T_7d8cf_row3_col19" class="data row3 col19">False</td>
-<td id="T_7d8cf_row3_col20" class="data row3 col20">nan</td>
-<td id="T_7d8cf_row3_col21" class="data row3 col21">True</td>
-<td id="T_7d8cf_row3_col22" class="data row3 col22">Gas</td>
-<td id="T_7d8cf_row3_col23" class="data row3 col23">17.000000</td>
-<td id="T_7d8cf_row3_col24" class="data row3 col24">USA installed</td>
-<td id="T_7d8cf_row3_col25" class="data row3 col25">Living area (residential, urban or rural)</td>
-<td id="T_7d8cf_row3_col26" class="data row3 col26">119.000000</td>
-<td id="T_7d8cf_row3_col27" class="data row3 col27">14.000000</td>
-<td id="T_7d8cf_row3_col28" class="data row3 col28">2.000000</td>
-<td id="T_7d8cf_row3_col29" class="data row3 col29">nan</td>
-<td id="T_7d8cf_row3_col30" class="data row3 col30">nan</td>
-<td id="T_7d8cf_row3_col31" class="data row3 col31">True</td>
-<td id="T_7d8cf_row3_col32" class="data row3 col32">True</td>
-<td id="T_7d8cf_row3_col33" class="data row3 col33">272000.000000</td>
-<td id="T_7d8cf_row3_col34" class="data row3 col34">246.000000</td>
-<td id="T_7d8cf_row3_col35" class="data row3 col35">False</td>
-<td id="T_7d8cf_row3_col36" class="data row3 col36">20230622-0002923649-RES-1</td>
-<td id="T_7d8cf_row3_col37" class="data row3 col37">4.000000</td>
-<td id="T_7d8cf_row3_col38" class="data row3 col38">False</td>
-<td id="T_7d8cf_row3_col39" class="data row3 col39">55.000000</td>
-<td id="T_7d8cf_row3_col40" class="data row3 col40">Urban</td>
-<td id="T_7d8cf_row3_col41" class="data row3 col41">True</td>
-<td id="T_7d8cf_row3_col42" class="data row3 col42">False</td>
-<td id="T_7d8cf_row3_col43" class="data row3 col43">2.000000</td>
-<td id="T_7d8cf_row3_col44" class="data row3 col44">http://www.immodavinci.be</td>
-<td id="T_7d8cf_row3_col45" class="data row3 col45">nan</td>
-<td id="T_7d8cf_row3_col46" class="data row3 col46">nan</td>
-<td id="T_7d8cf_row3_col47" class="data row3 col47">https://www.immoweb.be/en/classified/house/for-sale/gent/9000/10838392</td>
-<td id="T_7d8cf_row3_col48" class="data row3 col48">2023-09-27 14:02:11.811691</td>
-<td id="T_7d8cf_row3_col49" class="data row3 col49">Gent</td>
-<td id="T_7d8cf_row3_col50" class="data row3 col50">1</td>
-<td id="T_7d8cf_row3_col51" class="data row3 col51">9000</td>
-<td id="T_7d8cf_row3_col52" class="data row3 col52">SintDenijslaan</td>
+<td id="T_54650_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
+<td id="T_54650_row3_col0" class="data row3 col0">nan</td>
+<td id="T_54650_row3_col1" class="data row3 col1">After signing the deed</td>
+<td id="T_54650_row3_col2" class="data row3 col2">nan</td>
+<td id="T_54650_row3_col3" class="data row3 col3">2.000000</td>
+<td id="T_54650_row3_col4" class="data row3 col4">14.000000</td>
+<td id="T_54650_row3_col5" class="data row3 col5">14.000000</td>
+<td id="T_54650_row3_col6" class="data row3 col6">10.000000</td>
+<td id="T_54650_row3_col7" class="data row3 col7">3.000000</td>
+<td id="T_54650_row3_col8" class="data row3 col8">Good</td>
+<td id="T_54650_row3_col9" class="data row3 col9">4167.000000</td>
+<td id="T_54650_row3_col10" class="data row3 col10">898.000000</td>
+<td id="T_54650_row3_col11" class="data row3 col11">True</td>
+<td id="T_54650_row3_col12" class="data row3 col12">1899.000000</td>
+<td id="T_54650_row3_col13" class="data row3 col13">nan</td>
+<td id="T_54650_row3_col14" class="data row3 col14">nan</td>
+<td id="T_54650_row3_col15" class="data row3 col15">True</td>
+<td id="T_54650_row3_col16" class="data row3 col16">C</td>
+<td id="T_54650_row3_col17" class="data row3 col17">5535455</td>
+<td id="T_54650_row3_col18" class="data row3 col18">False</td>
+<td id="T_54650_row3_col19" class="data row3 col19">False</td>
+<td id="T_54650_row3_col20" class="data row3 col20">nan</td>
+<td id="T_54650_row3_col21" class="data row3 col21">True</td>
+<td id="T_54650_row3_col22" class="data row3 col22">Gas</td>
+<td id="T_54650_row3_col23" class="data row3 col23">17.000000</td>
+<td id="T_54650_row3_col24" class="data row3 col24">USA installed</td>
+<td id="T_54650_row3_col25" class="data row3 col25">Living area (residential, urban or rural)</td>
+<td id="T_54650_row3_col26" class="data row3 col26">119.000000</td>
+<td id="T_54650_row3_col27" class="data row3 col27">14.000000</td>
+<td id="T_54650_row3_col28" class="data row3 col28">2.000000</td>
+<td id="T_54650_row3_col29" class="data row3 col29">nan</td>
+<td id="T_54650_row3_col30" class="data row3 col30">nan</td>
+<td id="T_54650_row3_col31" class="data row3 col31">True</td>
+<td id="T_54650_row3_col32" class="data row3 col32">True</td>
+<td id="T_54650_row3_col33" class="data row3 col33">272000.000000</td>
+<td id="T_54650_row3_col34" class="data row3 col34">246.000000</td>
+<td id="T_54650_row3_col35" class="data row3 col35">False</td>
+<td id="T_54650_row3_col36" class="data row3 col36">20230622-0002923649-RES-1</td>
+<td id="T_54650_row3_col37" class="data row3 col37">4.000000</td>
+<td id="T_54650_row3_col38" class="data row3 col38">False</td>
+<td id="T_54650_row3_col39" class="data row3 col39">55.000000</td>
+<td id="T_54650_row3_col40" class="data row3 col40">Urban</td>
+<td id="T_54650_row3_col41" class="data row3 col41">True</td>
+<td id="T_54650_row3_col42" class="data row3 col42">False</td>
+<td id="T_54650_row3_col43" class="data row3 col43">2.000000</td>
+<td id="T_54650_row3_col44" class="data row3 col44">http://www.immodavinci.be</td>
+<td id="T_54650_row3_col45" class="data row3 col45">nan</td>
+<td id="T_54650_row3_col46" class="data row3 col46">nan</td>
+<td id="T_54650_row3_col47" class="data row3 col47">https://www.immoweb.be/en/classified/house/for-sale/gent/9000/10838392</td>
+<td id="T_54650_row3_col48" class="data row3 col48">2023-09-27 14:02:11.811691</td>
+<td id="T_54650_row3_col49" class="data row3 col49">Gent</td>
+<td id="T_54650_row3_col50" class="data row3 col50">1</td>
+<td id="T_54650_row3_col51" class="data row3 col51">9000</td>
+<td id="T_54650_row3_col52" class="data row3 col52">SintDenijslaan</td>
 </tr>
 <tr class="odd">
-<td id="T_7d8cf_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
-<td id="T_7d8cf_row4_col0" class="data row4 col0">nan</td>
-<td id="T_7d8cf_row4_col1" class="data row4 col1">At delivery</td>
-<td id="T_7d8cf_row4_col2" class="data row4 col2">nan</td>
-<td id="T_7d8cf_row4_col3" class="data row4 col3">1.000000</td>
-<td id="T_7d8cf_row4_col4" class="data row4 col4">16.000000</td>
-<td id="T_7d8cf_row4_col5" class="data row4 col5">12.000000</td>
-<td id="T_7d8cf_row4_col6" class="data row4 col6">12.000000</td>
-<td id="T_7d8cf_row4_col7" class="data row4 col7">3.000000</td>
-<td id="T_7d8cf_row4_col8" class="data row4 col8">As new</td>
-<td id="T_7d8cf_row4_col9" class="data row4 col9">nan</td>
-<td id="T_7d8cf_row4_col10" class="data row4 col10">nan</td>
-<td id="T_7d8cf_row4_col11" class="data row4 col11">True</td>
-<td id="T_7d8cf_row4_col12" class="data row4 col12">2021.000000</td>
-<td id="T_7d8cf_row4_col13" class="data row4 col13">nan</td>
-<td id="T_7d8cf_row4_col14" class="data row4 col14">nan</td>
-<td id="T_7d8cf_row4_col15" class="data row4 col15">True</td>
-<td id="T_7d8cf_row4_col16" class="data row4 col16">A</td>
-<td id="T_7d8cf_row4_col17" class="data row4 col17">5527171</td>
-<td id="T_7d8cf_row4_col18" class="data row4 col18">False</td>
-<td id="T_7d8cf_row4_col19" class="data row4 col19">False</td>
-<td id="T_7d8cf_row4_col20" class="data row4 col20">250.000000</td>
-<td id="T_7d8cf_row4_col21" class="data row4 col21">True</td>
-<td id="T_7d8cf_row4_col22" class="data row4 col22">Gas</td>
-<td id="T_7d8cf_row4_col23" class="data row4 col23">nan</td>
-<td id="T_7d8cf_row4_col24" class="data row4 col24">USA hyper equipped</td>
-<td id="T_7d8cf_row4_col25" class="data row4 col25">Living area (residential, urban or rural)</td>
-<td id="T_7d8cf_row4_col26" class="data row4 col26">215.000000</td>
-<td id="T_7d8cf_row4_col27" class="data row4 col27">46.000000</td>
-<td id="T_7d8cf_row4_col28" class="data row4 col28">3.000000</td>
-<td id="T_7d8cf_row4_col29" class="data row4 col29">nan</td>
-<td id="T_7d8cf_row4_col30" class="data row4 col30">1.000000</td>
-<td id="T_7d8cf_row4_col31" class="data row4 col31">True</td>
-<td id="T_7d8cf_row4_col32" class="data row4 col32">False</td>
-<td id="T_7d8cf_row4_col33" class="data row4 col33">413150.000000</td>
-<td id="T_7d8cf_row4_col34" class="data row4 col34">27.000000</td>
-<td id="T_7d8cf_row4_col35" class="data row4 col35">nan</td>
-<td id="T_7d8cf_row4_col36" class="data row4 col36">12345</td>
-<td id="T_7d8cf_row4_col37" class="data row4 col37">7.000000</td>
-<td id="T_7d8cf_row4_col38" class="data row4 col38">True</td>
-<td id="T_7d8cf_row4_col39" class="data row4 col39">330.000000</td>
-<td id="T_7d8cf_row4_col40" class="data row4 col40">Living area (residential, urban or rural)</td>
-<td id="T_7d8cf_row4_col41" class="data row4 col41">True</td>
-<td id="T_7d8cf_row4_col42" class="data row4 col42">False</td>
-<td id="T_7d8cf_row4_col43" class="data row4 col43">2.000000</td>
-<td id="T_7d8cf_row4_col44" class="data row4 col44">http://www.living-stone.be</td>
-<td id="T_7d8cf_row4_col45" class="data row4 col45">nan</td>
-<td id="T_7d8cf_row4_col46" class="data row4 col46">nan</td>
-<td id="T_7d8cf_row4_col47" class="data row4 col47">https://www.immoweb.be/en/classified/house/for-sale/affligem/1790/10842333</td>
-<td id="T_7d8cf_row4_col48" class="data row4 col48">2023-09-27 14:02:11.968969</td>
-<td id="T_7d8cf_row4_col49" class="data row4 col49">Dilbeek</td>
-<td id="T_7d8cf_row4_col50" class="data row4 col50">1</td>
-<td id="T_7d8cf_row4_col51" class="data row4 col51">1700</td>
-<td id="T_7d8cf_row4_col52" class="data row4 col52">Astridlaan</td>
+<td id="T_54650_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
+<td id="T_54650_row4_col0" class="data row4 col0">nan</td>
+<td id="T_54650_row4_col1" class="data row4 col1">At delivery</td>
+<td id="T_54650_row4_col2" class="data row4 col2">nan</td>
+<td id="T_54650_row4_col3" class="data row4 col3">1.000000</td>
+<td id="T_54650_row4_col4" class="data row4 col4">16.000000</td>
+<td id="T_54650_row4_col5" class="data row4 col5">12.000000</td>
+<td id="T_54650_row4_col6" class="data row4 col6">12.000000</td>
+<td id="T_54650_row4_col7" class="data row4 col7">3.000000</td>
+<td id="T_54650_row4_col8" class="data row4 col8">As new</td>
+<td id="T_54650_row4_col9" class="data row4 col9">nan</td>
+<td id="T_54650_row4_col10" class="data row4 col10">nan</td>
+<td id="T_54650_row4_col11" class="data row4 col11">True</td>
+<td id="T_54650_row4_col12" class="data row4 col12">2021.000000</td>
+<td id="T_54650_row4_col13" class="data row4 col13">nan</td>
+<td id="T_54650_row4_col14" class="data row4 col14">nan</td>
+<td id="T_54650_row4_col15" class="data row4 col15">True</td>
+<td id="T_54650_row4_col16" class="data row4 col16">A</td>
+<td id="T_54650_row4_col17" class="data row4 col17">5527171</td>
+<td id="T_54650_row4_col18" class="data row4 col18">False</td>
+<td id="T_54650_row4_col19" class="data row4 col19">False</td>
+<td id="T_54650_row4_col20" class="data row4 col20">250.000000</td>
+<td id="T_54650_row4_col21" class="data row4 col21">True</td>
+<td id="T_54650_row4_col22" class="data row4 col22">Gas</td>
+<td id="T_54650_row4_col23" class="data row4 col23">nan</td>
+<td id="T_54650_row4_col24" class="data row4 col24">USA hyper equipped</td>
+<td id="T_54650_row4_col25" class="data row4 col25">Living area (residential, urban or rural)</td>
+<td id="T_54650_row4_col26" class="data row4 col26">215.000000</td>
+<td id="T_54650_row4_col27" class="data row4 col27">46.000000</td>
+<td id="T_54650_row4_col28" class="data row4 col28">3.000000</td>
+<td id="T_54650_row4_col29" class="data row4 col29">nan</td>
+<td id="T_54650_row4_col30" class="data row4 col30">1.000000</td>
+<td id="T_54650_row4_col31" class="data row4 col31">True</td>
+<td id="T_54650_row4_col32" class="data row4 col32">False</td>
+<td id="T_54650_row4_col33" class="data row4 col33">413150.000000</td>
+<td id="T_54650_row4_col34" class="data row4 col34">27.000000</td>
+<td id="T_54650_row4_col35" class="data row4 col35">nan</td>
+<td id="T_54650_row4_col36" class="data row4 col36">12345</td>
+<td id="T_54650_row4_col37" class="data row4 col37">7.000000</td>
+<td id="T_54650_row4_col38" class="data row4 col38">True</td>
+<td id="T_54650_row4_col39" class="data row4 col39">330.000000</td>
+<td id="T_54650_row4_col40" class="data row4 col40">Living area (residential, urban or rural)</td>
+<td id="T_54650_row4_col41" class="data row4 col41">True</td>
+<td id="T_54650_row4_col42" class="data row4 col42">False</td>
+<td id="T_54650_row4_col43" class="data row4 col43">2.000000</td>
+<td id="T_54650_row4_col44" class="data row4 col44">http://www.living-stone.be</td>
+<td id="T_54650_row4_col45" class="data row4 col45">nan</td>
+<td id="T_54650_row4_col46" class="data row4 col46">nan</td>
+<td id="T_54650_row4_col47" class="data row4 col47">https://www.immoweb.be/en/classified/house/for-sale/affligem/1790/10842333</td>
+<td id="T_54650_row4_col48" class="data row4 col48">2023-09-27 14:02:11.968969</td>
+<td id="T_54650_row4_col49" class="data row4 col49">Dilbeek</td>
+<td id="T_54650_row4_col50" class="data row4 col50">1</td>
+<td id="T_54650_row4_col51" class="data row4 col51">1700</td>
+<td id="T_54650_row4_col52" class="data row4 col52">Astridlaan</td>
 </tr>
 </tbody>
 </table>
@@ -2246,7 +2246,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <div class="sourceCode" id="cb16" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'Predicting Belgian Real Estate Prices: Part 2: Data Cleanup After Web Scraping'</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Adam Cseresznye</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> '2023-11-08'</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> '2023-11-04'</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Predicting Belgian Real Estate Prices</span></span>
 <span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
