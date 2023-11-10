@@ -102,7 +102,6 @@ def prepare_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series]:
     - Tuple[pd.DataFrame, pd.Series]: A tuple containing the prepared features (X) and the target (y).
 
     Example use case:
-    
     # Load your dataset into a DataFrame (e.g., df)
     df = load_data()
 
@@ -110,7 +109,6 @@ def prepare_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series]:
     X, y = prepare_data_for_modelling(df)
 
     # Now you can use X and y for machine learning tasks.
-    
     """
 
     processed_df = (
@@ -173,7 +171,6 @@ def run_catboost_CV(
       scores across cross-validation folds.
 
     Example:
-    
     # Load your feature matrix (X) and target variable (y)
     X, y = load_data()
 
@@ -182,7 +179,6 @@ def run_catboost_CV(
 
     print(f"Mean RMSE: {mean_rmse:.4f}")
     print(f"Standard Deviation of RMSE: {std_rmse:.4f}")
-    
 
     Notes:
     - Ensure that the input data `X` and `y` are properly preprocessed and do not contain any
@@ -316,7 +312,6 @@ def identify_outliers(df: pd.DataFrame) -> pd.Series:
     - pd.Series: A Boolean Series indicating outliers (True) and non-outliers (False).
 
     Example:
-    
     # Load your DataFrame with features (df)
     df = load_data()
 
@@ -325,7 +320,6 @@ def identify_outliers(df: pd.DataFrame) -> pd.Series:
 
     # Use the outlier mask to filter your DataFrame
     filtered_df = df[~outlier_mask]  # Keep non-outliers
-    
 
     Notes:
     - The function uses Local Outlier Factor (LOF) with default parameters for identifying outliers.
@@ -460,7 +454,6 @@ def FE_categorical_transform(
       sorted by "mean_OOFs" in ascending order.
 
     Example:
-    
     # Load your DataFrame with features (X)
     X = load_data()
 
@@ -469,7 +462,6 @@ def FE_categorical_transform(
 
     # View the DataFrame with sorted results
     print(result_df.head())
-    
 
     Notes:
     - This function uses CatBoost Cross-Validation to assess the quality of transformations for
@@ -573,7 +565,6 @@ def FE_continuous_transform(
       and "transformed_continuous," sorted by "mean_OOFs" in ascending order.
 
     Example:
-    
     # Load your DataFrame with features (X) and target variable (y)
     X, y = load_data()
 
@@ -582,7 +573,6 @@ def FE_continuous_transform(
 
     # View the DataFrame with sorted results
     print(result_df.head())
-    
 
     Notes:
     - This function uses CatBoost Cross-Validation to assess the quality of transformations for
@@ -1234,7 +1224,6 @@ def prepare_data_for_modelling(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Serie
     - Tuple[pd.DataFrame, pd.Series]: A tuple containing the prepared features (X) and the target (y).
 
     Example use case:
-    
     # Load your dataset into a DataFrame (e.g., df)
     df = load_data()
 
@@ -1242,7 +1231,6 @@ def prepare_data_for_modelling(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Serie
     X, y = prepare_data_for_modelling(df)
 
     # Now you can use X and y for machine learning tasks.
-    
 
     Args:
         df (pd.DataFrame): The input DataFrame containing the dataset.
