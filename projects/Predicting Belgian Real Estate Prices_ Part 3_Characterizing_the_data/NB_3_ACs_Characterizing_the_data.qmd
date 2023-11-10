@@ -1,7 +1,7 @@
 ---
 title: 'Predicting Belgian Real Estate Prices: Part 3: Characterizing Belgian Real Estate Data Post-Scraping'
 author: Adam Cseresznye
-date: '2023-11-09'
+date: '2023-11-05'
 categories:
   - Predicting Belgian Real Estate Prices
 jupyter: python3

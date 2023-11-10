@@ -1,7 +1,7 @@
 ---
 title: 'Predicting Belgian Real Estate Prices: Part 4: Building a Baseline Model'
 author: Adam Cseresznye
-date: '2023-11-09'
+date: '2023-11-06'
 categories:
   - Predicting Belgian Real Estate Prices
 jupyter: python3
@@ -337,7 +337,7 @@ with warnings.catch_warnings():
         [
             {
                 "selector": "th.col_heading",
-                "props": "text-align: center; font-size: 1.5em;",
+                "props": "text-align: center; font-size: 1.0em;",
             },
             {"selector": "td", "props": "text-align: center;"},
             {
