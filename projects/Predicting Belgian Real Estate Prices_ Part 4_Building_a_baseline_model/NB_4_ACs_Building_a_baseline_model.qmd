@@ -354,5 +354,5 @@ with warnings.catch_warnings():
 
 The table above clearly shows that the `CatBoostRegressor` has performed exceptionally well, achieving the best scores in RMSE, RMSLE, and R2 on the test set. It has outperformed the `LGBMRegressor`, `ExtraTreesRegressor`, `GradientBoostingRegressor`, and even the `XGBRegressor`.
 
-In the next section, we will dive deeper into optimizing our model. This will involve refining model settings, enhancing features, and employing techniques to improve our overall predictive accuracy. Looking forward tseeing you there!n!
+In the next section, we will dive deeper into optimizing our model. This will involve refining model settings, enhancing features, and employing techniques to improve our overall predictive accuracy. Looking forward to seeing you there!
 
