@@ -23,6 +23,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/Predicting Belgian Real Estate Prices_ Part 6_Feature_engineering/NB_6_ACs_Feature_engineering.html",
       "/projects/Predicting Belgian Real Estate Prices_ Part 5_Initial_feature_selection/NB_5_ACs_Initial_feature_selection.html",
       "/projects/Predicting Belgian Real Estate Prices_ Part 4_Building_a_baseline_model/NB_4_ACs_Building_a_baseline_model.html",
       "/projects/Predicting Belgian Real Estate Prices_ Part 3_Characterizing_the_data/NB_3_ACs_Characterizing_the_data.html",
