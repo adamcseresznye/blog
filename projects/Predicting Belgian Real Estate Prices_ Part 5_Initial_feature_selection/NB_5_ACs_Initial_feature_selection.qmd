@@ -14,6 +14,13 @@ format:
 
 ![Photo by Stephen Phillips - Hostreviews.co.uk on UnSplash](https://cf.bstatic.com/xdata/images/hotel/max1024x768/408003083.jpg?k=c49b5c4a2346b3ab002b9d1b22dbfb596cee523b53abef2550d0c92d0faf2d8b&o=&hp=1){fig-align="center" width=50%}
 
+In Part 4, we looked into some crucial sample pre-processing steps before modeling, establishing the required pipeline for data processing, evaluating various algorithms, and ultimately identifying an appropriate baseline model, that is CatBoost. As we proceed to Part 5, our focus will be on assessing the significance of features in the initial scraped dataset. We'll achieve this by employing the `feature_importances_` method of CatBoostRegressor and analyzing SHAP values. Additionally, we'll systematically eliminate features showing lower importance or predictive capability. Excited to delve into this phase!
+
+::: {.callout-note}
+You can access the project's app through its [Streamlit website](https://belgian-house-price-predictor.streamlit.app/).
+
+:::
+
 # Import data
 
 ```{python}
@@ -36,13 +43,6 @@ from tqdm import tqdm
 
 LetsPlot.setup_html()
 ```
-
-In Part 4, we looked into some crucial sample pre-processing steps before modeling, establishing the required pipeline for data processing, evaluating various algorithms, and ultimately identifying an appropriate baseline model, that is CatBoost. As we proceed to Part 5, our focus will be on assessing the significance of features in the initial scraped dataset. We'll achieve this by employing the `feature_importances_` method of CatBoostRegressor and analyzing SHAP values. Additionally, we'll systematically eliminate features showing lower importance or predictive capability. Excited to delve into this phase!
-
-::: {.callout-note}
-You can access the project's app through its [Streamlit website](https://belgian-house-price-predictor.streamlit.app/).
-
-:::
 
 # Prepare dataframe before modelling
 ## Read in dataframe
