@@ -291,7 +291,7 @@ Note
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="aICBGt"></div>
+            <div id="vnGSbA"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -315,9 +315,9 @@ Note
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("aICBGt").appendChild(div);
+                        document.getElementById("vnGSbA").appendChild(div);
                     };
-                    var e = document.getElementById("aICBGt");
+                    var e = document.getElementById("vnGSbA");
                     e.appendChild(script);
                 })()
             </script>
@@ -328,7 +328,14 @@ Note
 </section>
 <section id="prepare-dataframe-before-modelling" class="level1">
 <h1>Prepare dataframe before modelling</h1>
-<p>Let’s get our data ready for modeling by applying the “prepare_data_for_modelling” function as detailed in Part 6. A quick recap: this function carries out the subsequent actions to prepare a DataFrame for machine learning: 1. It randomly shuffles the DataFrame’s rows. 2. The ‘price’ column is transformed into the base 10 logarithm. 3. Categorical variable missing values are replaced with ‘missing value.’ 4. It divides the data into features (X) and the target (y). 5. Using LocalOutlierFactor, it identifies and removes outlier values.rFactor.</p>
+<p>Let’s get our data ready for modeling by applying the <code>prepare_data_for_modelling</code> function as detailed in Part 6. A quick recap: this function carries out the subsequent actions to prepare a DataFrame for machine learning:</p>
+<ol type="1">
+<li>It randomly shuffles the DataFrame’s rows.</li>
+<li>The ‘price’ column is transformed into the base 10 logarithm.</li>
+<li>Categorical variable missing values are replaced with ‘missing value.’</li>
+<li>It divides the data into features (X) and the target (y).</li>
+<li>Using <code>LocalOutlierFactor</code>, it identifies and removes outlier values.</li>
+</ol>
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
@@ -671,7 +678,7 @@ The corresponding values: {'iterations': 956, 'depth': 7, 'learning_rate': 0.050
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>predict_model.score_prediction(y_pred<span class="op">=</span>prediction, y_true<span class="op">=</span>y_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="32">
+<div class="cell-output cell-output-display" data-execution_count="29">
 <pre><code>(0.1101569172024175, 0.8771378054646048)</code></pre>
 </div>
 </div>
@@ -688,7 +695,7 @@ The corresponding values: {'iterations': 956, 'depth': 7, 'learning_rate': 0.050
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="33">
+<div class="cell-output cell-output-display" data-execution_count="30">
 <div>
 
 
@@ -818,7 +825,7 @@ The corresponding values: {'iterations': 956, 'depth': 7, 'learning_rate': 0.050
 </details>
 <div id="fig-fig1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-   <div id="lzH5ce"></div>
+   <div id="gK1HJH"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -910,7 +917,7 @@ The corresponding values: {'iterations': 956, 'depth': 7, 'learning_rate': 0.050
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("lzH5ce");
+           var plotContainer = document.getElementById("gK1HJH");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -944,7 +951,7 @@ The corresponding values: {'iterations': 956, 'depth': 7, 'learning_rate': 0.050
 </details>
 <div id="fig-fig2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-   <div id="V8FEGS"></div>
+   <div id="VLQfJ1"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1000,7 +1007,7 @@ The corresponding values: {'iterations': 956, 'depth': 7, 'learning_rate': 0.050
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("V8FEGS");
+           var plotContainer = document.getElementById("VLQfJ1");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1478,401 +1485,402 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-59"><a href="#cb22-59" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-60"><a href="#cb22-60" aria-hidden="true" tabindex="-1"></a><span class="fu"># Prepare dataframe before modelling</span></span>
 <span id="cb22-61"><a href="#cb22-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a>Let's get our data ready for modeling by applying the "prepare_data_for_modelling" function as detailed in Part 6. A quick recap: this function carries out the subsequent actions to prepare a DataFrame for machine learning:</span>
-<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>It randomly shuffles the DataFrame's rows.</span>
-<span id="cb22-64"><a href="#cb22-64" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The 'price' column is transformed into the base 10 logarithm.</span>
-<span id="cb22-65"><a href="#cb22-65" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Categorical variable missing values are replaced with 'missing value.'</span>
-<span id="cb22-66"><a href="#cb22-66" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>It divides the data into features (X) and the target (y).</span>
-<span id="cb22-67"><a href="#cb22-67" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Using LocalOutlierFactor, it identifies and removes outlier values.rFactor.</span>
-<span id="cb22-68"><a href="#cb22-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-71"><a href="#cb22-71" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-72"><a href="#cb22-72" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_parquet(</span>
-<span id="cb22-73"><a href="#cb22-73" aria-hidden="true" tabindex="-1"></a>    utils.Configuration.INTERIM_DATA_PATH.joinpath(</span>
-<span id="cb22-74"><a href="#cb22-74" aria-hidden="true" tabindex="-1"></a>        <span class="st">"2023-10-01_Processed_dataset_for_NB_use.parquet.gzip"</span></span>
-<span id="cb22-75"><a href="#cb22-75" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb22-76"><a href="#cb22-76" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb22-77"><a href="#cb22-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-78"><a href="#cb22-78" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> pre_process.prepare_data_for_modelling(df)</span>
-<span id="cb22-79"><a href="#cb22-79" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-80"><a href="#cb22-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-81"><a href="#cb22-81" aria-hidden="true" tabindex="-1"></a>We'll divide the data into training and testing sets. The training portion will be dedicated to hyperparameter tuning. It's worth noting that, to guard against overfitting during hyperparameter tuning, we'll implement cross-validation. This involves splitting the training set into subgroups for training and validation. The validation portion helps prevent overfitting, and the training continues until we achieve the desired performance. The test set will come into play later for evaluating our final model.</span>
-<span id="cb22-82"><a href="#cb22-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-85"><a href="#cb22-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-86"><a href="#cb22-86" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> model_selection.train_test_split(</span>
-<span id="cb22-87"><a href="#cb22-87" aria-hidden="true" tabindex="-1"></a>    X,</span>
-<span id="cb22-88"><a href="#cb22-88" aria-hidden="true" tabindex="-1"></a>    y,</span>
-<span id="cb22-89"><a href="#cb22-89" aria-hidden="true" tabindex="-1"></a>    test_size<span class="op">=</span><span class="fl">0.2</span>,</span>
-<span id="cb22-90"><a href="#cb22-90" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span>utils.Configuration.seed,</span>
-<span id="cb22-91"><a href="#cb22-91" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb22-92"><a href="#cb22-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-93"><a href="#cb22-93" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Shape of X_train: </span><span class="sc">{</span>X_train<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">, Shape of X_test: </span><span class="sc">{</span>X_test<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb22-94"><a href="#cb22-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-95"><a href="#cb22-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-96"><a href="#cb22-96" aria-hidden="true" tabindex="-1"></a>We'll also create a handy helper function called <span class="in">`dumper`</span>. This function enables us to save the best parameters discovered during tuning as a <span class="in">`.pickle`</span> file, allowing us to load and utilize these parameters from the saved file at a later time.</span>
-<span id="cb22-97"><a href="#cb22-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-100"><a href="#cb22-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-101"><a href="#cb22-101" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dumper(<span class="bu">file</span>: Any, name: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb22-102"><a href="#cb22-102" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb22-103"><a href="#cb22-103" aria-hidden="true" tabindex="-1"></a><span class="co">    Pickle and save an object to a file.</span></span>
-<span id="cb22-104"><a href="#cb22-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-105"><a href="#cb22-105" aria-hidden="true" tabindex="-1"></a><span class="co">    This function takes an object and a name, then uses the Pickle library to serialize</span></span>
-<span id="cb22-106"><a href="#cb22-106" aria-hidden="true" tabindex="-1"></a><span class="co">    and save the object to a file with the given name. The file is saved in binary mode ('wb').</span></span>
-<span id="cb22-107"><a href="#cb22-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-108"><a href="#cb22-108" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb22-109"><a href="#cb22-109" aria-hidden="true" tabindex="-1"></a><span class="co">        file (Any): The object to be pickled and saved.</span></span>
-<span id="cb22-110"><a href="#cb22-110" aria-hidden="true" tabindex="-1"></a><span class="co">        name (str): The name of the file, including the file extension, where the object will be saved.</span></span>
-<span id="cb22-111"><a href="#cb22-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-112"><a href="#cb22-112" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb22-113"><a href="#cb22-113" aria-hidden="true" tabindex="-1"></a><span class="co">        None: This function does not return a value.</span></span>
-<span id="cb22-114"><a href="#cb22-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-115"><a href="#cb22-115" aria-hidden="true" tabindex="-1"></a><span class="co">    Example:</span></span>
-<span id="cb22-116"><a href="#cb22-116" aria-hidden="true" tabindex="-1"></a><span class="co">        To save an object to a file:</span></span>
-<span id="cb22-117"><a href="#cb22-117" aria-hidden="true" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; my_data = [1, 2, 3]</span></span>
-<span id="cb22-118"><a href="#cb22-118" aria-hidden="true" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; dumper(my_data, "my_data.pickle")</span></span>
-<span id="cb22-119"><a href="#cb22-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-120"><a href="#cb22-120" aria-hidden="true" tabindex="-1"></a><span class="co">    Note:</span></span>
-<span id="cb22-121"><a href="#cb22-121" aria-hidden="true" tabindex="-1"></a><span class="co">        The file is saved in binary mode ('wb') to ensure compatibility and proper</span></span>
-<span id="cb22-122"><a href="#cb22-122" aria-hidden="true" tabindex="-1"></a><span class="co">        handling of binary data.</span></span>
-<span id="cb22-123"><a href="#cb22-123" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb22-124"><a href="#cb22-124" aria-hidden="true" tabindex="-1"></a>    pickle.dump(<span class="bu">file</span>, <span class="bu">open</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">.pickle"</span>, <span class="st">"wb"</span>))</span>
-<span id="cb22-125"><a href="#cb22-125" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-126"><a href="#cb22-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-127"><a href="#cb22-127" aria-hidden="true" tabindex="-1"></a><span class="fu">## Hyperparameter tuning using Optuna</span></span>
-<span id="cb22-128"><a href="#cb22-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-129"><a href="#cb22-129" aria-hidden="true" tabindex="-1"></a>To identify the most optimal settings, we'll leverage the Optuna library. The key hyperparameters under consideration are iterations, depth, learning_rate, random_strength, bagging_temperature, and others.</span>
-<span id="cb22-130"><a href="#cb22-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-133"><a href="#cb22-133" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-134"><a href="#cb22-134" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> objective(trial: optuna.Trial) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
-<span id="cb22-135"><a href="#cb22-135" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb22-136"><a href="#cb22-136" aria-hidden="true" tabindex="-1"></a><span class="co">    Optuna objective function for tuning CatBoost hyperparameters.</span></span>
-<span id="cb22-137"><a href="#cb22-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-138"><a href="#cb22-138" aria-hidden="true" tabindex="-1"></a><span class="co">    This function takes an Optuna trial and explores hyperparameters for a CatBoost</span></span>
-<span id="cb22-139"><a href="#cb22-139" aria-hidden="true" tabindex="-1"></a><span class="co">    model to minimize the Root Mean Squared Error (RMSE) using K-Fold cross-validation.</span></span>
-<span id="cb22-140"><a href="#cb22-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-141"><a href="#cb22-141" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
-<span id="cb22-142"><a href="#cb22-142" aria-hidden="true" tabindex="-1"></a><span class="co">    - trial (optuna.Trial): Optuna trial object for hyperparameter optimization.</span></span>
-<span id="cb22-143"><a href="#cb22-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-144"><a href="#cb22-144" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb22-145"><a href="#cb22-145" aria-hidden="true" tabindex="-1"></a><span class="co">    - float: Mean RMSE across K-Fold cross-validation iterations.</span></span>
-<span id="cb22-146"><a href="#cb22-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-147"><a href="#cb22-147" aria-hidden="true" tabindex="-1"></a><span class="co">    Example use case:</span></span>
-<span id="cb22-148"><a href="#cb22-148" aria-hidden="true" tabindex="-1"></a><span class="co">    # Create an Optuna study and optimize hyperparameters</span></span>
-<span id="cb22-149"><a href="#cb22-149" aria-hidden="true" tabindex="-1"></a><span class="co">    study = optuna.create_study(direction="minimize")</span></span>
-<span id="cb22-150"><a href="#cb22-150" aria-hidden="true" tabindex="-1"></a><span class="co">    study.optimize(objective, n_trials=100)</span></span>
-<span id="cb22-151"><a href="#cb22-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-152"><a href="#cb22-152" aria-hidden="true" tabindex="-1"></a><span class="co">    # Get the best hyperparameters</span></span>
-<span id="cb22-153"><a href="#cb22-153" aria-hidden="true" tabindex="-1"></a><span class="co">    best_params = study.best_params</span></span>
-<span id="cb22-154"><a href="#cb22-154" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb22-155"><a href="#cb22-155" aria-hidden="true" tabindex="-1"></a>    catboost_params <span class="op">=</span> {</span>
-<span id="cb22-156"><a href="#cb22-156" aria-hidden="true" tabindex="-1"></a>        <span class="st">"iterations"</span>: trial.suggest_int(<span class="st">"iterations"</span>, <span class="dv">10</span>, <span class="dv">1000</span>),</span>
-<span id="cb22-157"><a href="#cb22-157" aria-hidden="true" tabindex="-1"></a>        <span class="st">"depth"</span>: trial.suggest_int(<span class="st">"depth"</span>, <span class="dv">1</span>, <span class="dv">8</span>),</span>
-<span id="cb22-158"><a href="#cb22-158" aria-hidden="true" tabindex="-1"></a>        <span class="st">"learning_rate"</span>: trial.suggest_float(<span class="st">"learning_rate"</span>, <span class="fl">0.01</span>, <span class="dv">1</span>),</span>
-<span id="cb22-159"><a href="#cb22-159" aria-hidden="true" tabindex="-1"></a>        <span class="st">"random_strength"</span>: trial.suggest_float(<span class="st">"random_strength"</span>, <span class="fl">1e-9</span>, <span class="dv">10</span>),</span>
-<span id="cb22-160"><a href="#cb22-160" aria-hidden="true" tabindex="-1"></a>        <span class="st">"bagging_temperature"</span>: trial.suggest_float(<span class="st">"bagging_temperature"</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
-<span id="cb22-161"><a href="#cb22-161" aria-hidden="true" tabindex="-1"></a>        <span class="st">"l2_leaf_reg"</span>: trial.suggest_int(<span class="st">"l2_leaf_reg"</span>, <span class="dv">2</span>, <span class="dv">30</span>),</span>
-<span id="cb22-162"><a href="#cb22-162" aria-hidden="true" tabindex="-1"></a>        <span class="st">"border_count"</span>: trial.suggest_int(<span class="st">"border_count"</span>, <span class="dv">1</span>, <span class="dv">255</span>),</span>
-<span id="cb22-163"><a href="#cb22-163" aria-hidden="true" tabindex="-1"></a>        <span class="st">"thread_count"</span>: os.cpu_count(),</span>
-<span id="cb22-164"><a href="#cb22-164" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-165"><a href="#cb22-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-166"><a href="#cb22-166" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> []</span>
-<span id="cb22-167"><a href="#cb22-167" aria-hidden="true" tabindex="-1"></a>    optuna.logging.set_verbosity(optuna.logging.WARNING)</span>
-<span id="cb22-168"><a href="#cb22-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-169"><a href="#cb22-169" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract feature names and data types</span></span>
-<span id="cb22-170"><a href="#cb22-170" aria-hidden="true" tabindex="-1"></a>    <span class="co"># features = X.columns[~X.columns.str.contains("price")]</span></span>
-<span id="cb22-171"><a href="#cb22-171" aria-hidden="true" tabindex="-1"></a>    <span class="co"># numerical_features = X.select_dtypes("number").columns.to_list()</span></span>
-<span id="cb22-172"><a href="#cb22-172" aria-hidden="true" tabindex="-1"></a>    categorical_features <span class="op">=</span> X.select_dtypes(<span class="st">"object"</span>).columns.to_list()</span>
-<span id="cb22-173"><a href="#cb22-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-174"><a href="#cb22-174" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a K-Fold cross-validator</span></span>
-<span id="cb22-175"><a href="#cb22-175" aria-hidden="true" tabindex="-1"></a>    CV <span class="op">=</span> model_selection.RepeatedKFold(</span>
-<span id="cb22-176"><a href="#cb22-176" aria-hidden="true" tabindex="-1"></a>        n_splits<span class="op">=</span><span class="dv">10</span>, n_repeats<span class="op">=</span><span class="dv">1</span>, random_state<span class="op">=</span>utils.Configuration.seed</span>
-<span id="cb22-177"><a href="#cb22-177" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb22-178"><a href="#cb22-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-179"><a href="#cb22-179" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> train_fold_index, val_fold_index <span class="kw">in</span> CV.split(X):</span>
-<span id="cb22-180"><a href="#cb22-180" aria-hidden="true" tabindex="-1"></a>        X_train_fold, X_val_fold <span class="op">=</span> X.loc[train_fold_index], X.loc[val_fold_index]</span>
-<span id="cb22-181"><a href="#cb22-181" aria-hidden="true" tabindex="-1"></a>        y_train_fold, y_val_fold <span class="op">=</span> y.loc[train_fold_index], y.loc[val_fold_index]</span>
-<span id="cb22-182"><a href="#cb22-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-183"><a href="#cb22-183" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create CatBoost datasets</span></span>
-<span id="cb22-184"><a href="#cb22-184" aria-hidden="true" tabindex="-1"></a>        catboost_train <span class="op">=</span> catboost.Pool(</span>
-<span id="cb22-185"><a href="#cb22-185" aria-hidden="true" tabindex="-1"></a>            X_train_fold,</span>
-<span id="cb22-186"><a href="#cb22-186" aria-hidden="true" tabindex="-1"></a>            y_train_fold,</span>
-<span id="cb22-187"><a href="#cb22-187" aria-hidden="true" tabindex="-1"></a>            cat_features<span class="op">=</span>categorical_features,</span>
-<span id="cb22-188"><a href="#cb22-188" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb22-189"><a href="#cb22-189" aria-hidden="true" tabindex="-1"></a>        catboost_valid <span class="op">=</span> catboost.Pool(</span>
-<span id="cb22-190"><a href="#cb22-190" aria-hidden="true" tabindex="-1"></a>            X_val_fold,</span>
-<span id="cb22-191"><a href="#cb22-191" aria-hidden="true" tabindex="-1"></a>            y_val_fold,</span>
-<span id="cb22-192"><a href="#cb22-192" aria-hidden="true" tabindex="-1"></a>            cat_features<span class="op">=</span>categorical_features,</span>
-<span id="cb22-193"><a href="#cb22-193" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb22-194"><a href="#cb22-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-195"><a href="#cb22-195" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Initialize and train the CatBoost model</span></span>
-<span id="cb22-196"><a href="#cb22-196" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> catboost.CatBoostRegressor(<span class="op">**</span>catboost_params)</span>
-<span id="cb22-197"><a href="#cb22-197" aria-hidden="true" tabindex="-1"></a>        model.fit(</span>
-<span id="cb22-198"><a href="#cb22-198" aria-hidden="true" tabindex="-1"></a>            catboost_train,</span>
-<span id="cb22-199"><a href="#cb22-199" aria-hidden="true" tabindex="-1"></a>            eval_set<span class="op">=</span>[catboost_valid],</span>
-<span id="cb22-200"><a href="#cb22-200" aria-hidden="true" tabindex="-1"></a>            early_stopping_rounds<span class="op">=</span>utils.Configuration.early_stopping_round,</span>
-<span id="cb22-201"><a href="#cb22-201" aria-hidden="true" tabindex="-1"></a>            verbose<span class="op">=</span>utils.Configuration.verbose,</span>
-<span id="cb22-202"><a href="#cb22-202" aria-hidden="true" tabindex="-1"></a>            use_best_model<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb22-203"><a href="#cb22-203" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb22-204"><a href="#cb22-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-205"><a href="#cb22-205" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate OOF validation predictions</span></span>
-<span id="cb22-206"><a href="#cb22-206" aria-hidden="true" tabindex="-1"></a>        valid_pred <span class="op">=</span> model.predict(X_val_fold)</span>
-<span id="cb22-207"><a href="#cb22-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-208"><a href="#cb22-208" aria-hidden="true" tabindex="-1"></a>        RMSE_score <span class="op">=</span> metrics.mean_squared_error(y_val_fold, valid_pred, squared<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb22-209"><a href="#cb22-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-210"><a href="#cb22-210" aria-hidden="true" tabindex="-1"></a>        <span class="kw">del</span> (</span>
-<span id="cb22-211"><a href="#cb22-211" aria-hidden="true" tabindex="-1"></a>            X_train_fold,</span>
-<span id="cb22-212"><a href="#cb22-212" aria-hidden="true" tabindex="-1"></a>            y_train_fold,</span>
-<span id="cb22-213"><a href="#cb22-213" aria-hidden="true" tabindex="-1"></a>            X_val_fold,</span>
-<span id="cb22-214"><a href="#cb22-214" aria-hidden="true" tabindex="-1"></a>            y_val_fold,</span>
-<span id="cb22-215"><a href="#cb22-215" aria-hidden="true" tabindex="-1"></a>            catboost_train,</span>
-<span id="cb22-216"><a href="#cb22-216" aria-hidden="true" tabindex="-1"></a>            catboost_valid,</span>
-<span id="cb22-217"><a href="#cb22-217" aria-hidden="true" tabindex="-1"></a>            model,</span>
-<span id="cb22-218"><a href="#cb22-218" aria-hidden="true" tabindex="-1"></a>            valid_pred,</span>
-<span id="cb22-219"><a href="#cb22-219" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb22-220"><a href="#cb22-220" aria-hidden="true" tabindex="-1"></a>        gc.collect()</span>
-<span id="cb22-221"><a href="#cb22-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-222"><a href="#cb22-222" aria-hidden="true" tabindex="-1"></a>        results.append(RMSE_score)</span>
-<span id="cb22-223"><a href="#cb22-223" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.mean(results)</span>
-<span id="cb22-224"><a href="#cb22-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-225"><a href="#cb22-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-226"><a href="#cb22-226" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb22-227"><a href="#cb22-227" aria-hidden="true" tabindex="-1"></a>Similar to Part 6, the hyperparameter optimization step was pre-computed due to the significant computational time needed. The results were saved rather than executed during notebook rendering to save time. However, note that the outcomes should remain unchanged.</span>
-<span id="cb22-228"><a href="#cb22-228" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb22-229"><a href="#cb22-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-232"><a href="#cb22-232" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-233"><a href="#cb22-233" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>script echo skipping</span>
-<span id="cb22-234"><a href="#cb22-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-235"><a href="#cb22-235" aria-hidden="true" tabindex="-1"></a>study <span class="op">=</span> optuna.create_study(direction<span class="op">=</span><span class="st">"minimize"</span>)</span>
-<span id="cb22-236"><a href="#cb22-236" aria-hidden="true" tabindex="-1"></a>study.optimize(train_model.Optuna_Objective(X_train, y_train), n_trials<span class="op">=</span><span class="dv">100</span>, show_progress_bar<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb22-237"><a href="#cb22-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-238"><a href="#cb22-238" aria-hidden="true" tabindex="-1"></a>dumper(study.best_params, <span class="st">"CatBoost_params"</span>)</span>
-<span id="cb22-239"><a href="#cb22-239" aria-hidden="true" tabindex="-1"></a>dumper(study.best_value, <span class="st">"CatBoost_value"</span>)</span>
-<span id="cb22-240"><a href="#cb22-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-241"><a href="#cb22-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-242"><a href="#cb22-242" aria-hidden="true" tabindex="-1"></a>As shown below, Optuna found the best Out-Of-Fold (OOF) score using the selected parameters, which is 0.1060. Recall that in Part 6, our best OOF score was 0.1070, so this represents a modest improvement, albeit a slight one.</span>
-<span id="cb22-243"><a href="#cb22-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-246"><a href="#cb22-246" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-247"><a href="#cb22-247" aria-hidden="true" tabindex="-1"></a>catboost_params_optuna <span class="op">=</span> pd.read_pickle(<span class="st">"CatBoost_params.pickle"</span>)</span>
-<span id="cb22-248"><a href="#cb22-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-249"><a href="#cb22-249" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(</span>
-<span id="cb22-250"><a href="#cb22-250" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f'The best OOF RMSE score of the hyperparameter tuning is </span><span class="sc">{</span>pd<span class="sc">.</span>read_pickle(<span class="st">"CatBoost_value.pickle"</span>)<span class="sc">:.4f}</span><span class="ss">.'</span></span>
-<span id="cb22-251"><a href="#cb22-251" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb22-252"><a href="#cb22-252" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The corresponding values: </span><span class="sc">{</span>catboost_params_optuna<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb22-253"><a href="#cb22-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-254"><a href="#cb22-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-255"><a href="#cb22-255" aria-hidden="true" tabindex="-1"></a><span class="fu"># Retrain using the best parameters and predict</span></span>
-<span id="cb22-256"><a href="#cb22-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-257"><a href="#cb22-257" aria-hidden="true" tabindex="-1"></a>After obtaining the most optimal parameters, we can proceed to retrain our model using the entire dataset, excluding the test portion, of course. For this we can use the <span class="in">`train_catboost`</span> as seen below.</span>
-<span id="cb22-258"><a href="#cb22-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-261"><a href="#cb22-261" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-262"><a href="#cb22-262" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train_catboost(</span>
-<span id="cb22-263"><a href="#cb22-263" aria-hidden="true" tabindex="-1"></a>    X: pd.DataFrame, y: pd.Series, catboost_params: <span class="bu">dict</span></span>
-<span id="cb22-264"><a href="#cb22-264" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> catboost.CatBoostRegressor:</span>
-<span id="cb22-265"><a href="#cb22-265" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb22-266"><a href="#cb22-266" aria-hidden="true" tabindex="-1"></a><span class="co">    Train a CatBoostRegressor model using the provided data and parameters.</span></span>
-<span id="cb22-267"><a href="#cb22-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-268"><a href="#cb22-268" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
-<span id="cb22-269"><a href="#cb22-269" aria-hidden="true" tabindex="-1"></a><span class="co">        X (pd.DataFrame): The feature dataset.</span></span>
-<span id="cb22-270"><a href="#cb22-270" aria-hidden="true" tabindex="-1"></a><span class="co">        y (pd.Series): The target variable.</span></span>
-<span id="cb22-271"><a href="#cb22-271" aria-hidden="true" tabindex="-1"></a><span class="co">        catboost_params (dict): CatBoost hyperparameters.</span></span>
-<span id="cb22-272"><a href="#cb22-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-273"><a href="#cb22-273" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb22-274"><a href="#cb22-274" aria-hidden="true" tabindex="-1"></a><span class="co">        CatBoostRegressor: The trained CatBoost model.</span></span>
-<span id="cb22-275"><a href="#cb22-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-276"><a href="#cb22-276" aria-hidden="true" tabindex="-1"></a><span class="co">    This function takes the feature dataset `X`, the target variable `y`, and a dictionary of CatBoost</span></span>
-<span id="cb22-277"><a href="#cb22-277" aria-hidden="true" tabindex="-1"></a><span class="co">    hyperparameters. It automatically detects categorical features in the dataset and trains a CatBoostRegressor</span></span>
-<span id="cb22-278"><a href="#cb22-278" aria-hidden="true" tabindex="-1"></a><span class="co">    model with the specified parameters.</span></span>
-<span id="cb22-279"><a href="#cb22-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-280"><a href="#cb22-280" aria-hidden="true" tabindex="-1"></a><span class="co">    Example:</span></span>
-<span id="cb22-281"><a href="#cb22-281" aria-hidden="true" tabindex="-1"></a><span class="co">        X, y = load_data()</span></span>
-<span id="cb22-282"><a href="#cb22-282" aria-hidden="true" tabindex="-1"></a><span class="co">        catboost_params = {</span></span>
-<span id="cb22-283"><a href="#cb22-283" aria-hidden="true" tabindex="-1"></a><span class="co">            'iterations': 1000,</span></span>
-<span id="cb22-284"><a href="#cb22-284" aria-hidden="true" tabindex="-1"></a><span class="co">            'learning_rate': 0.1,</span></span>
-<span id="cb22-285"><a href="#cb22-285" aria-hidden="true" tabindex="-1"></a><span class="co">            'depth': 6,</span></span>
-<span id="cb22-286"><a href="#cb22-286" aria-hidden="true" tabindex="-1"></a><span class="co">            # ... other hyperparameters ...</span></span>
-<span id="cb22-287"><a href="#cb22-287" aria-hidden="true" tabindex="-1"></a><span class="co">        }</span></span>
-<span id="cb22-288"><a href="#cb22-288" aria-hidden="true" tabindex="-1"></a><span class="co">        model = train_catboost(X, y, catboost_params)</span></span>
-<span id="cb22-289"><a href="#cb22-289" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb22-290"><a href="#cb22-290" aria-hidden="true" tabindex="-1"></a>    categorical_features <span class="op">=</span> X.select_dtypes(<span class="st">"object"</span>).columns.to_list()</span>
-<span id="cb22-291"><a href="#cb22-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-292"><a href="#cb22-292" aria-hidden="true" tabindex="-1"></a>    catboost_train <span class="op">=</span> catboost.Pool(</span>
-<span id="cb22-293"><a href="#cb22-293" aria-hidden="true" tabindex="-1"></a>        X,</span>
-<span id="cb22-294"><a href="#cb22-294" aria-hidden="true" tabindex="-1"></a>        y,</span>
-<span id="cb22-295"><a href="#cb22-295" aria-hidden="true" tabindex="-1"></a>        cat_features<span class="op">=</span>categorical_features,</span>
-<span id="cb22-296"><a href="#cb22-296" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb22-297"><a href="#cb22-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-298"><a href="#cb22-298" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> catboost.CatBoostRegressor(<span class="op">**</span>catboost_params)</span>
-<span id="cb22-299"><a href="#cb22-299" aria-hidden="true" tabindex="-1"></a>    model.fit(</span>
-<span id="cb22-300"><a href="#cb22-300" aria-hidden="true" tabindex="-1"></a>        catboost_train,</span>
-<span id="cb22-301"><a href="#cb22-301" aria-hidden="true" tabindex="-1"></a>        verbose<span class="op">=</span>utils.Configuration.verbose,</span>
-<span id="cb22-302"><a href="#cb22-302" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb22-303"><a href="#cb22-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-304"><a href="#cb22-304" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> model</span>
-<span id="cb22-305"><a href="#cb22-305" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-306"><a href="#cb22-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-309"><a href="#cb22-309" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-310"><a href="#cb22-310" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> train_model.train_catboost(X_train, y_train, catboost_params_optuna)</span>
-<span id="cb22-311"><a href="#cb22-311" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-312"><a href="#cb22-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-313"><a href="#cb22-313" aria-hidden="true" tabindex="-1"></a>Excellent! We've made good progress. Now, it's time for the final evaluation of our dataset using the test set. We can use the <span class="in">`predict_catboost`</span> function for this.</span>
-<span id="cb22-314"><a href="#cb22-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-317"><a href="#cb22-317" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-318"><a href="#cb22-318" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict_catboost(</span>
-<span id="cb22-319"><a href="#cb22-319" aria-hidden="true" tabindex="-1"></a>    model: catboost.CatBoostRegressor,</span>
-<span id="cb22-320"><a href="#cb22-320" aria-hidden="true" tabindex="-1"></a>    X: pd.DataFrame,</span>
-<span id="cb22-321"><a href="#cb22-321" aria-hidden="true" tabindex="-1"></a>    thread_count: <span class="bu">int</span> <span class="op">=</span> <span class="op">-</span><span class="dv">1</span>,</span>
-<span id="cb22-322"><a href="#cb22-322" aria-hidden="true" tabindex="-1"></a>    verbose: <span class="bu">int</span> <span class="op">=</span> <span class="va">None</span>,</span>
-<span id="cb22-323"><a href="#cb22-323" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> np.ndarray:</span>
-<span id="cb22-324"><a href="#cb22-324" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb22-325"><a href="#cb22-325" aria-hidden="true" tabindex="-1"></a><span class="co">    Make predictions using a CatBoost model on the provided dataset.</span></span>
-<span id="cb22-326"><a href="#cb22-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-327"><a href="#cb22-327" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
-<span id="cb22-328"><a href="#cb22-328" aria-hidden="true" tabindex="-1"></a><span class="co">        model (catboost.CatBoostRegressor): The trained CatBoost model.</span></span>
-<span id="cb22-329"><a href="#cb22-329" aria-hidden="true" tabindex="-1"></a><span class="co">        X (pd.DataFrame): The dataset for which predictions are to be made.</span></span>
-<span id="cb22-330"><a href="#cb22-330" aria-hidden="true" tabindex="-1"></a><span class="co">        thread_count (int, optional): The number of threads for prediction. Default is -1 (auto).</span></span>
-<span id="cb22-331"><a href="#cb22-331" aria-hidden="true" tabindex="-1"></a><span class="co">        verbose (int, optional): Verbosity level. Default is None.</span></span>
-<span id="cb22-332"><a href="#cb22-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-333"><a href="#cb22-333" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb22-334"><a href="#cb22-334" aria-hidden="true" tabindex="-1"></a><span class="co">        np.ndarray: Predicted values.</span></span>
-<span id="cb22-335"><a href="#cb22-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-336"><a href="#cb22-336" aria-hidden="true" tabindex="-1"></a><span class="co">    This function takes a trained CatBoost model, a dataset `X`, and optional parameters for</span></span>
-<span id="cb22-337"><a href="#cb22-337" aria-hidden="true" tabindex="-1"></a><span class="co">    specifying the number of threads (`thread_count`) and verbosity (`verbose`) during prediction.</span></span>
-<span id="cb22-338"><a href="#cb22-338" aria-hidden="true" tabindex="-1"></a><span class="co">    It returns an array of predicted values.</span></span>
-<span id="cb22-339"><a href="#cb22-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-340"><a href="#cb22-340" aria-hidden="true" tabindex="-1"></a><span class="co">    Example:</span></span>
-<span id="cb22-341"><a href="#cb22-341" aria-hidden="true" tabindex="-1"></a><span class="co">        model = load_catboost_model()</span></span>
-<span id="cb22-342"><a href="#cb22-342" aria-hidden="true" tabindex="-1"></a><span class="co">        X_new = load_new_data()</span></span>
-<span id="cb22-343"><a href="#cb22-343" aria-hidden="true" tabindex="-1"></a><span class="co">        predictions = predict_catboost(model, X_new, thread_count=4, verbose=2)</span></span>
-<span id="cb22-344"><a href="#cb22-344" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb22-345"><a href="#cb22-345" aria-hidden="true" tabindex="-1"></a>    prediction <span class="op">=</span> model.predict(data<span class="op">=</span>X, thread_count<span class="op">=</span>thread_count, verbose<span class="op">=</span>verbose)</span>
-<span id="cb22-346"><a href="#cb22-346" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> prediction</span>
-<span id="cb22-347"><a href="#cb22-347" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-348"><a href="#cb22-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-349"><a href="#cb22-349" aria-hidden="true" tabindex="-1"></a>To assess the predictions, we'll obtain both RMSE and R2 values.</span>
-<span id="cb22-350"><a href="#cb22-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-353"><a href="#cb22-353" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-354"><a href="#cb22-354" aria-hidden="true" tabindex="-1"></a>prediction <span class="op">=</span> predict_model.predict_catboost(model<span class="op">=</span>model, X<span class="op">=</span>X_test)</span>
-<span id="cb22-355"><a href="#cb22-355" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-356"><a href="#cb22-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-359"><a href="#cb22-359" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-360"><a href="#cb22-360" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> score_prediction(y_true, y_pred):</span>
-<span id="cb22-361"><a href="#cb22-361" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb22-362"><a href="#cb22-362" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculate regression evaluation metrics based on</span></span>
-<span id="cb22-363"><a href="#cb22-363" aria-hidden="true" tabindex="-1"></a><span class="co">    true and predicted values.</span></span>
-<span id="cb22-364"><a href="#cb22-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-365"><a href="#cb22-365" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
-<span id="cb22-366"><a href="#cb22-366" aria-hidden="true" tabindex="-1"></a><span class="co">        y_true (array-like): True target values.</span></span>
-<span id="cb22-367"><a href="#cb22-367" aria-hidden="true" tabindex="-1"></a><span class="co">        y_pred (array-like): Predicted values.</span></span>
-<span id="cb22-368"><a href="#cb22-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-369"><a href="#cb22-369" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb22-370"><a href="#cb22-370" aria-hidden="true" tabindex="-1"></a><span class="co">        tuple: A tuple containing Root Mean Squared Error (RMSE)</span></span>
-<span id="cb22-371"><a href="#cb22-371" aria-hidden="true" tabindex="-1"></a><span class="co">        and R-squared (R2).</span></span>
-<span id="cb22-372"><a href="#cb22-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-373"><a href="#cb22-373" aria-hidden="true" tabindex="-1"></a><span class="co">    This function calculates RMSE and R2 to evaluate the goodness</span></span>
-<span id="cb22-374"><a href="#cb22-374" aria-hidden="true" tabindex="-1"></a><span class="co">    of fit between the true target values and predicted values.</span></span>
-<span id="cb22-375"><a href="#cb22-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-376"><a href="#cb22-376" aria-hidden="true" tabindex="-1"></a><span class="co">    Example:</span></span>
-<span id="cb22-377"><a href="#cb22-377" aria-hidden="true" tabindex="-1"></a><span class="co">        y_true = [3, 5, 7, 9]</span></span>
-<span id="cb22-378"><a href="#cb22-378" aria-hidden="true" tabindex="-1"></a><span class="co">        y_pred = [2.8, 5.2, 7.1, 9.3]</span></span>
-<span id="cb22-379"><a href="#cb22-379" aria-hidden="true" tabindex="-1"></a><span class="co">        rmse, r2 = score_prediction(y_true, y_pred)</span></span>
-<span id="cb22-380"><a href="#cb22-380" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb22-381"><a href="#cb22-381" aria-hidden="true" tabindex="-1"></a>    RMSE <span class="op">=</span> np.sqrt(metrics.mean_squared_error(y_true, np.log10(y_pred)))</span>
-<span id="cb22-382"><a href="#cb22-382" aria-hidden="true" tabindex="-1"></a>    R2 <span class="op">=</span> metrics.r2_score(y_true, y_pred)</span>
-<span id="cb22-383"><a href="#cb22-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-384"><a href="#cb22-384" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> RMSE, R2</span>
-<span id="cb22-385"><a href="#cb22-385" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-386"><a href="#cb22-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-387"><a href="#cb22-387" aria-hidden="true" tabindex="-1"></a>Superb! As you can see, the test set has an RMSE of 0.1101 and an R2 of 0.877. It's worth noting that the test set's RMSE is slightly higher than that of the training set, which is expected and suggests overfitting. Despite our efforts to prevent overfitting, it can be challenging to eliminate entirely. Nevertheless, it appears that we've done well.</span>
-<span id="cb22-388"><a href="#cb22-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-391"><a href="#cb22-391" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-392"><a href="#cb22-392" aria-hidden="true" tabindex="-1"></a>predict_model.score_prediction(y_pred<span class="op">=</span>prediction, y_true<span class="op">=</span>y_test)</span>
-<span id="cb22-393"><a href="#cb22-393" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-394"><a href="#cb22-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-395"><a href="#cb22-395" aria-hidden="true" tabindex="-1"></a>Let's put the original values and prediction in a DataFrame so that we can evaluate them visually as well.</span>
-<span id="cb22-396"><a href="#cb22-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-399"><a href="#cb22-399" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-400"><a href="#cb22-400" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> (</span>
-<span id="cb22-401"><a href="#cb22-401" aria-hidden="true" tabindex="-1"></a>    pd.concat(</span>
-<span id="cb22-402"><a href="#cb22-402" aria-hidden="true" tabindex="-1"></a>        [y_test.reset_index(drop<span class="op">=</span><span class="va">True</span>), pd.Series(prediction)], axis<span class="op">=</span><span class="st">"columns"</span></span>
-<span id="cb22-403"><a href="#cb22-403" aria-hidden="true" tabindex="-1"></a>    ).rename(columns<span class="op">=</span>{<span class="st">"price"</span>: <span class="st">"original_values"</span>, <span class="dv">0</span>: <span class="st">"predicted_values"</span>})</span>
-<span id="cb22-404"><a href="#cb22-404" aria-hidden="true" tabindex="-1"></a>    <span class="co"># .apply(lambda x: 10**x)</span></span>
-<span id="cb22-405"><a href="#cb22-405" aria-hidden="true" tabindex="-1"></a>    .assign(residuals<span class="op">=</span><span class="kw">lambda</span> df: df.original_values <span class="op">-</span> df.predicted_values)</span>
-<span id="cb22-406"><a href="#cb22-406" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb22-407"><a href="#cb22-407" aria-hidden="true" tabindex="-1"></a>results</span>
-<span id="cb22-408"><a href="#cb22-408" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-409"><a href="#cb22-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-410"><a href="#cb22-410" aria-hidden="true" tabindex="-1"></a>As depicted below, our model demonstrates the ability to generalize effectively for unseen data, showcasing high R2 values and low RMSE. Additionally, examining the residuals reveals an even distribution, symbolizing robust model performance.</span>
-<span id="cb22-411"><a href="#cb22-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-414"><a href="#cb22-414" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-415"><a href="#cb22-415" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Contrasting Predicted House Prices with Actual House Prices</span></span>
-<span id="cb22-416"><a href="#cb22-416" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-fig1</span></span>
-<span id="cb22-417"><a href="#cb22-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-418"><a href="#cb22-418" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb22-419"><a href="#cb22-419" aria-hidden="true" tabindex="-1"></a>    results.pipe(</span>
-<span id="cb22-420"><a href="#cb22-420" aria-hidden="true" tabindex="-1"></a>        <span class="kw">lambda</span> df: ggplot(df, aes(<span class="st">"original_values"</span>, <span class="st">"predicted_values"</span>))</span>
-<span id="cb22-421"><a href="#cb22-421" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_point()</span>
-<span id="cb22-422"><a href="#cb22-422" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_smooth()</span>
-<span id="cb22-423"><a href="#cb22-423" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_text(</span>
-<span id="cb22-424"><a href="#cb22-424" aria-hidden="true" tabindex="-1"></a>            x<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb22-425"><a href="#cb22-425" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span><span class="fl">6.6</span>,</span>
-<span id="cb22-426"><a href="#cb22-426" aria-hidden="true" tabindex="-1"></a>            label<span class="op">=</span><span class="ss">f"RMSE = </span><span class="sc">{</span>predict_model<span class="sc">.</span>score_prediction(y_pred<span class="op">=</span>prediction, y_true<span class="op">=</span>y_test)[<span class="dv">0</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
-<span id="cb22-427"><a href="#cb22-427" aria-hidden="true" tabindex="-1"></a>            fontface<span class="op">=</span><span class="st">"bold"</span>,</span>
-<span id="cb22-428"><a href="#cb22-428" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb22-429"><a href="#cb22-429" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_text(</span>
-<span id="cb22-430"><a href="#cb22-430" aria-hidden="true" tabindex="-1"></a>            x<span class="op">=</span><span class="fl">4.965</span>,</span>
-<span id="cb22-431"><a href="#cb22-431" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span><span class="fl">6.5</span>,</span>
-<span id="cb22-432"><a href="#cb22-432" aria-hidden="true" tabindex="-1"></a>            label<span class="op">=</span><span class="ss">f"R2 = </span><span class="sc">{</span>predict_model<span class="sc">.</span>score_prediction(y_pred<span class="op">=</span>prediction, y_true<span class="op">=</span>y_test)[<span class="dv">1</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
-<span id="cb22-433"><a href="#cb22-433" aria-hidden="true" tabindex="-1"></a>            fontface<span class="op">=</span><span class="st">"bold"</span>,</span>
-<span id="cb22-434"><a href="#cb22-434" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb22-435"><a href="#cb22-435" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> labs(</span>
-<span id="cb22-436"><a href="#cb22-436" aria-hidden="true" tabindex="-1"></a>            title<span class="op">=</span><span class="st">"Contrasting Predicted House Prices with Actual House Prices"</span>,</span>
-<span id="cb22-437"><a href="#cb22-437" aria-hidden="true" tabindex="-1"></a>            subtitle<span class="op">=</span><span class="st">""" The plot suggests that the model makes accurate predictions on the test data. This is evident from the low RMSE values, </span></span>
-<span id="cb22-438"><a href="#cb22-438" aria-hidden="true" tabindex="-1"></a><span class="st">            signifying a high level of accuracy. Additionally, the high R2 value indicates that the model effectively accounts for a </span></span>
-<span id="cb22-439"><a href="#cb22-439" aria-hidden="true" tabindex="-1"></a><span class="st">            substantial portion of the data's variance, demonstrating a strong alignment between the model's predictions and the actual data.</span></span>
-<span id="cb22-440"><a href="#cb22-440" aria-hidden="true" tabindex="-1"></a><span class="st">            """</span>,</span>
-<span id="cb22-441"><a href="#cb22-441" aria-hidden="true" tabindex="-1"></a>            x<span class="op">=</span><span class="st">"log10 True Prices (EUR)"</span>,</span>
-<span id="cb22-442"><a href="#cb22-442" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span><span class="st">"log10 Predicted Prices (EUR)"</span>,</span>
-<span id="cb22-443"><a href="#cb22-443" aria-hidden="true" tabindex="-1"></a>            caption<span class="op">=</span><span class="st">"https://www.immoweb.be/"</span>,</span>
-<span id="cb22-444"><a href="#cb22-444" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb22-445"><a href="#cb22-445" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> theme(</span>
-<span id="cb22-446"><a href="#cb22-446" aria-hidden="true" tabindex="-1"></a>            plot_subtitle<span class="op">=</span>element_text(</span>
-<span id="cb22-447"><a href="#cb22-447" aria-hidden="true" tabindex="-1"></a>                size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">"italic"</span></span>
-<span id="cb22-448"><a href="#cb22-448" aria-hidden="true" tabindex="-1"></a>            ),  <span class="co"># Customize subtitle appearance</span></span>
-<span id="cb22-449"><a href="#cb22-449" aria-hidden="true" tabindex="-1"></a>            plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">15</span>, face<span class="op">=</span><span class="st">"bold"</span>),  <span class="co"># Customize title appearance</span></span>
-<span id="cb22-450"><a href="#cb22-450" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb22-451"><a href="#cb22-451" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">600</span>)</span>
-<span id="cb22-452"><a href="#cb22-452" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb22-453"><a href="#cb22-453" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb22-454"><a href="#cb22-454" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-455"><a href="#cb22-455" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-458"><a href="#cb22-458" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb22-459"><a href="#cb22-459" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Assessing the Residuals from the Catboost Model</span></span>
-<span id="cb22-460"><a href="#cb22-460" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-fig2</span></span>
-<span id="cb22-461"><a href="#cb22-461" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-462"><a href="#cb22-462" aria-hidden="true" tabindex="-1"></a>(</span>
-<span id="cb22-463"><a href="#cb22-463" aria-hidden="true" tabindex="-1"></a>    results.pipe(<span class="kw">lambda</span> df: ggplot(df, aes(<span class="st">"residuals"</span>)) <span class="op">+</span> geom_histogram(stat<span class="op">=</span><span class="st">"bin"</span>))</span>
-<span id="cb22-464"><a href="#cb22-464" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> labs(</span>
-<span id="cb22-465"><a href="#cb22-465" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="st">"Assessing the Residuals from the Catboost Model"</span>,</span>
-<span id="cb22-466"><a href="#cb22-466" aria-hidden="true" tabindex="-1"></a>        subtitle<span class="op">=</span><span class="st">""" Normally distributed residuals imply consistent and accurate model predictions, aligning with statistical assumptions.</span></span>
-<span id="cb22-467"><a href="#cb22-467" aria-hidden="true" tabindex="-1"></a><span class="st">            """</span>,</span>
-<span id="cb22-468"><a href="#cb22-468" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="st">"Distribution of Residuals"</span>,</span>
-<span id="cb22-469"><a href="#cb22-469" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span><span class="st">""</span>,</span>
-<span id="cb22-470"><a href="#cb22-470" aria-hidden="true" tabindex="-1"></a>        caption<span class="op">=</span><span class="st">"https://www.immoweb.be/"</span>,</span>
-<span id="cb22-471"><a href="#cb22-471" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb22-472"><a href="#cb22-472" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> theme(</span>
-<span id="cb22-473"><a href="#cb22-473" aria-hidden="true" tabindex="-1"></a>        plot_subtitle<span class="op">=</span>element_text(</span>
-<span id="cb22-474"><a href="#cb22-474" aria-hidden="true" tabindex="-1"></a>            size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">"italic"</span></span>
-<span id="cb22-475"><a href="#cb22-475" aria-hidden="true" tabindex="-1"></a>        ),  <span class="co"># Customize subtitle appearance</span></span>
-<span id="cb22-476"><a href="#cb22-476" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">15</span>, face<span class="op">=</span><span class="st">"bold"</span>),  <span class="co"># Customize title appearance</span></span>
-<span id="cb22-477"><a href="#cb22-477" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb22-478"><a href="#cb22-478" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">600</span>)</span>
-<span id="cb22-479"><a href="#cb22-479" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb22-480"><a href="#cb22-480" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-481"><a href="#cb22-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-482"><a href="#cb22-482" aria-hidden="true" tabindex="-1"></a>And there you have it! We reached the end of these series! 🥳🎆🎉🍾🍻🕺 </span>
-<span id="cb22-483"><a href="#cb22-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-484"><a href="#cb22-484" aria-hidden="true" tabindex="-1"></a>Over these seven articles, we've shown how to build a reliable, high-performing machine learning model for real-time house price prediction. While there's always room for improvement, like exploring geolocation-based feature engineering, blending, and stacking, our aim was to provide a comprehensive guide from start to finish. We hope you've enjoyed this journey and gained inspiration and insights for your own projects.  </span>
-<span id="cb22-485"><a href="#cb22-485" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-486"><a href="#cb22-486" aria-hidden="true" tabindex="-1"></a>Until next time! 💻🐍🐼</span>
+<span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a>Let's get our data ready for modeling by applying the <span class="in">`prepare_data_for_modelling`</span> function as detailed in Part 6. A quick recap: this function carries out the subsequent actions to prepare a DataFrame for machine learning:  </span>
+<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-64"><a href="#cb22-64" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>It randomly shuffles the DataFrame's rows.</span>
+<span id="cb22-65"><a href="#cb22-65" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The 'price' column is transformed into the base 10 logarithm.</span>
+<span id="cb22-66"><a href="#cb22-66" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Categorical variable missing values are replaced with 'missing value.'</span>
+<span id="cb22-67"><a href="#cb22-67" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>It divides the data into features (X) and the target (y).</span>
+<span id="cb22-68"><a href="#cb22-68" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Using <span class="in">`LocalOutlierFactor`</span>, it identifies and removes outlier values.</span>
+<span id="cb22-69"><a href="#cb22-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-72"><a href="#cb22-72" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-73"><a href="#cb22-73" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_parquet(</span>
+<span id="cb22-74"><a href="#cb22-74" aria-hidden="true" tabindex="-1"></a>    utils.Configuration.INTERIM_DATA_PATH.joinpath(</span>
+<span id="cb22-75"><a href="#cb22-75" aria-hidden="true" tabindex="-1"></a>        <span class="st">"2023-10-01_Processed_dataset_for_NB_use.parquet.gzip"</span></span>
+<span id="cb22-76"><a href="#cb22-76" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-77"><a href="#cb22-77" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-78"><a href="#cb22-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-79"><a href="#cb22-79" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> pre_process.prepare_data_for_modelling(df)</span>
+<span id="cb22-80"><a href="#cb22-80" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-81"><a href="#cb22-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-82"><a href="#cb22-82" aria-hidden="true" tabindex="-1"></a>We'll divide the data into training and testing sets. The training portion will be dedicated to hyperparameter tuning. It's worth noting that, to guard against overfitting during hyperparameter tuning, we'll implement cross-validation. This involves splitting the training set into subgroups for training and validation. The validation portion helps prevent overfitting, and the training continues until we achieve the desired performance. The test set will come into play later for evaluating our final model.</span>
+<span id="cb22-83"><a href="#cb22-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-86"><a href="#cb22-86" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-87"><a href="#cb22-87" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> model_selection.train_test_split(</span>
+<span id="cb22-88"><a href="#cb22-88" aria-hidden="true" tabindex="-1"></a>    X,</span>
+<span id="cb22-89"><a href="#cb22-89" aria-hidden="true" tabindex="-1"></a>    y,</span>
+<span id="cb22-90"><a href="#cb22-90" aria-hidden="true" tabindex="-1"></a>    test_size<span class="op">=</span><span class="fl">0.2</span>,</span>
+<span id="cb22-91"><a href="#cb22-91" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span>utils.Configuration.seed,</span>
+<span id="cb22-92"><a href="#cb22-92" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-93"><a href="#cb22-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-94"><a href="#cb22-94" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Shape of X_train: </span><span class="sc">{</span>X_train<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">, Shape of X_test: </span><span class="sc">{</span>X_test<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb22-95"><a href="#cb22-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-96"><a href="#cb22-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-97"><a href="#cb22-97" aria-hidden="true" tabindex="-1"></a>We'll also create a handy helper function called <span class="in">`dumper`</span>. This function enables us to save the best parameters discovered during tuning as a <span class="in">`.pickle`</span> file, allowing us to load and utilize these parameters from the saved file at a later time.</span>
+<span id="cb22-98"><a href="#cb22-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-101"><a href="#cb22-101" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-102"><a href="#cb22-102" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dumper(<span class="bu">file</span>: Any, name: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb22-103"><a href="#cb22-103" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb22-104"><a href="#cb22-104" aria-hidden="true" tabindex="-1"></a><span class="co">    Pickle and save an object to a file.</span></span>
+<span id="cb22-105"><a href="#cb22-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-106"><a href="#cb22-106" aria-hidden="true" tabindex="-1"></a><span class="co">    This function takes an object and a name, then uses the Pickle library to serialize</span></span>
+<span id="cb22-107"><a href="#cb22-107" aria-hidden="true" tabindex="-1"></a><span class="co">    and save the object to a file with the given name. The file is saved in binary mode ('wb').</span></span>
+<span id="cb22-108"><a href="#cb22-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-109"><a href="#cb22-109" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb22-110"><a href="#cb22-110" aria-hidden="true" tabindex="-1"></a><span class="co">        file (Any): The object to be pickled and saved.</span></span>
+<span id="cb22-111"><a href="#cb22-111" aria-hidden="true" tabindex="-1"></a><span class="co">        name (str): The name of the file, including the file extension, where the object will be saved.</span></span>
+<span id="cb22-112"><a href="#cb22-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-113"><a href="#cb22-113" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb22-114"><a href="#cb22-114" aria-hidden="true" tabindex="-1"></a><span class="co">        None: This function does not return a value.</span></span>
+<span id="cb22-115"><a href="#cb22-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-116"><a href="#cb22-116" aria-hidden="true" tabindex="-1"></a><span class="co">    Example:</span></span>
+<span id="cb22-117"><a href="#cb22-117" aria-hidden="true" tabindex="-1"></a><span class="co">        To save an object to a file:</span></span>
+<span id="cb22-118"><a href="#cb22-118" aria-hidden="true" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; my_data = [1, 2, 3]</span></span>
+<span id="cb22-119"><a href="#cb22-119" aria-hidden="true" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; dumper(my_data, "my_data.pickle")</span></span>
+<span id="cb22-120"><a href="#cb22-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-121"><a href="#cb22-121" aria-hidden="true" tabindex="-1"></a><span class="co">    Note:</span></span>
+<span id="cb22-122"><a href="#cb22-122" aria-hidden="true" tabindex="-1"></a><span class="co">        The file is saved in binary mode ('wb') to ensure compatibility and proper</span></span>
+<span id="cb22-123"><a href="#cb22-123" aria-hidden="true" tabindex="-1"></a><span class="co">        handling of binary data.</span></span>
+<span id="cb22-124"><a href="#cb22-124" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb22-125"><a href="#cb22-125" aria-hidden="true" tabindex="-1"></a>    pickle.dump(<span class="bu">file</span>, <span class="bu">open</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">.pickle"</span>, <span class="st">"wb"</span>))</span>
+<span id="cb22-126"><a href="#cb22-126" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-127"><a href="#cb22-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-128"><a href="#cb22-128" aria-hidden="true" tabindex="-1"></a><span class="fu">## Hyperparameter tuning using Optuna</span></span>
+<span id="cb22-129"><a href="#cb22-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-130"><a href="#cb22-130" aria-hidden="true" tabindex="-1"></a>To identify the most optimal settings, we'll leverage the Optuna library. The key hyperparameters under consideration are iterations, depth, learning_rate, random_strength, bagging_temperature, and others.</span>
+<span id="cb22-131"><a href="#cb22-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-134"><a href="#cb22-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-135"><a href="#cb22-135" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> objective(trial: optuna.Trial) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="cb22-136"><a href="#cb22-136" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb22-137"><a href="#cb22-137" aria-hidden="true" tabindex="-1"></a><span class="co">    Optuna objective function for tuning CatBoost hyperparameters.</span></span>
+<span id="cb22-138"><a href="#cb22-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-139"><a href="#cb22-139" aria-hidden="true" tabindex="-1"></a><span class="co">    This function takes an Optuna trial and explores hyperparameters for a CatBoost</span></span>
+<span id="cb22-140"><a href="#cb22-140" aria-hidden="true" tabindex="-1"></a><span class="co">    model to minimize the Root Mean Squared Error (RMSE) using K-Fold cross-validation.</span></span>
+<span id="cb22-141"><a href="#cb22-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-142"><a href="#cb22-142" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
+<span id="cb22-143"><a href="#cb22-143" aria-hidden="true" tabindex="-1"></a><span class="co">    - trial (optuna.Trial): Optuna trial object for hyperparameter optimization.</span></span>
+<span id="cb22-144"><a href="#cb22-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-145"><a href="#cb22-145" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb22-146"><a href="#cb22-146" aria-hidden="true" tabindex="-1"></a><span class="co">    - float: Mean RMSE across K-Fold cross-validation iterations.</span></span>
+<span id="cb22-147"><a href="#cb22-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-148"><a href="#cb22-148" aria-hidden="true" tabindex="-1"></a><span class="co">    Example use case:</span></span>
+<span id="cb22-149"><a href="#cb22-149" aria-hidden="true" tabindex="-1"></a><span class="co">    # Create an Optuna study and optimize hyperparameters</span></span>
+<span id="cb22-150"><a href="#cb22-150" aria-hidden="true" tabindex="-1"></a><span class="co">    study = optuna.create_study(direction="minimize")</span></span>
+<span id="cb22-151"><a href="#cb22-151" aria-hidden="true" tabindex="-1"></a><span class="co">    study.optimize(objective, n_trials=100)</span></span>
+<span id="cb22-152"><a href="#cb22-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-153"><a href="#cb22-153" aria-hidden="true" tabindex="-1"></a><span class="co">    # Get the best hyperparameters</span></span>
+<span id="cb22-154"><a href="#cb22-154" aria-hidden="true" tabindex="-1"></a><span class="co">    best_params = study.best_params</span></span>
+<span id="cb22-155"><a href="#cb22-155" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb22-156"><a href="#cb22-156" aria-hidden="true" tabindex="-1"></a>    catboost_params <span class="op">=</span> {</span>
+<span id="cb22-157"><a href="#cb22-157" aria-hidden="true" tabindex="-1"></a>        <span class="st">"iterations"</span>: trial.suggest_int(<span class="st">"iterations"</span>, <span class="dv">10</span>, <span class="dv">1000</span>),</span>
+<span id="cb22-158"><a href="#cb22-158" aria-hidden="true" tabindex="-1"></a>        <span class="st">"depth"</span>: trial.suggest_int(<span class="st">"depth"</span>, <span class="dv">1</span>, <span class="dv">8</span>),</span>
+<span id="cb22-159"><a href="#cb22-159" aria-hidden="true" tabindex="-1"></a>        <span class="st">"learning_rate"</span>: trial.suggest_float(<span class="st">"learning_rate"</span>, <span class="fl">0.01</span>, <span class="dv">1</span>),</span>
+<span id="cb22-160"><a href="#cb22-160" aria-hidden="true" tabindex="-1"></a>        <span class="st">"random_strength"</span>: trial.suggest_float(<span class="st">"random_strength"</span>, <span class="fl">1e-9</span>, <span class="dv">10</span>),</span>
+<span id="cb22-161"><a href="#cb22-161" aria-hidden="true" tabindex="-1"></a>        <span class="st">"bagging_temperature"</span>: trial.suggest_float(<span class="st">"bagging_temperature"</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb22-162"><a href="#cb22-162" aria-hidden="true" tabindex="-1"></a>        <span class="st">"l2_leaf_reg"</span>: trial.suggest_int(<span class="st">"l2_leaf_reg"</span>, <span class="dv">2</span>, <span class="dv">30</span>),</span>
+<span id="cb22-163"><a href="#cb22-163" aria-hidden="true" tabindex="-1"></a>        <span class="st">"border_count"</span>: trial.suggest_int(<span class="st">"border_count"</span>, <span class="dv">1</span>, <span class="dv">255</span>),</span>
+<span id="cb22-164"><a href="#cb22-164" aria-hidden="true" tabindex="-1"></a>        <span class="st">"thread_count"</span>: os.cpu_count(),</span>
+<span id="cb22-165"><a href="#cb22-165" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb22-166"><a href="#cb22-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-167"><a href="#cb22-167" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> []</span>
+<span id="cb22-168"><a href="#cb22-168" aria-hidden="true" tabindex="-1"></a>    optuna.logging.set_verbosity(optuna.logging.WARNING)</span>
+<span id="cb22-169"><a href="#cb22-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-170"><a href="#cb22-170" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract feature names and data types</span></span>
+<span id="cb22-171"><a href="#cb22-171" aria-hidden="true" tabindex="-1"></a>    <span class="co"># features = X.columns[~X.columns.str.contains("price")]</span></span>
+<span id="cb22-172"><a href="#cb22-172" aria-hidden="true" tabindex="-1"></a>    <span class="co"># numerical_features = X.select_dtypes("number").columns.to_list()</span></span>
+<span id="cb22-173"><a href="#cb22-173" aria-hidden="true" tabindex="-1"></a>    categorical_features <span class="op">=</span> X.select_dtypes(<span class="st">"object"</span>).columns.to_list()</span>
+<span id="cb22-174"><a href="#cb22-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-175"><a href="#cb22-175" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a K-Fold cross-validator</span></span>
+<span id="cb22-176"><a href="#cb22-176" aria-hidden="true" tabindex="-1"></a>    CV <span class="op">=</span> model_selection.RepeatedKFold(</span>
+<span id="cb22-177"><a href="#cb22-177" aria-hidden="true" tabindex="-1"></a>        n_splits<span class="op">=</span><span class="dv">10</span>, n_repeats<span class="op">=</span><span class="dv">1</span>, random_state<span class="op">=</span>utils.Configuration.seed</span>
+<span id="cb22-178"><a href="#cb22-178" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-179"><a href="#cb22-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-180"><a href="#cb22-180" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> train_fold_index, val_fold_index <span class="kw">in</span> CV.split(X):</span>
+<span id="cb22-181"><a href="#cb22-181" aria-hidden="true" tabindex="-1"></a>        X_train_fold, X_val_fold <span class="op">=</span> X.loc[train_fold_index], X.loc[val_fold_index]</span>
+<span id="cb22-182"><a href="#cb22-182" aria-hidden="true" tabindex="-1"></a>        y_train_fold, y_val_fold <span class="op">=</span> y.loc[train_fold_index], y.loc[val_fold_index]</span>
+<span id="cb22-183"><a href="#cb22-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-184"><a href="#cb22-184" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create CatBoost datasets</span></span>
+<span id="cb22-185"><a href="#cb22-185" aria-hidden="true" tabindex="-1"></a>        catboost_train <span class="op">=</span> catboost.Pool(</span>
+<span id="cb22-186"><a href="#cb22-186" aria-hidden="true" tabindex="-1"></a>            X_train_fold,</span>
+<span id="cb22-187"><a href="#cb22-187" aria-hidden="true" tabindex="-1"></a>            y_train_fold,</span>
+<span id="cb22-188"><a href="#cb22-188" aria-hidden="true" tabindex="-1"></a>            cat_features<span class="op">=</span>categorical_features,</span>
+<span id="cb22-189"><a href="#cb22-189" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb22-190"><a href="#cb22-190" aria-hidden="true" tabindex="-1"></a>        catboost_valid <span class="op">=</span> catboost.Pool(</span>
+<span id="cb22-191"><a href="#cb22-191" aria-hidden="true" tabindex="-1"></a>            X_val_fold,</span>
+<span id="cb22-192"><a href="#cb22-192" aria-hidden="true" tabindex="-1"></a>            y_val_fold,</span>
+<span id="cb22-193"><a href="#cb22-193" aria-hidden="true" tabindex="-1"></a>            cat_features<span class="op">=</span>categorical_features,</span>
+<span id="cb22-194"><a href="#cb22-194" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb22-195"><a href="#cb22-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-196"><a href="#cb22-196" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Initialize and train the CatBoost model</span></span>
+<span id="cb22-197"><a href="#cb22-197" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> catboost.CatBoostRegressor(<span class="op">**</span>catboost_params)</span>
+<span id="cb22-198"><a href="#cb22-198" aria-hidden="true" tabindex="-1"></a>        model.fit(</span>
+<span id="cb22-199"><a href="#cb22-199" aria-hidden="true" tabindex="-1"></a>            catboost_train,</span>
+<span id="cb22-200"><a href="#cb22-200" aria-hidden="true" tabindex="-1"></a>            eval_set<span class="op">=</span>[catboost_valid],</span>
+<span id="cb22-201"><a href="#cb22-201" aria-hidden="true" tabindex="-1"></a>            early_stopping_rounds<span class="op">=</span>utils.Configuration.early_stopping_round,</span>
+<span id="cb22-202"><a href="#cb22-202" aria-hidden="true" tabindex="-1"></a>            verbose<span class="op">=</span>utils.Configuration.verbose,</span>
+<span id="cb22-203"><a href="#cb22-203" aria-hidden="true" tabindex="-1"></a>            use_best_model<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb22-204"><a href="#cb22-204" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb22-205"><a href="#cb22-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-206"><a href="#cb22-206" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate OOF validation predictions</span></span>
+<span id="cb22-207"><a href="#cb22-207" aria-hidden="true" tabindex="-1"></a>        valid_pred <span class="op">=</span> model.predict(X_val_fold)</span>
+<span id="cb22-208"><a href="#cb22-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-209"><a href="#cb22-209" aria-hidden="true" tabindex="-1"></a>        RMSE_score <span class="op">=</span> metrics.mean_squared_error(y_val_fold, valid_pred, squared<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb22-210"><a href="#cb22-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-211"><a href="#cb22-211" aria-hidden="true" tabindex="-1"></a>        <span class="kw">del</span> (</span>
+<span id="cb22-212"><a href="#cb22-212" aria-hidden="true" tabindex="-1"></a>            X_train_fold,</span>
+<span id="cb22-213"><a href="#cb22-213" aria-hidden="true" tabindex="-1"></a>            y_train_fold,</span>
+<span id="cb22-214"><a href="#cb22-214" aria-hidden="true" tabindex="-1"></a>            X_val_fold,</span>
+<span id="cb22-215"><a href="#cb22-215" aria-hidden="true" tabindex="-1"></a>            y_val_fold,</span>
+<span id="cb22-216"><a href="#cb22-216" aria-hidden="true" tabindex="-1"></a>            catboost_train,</span>
+<span id="cb22-217"><a href="#cb22-217" aria-hidden="true" tabindex="-1"></a>            catboost_valid,</span>
+<span id="cb22-218"><a href="#cb22-218" aria-hidden="true" tabindex="-1"></a>            model,</span>
+<span id="cb22-219"><a href="#cb22-219" aria-hidden="true" tabindex="-1"></a>            valid_pred,</span>
+<span id="cb22-220"><a href="#cb22-220" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb22-221"><a href="#cb22-221" aria-hidden="true" tabindex="-1"></a>        gc.collect()</span>
+<span id="cb22-222"><a href="#cb22-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-223"><a href="#cb22-223" aria-hidden="true" tabindex="-1"></a>        results.append(RMSE_score)</span>
+<span id="cb22-224"><a href="#cb22-224" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.mean(results)</span>
+<span id="cb22-225"><a href="#cb22-225" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-226"><a href="#cb22-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-227"><a href="#cb22-227" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb22-228"><a href="#cb22-228" aria-hidden="true" tabindex="-1"></a>Similar to Part 6, the hyperparameter optimization step was pre-computed due to the significant computational time needed. The results were saved rather than executed during notebook rendering to save time. However, note that the outcomes should remain unchanged.</span>
+<span id="cb22-229"><a href="#cb22-229" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb22-230"><a href="#cb22-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-233"><a href="#cb22-233" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-234"><a href="#cb22-234" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>script echo skipping</span>
+<span id="cb22-235"><a href="#cb22-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-236"><a href="#cb22-236" aria-hidden="true" tabindex="-1"></a>study <span class="op">=</span> optuna.create_study(direction<span class="op">=</span><span class="st">"minimize"</span>)</span>
+<span id="cb22-237"><a href="#cb22-237" aria-hidden="true" tabindex="-1"></a>study.optimize(train_model.Optuna_Objective(X_train, y_train), n_trials<span class="op">=</span><span class="dv">100</span>, show_progress_bar<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb22-238"><a href="#cb22-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-239"><a href="#cb22-239" aria-hidden="true" tabindex="-1"></a>dumper(study.best_params, <span class="st">"CatBoost_params"</span>)</span>
+<span id="cb22-240"><a href="#cb22-240" aria-hidden="true" tabindex="-1"></a>dumper(study.best_value, <span class="st">"CatBoost_value"</span>)</span>
+<span id="cb22-241"><a href="#cb22-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-242"><a href="#cb22-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-243"><a href="#cb22-243" aria-hidden="true" tabindex="-1"></a>As shown below, Optuna found the best Out-Of-Fold (OOF) score using the selected parameters, which is 0.1060. Recall that in Part 6, our best OOF score was 0.1070, so this represents a modest improvement, albeit a slight one.</span>
+<span id="cb22-244"><a href="#cb22-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-247"><a href="#cb22-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-248"><a href="#cb22-248" aria-hidden="true" tabindex="-1"></a>catboost_params_optuna <span class="op">=</span> pd.read_pickle(<span class="st">"CatBoost_params.pickle"</span>)</span>
+<span id="cb22-249"><a href="#cb22-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-250"><a href="#cb22-250" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(</span>
+<span id="cb22-251"><a href="#cb22-251" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f'The best OOF RMSE score of the hyperparameter tuning is </span><span class="sc">{</span>pd<span class="sc">.</span>read_pickle(<span class="st">"CatBoost_value.pickle"</span>)<span class="sc">:.4f}</span><span class="ss">.'</span></span>
+<span id="cb22-252"><a href="#cb22-252" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-253"><a href="#cb22-253" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The corresponding values: </span><span class="sc">{</span>catboost_params_optuna<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb22-254"><a href="#cb22-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-255"><a href="#cb22-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-256"><a href="#cb22-256" aria-hidden="true" tabindex="-1"></a><span class="fu"># Retrain using the best parameters and predict</span></span>
+<span id="cb22-257"><a href="#cb22-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-258"><a href="#cb22-258" aria-hidden="true" tabindex="-1"></a>After obtaining the most optimal parameters, we can proceed to retrain our model using the entire dataset, excluding the test portion, of course. For this we can use the <span class="in">`train_catboost`</span> as seen below.</span>
+<span id="cb22-259"><a href="#cb22-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-262"><a href="#cb22-262" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-263"><a href="#cb22-263" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train_catboost(</span>
+<span id="cb22-264"><a href="#cb22-264" aria-hidden="true" tabindex="-1"></a>    X: pd.DataFrame, y: pd.Series, catboost_params: <span class="bu">dict</span></span>
+<span id="cb22-265"><a href="#cb22-265" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> catboost.CatBoostRegressor:</span>
+<span id="cb22-266"><a href="#cb22-266" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb22-267"><a href="#cb22-267" aria-hidden="true" tabindex="-1"></a><span class="co">    Train a CatBoostRegressor model using the provided data and parameters.</span></span>
+<span id="cb22-268"><a href="#cb22-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-269"><a href="#cb22-269" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
+<span id="cb22-270"><a href="#cb22-270" aria-hidden="true" tabindex="-1"></a><span class="co">        X (pd.DataFrame): The feature dataset.</span></span>
+<span id="cb22-271"><a href="#cb22-271" aria-hidden="true" tabindex="-1"></a><span class="co">        y (pd.Series): The target variable.</span></span>
+<span id="cb22-272"><a href="#cb22-272" aria-hidden="true" tabindex="-1"></a><span class="co">        catboost_params (dict): CatBoost hyperparameters.</span></span>
+<span id="cb22-273"><a href="#cb22-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-274"><a href="#cb22-274" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb22-275"><a href="#cb22-275" aria-hidden="true" tabindex="-1"></a><span class="co">        CatBoostRegressor: The trained CatBoost model.</span></span>
+<span id="cb22-276"><a href="#cb22-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-277"><a href="#cb22-277" aria-hidden="true" tabindex="-1"></a><span class="co">    This function takes the feature dataset `X`, the target variable `y`, and a dictionary of CatBoost</span></span>
+<span id="cb22-278"><a href="#cb22-278" aria-hidden="true" tabindex="-1"></a><span class="co">    hyperparameters. It automatically detects categorical features in the dataset and trains a CatBoostRegressor</span></span>
+<span id="cb22-279"><a href="#cb22-279" aria-hidden="true" tabindex="-1"></a><span class="co">    model with the specified parameters.</span></span>
+<span id="cb22-280"><a href="#cb22-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-281"><a href="#cb22-281" aria-hidden="true" tabindex="-1"></a><span class="co">    Example:</span></span>
+<span id="cb22-282"><a href="#cb22-282" aria-hidden="true" tabindex="-1"></a><span class="co">        X, y = load_data()</span></span>
+<span id="cb22-283"><a href="#cb22-283" aria-hidden="true" tabindex="-1"></a><span class="co">        catboost_params = {</span></span>
+<span id="cb22-284"><a href="#cb22-284" aria-hidden="true" tabindex="-1"></a><span class="co">            'iterations': 1000,</span></span>
+<span id="cb22-285"><a href="#cb22-285" aria-hidden="true" tabindex="-1"></a><span class="co">            'learning_rate': 0.1,</span></span>
+<span id="cb22-286"><a href="#cb22-286" aria-hidden="true" tabindex="-1"></a><span class="co">            'depth': 6,</span></span>
+<span id="cb22-287"><a href="#cb22-287" aria-hidden="true" tabindex="-1"></a><span class="co">            # ... other hyperparameters ...</span></span>
+<span id="cb22-288"><a href="#cb22-288" aria-hidden="true" tabindex="-1"></a><span class="co">        }</span></span>
+<span id="cb22-289"><a href="#cb22-289" aria-hidden="true" tabindex="-1"></a><span class="co">        model = train_catboost(X, y, catboost_params)</span></span>
+<span id="cb22-290"><a href="#cb22-290" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb22-291"><a href="#cb22-291" aria-hidden="true" tabindex="-1"></a>    categorical_features <span class="op">=</span> X.select_dtypes(<span class="st">"object"</span>).columns.to_list()</span>
+<span id="cb22-292"><a href="#cb22-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-293"><a href="#cb22-293" aria-hidden="true" tabindex="-1"></a>    catboost_train <span class="op">=</span> catboost.Pool(</span>
+<span id="cb22-294"><a href="#cb22-294" aria-hidden="true" tabindex="-1"></a>        X,</span>
+<span id="cb22-295"><a href="#cb22-295" aria-hidden="true" tabindex="-1"></a>        y,</span>
+<span id="cb22-296"><a href="#cb22-296" aria-hidden="true" tabindex="-1"></a>        cat_features<span class="op">=</span>categorical_features,</span>
+<span id="cb22-297"><a href="#cb22-297" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-298"><a href="#cb22-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-299"><a href="#cb22-299" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> catboost.CatBoostRegressor(<span class="op">**</span>catboost_params)</span>
+<span id="cb22-300"><a href="#cb22-300" aria-hidden="true" tabindex="-1"></a>    model.fit(</span>
+<span id="cb22-301"><a href="#cb22-301" aria-hidden="true" tabindex="-1"></a>        catboost_train,</span>
+<span id="cb22-302"><a href="#cb22-302" aria-hidden="true" tabindex="-1"></a>        verbose<span class="op">=</span>utils.Configuration.verbose,</span>
+<span id="cb22-303"><a href="#cb22-303" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-304"><a href="#cb22-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-305"><a href="#cb22-305" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> model</span>
+<span id="cb22-306"><a href="#cb22-306" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-307"><a href="#cb22-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-310"><a href="#cb22-310" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-311"><a href="#cb22-311" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> train_model.train_catboost(X_train, y_train, catboost_params_optuna)</span>
+<span id="cb22-312"><a href="#cb22-312" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-313"><a href="#cb22-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-314"><a href="#cb22-314" aria-hidden="true" tabindex="-1"></a>Excellent! We've made good progress. Now, it's time for the final evaluation of our dataset using the test set. We can use the <span class="in">`predict_catboost`</span> function for this.</span>
+<span id="cb22-315"><a href="#cb22-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-318"><a href="#cb22-318" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-319"><a href="#cb22-319" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict_catboost(</span>
+<span id="cb22-320"><a href="#cb22-320" aria-hidden="true" tabindex="-1"></a>    model: catboost.CatBoostRegressor,</span>
+<span id="cb22-321"><a href="#cb22-321" aria-hidden="true" tabindex="-1"></a>    X: pd.DataFrame,</span>
+<span id="cb22-322"><a href="#cb22-322" aria-hidden="true" tabindex="-1"></a>    thread_count: <span class="bu">int</span> <span class="op">=</span> <span class="op">-</span><span class="dv">1</span>,</span>
+<span id="cb22-323"><a href="#cb22-323" aria-hidden="true" tabindex="-1"></a>    verbose: <span class="bu">int</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb22-324"><a href="#cb22-324" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb22-325"><a href="#cb22-325" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb22-326"><a href="#cb22-326" aria-hidden="true" tabindex="-1"></a><span class="co">    Make predictions using a CatBoost model on the provided dataset.</span></span>
+<span id="cb22-327"><a href="#cb22-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-328"><a href="#cb22-328" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
+<span id="cb22-329"><a href="#cb22-329" aria-hidden="true" tabindex="-1"></a><span class="co">        model (catboost.CatBoostRegressor): The trained CatBoost model.</span></span>
+<span id="cb22-330"><a href="#cb22-330" aria-hidden="true" tabindex="-1"></a><span class="co">        X (pd.DataFrame): The dataset for which predictions are to be made.</span></span>
+<span id="cb22-331"><a href="#cb22-331" aria-hidden="true" tabindex="-1"></a><span class="co">        thread_count (int, optional): The number of threads for prediction. Default is -1 (auto).</span></span>
+<span id="cb22-332"><a href="#cb22-332" aria-hidden="true" tabindex="-1"></a><span class="co">        verbose (int, optional): Verbosity level. Default is None.</span></span>
+<span id="cb22-333"><a href="#cb22-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-334"><a href="#cb22-334" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb22-335"><a href="#cb22-335" aria-hidden="true" tabindex="-1"></a><span class="co">        np.ndarray: Predicted values.</span></span>
+<span id="cb22-336"><a href="#cb22-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-337"><a href="#cb22-337" aria-hidden="true" tabindex="-1"></a><span class="co">    This function takes a trained CatBoost model, a dataset `X`, and optional parameters for</span></span>
+<span id="cb22-338"><a href="#cb22-338" aria-hidden="true" tabindex="-1"></a><span class="co">    specifying the number of threads (`thread_count`) and verbosity (`verbose`) during prediction.</span></span>
+<span id="cb22-339"><a href="#cb22-339" aria-hidden="true" tabindex="-1"></a><span class="co">    It returns an array of predicted values.</span></span>
+<span id="cb22-340"><a href="#cb22-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-341"><a href="#cb22-341" aria-hidden="true" tabindex="-1"></a><span class="co">    Example:</span></span>
+<span id="cb22-342"><a href="#cb22-342" aria-hidden="true" tabindex="-1"></a><span class="co">        model = load_catboost_model()</span></span>
+<span id="cb22-343"><a href="#cb22-343" aria-hidden="true" tabindex="-1"></a><span class="co">        X_new = load_new_data()</span></span>
+<span id="cb22-344"><a href="#cb22-344" aria-hidden="true" tabindex="-1"></a><span class="co">        predictions = predict_catboost(model, X_new, thread_count=4, verbose=2)</span></span>
+<span id="cb22-345"><a href="#cb22-345" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb22-346"><a href="#cb22-346" aria-hidden="true" tabindex="-1"></a>    prediction <span class="op">=</span> model.predict(data<span class="op">=</span>X, thread_count<span class="op">=</span>thread_count, verbose<span class="op">=</span>verbose)</span>
+<span id="cb22-347"><a href="#cb22-347" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> prediction</span>
+<span id="cb22-348"><a href="#cb22-348" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-349"><a href="#cb22-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-350"><a href="#cb22-350" aria-hidden="true" tabindex="-1"></a>To assess the predictions, we'll obtain both RMSE and R2 values.</span>
+<span id="cb22-351"><a href="#cb22-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-354"><a href="#cb22-354" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-355"><a href="#cb22-355" aria-hidden="true" tabindex="-1"></a>prediction <span class="op">=</span> predict_model.predict_catboost(model<span class="op">=</span>model, X<span class="op">=</span>X_test)</span>
+<span id="cb22-356"><a href="#cb22-356" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-357"><a href="#cb22-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-360"><a href="#cb22-360" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-361"><a href="#cb22-361" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> score_prediction(y_true, y_pred):</span>
+<span id="cb22-362"><a href="#cb22-362" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb22-363"><a href="#cb22-363" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculate regression evaluation metrics based on</span></span>
+<span id="cb22-364"><a href="#cb22-364" aria-hidden="true" tabindex="-1"></a><span class="co">    true and predicted values.</span></span>
+<span id="cb22-365"><a href="#cb22-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-366"><a href="#cb22-366" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
+<span id="cb22-367"><a href="#cb22-367" aria-hidden="true" tabindex="-1"></a><span class="co">        y_true (array-like): True target values.</span></span>
+<span id="cb22-368"><a href="#cb22-368" aria-hidden="true" tabindex="-1"></a><span class="co">        y_pred (array-like): Predicted values.</span></span>
+<span id="cb22-369"><a href="#cb22-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-370"><a href="#cb22-370" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb22-371"><a href="#cb22-371" aria-hidden="true" tabindex="-1"></a><span class="co">        tuple: A tuple containing Root Mean Squared Error (RMSE)</span></span>
+<span id="cb22-372"><a href="#cb22-372" aria-hidden="true" tabindex="-1"></a><span class="co">        and R-squared (R2).</span></span>
+<span id="cb22-373"><a href="#cb22-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-374"><a href="#cb22-374" aria-hidden="true" tabindex="-1"></a><span class="co">    This function calculates RMSE and R2 to evaluate the goodness</span></span>
+<span id="cb22-375"><a href="#cb22-375" aria-hidden="true" tabindex="-1"></a><span class="co">    of fit between the true target values and predicted values.</span></span>
+<span id="cb22-376"><a href="#cb22-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-377"><a href="#cb22-377" aria-hidden="true" tabindex="-1"></a><span class="co">    Example:</span></span>
+<span id="cb22-378"><a href="#cb22-378" aria-hidden="true" tabindex="-1"></a><span class="co">        y_true = [3, 5, 7, 9]</span></span>
+<span id="cb22-379"><a href="#cb22-379" aria-hidden="true" tabindex="-1"></a><span class="co">        y_pred = [2.8, 5.2, 7.1, 9.3]</span></span>
+<span id="cb22-380"><a href="#cb22-380" aria-hidden="true" tabindex="-1"></a><span class="co">        rmse, r2 = score_prediction(y_true, y_pred)</span></span>
+<span id="cb22-381"><a href="#cb22-381" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb22-382"><a href="#cb22-382" aria-hidden="true" tabindex="-1"></a>    RMSE <span class="op">=</span> np.sqrt(metrics.mean_squared_error(y_true, np.log10(y_pred)))</span>
+<span id="cb22-383"><a href="#cb22-383" aria-hidden="true" tabindex="-1"></a>    R2 <span class="op">=</span> metrics.r2_score(y_true, y_pred)</span>
+<span id="cb22-384"><a href="#cb22-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-385"><a href="#cb22-385" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> RMSE, R2</span>
+<span id="cb22-386"><a href="#cb22-386" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-387"><a href="#cb22-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-388"><a href="#cb22-388" aria-hidden="true" tabindex="-1"></a>Superb! As you can see, the test set has an RMSE of 0.1101 and an R2 of 0.877. It's worth noting that the test set's RMSE is slightly higher than that of the training set, which is expected and suggests overfitting. Despite our efforts to prevent overfitting, it can be challenging to eliminate entirely. Nevertheless, it appears that we've done well.</span>
+<span id="cb22-389"><a href="#cb22-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-392"><a href="#cb22-392" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-393"><a href="#cb22-393" aria-hidden="true" tabindex="-1"></a>predict_model.score_prediction(y_pred<span class="op">=</span>prediction, y_true<span class="op">=</span>y_test)</span>
+<span id="cb22-394"><a href="#cb22-394" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-395"><a href="#cb22-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-396"><a href="#cb22-396" aria-hidden="true" tabindex="-1"></a>Let's put the original values and prediction in a DataFrame so that we can evaluate them visually as well.</span>
+<span id="cb22-397"><a href="#cb22-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-400"><a href="#cb22-400" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-401"><a href="#cb22-401" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> (</span>
+<span id="cb22-402"><a href="#cb22-402" aria-hidden="true" tabindex="-1"></a>    pd.concat(</span>
+<span id="cb22-403"><a href="#cb22-403" aria-hidden="true" tabindex="-1"></a>        [y_test.reset_index(drop<span class="op">=</span><span class="va">True</span>), pd.Series(prediction)], axis<span class="op">=</span><span class="st">"columns"</span></span>
+<span id="cb22-404"><a href="#cb22-404" aria-hidden="true" tabindex="-1"></a>    ).rename(columns<span class="op">=</span>{<span class="st">"price"</span>: <span class="st">"original_values"</span>, <span class="dv">0</span>: <span class="st">"predicted_values"</span>})</span>
+<span id="cb22-405"><a href="#cb22-405" aria-hidden="true" tabindex="-1"></a>    <span class="co"># .apply(lambda x: 10**x)</span></span>
+<span id="cb22-406"><a href="#cb22-406" aria-hidden="true" tabindex="-1"></a>    .assign(residuals<span class="op">=</span><span class="kw">lambda</span> df: df.original_values <span class="op">-</span> df.predicted_values)</span>
+<span id="cb22-407"><a href="#cb22-407" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-408"><a href="#cb22-408" aria-hidden="true" tabindex="-1"></a>results</span>
+<span id="cb22-409"><a href="#cb22-409" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-410"><a href="#cb22-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-411"><a href="#cb22-411" aria-hidden="true" tabindex="-1"></a>As depicted below, our model demonstrates the ability to generalize effectively for unseen data, showcasing high R2 values and low RMSE. Additionally, examining the residuals reveals an even distribution, symbolizing robust model performance.</span>
+<span id="cb22-412"><a href="#cb22-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-415"><a href="#cb22-415" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-416"><a href="#cb22-416" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Contrasting Predicted House Prices with Actual House Prices</span></span>
+<span id="cb22-417"><a href="#cb22-417" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-fig1</span></span>
+<span id="cb22-418"><a href="#cb22-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-419"><a href="#cb22-419" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb22-420"><a href="#cb22-420" aria-hidden="true" tabindex="-1"></a>    results.pipe(</span>
+<span id="cb22-421"><a href="#cb22-421" aria-hidden="true" tabindex="-1"></a>        <span class="kw">lambda</span> df: ggplot(df, aes(<span class="st">"original_values"</span>, <span class="st">"predicted_values"</span>))</span>
+<span id="cb22-422"><a href="#cb22-422" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_point()</span>
+<span id="cb22-423"><a href="#cb22-423" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_smooth()</span>
+<span id="cb22-424"><a href="#cb22-424" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_text(</span>
+<span id="cb22-425"><a href="#cb22-425" aria-hidden="true" tabindex="-1"></a>            x<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb22-426"><a href="#cb22-426" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span><span class="fl">6.6</span>,</span>
+<span id="cb22-427"><a href="#cb22-427" aria-hidden="true" tabindex="-1"></a>            label<span class="op">=</span><span class="ss">f"RMSE = </span><span class="sc">{</span>predict_model<span class="sc">.</span>score_prediction(y_pred<span class="op">=</span>prediction, y_true<span class="op">=</span>y_test)[<span class="dv">0</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb22-428"><a href="#cb22-428" aria-hidden="true" tabindex="-1"></a>            fontface<span class="op">=</span><span class="st">"bold"</span>,</span>
+<span id="cb22-429"><a href="#cb22-429" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb22-430"><a href="#cb22-430" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_text(</span>
+<span id="cb22-431"><a href="#cb22-431" aria-hidden="true" tabindex="-1"></a>            x<span class="op">=</span><span class="fl">4.965</span>,</span>
+<span id="cb22-432"><a href="#cb22-432" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span><span class="fl">6.5</span>,</span>
+<span id="cb22-433"><a href="#cb22-433" aria-hidden="true" tabindex="-1"></a>            label<span class="op">=</span><span class="ss">f"R2 = </span><span class="sc">{</span>predict_model<span class="sc">.</span>score_prediction(y_pred<span class="op">=</span>prediction, y_true<span class="op">=</span>y_test)[<span class="dv">1</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb22-434"><a href="#cb22-434" aria-hidden="true" tabindex="-1"></a>            fontface<span class="op">=</span><span class="st">"bold"</span>,</span>
+<span id="cb22-435"><a href="#cb22-435" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb22-436"><a href="#cb22-436" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> labs(</span>
+<span id="cb22-437"><a href="#cb22-437" aria-hidden="true" tabindex="-1"></a>            title<span class="op">=</span><span class="st">"Contrasting Predicted House Prices with Actual House Prices"</span>,</span>
+<span id="cb22-438"><a href="#cb22-438" aria-hidden="true" tabindex="-1"></a>            subtitle<span class="op">=</span><span class="st">""" The plot suggests that the model makes accurate predictions on the test data. This is evident from the low RMSE values, </span></span>
+<span id="cb22-439"><a href="#cb22-439" aria-hidden="true" tabindex="-1"></a><span class="st">            signifying a high level of accuracy. Additionally, the high R2 value indicates that the model effectively accounts for a </span></span>
+<span id="cb22-440"><a href="#cb22-440" aria-hidden="true" tabindex="-1"></a><span class="st">            substantial portion of the data's variance, demonstrating a strong alignment between the model's predictions and the actual data.</span></span>
+<span id="cb22-441"><a href="#cb22-441" aria-hidden="true" tabindex="-1"></a><span class="st">            """</span>,</span>
+<span id="cb22-442"><a href="#cb22-442" aria-hidden="true" tabindex="-1"></a>            x<span class="op">=</span><span class="st">"log10 True Prices (EUR)"</span>,</span>
+<span id="cb22-443"><a href="#cb22-443" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span><span class="st">"log10 Predicted Prices (EUR)"</span>,</span>
+<span id="cb22-444"><a href="#cb22-444" aria-hidden="true" tabindex="-1"></a>            caption<span class="op">=</span><span class="st">"https://www.immoweb.be/"</span>,</span>
+<span id="cb22-445"><a href="#cb22-445" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb22-446"><a href="#cb22-446" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> theme(</span>
+<span id="cb22-447"><a href="#cb22-447" aria-hidden="true" tabindex="-1"></a>            plot_subtitle<span class="op">=</span>element_text(</span>
+<span id="cb22-448"><a href="#cb22-448" aria-hidden="true" tabindex="-1"></a>                size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">"italic"</span></span>
+<span id="cb22-449"><a href="#cb22-449" aria-hidden="true" tabindex="-1"></a>            ),  <span class="co"># Customize subtitle appearance</span></span>
+<span id="cb22-450"><a href="#cb22-450" aria-hidden="true" tabindex="-1"></a>            plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">15</span>, face<span class="op">=</span><span class="st">"bold"</span>),  <span class="co"># Customize title appearance</span></span>
+<span id="cb22-451"><a href="#cb22-451" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb22-452"><a href="#cb22-452" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">600</span>)</span>
+<span id="cb22-453"><a href="#cb22-453" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-454"><a href="#cb22-454" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-455"><a href="#cb22-455" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-456"><a href="#cb22-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-459"><a href="#cb22-459" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb22-460"><a href="#cb22-460" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Assessing the Residuals from the Catboost Model</span></span>
+<span id="cb22-461"><a href="#cb22-461" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-fig2</span></span>
+<span id="cb22-462"><a href="#cb22-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-463"><a href="#cb22-463" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb22-464"><a href="#cb22-464" aria-hidden="true" tabindex="-1"></a>    results.pipe(<span class="kw">lambda</span> df: ggplot(df, aes(<span class="st">"residuals"</span>)) <span class="op">+</span> geom_histogram(stat<span class="op">=</span><span class="st">"bin"</span>))</span>
+<span id="cb22-465"><a href="#cb22-465" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> labs(</span>
+<span id="cb22-466"><a href="#cb22-466" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="st">"Assessing the Residuals from the Catboost Model"</span>,</span>
+<span id="cb22-467"><a href="#cb22-467" aria-hidden="true" tabindex="-1"></a>        subtitle<span class="op">=</span><span class="st">""" Normally distributed residuals imply consistent and accurate model predictions, aligning with statistical assumptions.</span></span>
+<span id="cb22-468"><a href="#cb22-468" aria-hidden="true" tabindex="-1"></a><span class="st">            """</span>,</span>
+<span id="cb22-469"><a href="#cb22-469" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="st">"Distribution of Residuals"</span>,</span>
+<span id="cb22-470"><a href="#cb22-470" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span><span class="st">""</span>,</span>
+<span id="cb22-471"><a href="#cb22-471" aria-hidden="true" tabindex="-1"></a>        caption<span class="op">=</span><span class="st">"https://www.immoweb.be/"</span>,</span>
+<span id="cb22-472"><a href="#cb22-472" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-473"><a href="#cb22-473" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> theme(</span>
+<span id="cb22-474"><a href="#cb22-474" aria-hidden="true" tabindex="-1"></a>        plot_subtitle<span class="op">=</span>element_text(</span>
+<span id="cb22-475"><a href="#cb22-475" aria-hidden="true" tabindex="-1"></a>            size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">"italic"</span></span>
+<span id="cb22-476"><a href="#cb22-476" aria-hidden="true" tabindex="-1"></a>        ),  <span class="co"># Customize subtitle appearance</span></span>
+<span id="cb22-477"><a href="#cb22-477" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">15</span>, face<span class="op">=</span><span class="st">"bold"</span>),  <span class="co"># Customize title appearance</span></span>
+<span id="cb22-478"><a href="#cb22-478" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-479"><a href="#cb22-479" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">600</span>)</span>
+<span id="cb22-480"><a href="#cb22-480" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-481"><a href="#cb22-481" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-482"><a href="#cb22-482" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-483"><a href="#cb22-483" aria-hidden="true" tabindex="-1"></a>And there you have it! We reached the end of these series! 🥳🎆🎉🍾🍻🕺 </span>
+<span id="cb22-484"><a href="#cb22-484" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-485"><a href="#cb22-485" aria-hidden="true" tabindex="-1"></a>Over these seven articles, we've shown how to build a reliable, high-performing machine learning model for real-time house price prediction. While there's always room for improvement, like exploring geolocation-based feature engineering, blending, and stacking, our aim was to provide a comprehensive guide from start to finish. We hope you've enjoyed this journey and gained inspiration and insights for your own projects.  </span>
+<span id="cb22-486"><a href="#cb22-486" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-487"><a href="#cb22-487" aria-hidden="true" tabindex="-1"></a>Until next time! 💻🐍🐼</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
