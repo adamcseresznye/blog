@@ -57,12 +57,13 @@ Up to this point, we've successfully obtained all the house advertisements from 
 
 # Prepare dataframe before modelling
 
-Let's get our data ready for modeling by applying the "prepare_data_for_modelling" function as detailed in Part 6. A quick recap: this function carries out the subsequent actions to prepare a DataFrame for machine learning:
+Let's get our data ready for modeling by applying the `prepare_data_for_modelling` function as detailed in Part 6. A quick recap: this function carries out the subsequent actions to prepare a DataFrame for machine learning:  
+
 1. It randomly shuffles the DataFrame's rows.
 2. The 'price' column is transformed into the base 10 logarithm.
 3. Categorical variable missing values are replaced with 'missing value.'
 4. It divides the data into features (X) and the target (y).
-5. Using LocalOutlierFactor, it identifies and removes outlier values.rFactor.
+5. Using `LocalOutlierFactor`, it identifies and removes outlier values.
 
 ```{python}
 df = pd.read_parquet(
