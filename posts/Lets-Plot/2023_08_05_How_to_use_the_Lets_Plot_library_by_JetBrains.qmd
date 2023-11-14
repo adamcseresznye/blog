@@ -13,6 +13,11 @@ format:
     code-tools: true
 ---
 
+#| label: JetBrains logo
+#| fig-cap: "fig1"
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/0/08/JetBrains_beam_logo.svg/1200px-JetBrains_beam_logo.svg.png){fig-align="center" width=50%}
+
 When I embarked on my data science journey,  due to my academics background I quickly gravitated towards the [R programming language](https://www.r-project.org/). Like many R novices, I began with Hadley Wickham's [R for Data Science](https://r4ds.hadley.nz/) book which introduced me to the wonderful [ggplot2](https://ggplot2.tidyverse.org/) library. As my interest in machine learning grew, I made the switch to Python. Nowadays, for most of my data plotting needs, I rely mainly on [matplotlib](https://matplotlib.org/) or [seaborn](https://seaborn.pydata.org/). Though I love these libraries, their multiple ways of accomplishing the same tasks can be a bit cumbersome and challenging to learn at first.
 
 That's why in this article, I'm excited to introduce you to the [Lets-Plot](https://lets-plot.org/index.html#) library by JetBrains. It is the closest you can get to ggplot's syntax while using Python. While some traditional Python users might find the syntax a bit unfamiliar initially, I'm here to make a case for this fantastic library and hopefully inspire you to incorporate it into your day-to-day data science activities.
