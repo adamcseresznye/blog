@@ -1,7 +1,7 @@
 ---
 title: Streamlining Data Wrangling with the CP-Seeker Post-Processing App
 author: Adam Cseresznye
-date: '2023-13-11'
+date: '2023-11-13'
 categories:
   - CP-Seeker Post-Processing App
 jupyter: python3
