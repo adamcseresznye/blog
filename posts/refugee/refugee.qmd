@@ -12,7 +12,7 @@ format:
     code-tools: true
 ---
 
-![Paolo Bernasconi – Refugiarte 2018](https://www.unhcr.org/refugiarte/wp-content/uploads/sites/113/2020/11/Pablo_Bernasconi_001.jpg){fig-align="center" width=50%}
+![Teowodros Hagos](https://assets.nst.com.my/images/articles/vibes061220lucienrefugeeb_1607218243.jpg){fig-align="center" width=50%}
 
 Welcome to our blog dedicated to [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-08-22). This week, we venture into the sobering realm of refugee statistics using the [{refugees}](https://cran.r-project.org/web/packages/refugees/index.html) R package. This tool grants access to the United Nations High Commissioner for Refugees (UNHCR) Refugee Data Finder, providing critical insights into forcibly displaced populations spanning over seven decades. With data from UNHCR, UNRWA, and the Internal Displacement Monitoring Centre, we'll explore a subset of this information, focusing on population statistics from 2010 to 2022. 
 
