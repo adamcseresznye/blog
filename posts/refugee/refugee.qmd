@@ -4,12 +4,12 @@ author: Adam Cseresznye
 date: '2023-08-22'
 categories:
   - Tidy Tuesday
-jupyter: python3
 toc: true
 format:
   html:
     code-fold: true
     code-tools: true
+jupyter: python3
 ---
 
 ![Teowodros Hagos](https://assets.nst.com.my/images/articles/vibes061220lucienrefugeeb_1607218243.jpg){fig-align="center" width=50%}
