@@ -22,11 +22,11 @@ Unlike conventional methods, DeepLCMS streamlines the data processing pipeline, 
 We believe that applying cutting-edge CNN-based technologies, such as DeepLCMS, for non-discriminatory mass spectrometry analysis has the potential to significantly enhance the field of mass spectrometry analysis, enabling faster, more streamlined, and more informative data interpretation, particularly in domains that demand high-throughput and rapid decision-making processes. Its capacity to directly classify pseudo-images without extensive preprocessing could unlock a wealth of opportunities for researchers and clinicians alike.
 
 ::: {.callout-note appearance="simple"}
-DeepLCMS is an open-source project, freely available on [GitHub](https://github.com/adamcseresznye/DeepLCMS), that aims to provide researchers with a reproducible code-template for leveraging deep learning for mass spectrometry data analysis. 
+DeepLCMS is an open-source project, freely available on [GitHub](https://github.com/adamcseresznye/DeepLCMS), that aims to provide researchers with a reproducible code-template for leveraging deep learning for mass spectrometry data analysis.
 
 In contrast to traditional methods that involve laborious steps like peak alignment, data annotation, and quantitation, DeepLCMS delivers results significantly faster by approaching LC/MS problems as a computer vision task. This novel approach uses a neuronal network to directly learn from the patterns inherent in the sample in an unbiased way without the need for manual intervention, accelerating the entire workflow.
 
-The study stands out from previous research by conducting a *comprehensive evaluation of diverse architecture families*, including cutting-edge architectures like vision transformers. Additionally, it employs *basic hyperparameter tuning* to optimize key parameters such as the optimizer and learning rate scheduler. Furthermore, it examines the *impact of image pretreatment* on validation metrics, exploring image sharpness and data augmentation techniques that mimic retention time shift. To enhance model generalization, this study takes advantage of *regularization techniques* like random-tilting images and random erasing during training. Finally, it also explores *model interpretability* by delving into the decision-making process of the pre-trained network, employing TorchVision for a comprehensive analysis.
+The study stands out from previous research by conducting a *comprehensive evaluation of diverse architecture families*, including cutting-edge architectures like vision transformers. Additionally, it employs *basic hyperparameter tuning* to optimize key parameters such as the optimizer and learning rate scheduler. Furthermore, it examines the *impact of image pretreatment* on validation metrics, exploring image sharpness and data augmentation techniques that mimic retention time shift. To enhance model generalization, this study takes advantage of *regularization techniques* like random-tilting images and random erasing during training. Finally, it also explores model interpretability by delving into the decision-making process of the pre-trained network, employing TorchVision for a comprehensive analysis.
 :::
 
 # Importing libraries
@@ -65,9 +65,9 @@ The use of pre-trained neural networks for mass spectrometry data analysis is re
 ::: {.callout-tip}
 ## Project Structure
 
-To accommodate the high computational demands of neural network training, the DeepLCMS project is divided into two main parts. The first part focuses on data preprocessing, specifically converting LC/MS data into pseudo-images using the PyOpenMS library, which is written in C++ and optimized for efficiency. This task can be handled on a CPU, and the corresponding source code is found in the `src/deeplcms_functions` directory.
+To accommodate the high computational demands of neural network training, the DeepLCMS project is divided into two main parts. The first part focuses on data preprocessing, specifically converting LC/MS data into pseudo-images using the PyOpenMS library, which is written in C++ and optimized for efficiency. This task can be handled on a CPU, and the corresponding source code is found in the `src/cpu_modules` directory.
 
-To effectively train the neural networks, the project utilizes the PyTorch Lightning framework, which facilitates the development of a well-structured, modular codebase. Training experiments are conducted within Jupyter Notebooks running on Google Colab, a cloud platform offering free access to GPUs. The training code and associated modules reside within the `src/train_google_colab` directory, seamlessly integrating with Google Colab for effortless module imports.
+To effectively train the neural networks, the project utilizes the PyTorch Lightning framework, which facilitates the development of a well-structured, modular codebase. Training experiments are conducted within Jupyter Notebooks running on Google Colab, a cloud platform offering free access to GPUs. The training code and associated modules reside within the `src/gpu_modules` directory, seamlessly integrating with Google Colab for effortless module imports.
 :::
 
 # Materials and Methods
@@ -154,8 +154,6 @@ for idx, img_path in zip(range(1, rows * cols + 1), img_paths):
     plt.axis(False)
 ```
 
-
-
 @fig-exp_3_experiment_result_1 illustrates, image sharpness in combination with image augmentation had a significant impact on the validation loss. Setting the bin size to 500 and subsequent augmentation resulted in the lowest validation loss (0.129) and the highest validation F1 (0.982). Based on these findings, less image sharpness and more training images, obtained through data augmentation prior to training, had a beneficial effect on the validation metrics. Taken together, the final training and fine-tuning is conducted on images with bin size set to 500 and subsequent augmentation applied resulting in the generation of nine extra samples per training image.
 
 ```{python}
@@ -171,7 +169,9 @@ Optuna, an open-source hyperparameter optimization framework, delivers an automa
 
 ## Evaluating the final model on the test set
 
-The final model training was conducted using the optimal settings determined during the optimization experiments, employing transfer learning of a pre-trained ConvNeXt large model, with all of its layers frozen except for the last classification head. The learning rate was automatically determined to be 0.006 based on the learning rate finder tool implemented by PyTorch Lightning. For the training, we utilized the augmented dataset (@fig-exp-5-transformed_grid) that featured bin size set to 500 for both dimensions. To prevent overfitting and promote better generalization capabilities, random erasing (probability=1.00) and color jitter (probability=0.25) were used. This technique effectively augments the training data, prompting the model to minimize its dependence on specific regions of the image thus preventing the model from memorizing limited patterns and encourages it to generalize better to unseen data. The underlying concept resembles a dropout layer, a common component of neural network architectures. The optimized model achieved validation metrics with **loss** of 0.138, **validation precision** of 0.963, **F1** 0.946, **validation accuracy** exceeding 0.944, and **validation recall** reaching 0.93.
+The final model training was conducted using the optimal settings determined during the optimization experiments, employing transfer learning of a pre-trained ConvNeXt large model, with all of its layers frozen except for the last classification head. The learning rate was automatically determined to be 0.006 based on the learning rate finder tool implemented by PyTorch Lightning. For the training, we utilized the augmented dataset (@fig-exp-5-transformed_grid) that featured bin size set to 500 for both dimensions. To prevent overfitting and promote better generalization capabilities, random erasing (probability=1.00) and color jitter (probability=0.25) were used. This technique effectively augments the training data, prompting the model to minimize its dependence on specific regions of the image thus preveting the model from memorizing limited patterns and encourages it to generalize better to unseen data. The underlying concept resembles a dropout layer, a common component of neural network architectures. The optimized model achieved validation metrics with **loss** of 0.138, **validation precision** of 0.963, **F1** 0.946, **validation accuracy** exceeding 0.944, and **validation recall** reaching 0.93.
+
+
 
 During training, we employed early stopping to prevent overfitting, terminating training if the validation loss fails to improve for 10 consecutive epochs. Additionally, we utilized PyTorch Lightning's built-in `ModelCheckpoint` to save the best-performing model, ensuring that the model that achieved the highest validation metrics was preserved and evaluated later on.
 
@@ -218,7 +218,10 @@ To leverage the untargeted metabolomics data, we can, for example, construct a f
 
 ```{python}
 def overlay_untargeted_data(
-    query_str : str, ms_dial_location: Path, background_image_location: Path, crop_area: Tuple[int, int, int, int]
+    query_str: str,
+    ms_dial_location: Path,
+    background_image_location: Path,
+    crop_area: Tuple[int, int, int, int],
 ):
     """
     Overlay untargeted metabolomics data on a background image.
