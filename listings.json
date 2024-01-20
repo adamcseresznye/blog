@@ -23,6 +23,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/Quantifyer/quantifyer.html",
       "/projects/DeepLCMS/DeepLCMS.html",
       "/projects/CP_Seeker_Post_Processing_App/CP_Seeker_Post_Processing_App.html",
       "/projects/Predicting Belgian Real Estate Prices_ Part 7_Fine_tuning/NB_7_ACs_Fine_tuning.html",
