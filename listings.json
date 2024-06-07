@@ -6,6 +6,7 @@
   {
     "listing": "/articles.html",
     "items": [
+      "/posts/speed_up_py/speed_up_py.html",
       "/posts/human_day/human_day.html",
       "/posts/labour_day/labour_day.html",
       "/posts/pandas_styler/pandas_style.html",
