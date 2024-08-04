@@ -1,8 +1,7 @@
 ---
+page-layout: full
 about:
   template: marquee
-  image-shape: rectangle
-  image-width: 12em
   links:
     - icon: twitter
       text: Twitter
@@ -13,46 +12,133 @@ about:
     - icon: github
       text: Github
       href: https://github.com/adamcseresznye
-
 ---
 
-<html>
-<head>
-  <style>
-    blockquote {
-      border-left: 4px solid #E5E4E2;
-      padding: 15px;
-      margin: 0;
-      font-size: 14px;
-    }
+<style>
+body {
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
 
-    blockquote p {
-      margin: 0;
-      line-height: 0.5;
-    }
+.content-block {
+  padding: 40px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  text-align: center;
+}
 
-    blockquote footer {
-      text-align: left;
-      margin-top: 10px;
-      font-style: italic;
-      font-size: 13px;
-    }
-  </style>
-</head>
-<body>
-  <blockquote>
-    <p>Now is better than never...</p>
-    <footer>— Tim Peters, <cite>The Zen of Python</cite></footer>
-  </blockquote>
-</body>
-</html>
+.section {
+  margin-bottom: 6em;
+  padding: 3em 0;
+  border-bottom: 1px solid #ddd;
+}
 
+.section:last-child {
+  border-bottom: none;
+}
 
-<h1 style="text-align: center;">Hi there! Welcome to my website! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/> </h1> 
+h1, h2 {
+  margin-bottom: 1.5em;
+}
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+}
 
-I am Adam, a PhD candidate at the University of Antwerp working in the field of *environmental toxicology*. If you're curious about my academic journey and accomplishments, feel free to explore [my scientific output](https://adamcseresznye.github.io/blog/scientific_output.html) for more information.
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; 
+    gap: 0.5em; 
+  }
+  .grid-item {
+    margin-bottom: 2em !important; /* Increased from 0.5em to 2em */
+  }
+  .section {
+    padding: 2em 0; /* Slightly reduced from 3em to 2em */
+  }
+  .collab-section {
+    margin-top: 3em; /* Added margin to the top of the collaboration section */
+  }
+}
 
-This platform is dedicated to my pursuit of mastering *data science*, and I would invite you to join me. Here, you'll find various [projects](https://adamcseresznye.github.io/blog/projects.html), [blog posts](https://adamcseresznye.github.io/blog/articles.html), and valuable tidbits that may serve as a source of inspiration for your own journey. 
+.collab-text {
+  margin-bottom: 1em; /* Default spacing */
+}
 
-Let's embark on this data-driven journey together!
+.grid-item {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.grid-item h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.grid-item p {
+  margin: 0;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 0.5em;
+  padding: 0.75em 1.5em;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.collab-text {
+  margin-bottom: 1em; /* Default spacing */
+}
+</style>
+
+::: {.content-block}
+
+::: {.section}
+<h1>Hi there! Welcome to my website! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/></h1> 
+
+<p>I am Adam, a PhD candidate at the University of Antwerp working in the field of <em>environmental toxicology</em>. This platform is dedicated to my pursuit of mastering <em>data science (DS)</em>, and I invite you to join me on this journey.</p>
+:::
+
+::: {.section}
+## Explore My Work
+
+::: {.grid}
+
+::: {.grid-item}
+### [Scientific Research](https://adamcseresznye.github.io/blog/scientific_output.html)
+Discover my scientific contributions.
+:::
+
+::: {.grid-item}
+### [DS Projects](https://adamcseresznye.github.io/blog/projects.html)
+Explore my projects.
+:::
+
+::: {.grid-item}
+### [Blog](https://adamcseresznye.github.io/blog/articles.html)
+Read interesting tidbits on DS.
+:::
+
+:::
+:::
+
+::: {.section}
+<p class="collab-text">Interested in collaboration or have questions? Get in touch!</p>
+
+<a href="mailto:csenye.chem@gmail.com" class="btn-primary">Contact Me</a>
+:::
+
+:::
