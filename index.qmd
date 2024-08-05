@@ -18,9 +18,8 @@ about:
 body {
   font-size: 18px;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
+  
+  }
 
 .content-block {
   padding: 40px 20px;
@@ -118,7 +117,7 @@ h1, h2 {
 ::: {.grid}
 
 ::: {.grid-item}
-### [Scientific Research](https://adamcseresznye.github.io/blog/scientific_output.html)
+### [Scientific Output](https://adamcseresznye.github.io/blog/scientific_output.html)
 Discover my scientific contributions.
 :::
 
