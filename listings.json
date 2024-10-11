@@ -24,6 +24,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/Chromascope/article.html",
       "/projects/Quantifyer/quantifyer.html",
       "/projects/DeepLCMS/DeepLCMS.html",
       "/projects/CP_Seeker_Post_Processing_App/CP_Seeker_Post_Processing_App.html",

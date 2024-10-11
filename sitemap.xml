@@ -2,110 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://adamcseresznye.github.io/blog/scientific_output.html</loc>
-    <lastmod>2024-10-11T11:24:24.308Z</lastmod>
+    <lastmod>2024-10-11T12:16:54.778Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects/Quantifyer/quantifyer.html</loc>
-    <lastmod>2024-10-11T11:24:22.813Z</lastmod>
+    <lastmod>2024-10-11T12:16:53.265Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects/Predicting Belgian Real Estate Prices_ Part 6_Feature_engineering/NB_6_ACs_Feature_engineering.html</loc>
-    <lastmod>2024-10-11T11:24:20.748Z</lastmod>
+    <lastmod>2024-10-11T12:16:51.285Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects/Predicting Belgian Real Estate Prices_ Part 4_Building_a_baseline_model/NB_4_ACs_Building_a_baseline_model.html</loc>
-    <lastmod>2024-10-11T11:24:16.283Z</lastmod>
+    <lastmod>2024-10-11T12:16:47.106Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects/Predicting Belgian Real Estate Prices_ Part 2_Basic_clean_up_after_scraping/NB_2_ACs_Basic_clean_up_after_scraping.html</loc>
-    <lastmod>2024-10-11T11:24:12.856Z</lastmod>
+    <lastmod>2024-10-11T12:16:44.006Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects/DeepLCMS/DeepLCMS.html</loc>
-    <lastmod>2024-10-11T11:24:08.700Z</lastmod>
+    <lastmod>2024-10-11T12:16:40.796Z</lastmod>
   </url>
   <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/Top 10 things I learned from Effective Pandas/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html</loc>
-    <lastmod>2024-10-11T11:24:03.769Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/spam/spam.html</loc>
-    <lastmod>2024-10-11T11:24:00.653Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/polars speed/polars_speed.html</loc>
-    <lastmod>2024-10-11T11:23:56.071Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/pandas_styler/pandas_style.html</loc>
-    <lastmod>2024-10-11T11:23:50.821Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/labour_day/labour_day.html</loc>
-    <lastmod>2024-10-11T11:23:46.361Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/human_day/human_day.html</loc>
-    <lastmod>2024-10-11T11:23:44.141Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/2023-08-08-HotOnes/2023_08_08_HotOnes.html</loc>
-    <lastmod>2024-10-11T11:23:38.013Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/articles.html</loc>
-    <lastmod>2024-10-11T11:23:36.011Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/index.html</loc>
-    <lastmod>2024-10-11T11:23:36.413Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/folium/2023-07-09-Folium.html</loc>
-    <lastmod>2024-10-11T11:23:41.461Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/Kaggle/Kaggle.html</loc>
-    <lastmod>2024-10-11T11:23:44.791Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/Lets-Plot/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html</loc>
-    <lastmod>2024-10-11T11:23:47.679Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/polars/Polars_revised.html</loc>
-    <lastmod>2024-10-11T11:23:54.261Z</lastmod>
-  </url>
-  <url>
-    <loc>https://adamcseresznye.github.io/blog/posts/refugee/refugee.html</loc>
-    <lastmod>2024-10-11T11:23:58.874Z</lastmod>
+    <loc>https://adamcseresznye.github.io/blog/projects/Chromascope/article.html</loc>
+    <lastmod>2024-10-11T12:16:36.916Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/posts/speed_up_py/speed_up_py.html</loc>
-    <lastmod>2024-10-11T11:24:01.863Z</lastmod>
+    <lastmod>2024-10-11T12:16:34.846Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/refugee/refugee.html</loc>
+    <lastmod>2024-10-11T12:16:32.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/polars/Polars_revised.html</loc>
+    <lastmod>2024-10-11T12:16:28.196Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/Lets-Plot/2023_08_05_How_to_use_the_Lets_Plot_library_by_JetBrains.html</loc>
+    <lastmod>2024-10-11T12:16:22.222Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/Kaggle/Kaggle.html</loc>
+    <lastmod>2024-10-11T12:16:19.437Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/folium/2023-07-09-Folium.html</loc>
+    <lastmod>2024-10-11T12:16:15.702Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/index.html</loc>
+    <lastmod>2024-10-11T12:16:10.433Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/articles.html</loc>
+    <lastmod>2024-10-11T12:16:10.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/2023-08-08-HotOnes/2023_08_08_HotOnes.html</loc>
+    <lastmod>2024-10-11T12:16:12.168Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/human_day/human_day.html</loc>
+    <lastmod>2024-10-11T12:16:18.707Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/labour_day/labour_day.html</loc>
+    <lastmod>2024-10-11T12:16:21.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/pandas_styler/pandas_style.html</loc>
+    <lastmod>2024-10-11T12:16:25.077Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/polars speed/polars_speed.html</loc>
+    <lastmod>2024-10-11T12:16:29.871Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/spam/spam.html</loc>
+    <lastmod>2024-10-11T12:16:33.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adamcseresznye.github.io/blog/posts/Top 10 things I learned from Effective Pandas/2023_08_02-Top_10_things_I_learned_from_Effective_Pandas.html</loc>
+    <lastmod>2024-10-11T12:16:36.466Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects/CP_Seeker_Post_Processing_App/CP_Seeker_Post_Processing_App.html</loc>
-    <lastmod>2024-10-11T11:24:04.670Z</lastmod>
+    <lastmod>2024-10-11T12:16:37.716Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects/Predicting Belgian Real Estate Prices_ Part 1_Feature Selection for Web Scraping/NB_1_ACs_Select_features_for_scraping.html</loc>
-    <lastmod>2024-10-11T11:24:09.732Z</lastmod>
+    <lastmod>2024-10-11T12:16:41.726Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects/Predicting Belgian Real Estate Prices_ Part 3_Characterizing_the_data/NB_3_ACs_Characterizing_the_data.html</loc>
-    <lastmod>2024-10-11T11:24:15.050Z</lastmod>
+    <lastmod>2024-10-11T12:16:45.940Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects/Predicting Belgian Real Estate Prices_ Part 5_Initial_feature_selection/NB_5_ACs_Initial_feature_selection.html</loc>
-    <lastmod>2024-10-11T11:24:17.866Z</lastmod>
+    <lastmod>2024-10-11T12:16:48.615Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects/Predicting Belgian Real Estate Prices_ Part 7_Fine_tuning/NB_7_ACs_Fine_tuning.html</loc>
-    <lastmod>2024-10-11T11:24:22.016Z</lastmod>
+    <lastmod>2024-10-11T12:16:52.495Z</lastmod>
   </url>
   <url>
     <loc>https://adamcseresznye.github.io/blog/projects.html</loc>
-    <lastmod>2024-10-11T11:24:23.680Z</lastmod>
+    <lastmod>2024-10-11T12:16:54.135Z</lastmod>
   </url>
 </urlset>
